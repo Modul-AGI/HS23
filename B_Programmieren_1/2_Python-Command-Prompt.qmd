@@ -1,0 +1,16 @@
+
+
+# Python Command Prompt {#sec-python-command-prompt}
+
+Um mit `R` zu Programmieren habt ihr bisher vermutlich in RStudio gearbeitet. RStudio ist eine sogenannte "Integrierte Entwicklungsumgebung" (i.e. IDE), wo ihr eure R-Scripts entwicklen konntet. Zu Beginn werden wir in diesem Kurs *ohne* Entwicklungsumgebung arbeiten und Python von der Konsole aus bedienen. 
+
+Startet dazu den *Python Command Prompt* indem ihr `Windowstaste` drückt und nach dieser Applikation sucht (einfach den Namen eingeben). Nach dem öffnen der Applikation sollte sich ein schwarzes Fenster öffnen und auf eure Eingabe warten (siehe @fig-python-cmd).
+
+![Python Command Prompt (i.e. "Eingabeaufforderung")
+](figures/python-command-prompt.PNG){#fig-python-cmd}
+
+Dieses Fenster ermöglicht es uns, auf sehr einfache (aber auch etwas trockene) Weise mit Python zu interagieren. Dazu müssen wir aber zuerst noch in das Python Programm einsteigen, indem wir `python` eintippen und `Enter` drücken. 
+
+![Python Command Prompt im Python Programm (beachte die drei `>>>`)](figures/python-command-prompt2.PNG){#fig-python-cmd2}
+
+

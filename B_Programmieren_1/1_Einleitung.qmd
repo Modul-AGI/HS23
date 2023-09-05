@@ -1,0 +1,34 @@
+
+
+# Programmieren I {#sec-intro-cig1}
+
+In diesem Block bekommt ihr euren ersten Kontakt mit Python und lernt dabei auch gerade JupyterLab kennen, um mit Python zu interagieren. Er soll einen Einstieg in die Programmierwelt von Python bieten und spezifisch zeigen wie man räumliche Fragestellungen mit frei verfügbarer Software lösen kann. 
+Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze kennen zu lernen, die Bereitschaft für lösungsorientiertes Arbeiten sowie etwas Hartnäckigkeit. 
+
+Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter *Programmieren I > Datensätze* herunterladen könnt.
+
+| Datensatz (inkl. Link) | Beschreibung          |
+|:-----------------------|:----------------------|                     
+| [zeckenstiche.csv](https://moodle.zhaw.ch/mod/resource/view.php?id=640830) | Eine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich |
+| [zeckenstiche_full.csv](https://moodle.zhaw.ch/mod/resource/view.php?id=640831) | Eine CSV mit 1'076 Zeckenstich-Meldungen im Kanton Zürich |
+| [wald.gpkg](https://moodle.zhaw.ch/mod/resource/view.php?id=640832) | Ein Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in "Wald" und "nicht Wald" unterscheidet |
+: Datensätze für den Teil "Programmieren I - III" {#tbl-datensaetze}
+
+:::{.callout-note}
+## Übungsziele
+
+- Python kennen lernen, erste Interaktionen mit Python durch die Commandline
+- Erste Erfahrungen mit JupyterLab sammeln
+- Die wichtigsten Datentypen in Python kennen lernen (`bool`, `str`, `int`, `float`, `list`, `dict`)
+- Pandas DataFrames kennen lernen und einfache Manipulationen durchführen 
+:::
+
+
+Die Slides zur heutigen Vorlesung findet ihr hier: 
+
+
+<!--
+<iframe src="https://modul-agi.github.io/slides/ProgrammierenI" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%" allowfullscreen></iframe>
+
+In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)
+-->

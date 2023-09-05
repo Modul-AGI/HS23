@@ -1,0 +1,12 @@
+# WebGIS II
+
+![](figures/web_map_leaflet_1.PNG)
+
+:::{.callout-note}
+## Übungsziele
+
+- Sie kennen die grundlegenden Webtechnologien wie HyperText Markup Language (HTML), JavaScript und Cascading Style Sheets (CSS).
+- Sie kennen die Unterschiede zwischen diesen Technologien und wissen, wie Sie sie in einem GIS-Kontext einsetzen können.
+- Sie haben sich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.
+- Sie können das GeoJson-Dateiformat verwenden.
+:::
