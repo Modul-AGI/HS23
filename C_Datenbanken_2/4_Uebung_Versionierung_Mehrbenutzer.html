@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Modul AGI HS22 - Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../C_Datenbanken_3/1_Einleitung.html" rel="next">
+<link href="../C_Datenbanken_2/3_Uebung_Server_Datenbanken.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_2/1_Einleitung.html">Datenbanken II</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Modul AGI HS22</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Willkommen!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsicherheit</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/2_Datengrundlage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datengrundlage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/3_Datenvorverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenvorverarbeitung</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unsicherheit der gemeldeten Zeckenstichstandorte</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unschärfe des Waldrandes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Automatisierung mit ModelBuilder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/7_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../B_Programmieren_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programmieren I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/2_Python-Command-Prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Command Prompt</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/3_Primitive_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primitive Datentypen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/4_Uebung_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/5_Komplexe_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Komplexe Datentypen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/6_Uebung_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/7_JupyterNotebook.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/8_Dictionary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/9_Uebung_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/10_Tabellarische_Daten.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">DataFrames</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../B_Programmieren_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programmieren II</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/2_Conda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/4_Functions_I.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/5_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/6_Functions_II.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Advanced</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/7_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/8_If_else.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">If / Else</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/9_Uebung_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/10_Zufallzahlen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Zufallszahlen generieren</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/11_Uebung_8.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Funktionen in <em>DataFrames</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/13_Uebung_9.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/20_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../B_Programmieren_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programmieren III</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/2_For_Loops_Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Einführung in <em>for loop</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/2_Uebung_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/3_Uebung_11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/4_For_Loops_Advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced <em>for loops</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/4_Uebung_12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 12</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/5_GIS_in_Python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Input: GIS in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/6_Raeumliche_Operationen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Räumliche Operationen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/6_Uebung_14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 14</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/7_Spatial_Joins.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spatial Joins</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/7_Uebung_15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 15</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../C_Datenbanken_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenbanken I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../C_Datenbanken_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenbanken II</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/2_Uebung_Datenintegritaet.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenintegrität</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/3_Uebung_Server_Datenbanken.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../C_Datenbanken_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenbanken III</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/2_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netzwerkanalyse I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vorbereitung</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_1/3_QGIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 1: Operationen mit QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 2: Zentralitätsmasse berechnen</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../D_Netzwerkanalyse_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netzwerkanalyse II</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_2/1_Shortest_Path.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 3: Kürzeste Pfade (shortest path)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 4: Traveling Salesperson</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../D_Netzwerkanalyse_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netzwerkanalyse III</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/2_Entsorgungsstelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 5: Entsorgungsstelle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/3_OEV-Gueteklassen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 6: ÖV-Güteklassen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 7: Zentralitätsmasse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 8: Flächen verrechnen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/6_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">WebGIS I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../E_WebGIS_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../E_WebGIS_1/3_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">WebGIS II</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../E_WebGIS_2/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Anleitung_fuer_Dozierende.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anleitung für Dozierende</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#übung-10-version-erstellen-in-arcgis-pro" id="toc-übung-10-version-erstellen-in-arcgis-pro" class="nav-link active" data-scroll-target="#übung-10-version-erstellen-in-arcgis-pro">Übung 10: Version erstellen in ArcGIS Pro</a></li>
+  <li><a href="#übung-11-versionen-zusammenführen-in-arcgis-pro" id="toc-übung-11-versionen-zusammenführen-in-arcgis-pro" class="nav-link" data-scroll-target="#übung-11-versionen-zusammenführen-in-arcgis-pro">Übung 11: Versionen zusammenführen in ArcGIS Pro</a></li>
+  <li><a href="#optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro-überprüfen" id="toc-optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro-überprüfen" class="nav-link" data-scroll-target="#optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro-überprüfen">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro überprüfen</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="übung-10-version-erstellen-in-arcgis-pro" class="level2">
+<h2 class="anchored" data-anchor-id="übung-10-version-erstellen-in-arcgis-pro">Übung 10: Version erstellen in ArcGIS Pro</h2>
+<p>Die Nutzung von Enterprise Server Geodatenbanken wie z.B. PostgreSQL erlaubt einen Mehrbenutzerbetrieb derselben Datenbank. In den vorigen Übungen haben wir jeweils alle Einträge in die Datenbank mehr oder weniger gleichzeitig durchgeführt, ohne auf eine Version zu achten. In solchen Fällen gilt für die Datenbank, dass der letzte Eintrag einen vorangehenden Eintrag überschreiben würde. Macht ein Benutzer Änderungen an einem Objekt, z.B. einem Polygon und gleichzeitig ein anderer Benutzer ebenfalls Änderungen am selben Polygon, so gilt jeweils die letzte Eintragung als aktuell. Alle vorigen Anpassungen werden überschrieben. Um dies zu verhindern, braucht es einen Mechanismus, welcher diese Mehrfachänderungen im Mehrbenutzerbetrieb managen kann. Hierzu wird Versionierung verwendet.</p>
+<ol type="1">
+<li>Kehren Sie in das Projekt “Datenbankzugriff” in ArcGIS Pro zurück und verbinden zur Datenbank “waelder” mit Ihrem zugewiesenen Benutzer (studentNr).</li>
+<li>Zeigen Sie die Sichtungsmeldungen aus der Datenbank in der Karte an.</li>
+<li>Starten Sie jetzt den Editor und erfassen ein paar beliebige Sichtungsmeldungen. Erfassen Sie auch die Attribute über die Attributtabelle. Speichern Sie anschliessend Ihre neuen Punkte.</li>
+<li>Wechseln Sie anschliessend die Ansicht im Contents-Fenster von “List By Drawing Order” auf “List By Data Source” (siehe <a href="#fig-db2-uebung10-1">Abbildung&nbsp;<span>46.1</span></a>). 5.Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang “sde.DEFAULT”. Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. “student1@…” zeigt hier auch noch den verbundenen Benutzer. (siehe <a href="#fig-db2-uebung10-2">Abbildung&nbsp;<span>46.2</span></a>).</li>
+<li>Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register “Data Source” / “Versioning” angezeigt.</li>
+<li>Hier sehen Sie alle Werkzeuge zur Verwaltung der Versionen. Erstellen Sie eine neue eigene Version durch Klick auf “New Version”. Achten Sie darauf das Häkchen bei “Change to this new version” zu setzen, damit die neue Version aktiviert wird (siehe <a href="#fig-db2-uebung10-3">Abbildung&nbsp;<span>46.3</span></a>).
+<ol type="a">
+<li>Name: studentNr_name</li>
+<li>Description: beliebiger Text</li>
+<li>Access Permission: Protected
+<ul>
+<li>Private: Alle Änderungen in dieser Version sind privat, d.h. kein anderer Benutzer kann diese Version sehen und/oder benutzen.</li>
+<li>Protected: Alle Änderungen sind privat und niemand kann in dieser Version Daten bearbeiten. Andere Benutzer können aber die Version anzeigen und Änderungen sehen.</li>
+<li>Public: Öffentliche Nutzung, d.h. auch andere Benutzer können zu dieser Version wechseln und Daten bearbeiten</li>
+</ul></li>
+</ol></li>
+<li>Erstellen Sie die neue Version mit “OK”.</li>
+<li>Schauen Sie wiederum die Datenbankverbindung im Contents-Fenster an. Die neue Version student1 ist jetzt aktiv. Ab sofort werden alle Änderungen innerhalb dieser Version gemacht und nicht mehr in der sde.DEFAULT Version (siehe <a href="#fig-db2-uebung10-4">Abbildung&nbsp;<span>46.4</span></a>).</li>
+<li>Starten Sie den Editor und löschen einige der bereits von Ihnen erfassten Sichtungsmeldungen und erfassen auch ein paar neue Punkte. Speichern Sie die Änderungen im Editor.</li>
+<li>Merken Sie sich ungefähr die Lage der von Ihnen jetzt digitalisierten Punkte (siehe <a href="#fig-db2-uebung10-5">Abbildung&nbsp;<span>46.5</span></a>).</li>
+<li>Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte “Data Source”→Versioning gewechselt werden.</li>
+<li>Wechseln Sie die Version zurück auf die sde.DEFAULT Version.</li>
+<li>Schauen Sie sich das Kartenbild an. Was fällt auf?</li>
+<li>Alle Ihre Anpassungen/Änderungen, welche Sie in der Version studentNr gemacht haben, sind in der sde.DEFAULT nicht mehr vorhanden. Dies ist normal, da die Änderungen eben in einer anderen Version gemacht wurden (siehe <a href="#fig-db2-uebung10-6">Abbildung&nbsp;<span>46.6</span></a> und <a href="#fig-db2-uebung10-7">Abbildung&nbsp;<span>46.7</span></a>).</li>
+<li>ACHTUNG: Es kann natürlich sein, dass Ihre Mit-Studierenden etwas schneller waren und bereits Änderungen auch in die sde.DEFAULT eingespielt haben und Ihr Kartenbild jetzt deshalb trotzdem anders aussieht als vorher.</li>
+<li>Speichern Sie Ihr ArcGIS Pro Projekt.</li>
+</ol>
+<div id="fig-db2-uebung10-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_1.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.1: Data Source in Contents-Fenster</figcaption>
+</figure>
+</div>
+<div id="fig-db2-uebung10-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_2.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.2: ArcGIS Pro Versionierung</figcaption>
+</figure>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-db2-uebung10-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_3.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.3: ArcGIS neue Version erstellen</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-db2-uebung10-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_4.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.4: Neue Version in Data Source in Contents-Fenster</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="fig-db2-uebung10-5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_5.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.5: Neue Punkte in ArcGIS GUI</figcaption>
+</figure>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-db2-uebung10-6" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_6.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.6: Ändere Version in Contents-Fenster</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-db2-uebung10-7" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung10_7.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.7: Ändere Version in Contents-Fenster</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="übung-11-versionen-zusammenführen-in-arcgis-pro" class="level2">
+<h2 class="anchored" data-anchor-id="übung-11-versionen-zusammenführen-in-arcgis-pro">Übung 11: Versionen zusammenführen in ArcGIS Pro</h2>
+<p>In vielen Anwendungsfällen bearbeiten viele Mitarbeiter die Daten in derselben Datenbank. Z.B. können unterschiedliche Mitarbeiter jeweils einen Teil eines Untersuchungsgebiets kartieren. Durch die Versionierung können alle Arbeiten unabhängig voneinander auf derselben Datenbank durchgeführt werden. Zu einem gewissen Zeitpunkt, spätestens nach Abschluss der Arbeiten sollten alle Arbeiten aber wieder in einer gemeinsamen Version zusammengeführt werden.</p>
+<ol type="1">
+<li>Bleiben Sie im Projekt “Datenbankzugriff” in ArcGIS Pro und in der Datenbank “waelder” mit Ihrem zugewiesenen Benutzer (studentNr).</li>
+<li>Wechseln Sie wiederum auf die “List By Data Source” Ansicht im Contents-Fenster.</li>
+<li>Schauen Sie sich den Versionsmanager an. Sie öffnen diesen über die Registerkarte “Data Source Versioning” über die Schaltfläche “Manage Versions” (siehe <a href="#fig-db2-uebung11-1">Abbildung&nbsp;<span>46.8</span></a>).</li>
+<li>Hier können Sie alle vorhandenen (sofern berechtigten) Versionen einsehen und verwalten.</li>
+<li>Da Sie Ihre jeweilige Version als “protected” erstellt haben, sollten auch die Versionen Ihrer MitStudierenden sichtbar sein (siehe <a href="#fig-db2-uebung11-2">Abbildung&nbsp;<span>46.9</span></a>).</li>
+<li>Schliessen Sie den Versionsmanager wieder.</li>
+<li>Wechseln Sie anschliessend für den Sichtungsmeldungen Layer die Version. Wählen Sie diesmal die Version eines anderen Teilnehmers z.B. Ihres Tischnachbarn (siehe <a href="#fig-db2-uebung11-3">Abbildung&nbsp;<span>46.10</span></a>).</li>
+<li>Sie sollten im Kartenbild wieder eine andere Version mit anderen Punkten sehen.</li>
+<li>Starten Sie den Editor und versuchen ein paar neue Punkte zu erfassen.</li>
+<li>Sie bekommen eine Fehlermeldung (siehe <a href="#fig-db2-uebung11-4">Abbildung&nbsp;<span>46.11</span></a>).</li>
+<li>Wie bereits erwähnt können “fremde” Versionen nicht bearbeitet werden, wenn diese nicht öffentlich sind.</li>
+<li>Wechseln Sie wieder zurück zu Ihrer eigenen Version “studentNr”.</li>
+<li>Zeigen Sie die Registerkarte “Data Source – Versioning” an.</li>
+<li>Bevor wir unsere eigenen Änderungen zurück in die sde.DEFAULT Version einspielen können, müssen wir auf Fehler bzw. Versionierungsprobleme prüfen, um sicher zu stellen, dass keine Inkonsistenzen entstehen.</li>
+<li>Klicken Sie dazu im Menü auf “Manage Versions”. Selektieren Sie Ihre Version und klicken “Reconcile/Post”. Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Lassen Sie ansonsten die Voreinstellungen (siehe <a href="#fig-db2-uebung11-5">Abbildung&nbsp;<span>46.12</span></a>).</li>
+<li>Sollte der Prozess ohne Fehler durchgeführt werden, so können im Anschluss die Änderungen in die sde.DEFAULT Datenbank geschrieben werden.</li>
+<li>Klicken Sie auf “Ok”. Alle Ihre Änderungen sollten jetzt auch in die sde.DEFAULT Version importiert worden sein.</li>
+<li>Prüfen Sie dies, indem Sie zurück auf die sde.DEFAULT Version wechseln. Diese sollte jetzt identisch mit Ihrer eigenen Version sein</li>
+</ol>
+<div id="fig-db2-uebung11-1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung11_1.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.8: “Manage Versions” in Data Source [ArcGIS Pro]</figcaption>
+</figure>
+</div>
+<div id="fig-db2-uebung11-2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung11_2.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.9: Verschiedene Versionen sind verfügbar</figcaption>
+</figure>
+</div>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-bottom">
+<div class="quarto-layout-panel quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-db2-uebung11-3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung11_3.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.10: Änderung der Version</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div id="fig-db2-uebung11-4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung11_4.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.11: Fehlermeldung in ArcGIS Pro</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-db2-uebung11-5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/screenshot_uebung11_5.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;46.12: Fehlerbehebung mit Reconcile/Post</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro-überprüfen" class="level2">
+<h2 class="anchored" data-anchor-id="optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro-überprüfen">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro überprüfen</h2>
+<p>Wir haben in der Vorlesung ein paar SQL-Abfragen über die “waelder” Datenbank definiert. Da wir jetzt über die vorigen Übungen ein paar Beispiel Daten in die Datenbank importiert haben, können wir diese Datenbank nutzen, um noch ein paar Abfragen zu üben. Es ist nicht Ziel alle Abfragen gemacht zu haben. Machen Sie einfach so viele Abfragen wie Sie können. Beachten Sie auch, dass es oft mehr als einen Lösungsweg gibt.</p>
+<ol type="1">
+<li>Starten Sie pgAdmin und verbinden mit der Datenbank “waelder” mit Ihrem zugewiesenen Login (studentNr).</li>
+<li>Formulieren Sie die folgenden SQL-Abfragen und führen diese über das Query Tool von pgAdmin aus. Schauen Sie sich anschliessend das Ergebnis in der Attributtabelle und im Geometry Viewer an.</li>
+</ol>
+<ul>
+<li>Nicht räumliche Abfragen:
+<ol type="a">
+<li>Welche Sichtungsmeldungen wurden von “id_erfasser_x” erfasst?</li>
+<li>Wurden Löwen gesichtet? Wenn ja, wie viele?</li>
+<li>Wie viele Tiere von jeder Art wurden jeweils gesichtet. Geben Sie eine Liste mit den Namen der Tierarten und der Anzahl der Sichtungen aus.</li>
+<li>Wie viele Hasen wurden gesichtet? Geben Sie eine Zahl aus.</li>
+<li>Welcher Erfasser hat am meisten Meldungen erfasst? Geben Sie die id_erfasser und die Anzahl der erfassten Tiere aus.</li>
+<li>Welcher Erfasser hat am meisten unterschiedliche Tiere erfasst? Geben Sie die id_erfasser und die Anzahl der unterschiedlichen Tiere aus.</li>
+<li>In welchen Wäldern kommen Rehe vor? Geben Sie die Namen und die Beschreibung der betroffenen Wälder und die Tierart aus.</li>
+<li>Wie viele unterschiedliche Tierarten wurden gesichtet und welche sind das? Zeigen Sie jede Tierart mit dem Datum der letzten Sichtung. SQL→MAX(datum).</li>
+<li>Welche Tierarten wurden NICHT gesichtet?</li>
+<li>In welchen Monaten wurden die meisten Tiere gesichtet? Geben Sie die drei “besten” Monate für Tiersichtungen aus.</li>
+</ol></li>
+<li>Räumliche Abfragen:
+<ol start="11" type="a">
+<li>Wie gross sind die erfassten Wälder? Geben Sie eine Liste mit den Waldflächen in qm aus.
+<ul>
+<li>Funktion: ST_AREA</li>
+</ul></li>
+<li>Wie viel Fläche in qm haben alle Wälder zusammen?
+<ul>
+<li>Funktion: ST_AREA und SUM</li>
+</ul></li>
+<li>Welche Sichtungsmeldungen liegen innerhalb eines Waldes?
+<ul>
+<li>Funktion: ST_CONTAINS oder ST_WITHIN</li>
+</ul></li>
+<li>Welche Sichtungsmeldungen liegen ausserhalb des Waldes?
+<ul>
+<li>Funktion: ST_UNION und ST_CONTAINS</li>
+</ul></li>
+<li>In welchem Wald gibt es die meisten Sichtungen?
+<ul>
+<li>Funktion: ST_CONTAINS und SUM</li>
+</ul></li>
+<li>Wie weit sind die ausserhalb liegenden Sichtungsmeldungen vom Wald entfernt?
+<ul>
+<li>Funktion: ST_DISTANCE, ST_UNION und ST_CONTAINS</li>
+</ul></li>
+<li>Welche Tiere wurden ausserhalb vom Wald gesichtet?
+<ul>
+<li>Funktion: ST_UNION, ST_CONTAINS + JOIN</li>
+</ul></li>
+</ol></li>
+<li>Weitere Abfragen:
+<ol start="18" type="a">
+<li>Gibt es Tierarten, welche nur im Wald gesichtet wurden? Welche sind das?</li>
+<li>Gibt es Tierarten, welche nie im Wald gesichtet wurden? Welche sind das?</li>
+<li>In welchen Wäldern wurden Füchse gesichtet?</li>
+<li>In welchen Wäldern kommen Rehe und Füchse gemeinsam vor?</li>
+<li>Wo gibt es Hermeline aber keine Mauswiesel?</li>
+</ol></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../C_Datenbanken_2/3_Uebung_Server_Datenbanken.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../C_Datenbanken_3/1_Einleitung.html" class="pagination-link">
+        <span class="nav-page-text">Datenbanken III</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

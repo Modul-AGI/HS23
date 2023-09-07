@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Modul AGI HS22 - Übung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Anleitung_fuer_Dozierende.html" rel="next">
+<link href="../E_WebGIS_2/1_Einleitung.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../custom.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../E_WebGIS_2/1_Einleitung.html">WebGIS II</a></li><li class="breadcrumb-item"><a href="../E_WebGIS_2/2_Uebung.html"><span class="chapter-number">63</span>&nbsp; <span class="chapter-title">Übung</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Modul AGI HS22</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Willkommen!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Unsicherheit</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/2_Datengrundlage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datengrundlage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/3_Datenvorverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenvorverarbeitung</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unsicherheit der gemeldeten Zeckenstichstandorte</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unschärfe des Waldrandes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Automatisierung mit ModelBuilder</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../A_Unsicherheit/7_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../B_Programmieren_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programmieren I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/2_Python-Command-Prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Command Prompt</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/3_Primitive_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primitive Datentypen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/4_Uebung_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/5_Komplexe_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Komplexe Datentypen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/6_Uebung_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/7_JupyterNotebook.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/8_Dictionary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dictionaries</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/9_Uebung_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/10_Tabellarische_Daten.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">DataFrames</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../B_Programmieren_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programmieren II</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/2_Conda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conda</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/4_Functions_I.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Basics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/5_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/6_Functions_II.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Advanced</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/7_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/8_If_else.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">If / Else</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/9_Uebung_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 7</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/10_Zufallzahlen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Zufallszahlen generieren</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/11_Uebung_8.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 8</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Funktionen in <em>DataFrames</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/13_Uebung_9.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 9</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/20_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../B_Programmieren_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programmieren III</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/2_For_Loops_Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Einführung in <em>for loop</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/2_Uebung_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 10</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/3_Uebung_11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 11</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/4_For_Loops_Advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced <em>for loops</em></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/4_Uebung_12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 12</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/5_GIS_in_Python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Input: GIS in Python</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/6_Raeumliche_Operationen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Räumliche Operationen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/6_Uebung_14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 14</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/7_Spatial_Joins.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spatial Joins</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/7_Uebung_15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 15</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../C_Datenbanken_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenbanken I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../C_Datenbanken_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenbanken II</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/2_Uebung_Datenintegritaet.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenintegrität</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/3_Uebung_Server_Datenbanken.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../C_Datenbanken_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Datenbanken III</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/2_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netzwerkanalyse I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vorbereitung</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_1/3_QGIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 1: Operationen mit QGIS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 2: Zentralitätsmasse berechnen</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../D_Netzwerkanalyse_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netzwerkanalyse II</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_2/1_Shortest_Path.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 3: Kürzeste Pfade (shortest path)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 4: Traveling Salesperson</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../D_Netzwerkanalyse_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Netzwerkanalyse III</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/2_Entsorgungsstelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 5: Entsorgungsstelle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/3_OEV-Gueteklassen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 6: ÖV-Güteklassen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 7: Zentralitätsmasse</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 8: Flächen verrechnen</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../D_Netzwerkanalyse_3/6_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">WebGIS I</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../E_WebGIS_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../E_WebGIS_1/3_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">WebGIS II</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../E_WebGIS_2/2_Uebung.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Übung</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Anleitung_fuer_Dozierende.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Anleitung für Dozierende</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#übung-1-erste-schritte-mit-html" id="toc-übung-1-erste-schritte-mit-html" class="nav-link active" data-scroll-target="#übung-1-erste-schritte-mit-html">Übung 1: Erste Schritte mit HTML</a></li>
+  <li><a href="#übung-2-erste-schritte-mit-javascript-und-der-leaflet-bibliothek" id="toc-übung-2-erste-schritte-mit-javascript-und-der-leaflet-bibliothek" class="nav-link" data-scroll-target="#übung-2-erste-schritte-mit-javascript-und-der-leaflet-bibliothek">Übung 2: Erste Schritte mit JavaScript und der Leaflet-Bibliothek</a></li>
+  <li><a href="#übung-3-geojson-datei-zur-webkarte-hinzufügen" id="toc-übung-3-geojson-datei-zur-webkarte-hinzufügen" class="nav-link" data-scroll-target="#übung-3-geojson-datei-zur-webkarte-hinzufügen">Übung 3: GeoJson-Datei zur Webkarte hinzufügen</a></li>
+  <li><a href="#übung-4-farbe-in-die-webkarte-einbringen" id="toc-übung-4-farbe-in-die-webkarte-einbringen" class="nav-link" data-scroll-target="#übung-4-farbe-in-die-webkarte-einbringen">Übung 4: Farbe in die Webkarte einbringen</a></li>
+  <li><a href="#übung-5-hinzufügen-von-interaktion-zur-webkarte" id="toc-übung-5-hinzufügen-von-interaktion-zur-webkarte" class="nav-link" data-scroll-target="#übung-5-hinzufügen-von-interaktion-zur-webkarte">Übung 5: Hinzufügen von Interaktion zur Webkarte</a></li>
+  <li><a href="#übung-6-der-webkarte-eine-legende-hinzufügen" id="toc-übung-6-der-webkarte-eine-legende-hinzufügen" class="nav-link" data-scroll-target="#übung-6-der-webkarte-eine-legende-hinzufügen">Übung 6: Der Webkarte eine Legende hinzufügen</a></li>
+  <li><a href="#endgültige-lösung" id="toc-endgültige-lösung" class="nav-link" data-scroll-target="#endgültige-lösung">Endgültige Lösung</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-title">Übung</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="übung-1-erste-schritte-mit-html" class="level2">
+<h2 class="anchored" data-anchor-id="übung-1-erste-schritte-mit-html">Übung 1: Erste Schritte mit HTML</h2>
+<p><a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a></p>
+<p>Die HyperText Markup Language <strong><em>(HTML)</em></strong> ist die Standard Markup Language für Inhalte, die in einem Webbrowser angezeigt werden sollen. Einfach ausgedrückt ist HTML die Sprache um den Inhalt einer Webseite zu definieren. Praktisch alle Webseiten basieren auf HTML.</p>
+<p>Lass uns mit einem einfachen Editor eurer Wahl ein erstes einfaches HTML-Dokument erstellen.</p>
+<p>Vorgeschlagene Editoren:</p>
+<ul>
+<li><a href="https://www.sublimetext.com">Sublimetext</a></li>
+<li><a href="https://notepad-plus-plus.org/downloads/">Notepad++</a></li>
+<li><a href="https://atom.io">Atom</a></li>
+</ul>
+<p>Öffnet den Editor Eurer Wahl und erstellt eine grundlegende HTML-Struktur, indem ihr das folgende Codefragment einfügt.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;head&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;title&gt;</span>Page title<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;body&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;h1&gt;</span>My first heading<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p&gt;</span>The first paragraph.<span class="kw">&lt;/p&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Speichert das Dokument als <strong>index.html</strong> in Eurem Arbeitsverzeichnis ab und öffnet es in einem von euch bevorzugten Browser. Ihr solltet etwas ähnliches wie die folgende Abbildung sehen (<a href="#fig-figure1">Abbildung&nbsp;<span>63.1</span></a>).</p>
+<div id="fig-figure1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_2.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.1: Ihre Erste HTML-Seite</figcaption>
+</figure>
+</div>
+<p>Alle HTML-Dokumente müssen mit einer Dokumenttyp-Deklaration beginnen: <em><code>&lt;!DOCTYPE html&gt;</code></em>. Das HTML-Dokument selbst beginnt mit <em><code>&lt;html&gt;</code></em> und endet mit <em><code>&lt;/html&gt;</code></em>. Der sichtbare Teil des HTML-Dokuments liegt zwischen <em><code>&lt;body&gt;</code></em> und <em><code>&lt;/body&gt;</code></em>. In diesem Abschnitt haben wir unsere erste Überschrift <em><code>&lt;h1&gt;&lt;/h1&gt;</code></em> positioniert, sowie das HTML-Element <em><code>&lt;p&gt;&lt;/p&gt;</code></em>, welches einen Absatz innerhalb des Body-Abschnitts definiert. Mehr zum Thema fHTML-Elemente findet Ihr unter folgendem Link <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML Elemente</a>.</p>
+</section>
+<section id="übung-2-erste-schritte-mit-javascript-und-der-leaflet-bibliothek" class="level2">
+<h2 class="anchored" data-anchor-id="übung-2-erste-schritte-mit-javascript-und-der-leaflet-bibliothek">Übung 2: Erste Schritte mit JavaScript und der Leaflet-Bibliothek</h2>
+<p><a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorial</a></p>
+<p>In der Welt der Webentwicklung ist HTML die Basis von allem, da es uns die Möglichkeit gibt, unsere Inhalte im Web darzustellen. Das, was die Dinge wirklich interessant und interaktiv macht, ist jedoch <strong>JavaScript</strong>. JavaScript ist im Moment die beliebteste Programmiersprache der Welt. Wenn HTML den Inhalt der Webseite definiert, definiert JavaScript dessen Verhalten. In HTML wird der JavaScript-Code zwischen den Tags <em><code>&lt;script&gt;</code></em> und <em><code>&lt;/script&gt;</code></em> in einem beliebigen Teil unseres HTML-Codes (Head oder Body) eingefügt.</p>
+<p>In dieser Übung verwenden wir zur Entwicklung einer einfachen Webkarte die Library <strong>Leaflet</strong>. Leaflet ist die beliebteste Open-Source-JavaScript-Library für die Entwicklung interaktiver Webkarten. Ihr Hauptvorteil besteht darin, dass sie effizient auf allen wichtigen Desktop- und Mobilplattformen läuft und auf einer einfach zu verwendenden und gut dokumentierten Anwendungsprogrammierschnittstelle (API) basiert.</p>
+<ul>
+<li>Geht zurück in Euer HTML-Dokument, das Ihr in Übung 1 erstellt habt und löscht die Elemente <em><code>&lt;h1&gt;</code></em> und <em><code>&lt;p&gt;</code></em>, sodass nur noch der leere <em><code>&lt;body&gt;</code></em> übrig ist.</li>
+</ul>
+<p>Als nächsten Schritt werden wir ein <em><code>&lt;div&gt;</code></em>-Element für die Definition unserer Karte erstellen. Ein <em><code>&lt;div&gt;</code></em> HTML-Element ist ein allgemeiner Container, der keine Auswirkung auf den Inhalt oder das Layout hat, bis er in irgendeiner Art und Weise mit Hilfe einer Styling-Sprache angesteuert wird. Hier kommt der dritte wichtige Akteur der Webentwicklung ins Spiel. Nämlich die Sprache Cascading Style Sheets kurz <strong>CSS</strong>. CSS ist die Sprache, die verwendet wird, um ein HTML-Dokument zu gestalten und um zu beschreiben, wie unsere Inhalte im Web dargestellt werden sollen. In HTML wird der CSS-Code zwischen den Tags <em><code>&lt;style&gt;</code></em> und <em><code>&lt;/style&gt;</code></em> innerhalb der <em><code>&lt;head&gt;</code></em>-Tags eingefügt.</p>
+<p><a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a></p>
+<ul>
+<li><p>Erstellt ein div-Element, um die Karten-ID festzulegen, damit wir unsere Karte gestalten können.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">id</span> <span class="ot">=</span> <span class="st">"map"</span><span class="kw">&gt;&lt;/div&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Verwendet den <strong>#</strong> CSS-Selektor <a href="https://www.w3schools.com/css/css_selectors.asp">CSS-Selektoren</a> innerhalb der <em><code>&lt;style&gt;&lt;/style&gt;</code></em>-Tags, um unsere Karte auf Vollbild zu setzen, indem Ihr die absolute Positionierung in die Ecken setzen.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;style&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="pp">#map</span> {<span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span> <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">right</span>: <span class="dv">0</span><span class="op">;</span>}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/style&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Nun werden wir die Leaflet-Bibliothek in unser File einbinden. Geht dazu auf <a href="https://leafletjs.com/download">Leaflet</a>. Kopiert die folgenden zwei Codezeilen, welche die Leaflet CSS- und JavaScript-Dateien enthalten, in den Head-Bereich Eures HTML-Dokuments.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">"sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">""</span> <span class="kw">/&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">"sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">""</span><span class="kw">&gt;&lt;/script&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Als nächstes erstellen wir eine neue Variable (innerhalb von <em><code>&lt;script&gt;&lt;/script&gt;</code></em>), welcher wir unsere bereits definierte Karte zuweisen. Im Folgenden definieren wir das Zentrum unserer Karte sowie die gewünschte Schärfeebene.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">'map'</span><span class="op">,</span> {<span class="dt">center</span><span class="op">:</span> [<span class="fl">46.944</span><span class="op">,</span> <span class="fl">8.028</span>]<span class="op">,</span> <span class="dt">zoom</span><span class="op">:</span> <span class="dv">8</span>})<span class="op">;</span> <span class="co">// Focus on Switzerland</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Um einen geigneten Tile Layer zu finden, könnt Ihr die Website <a href="https://cloud.maptiler.com/maps/">Maptiler</a> durchforsten. Wählt eine Map die Euch gefällt aus, scrollt nach unten zu den Tiles und kopiert den Link (siehe <a href="#fig-figure2">Abbildung&nbsp;<span>63.2</span></a>).</p>
+<div id="fig-figure2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_3.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.2: Tile kopieren</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Fügt den Link mit der Methode L.tileLayer() hinzu. Diese Methode von Leaflet erlaubt es uns den Tile Layer zu hosten (Leaflet-Erweiterungsmethoden). Aus Referenzierungsgründen ist es wichtig das Wir auch die Attribution hinzufügen (siehe <a href="#fig-figure3">Abbildung&nbsp;<span>63.3</span></a>), welche am Ende der gleichen Webseite zu finden ist (Tipp: Ihr könnt diesen Schritt aus dem Code unten kopieren).</p></li>
+<li><p>Füge schliesslich alles mit der Methode addTo(map) zu unserer Karte hinzu.</p>
+<div id="fig-figure3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_4.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.3: Kopieren der Attribution für die Nennung der Autoren</figcaption>
+</figure>
+</div></li>
+</ul></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>Um die Daten zu erhalten, müsst Ihr ein kostenloses Konto erstellen. 
+(Ihr könnt dazu eure ZHAW-E-Mail-Konto verwenden).</code></pre>
+</div>
+</div>
+<p>Nachdem Ihr die oben genannten Schritte durchgeführt habt, sollte Euer Code wie folgt aussehen:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;head&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">"sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">""</span> <span class="kw">/&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">"sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">""</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;style&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>            <span class="pp">#map</span> {<span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span> <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">right</span>: <span class="dv">0</span><span class="op">;</span>}</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;body&gt;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">id</span> <span class="ot">=</span> <span class="st">"map"</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script&gt;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">'map'</span><span class="op">,</span> {<span class="dt">center</span><span class="op">:</span> [<span class="fl">46.944</span><span class="op">,</span> <span class="fl">8.028</span>]<span class="op">,</span><span class="dt">zoom</span><span class="op">:</span> <span class="dv">8</span>})<span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            L<span class="op">.</span><span class="fu">tileLayer</span>(<span class="st">'https://api.maptiler.com/maps/streets-v2/256/{z}/{x}/{y}.png?key=4X87DmrzALHNsvjVPyhW'</span><span class="op">,</span> {<span class="dt">attribution</span><span class="op">:</span> <span class="st">'&lt;a href="https://www.maptiler.com/copyright/" target="_blank"&gt;&amp;copy; MapTiler&lt;/a&gt; &lt;a href="https://www.openstreetmap.org/copyright" target="_blank"&gt;&amp;copy; OpenStreetMap contributors&lt;/a&gt;'</span>})<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Speichert das Dokument (<strong>index.html</strong>) und öffnet es in Eurem bevorzugten Browser. Das Ergebnis sollte ähnlich aussehen wie <a href="#fig-figure4">Abbildung&nbsp;<span>63.4</span></a>.</li>
+</ul>
+<div id="fig-figure4" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_5.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.4: Interaktive Webkarte mit Leaflet JavaScript-Bibliothek</figcaption>
+</figure>
+</div>
+</section>
+<section id="übung-3-geojson-datei-zur-webkarte-hinzufügen" class="level2">
+<h2 class="anchored" data-anchor-id="übung-3-geojson-datei-zur-webkarte-hinzufügen">Übung 3: GeoJson-Datei zur Webkarte hinzufügen</h2>
+<p><strong>GeoJson</strong> ist ein sehr verbreitetes Dateiformat zur Kodierung einer Vielzahl von geografischen Datenstrukturen. In der Webkartenentwicklung können GeoJson Variablen innerhalb einer JavaScript-Datei zugewiesen werden.</p>
+<ul>
+<li><p>Ladet von <a href="https://drive.switch.ch/index.php/s/4ycg5kvYoEIp4we/download">Drive Switch</a> die Übungsdateien herunter und speichert alles im gleichen Ordner, in dem Euer Dokument <strong><em>index.html</em></strong> liegt. Einer der Hauptvorteile von JavaScript ist, dass es sich gut in ein HTML-Dokument integrieren lässt. Mit den Tags <em>`<code>&lt;script&gt;&lt;/script&gt;</code></em> können wir beliebig viele JavaScript-Dateien mit dem Haupt-HTML-Dokument verknüpfen. Dies werden wir mit der Datei <strong><em>kantons.js</em></strong> tun.</p></li>
+<li><p>Verknüpft die Datei <strong><em>kantons.js</em></strong> im Head Eueres Dokuments (nach dem Leaflet Script) wie folgt:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"kantons.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Öffnet nun die Datei <strong><em>kantons.js</em></strong> und kopiert den Namen der Variable, in der die Geojson-Daten gespeichert sind. Fügt diese anschliessend wie folgt zu Eurer Karte hinzu:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>L<span class="op">.</span><span class="fu">geoJSON</span>(nameOfTheVariable)<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>Nach dem Speichern und Aktualisieren Eures index.html-Dokuments sollte Eure Karte wie <a href="#fig-figure5">Abbildung&nbsp;<span>63.5</span></a> aussehen.</p>
+<div id="fig-figure5" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_6.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.5: Interaktive Webkarte mit den Kantonen der Schweiz</figcaption>
+</figure>
+</div>
+</section>
+<section id="übung-4-farbe-in-die-webkarte-einbringen" class="level2">
+<h2 class="anchored" data-anchor-id="übung-4-farbe-in-die-webkarte-einbringen">Übung 4: Farbe in die Webkarte einbringen</h2>
+<p>Das Ziel dieser Übung ist die Entwicklung einer interaktiven Choroplethenkarte. Jeder der räumlichen Einheiten (Kanton der Schweiz), wird eine Farbe zugewiesen. Jede Farbe basiert dabei auf einem spezifischen Geojson-Attribut, in unserem Fall die Bevölkerungszahl jedes Kantons.</p>
+<ul>
+<li>Öffnet erneut die Datei <strong>kantons.js</strong> und untersuchet die Geojson-Datei. Suchet nach dem Attribut welches die Bevölkerungszahl der Kantone representiert (siehe <a href="#fig-figure6">Abbildung&nbsp;<span>63.6</span></a>).</li>
+</ul>
+<div id="fig-figure6" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_7.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.6: JavaScript-Datei mit einer Sammlung von geografischen Datenstrukturen im Geojson-Format</figcaption>
+</figure>
+</div>
+<ul>
+<li><p>Als Nächstes werden wir die folgenden beiden Funktionen (<strong><em>getColor(d), style(feature)</em></strong>) verwenden, um jedem Kanton eine Farbe auf der Grundlage seiner Bevölkerungszahl zuzuweisen. Kopiert die folgenden Funktionen und fügt diese nach der <strong><em>map-Variablen</em></strong> in Euer Dokument ein.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getColor</span>(d) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> d <span class="op">&gt;</span> <span class="dv">1000000</span> <span class="op">?</span> <span class="st">'#084594'</span> <span class="op">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    d <span class="op">&gt;</span> <span class="dv">500000</span> <span class="op">?</span> <span class="st">'#2171b5'</span> <span class="op">:</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    d <span class="op">&gt;</span> <span class="dv">200000</span> <span class="op">?</span> <span class="st">'#4292c6'</span> <span class="op">:</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    d <span class="op">&gt;</span> <span class="dv">100000</span> <span class="op">?</span> <span class="st">'#6baed6'</span> <span class="op">:</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    d <span class="op">&gt;</span> <span class="dv">50000</span> <span class="op">?</span> <span class="st">'#9ecae1'</span> <span class="op">:</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    d <span class="op">&gt;</span> <span class="dv">20000</span> <span class="op">?</span> <span class="st">'#c6dbef'</span> <span class="op">:</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    d <span class="op">&gt;</span> <span class="dv">10000</span> <span class="op">?</span> <span class="st">'#deebf7'</span> <span class="op">:</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'#f7fbff'</span><span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">style</span>(feature) {</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">// using the population property as argument</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fillColor</span><span class="op">:</span> <span class="fu">getColor</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">Bevolkerung</span>)<span class="op">,</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        <span class="dt">color</span><span class="op">:</span> <span class="st">'white'</span><span class="op">,</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        <span class="dt">dashArray</span><span class="op">:</span> <span class="st">'3'</span><span class="op">,</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Die erste Funktion (<strong><em>getColor(d)</em></strong>) gibt das Argument <strong>d</strong> als Farbcode (z.B. <code>#9ecae1</code>) zurück, nachdem dessen Wert überprüft wurde. Wenn d zum Beispiel grösser als 1’000’000 ist, erhalten wir die Farbe <code>#084594</code>.</p>
+<p>Die Funktion (<strong><em>getColor(d)</em></strong>) wird dann innerhalb der zweiten Funktion (<strong><em>style(feature)</em></strong>) aufgerufen und nimmt als Argument das Attribut Bevolkerung der Variable kantons, die in der Datei <strong><em>kantons.js</em></strong> gespeichert ist. Schliesslich weist die Funktion <strong><em>style(feature)</em></strong> als Füllfarbe (fillColor) das Ergebnis der Funktion <strong><em>getColor(d)</em></strong> zu.</p></li>
+<li><p>Wir fügen nun als Style-Eigenschaft unseres <strong>L.geoJson</strong>-Objekts die Funktion <strong><em>style(feature)</em></strong> wie folgt hinzu:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>L<span class="op">.</span><span class="fu">geoJSON</span>(kantons<span class="op">,</span> {<span class="dt">style</span><span class="op">:</span> style})<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>Nachdem Euer Dokument gespeichert und Euer Browser aktualisiert ist, sollte Eure Karte wie <a href="#fig-figure7">Abbildung&nbsp;<span>63.7</span></a> aussehen.</p>
+<div id="fig-figure7" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_8.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.7: Web Interaktive Choroplethenkarte mit den Kantonen der Schweiz</figcaption>
+</figure>
+</div>
+</section>
+<section id="übung-5-hinzufügen-von-interaktion-zur-webkarte" class="level2">
+<h2 class="anchored" data-anchor-id="übung-5-hinzufügen-von-interaktion-zur-webkarte">Übung 5: Hinzufügen von Interaktion zur Webkarte</h2>
+<p>Nachdem wir die Choroplethenkarte entwickelt haben, wäre es schön, wenn wir ihr etwas Interaktivität geben könnten. Dazu verwenden wir eine der wichtigsten Funktionen von JavaScript, den Event Listener. Kurz gesagt definieren Event Listener die Art und Weise, wie die Endbenutzer mit dem Webinhalt interagieren können. Der wohl bekannteste ist der Onclick-Listener. Onclick-Listener definieren, was passiert, wenn der Benutzer irgendwo auf der Seite klickt. In unserem Fall ist es unser Ziel, dass wir auf jede räumlichen Einheiten (Kantone) in unserer Karte klicken können und wir im Gegenzug möglichst viele Informationen zurückerhalten. Genauer gesagt wollen wir, dass bei jedem Klick auf einen Kanton der Name und die Bevölkerungszahl auf dem Bildschirm angezeigt wird.</p>
+<p>In einem ersten Schritt müssen wir sicherstellen, dass unsere GeoJSON-Ebene über eine Variable zugänglich ist, indem wir sie vor unseren Listenern definieren.</p>
+<ul>
+<li><p>Erstellt eine Variable mit dem Namen geojson, direkt nach der Variable map wie folgt:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">"map"</span><span class="op">,</span> {<span class="dt">center</span><span class="op">:</span> [<span class="fl">46.984</span><span class="op">,</span> <span class="fl">8.950</span>]<span class="op">,</span> <span class="dt">zoom</span><span class="op">:</span><span class="dv">7</span>})<span class="op">;</span> <span class="co">// focus on Switzerland</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> geojson<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Zuerst definieren wir, was bei einem Klick passieren soll. In userem Fall soll ein Popup mit dem Namen und der Bevölkerungszahl des Kontons erscheinen. Die Funktion sieht wie folgt aus:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">showInfo</span>(e) {</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    geojson<span class="op">.</span><span class="fu">bindPopup</span>(<span class="st">"Kanton: "</span> <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">feature</span><span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">NAME</span> <span class="op">+</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;/b&gt;&lt;br /&gt;'</span> <span class="op">+</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bevolkerung: "</span> <span class="op">+</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">feature</span><span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">Bevolkerung</span>)<span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In der obigen Funktion (<strong><em>showInfo(e)</em></strong>) verknüpfen wir mit unserer Geojson-Variable ein <strong><em>Popup</em></strong>-Objekt (<a href="https://leafletjs.com/reference.html#popup">Leaflet popup</a>), in das wir einen Text sowie die Attribute <strong>NAME</strong> und <strong>Bevolkerung</strong> jedes der in unserem <strong><em>e.target</em></strong>-Objekt enthaltenen räumlichen Merkmale einbinden. In unserem Fall ist das <strong><em>e.target</em></strong>-Objekt die Variable <strong><em>kantons</em></strong> (gespeichert in der Datei <strong><em>kantons.js</em></strong>). (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/target">Mehr über e.target</a>)</p></li>
+<li><p>Als nächsten Schritt verwenden wir die Funktion <strong><em>onEachFeature</em></strong>, um die Funktion <strong><em>showInfo(e)</em></strong> mit dem onclick-Listener zu verknüpfen. Dies ist die Standardfunktion zur Verknüpfung der JavaScript-Listener mit den jeweiligen Funktionen, die für die Ausführung einer bestimmten Aufgabe erstellt wurden. Wir hätten zum Beispiel eine andere Funktion definieren können, die jedes Mal aufgerufen wird, wenn wir den Mauszeiger über ein bestimmtes Element unserer HTML-Struktur bewegen. In unserem Fall definieren wir den <strong><em>onclick listener</em></strong> wie folgt:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onEachFeature</span>(feature<span class="op">,</span> layer) {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    layer<span class="op">.</span><span class="fu">on</span>({</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">click</span><span class="op">:</span> showInfo</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Der letzte Schritt besteht darin, unsere GeoJSON-Ebene anzupassen, indem wir ihr die Option onEachFeature hinzufügen (<a href="https://docs.eegeo.com/eegeo.js/v0.1.780/docs/leaflet/L.GeoJson/">L.geoJson documentation</a>).</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>geojson <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(kantons<span class="op">,</span> {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">style</span><span class="op">:</span> style<span class="op">,</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">onEachFeature</span><span class="op">:</span> onEachFeature</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+<p>Nachdem Ihr Eure HTML-Struktur aktualisiert habt, speichert Eure Datei <strong><em>index.html</em></strong> und aktualisiert den Browser. Versucht nun auf der Karte herumzuklicken und schaut was passiert. Ihr solltet etwas ähnliches sehen wie <a href="#fig-figure8">Abbildung&nbsp;<span>63.8</span></a>.</p>
+<div id="fig-figure8" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_9.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.8: Web Interaktive Choroplethenkarte mit den Kantonen der Schweiz (mit Interaktivität)</figcaption>
+</figure>
+</div>
+</section>
+<section id="übung-6-der-webkarte-eine-legende-hinzufügen" class="level2">
+<h2 class="anchored" data-anchor-id="übung-6-der-webkarte-eine-legende-hinzufügen">Übung 6: Der Webkarte eine Legende hinzufügen</h2>
+<p>Um eine Legende zu unserer Webkarte hinzuzufügen, werden wir JavaScript und CSS verwenden.</p>
+<ul>
+<li><p>Verwendet die beiden verbleibenden Dateien <strong><em>control.js</em></strong> und <strong><em>control.css</em></strong> (zu finden im Ordner data). Speichert diese beiden Dateien in Eurem Arbeitsverzeichnis (der Pfad, in dem sich auch index.html und kantons.js befinden)</p></li>
+<li><p>Verknüpft diese beiden Dateien mit Eurem Haupt-HTML-Dokument am Ende des Body-Abschnitts wie folgt.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Linking the js and css code for the legend --&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"control.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text/css"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"control.css"</span><span class="kw">/&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Speichert die Datei <strong><em>index.html</em></strong> und aktualisieren die Browserseite. Die Webseite sollte nun wie <a href="#fig-figure9">Abbildung&nbsp;<span>63.9</span></a> aussehen.</p></li>
+</ul>
+<div id="fig-figure9" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="figures/web_map_leaflet_10.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;63.9: Web Interaktive Choroplethenkarte mit den Kantonen der Schweiz (Endgültige Version)</figcaption>
+</figure>
+</div>
+<p>Öffnet die beiden Dateien, die Ihr zuletzt zur Karte hinzugefügt habt, und versucht, den darin enthaltenen Code zu interpretieren. Versucht, etwas zu ändern und seht anschliessend, wie sich diese Aktion auf Eure Karte auswirkt.</p>
+<p><strong>Glückwunsch!!</strong> Ihr habt soeben Eure erste voll funktionsfähige interaktive Webkarte erstellt und dabei nur die grundlegenden Webtechnologien verwendet. Man könnte dieses HTML nun zum Beispiel über <a href="https://app.netlify.com/drop">Netlify Drop</a> Online zur Verfügung stellen.</p>
+</section>
+<section id="endgültige-lösung" class="level2">
+<h2 class="anchored" data-anchor-id="endgültige-lösung">Endgültige Lösung</h2>
+<p><strong>index.html</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;head&gt;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">"sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">""</span> <span class="kw">/&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">"sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">""</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"kantons.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;style&gt;</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>            <span class="pp">#map</span> {<span class="kw">position</span>: <span class="dv">absolute</span><span class="op">;</span> <span class="kw">top</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span> <span class="kw">right</span>: <span class="dv">0</span><span class="op">;</span>}</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;body&gt;</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">id</span> <span class="ot">=</span> <span class="st">"map"</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script&gt;</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> map <span class="op">=</span> L<span class="op">.</span><span class="fu">map</span>(<span class="st">'map'</span><span class="op">,</span> {<span class="dt">center</span><span class="op">:</span> [<span class="fl">46.944</span><span class="op">,</span> <span class="fl">8.028</span>]<span class="op">,</span><span class="dt">zoom</span><span class="op">:</span> <span class="dv">8</span>})<span class="op">;</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>            <span class="kw">var</span> geojson<span class="op">;</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>            <span class="co">// function for coloring the cantons based on their population property</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>            <span class="kw">function</span> <span class="fu">getColor</span>(d) {</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> d <span class="op">&gt;</span> <span class="dv">1000000</span> <span class="op">?</span> <span class="st">'#084594'</span> <span class="op">:</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>                d <span class="op">&gt;</span> <span class="dv">500000</span> <span class="op">?</span> <span class="st">'#2171b5'</span> <span class="op">:</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>                d <span class="op">&gt;</span> <span class="dv">200000</span> <span class="op">?</span> <span class="st">'#4292c6'</span> <span class="op">:</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>                d <span class="op">&gt;</span> <span class="dv">100000</span> <span class="op">?</span> <span class="st">'#6baed6'</span> <span class="op">:</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>                d <span class="op">&gt;</span> <span class="dv">50000</span> <span class="op">?</span> <span class="st">'#9ecae1'</span> <span class="op">:</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>                d <span class="op">&gt;</span> <span class="dv">20000</span> <span class="op">?</span> <span class="st">'#c6dbef'</span> <span class="op">:</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>                d <span class="op">&gt;</span> <span class="dv">10000</span> <span class="op">?</span> <span class="st">'#deebf7'</span> <span class="op">:</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>                <span class="st">'#f7fbff'</span><span class="op">;</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>            <span class="kw">function</span> <span class="fu">style</span>(feature) {</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> {</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">fillColor</span><span class="op">:</span> <span class="fu">getColor</span>(feature<span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">Bevolkerung</span>)<span class="op">,</span> <span class="co">// using the population property as argument</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">weight</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">color</span><span class="op">:</span> <span class="st">'white'</span><span class="op">,</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">dashArray</span><span class="op">:</span> <span class="st">'3'</span><span class="op">,</span></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.7</span></span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>               }<span class="op">;</span></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>           }</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>           </span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>            <span class="kw">function</span> <span class="fu">showInfo</span>(e) {</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>                geojson<span class="op">.</span><span class="fu">bindPopup</span>(<span class="st">"Kanton: "</span> <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">feature</span><span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">NAME</span> <span class="op">+</span> <span class="st">'&lt;/b&gt;&lt;br/&gt;'</span> <span class="op">+</span> <span class="st">"Bevolkerung: "</span> <span class="op">+</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">feature</span><span class="op">.</span><span class="at">properties</span><span class="op">.</span><span class="at">Bevolkerung</span>)<span class="op">;</span></span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>            <span class="kw">function</span> <span class="fu">onEachFeature</span>(feature<span class="op">,</span> layer) {</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>                layer<span class="op">.</span><span class="fu">on</span>({</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>                    <span class="dt">click</span><span class="op">:</span> showInfo</span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>                })<span class="op">;</span></span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>            L<span class="op">.</span><span class="fu">tileLayer</span>(<span class="st">'https://api.maptiler.com/maps/streets-v2/256/{z}/{x}/{y}.png?key=4X87DmrzALHNsvjVPyhW'</span><span class="op">,</span> {<span class="dt">attribution</span><span class="op">:</span> <span class="st">'&lt;a href="https://www.maptiler.com/copyright/" target="_blank"&gt;&amp;copy; MapTiler&lt;/a&gt; &lt;a href="https://www.openstreetmap.org/copyright" target="_blank"&gt;&amp;copy; OpenStreetMap contributors&lt;/a&gt;'</span>})<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a>            geojson <span class="op">=</span> L<span class="op">.</span><span class="fu">geoJson</span>(kantons<span class="op">,</span> {</span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>                <span class="dt">style</span><span class="op">:</span> style<span class="op">,</span></span>
+<span id="cb17-54"><a href="#cb17-54" aria-hidden="true" tabindex="-1"></a>                <span class="dt">onEachFeature</span><span class="op">:</span> onEachFeature</span>
+<span id="cb17-55"><a href="#cb17-55" aria-hidden="true" tabindex="-1"></a>            })<span class="op">.</span><span class="fu">addTo</span>(map)<span class="op">;</span></span>
+<span id="cb17-56"><a href="#cb17-56" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb17-57"><a href="#cb17-57" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb17-58"><a href="#cb17-58" aria-hidden="true" tabindex="-1"></a>        <span class="co">&lt;!-- Linking the js and css code for the legend --&gt;</span></span>
+<span id="cb17-59"><a href="#cb17-59" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">"control.js"</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb17-60"><a href="#cb17-60" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">"stylesheet"</span> <span class="er">type</span><span class="ot">=</span><span class="st">"text/css"</span> <span class="er">href</span><span class="ot">=</span><span class="st">"control.css"</span><span class="kw">/&gt;</span></span>
+<span id="cb17-61"><a href="#cb17-61" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb17-62"><a href="#cb17-62" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'alternate';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../E_WebGIS_2/1_Einleitung.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">WebGIS II</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../Anleitung_fuer_Dozierende.html" class="pagination-link">
+        <span class="nav-page-text">Anleitung für Dozierende</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
