@@ -1,9 +1,9 @@
 ---
-echo: true                      # set "to true" to show solutions
-code-fold: true                 # set "to true" to show solutions
-code-summary: "Musterlösung"     
+output: false
+echo: false                      # set to true to show solution
+code-fold: false                 # set to true to show solution
+code-summary: "Musterlösung"    
 ---
-
 ## Übung 14
 
 Nun ist es Zeit, dass ihr selbst mit *GeoDataFrames* Hand anlegt. Achtet dabei immer auf die Datentypen eurer Daten (mit `type`) und konsultiert dazu @sec-pythongis-datenstruktur. Zudem ist Geopandas gut dokumentiert, es lohnt ich diese immer wieder zu konsultieren: [geopandas.org](https://geopandas.org)

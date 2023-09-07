@@ -1,8 +1,8 @@
 ---
 output: false
-echo: true                      # set "to true" to show solutions
-code-fold: true                 # set "to true" to show solutions
-code-summary: "Musterlösung"     
+echo: false                      # set to true to show solution
+code-fold: false                 # set to true to show solution
+code-summary: "Musterlösung"    
 ---
 
 # Übung 9

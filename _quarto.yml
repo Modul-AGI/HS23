@@ -17,7 +17,6 @@ format:
       - custom.css
 #      - present-exercises.css
 
-
 execute:
   freeze: true
   error: true

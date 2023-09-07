@@ -1,10 +1,9 @@
 ---
 output: false
-echo: true                      # activate this PERMENANTLY to show solutions
-code-fold: true                 # activate this PERMENANTLY to show solutions
-code-summary: "Musterlösung"    # activate this PERMENANTLY to show solutions
+echo: false                      # set to true to show solution
+code-fold: false                 # set to true to show solution
+code-summary: "Musterlösung"    
 ---
-
 
 # Übung 4
 
