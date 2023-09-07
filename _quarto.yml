@@ -25,7 +25,7 @@ execute:
   message: false
     
 book:
-  title: "Modul AGI HS22"
+  title: "Modul AGI HS23"
   author: "Forschungsgruppe Geoinformatik"
   reader-mode: true
   sidebar: 
