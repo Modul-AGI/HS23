@@ -1,3 +1,4 @@
+
 ## Quarto book stup
 
 Currently, we're using <https://quarto.org/docs/publishing/github-pages.html#github-action> to publish this website.
