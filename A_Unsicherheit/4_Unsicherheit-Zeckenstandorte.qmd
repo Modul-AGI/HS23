@@ -22,7 +22,7 @@ Hinweis: Speichere die Output Grouped Table direkt auf Datenbank-Ebene und nicht
 :::{.callout-note}
 ## ArcGIS Pro Help: Geoprocessing Tool Summarize Within
 
-<https://pro.arcgis.com/en/pro-app/tool-reference/analysis/summarize-within.htm>{target="_blank"}
+<https://pro.arcgis.com/en/pro-app/latest/tool-reference/geoanalytics-desktop/summarize-within.htm>{target="_blank"}
 :::
 
 Überprüfe anschliessend die beiden generierten Outputs (Tabelle und Feature Class). Welche Informationen sind darin enthalten? Was bedeuten die Werte in den Feldern Join ID, Run_Nr und Count of Points innerhalb der Output Grouped Table?
