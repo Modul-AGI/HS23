@@ -16,6 +16,8 @@ format:
     css:
       - custom.css
 #      - present-exercises.css
+    include-in-header:
+        script.html
 
 execute:
   freeze: true
@@ -23,15 +25,18 @@ execute:
   echo: true
   output: true
   message: false
+  warning: false
     
 book:
   title: "Modul AGI HS23"
   author: "Forschungsgruppe Geoinformatik"
   reader-mode: true
   sidebar: 
+    position: left
     logo: zhaw_sw_neg.png
     collapse-level: 1
-    style: floating 
+    style: floating
+  body-footer: <button class="presenter-btn" onClick="presenter()">Presenter</button>
   chapters:
     - index.qmd
     - part: "A_Unsicherheit/1_Einleitung.qmd"
@@ -54,10 +59,12 @@ book:
       - B_Programmieren_1/9_Uebung_3.qmd
       - B_Programmieren_1/10_Tabellarische_Daten.qmd
       - B_Programmieren_1/11_Uebung_4.qmd
+      - B_Programmieren_1/12_Uebung_5.qmd
     - part: "B_Programmieren_2/1_Einleitung.qmd"
       chapters:
       - B_Programmieren_2/2_Conda.qmd
       - B_Programmieren_2/3_Python_Module.qmd
+      - B_Programmieren_2/3_JupyterLab-Desktop.qmd
       - B_Programmieren_2/4_Functions_I.qmd
       - B_Programmieren_2/5_Uebung_5.qmd
       - B_Programmieren_2/6_Functions_II.qmd
