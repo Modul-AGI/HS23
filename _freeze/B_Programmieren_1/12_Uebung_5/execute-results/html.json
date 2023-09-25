@@ -1,0 +1,11 @@
+{
+  "hash": "295a3d85f4be05cb3c95df82f79406f0",
+  "result": {
+    "markdown": "---\noutput: false\necho: false                      # set to true to show solution\ncode-fold: false                 # set to true to show solution\ncode-summary: \"Musterlösung\"    \n---\n\n# Übung 5\n\nDiese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr müsst die Übung nicht verstehen, sondern nur ausführen. Meldet euch, falls es Probleme gibt.\n\n\n1. Startet Python Command Prompt (siehe [Python Command Prompt](#sec-python-command-prompt))\n2. Führt den Befehl: `conda create --name geopython` aus\n3. Bestätigt die Installation mit `y`\n4. Prüft, ob u.a. folgende Meldung im Terminal erscheint (meldet euch falls nicht):\n\n```sh\n#\n# To activate this environment, use\n#\n#     $ activate geopython\n#\n# To deactivate an active environment, use\n#\n#     $ deactivate\n```\n\n5. Führt den Befehl: `conda activate geopython` aus\n6. Prüft, ob die Eingabeforderung im Terminal nun mit `(geopython)` beginnt (meldet euch falls nicht)\n\n\n\n```{sh}\n(arcgispro-py3) C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3> # vorher\n\n(geopython)  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython> # nachher\n```\n\n\n5. Führt den folgenden Befehl aus: `conda install -c conda-forge jupyterlab geopandas matplotlib descartes`\n6. Bestätigt die Installation mit `y`\n\n",
+    "supporting": [
+      "12_Uebung_5_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
