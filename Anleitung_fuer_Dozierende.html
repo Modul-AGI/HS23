@@ -97,6 +97,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="custom.css">
 </head>
@@ -252,6 +261,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="./B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -271,6 +285,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -351,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="./B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -619,6 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
   <li><a href="#bilder" id="toc-bilder" class="nav-link" data-scroll-target="#bilder">Bilder</a></li>
   <li><a href="#übungsziele" id="toc-übungsziele" class="nav-link" data-scroll-target="#übungsziele">Übungsziele</a></li>
+  <li><a href="#presenter-mode" id="toc-presenter-mode" class="nav-link" data-scroll-target="#presenter-mode">Presenter mode</a></li>
   </ul>
 </nav>
     </div>
@@ -662,12 +682,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>… usw. (bis Stufe 6)</li>
 </ul></li>
 </ul>
-<p>Um im Text einen Querverweis auf ein Kapitel zu machen, müsst ihr diesem Zuerst eine eindeutige “ID” geben. Zum Beispiel sieht der Titel in <a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;17</span></a> folgendermassen aus:</p>
+<p>Um im Text einen Querverweis auf ein Kapitel zu machen, müsst ihr diesem Zuerst eine eindeutige “ID” geben. Zum Beispiel sieht der Titel in <a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;18</span></a> folgendermassen aus:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conda {#sec-conda}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Nun kann ich auf dieses Kapitel mit <code>@id</code> verweisen.</p>
 <ul>
 <li><code>@sec-conda</code> wird zu</li>
-<li><a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;17</span></a></li>
+<li><a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;18</span></a></li>
 </ul>
 <p>Das Verweisen funktioniert aber nur auf Nummerierte Kapitel und deren Unterkapitel.</p>
 <p>Mehr zum Markdown Syntax: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
@@ -788,11 +808,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Mehr zu diesen sogenannten <em>Callout Blocks</em>: <a href="https://quarto.org/docs/authoring/callouts.html" class="uri">https://quarto.org/docs/authoring/callouts.html</a></p>
+</section>
+<section id="presenter-mode" class="level2">
+<h2 class="anchored" data-anchor-id="presenter-mode">Presenter mode</h2>
+<p>Führe in der Konsole den JS code <code>presenter()</code> aus, um in den Präsentationsmodus zu gelangen (<code>padding-top</code> für alle h2`).</p>
 
 
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

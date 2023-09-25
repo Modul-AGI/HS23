@@ -64,6 +64,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -77,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html"><span class="chapter-number">48</span>&nbsp; <span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html"><span class="chapter-number">50</span>&nbsp; <span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -219,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +252,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -617,7 +636,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Starten Sie pgAdmin.</li>
 <li>Im Dashboard klicken Sie auf NEW Server und geben die folgenden Verbindungsparameter ein:</li>
 <li>Register General: Name: svma‐s‐01323_modulagi_pdb_studentNr. Verwenden Sie dabei die Nr. Ihres zugewiesenen Benutzers.</li>
-<li>Register Connection (siehe <a href="#fig-db3-uebung1-1">Abbildung&nbsp;<span>48.1</span></a>):
+<li>Register Connection (siehe <a href="#fig-db3-uebung1-1">Abbildung&nbsp;<span>50.1</span></a>):
 <ul>
 <li>Host name/address: svma‐s‐01323.zhaw.ch</li>
 <li>Port: 5432</li>
@@ -632,7 +651,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-db3-uebung1-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung1-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;48.1: Register Connection pgAdmin</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;50.1: Register Connection pgAdmin</figcaption>
 </figure>
 </div>
 </section>
@@ -643,7 +662,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Starten Sie ArcGIS Pro und erstellen Sie ein neues Projekt “Pflanzendatenbank_III”.</li>
 <li>Sie können alle folgenden Übungen in diesem Projekt durchführen.</li>
 <li>Navigieren Sie im Catalog Fenster zum Eintrag Databases. Über das Kontextmenü (Rechtsklick) können Sie eine neue Datenbankverbindung herstellen.</li>
-<li>Verwenden Sie folgende Parameter (siehe <a href="#fig-db3-uebung2-1">Abbildung&nbsp;<span>48.2</span></a>):
+<li>Verwenden Sie folgende Parameter (siehe <a href="#fig-db3-uebung2-1">Abbildung&nbsp;<span>50.2</span></a>):
 <ul>
 <li>Database Platform: PostgreSQL</li>
 <li>Instance: svma-s-01323.zhaw.ch</li>
@@ -658,14 +677,16 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-db3-uebung2-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung2-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;48.2: Register Connection ArcGIS Pro</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;50.2: Register Connection ArcGIS Pro</figcaption>
 </figure>
 </div>
 
 
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

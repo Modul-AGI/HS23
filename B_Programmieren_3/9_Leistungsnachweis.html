@@ -64,6 +64,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -77,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/9_Leistungsnachweis.html"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Leistungsnachweis</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/9_Leistungsnachweis.html"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Leistungsnachweis</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -219,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +252,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -612,15 +631,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="ziel-und-vorgehen" class="level2">
 <h2 class="anchored" data-anchor-id="ziel-und-vorgehen">Ziel und Vorgehen</h2>
 <p>Für den Leistungsnachweis von <em>Programmieren</em> sollt ihr den Anteil der Zeckenstiche im Wald unter der Berücksichtigung der Unsicherheit mit einer Monte Carlo Simulation ermitteln.</p>
-<p>Gehe dazu wie folgt vor: Erstelle einen <code>for loop</code> (siehe <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;32</span></a>), welcher pro Iteration folgende Schritte ausführt:</p>
+<p>Gehe dazu wie folgt vor: Erstelle einen <code>for loop</code> (siehe <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;34</span></a>), welcher pro Iteration folgende Schritte ausführt:</p>
 <ol type="1">
 <li>Schritt: Zeckenstiche importieren</li>
-<li>Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html"><span>Kapitel&nbsp;27</span></a>)</li>
-<li>Schritt: Simulierte Zeckenstiche von pandas DataFrame in <em>geo</em>pandas <em>Geo</em>DataFrame umwandeln (siehe <a href="5_GIS_in_Python.html#sec-pythongis-geodataframe"><span>Kapitel&nbsp;36.1</span></a>)</li>
+<li>Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html"><span>Kapitel&nbsp;29</span></a>)</li>
+<li>Schritt: Simulierte Zeckenstiche von pandas DataFrame in <em>geo</em>pandas <em>Geo</em>DataFrame umwandeln (siehe <a href="5_GIS_in_Python.html#sec-pythongis-geodataframe"><span>Kapitel&nbsp;38.1</span></a>)</li>
 <li>Schritt: Spatial Join mit wald.gpkg</li>
-<li>Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe <a href="7_Spatial_Joins.html"><span>Kapitel&nbsp;39</span></a>)</li>
+<li>Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe <a href="7_Spatial_Joins.html"><span>Kapitel&nbsp;41</span></a>)</li>
 <li>Schritt: Schritte 2 - 5 mindestens 50x Wiederholen (<code>for loop</code>)</li>
-<li>Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe <a href="8_Daten_Visualisieren.html"><span>Kapitel&nbsp;41</span></a>)</li>
+<li>Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe <a href="8_Daten_Visualisieren.html"><span>Kapitel&nbsp;43</span></a>)</li>
 <li>Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen</li>
 </ol>
 <p><img src="figures/mermaid-diagram-2022-10-13-112927.svg" class="img-fluid"></p>
@@ -631,7 +650,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>mit dem <strong>ganzen</strong> Datensatz <code>zeckenstiche_full.csv</code> (1’076 Meldungen, siehe <a href="../B_Programmieren_1/1_Einleitung.html#tbl-datensaetze">Tabelle&nbsp;<span>1</span></a>)</li>
 <li>mit mindestens 50 Iterationen</li>
-<li>mit drei verschiedenen Distanz-Werten (<code>distance =</code> in <a href="../B_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function"><span>Kapitel&nbsp;26.5</span></a>).</li>
+<li>mit drei verschiedenen Distanz-Werten (<code>distance =</code> in <a href="../B_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function"><span>Kapitel&nbsp;28.5</span></a>).</li>
 </ul>
 <p>Visualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)</p>
 </section>
@@ -676,7 +695,9 @@ ul.task-list li input[type="checkbox"] {
 
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

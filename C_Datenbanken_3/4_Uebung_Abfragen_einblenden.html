@@ -64,6 +64,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -77,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -219,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +252,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -609,7 +628,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In den nächsten Übungen wollen wir mit den Daten in unserer Beispiel-Datenbank umgehen (siehe <a href="#fig-db3-uebung3-1">Abbildung&nbsp;<span>49.1</span></a>). Dazu versuchen wir die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen “modulagi_pdb”. Verwenden Sie, wenn nicht anders angegeben diese Datenbank. Erstellen Sie zunächst noch einen beliebigen Ordner auf Ihrem Rechner in welchem wir die jeweiligen Ergebnisse speichern können. Sie finden ein Datenbankschema der Pflanzendatenbank auf dem Moodle. Dies hilft Ihnen beim Verständnis der Datenbank und seinen Beziehungen. Nutzen Sie auch die PostGIS Referenz, um die PostGIS Funktionen zu verstehen.</p>
+<p>In den nächsten Übungen wollen wir mit den Daten in unserer Beispiel-Datenbank umgehen (siehe <a href="#fig-db3-uebung3-1">Abbildung&nbsp;<span>51.1</span></a>). Dazu versuchen wir die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen “modulagi_pdb”. Verwenden Sie, wenn nicht anders angegeben diese Datenbank. Erstellen Sie zunächst noch einen beliebigen Ordner auf Ihrem Rechner in welchem wir die jeweiligen Ergebnisse speichern können. Sie finden ein Datenbankschema der Pflanzendatenbank auf dem Moodle. Dies hilft Ihnen beim Verständnis der Datenbank und seinen Beziehungen. Nutzen Sie auch die PostGIS Referenz, um die PostGIS Funktionen zu verstehen.</p>
 <ul>
 <li><a href="https://moodle.zhaw.ch/mod/resource/view.php?id=580704">Datenbankschema</a></li>
 <li><a href="https://postgis.net/docs/manual-3.3/reference.html">PostGIS Referenz</a></li>
@@ -618,7 +637,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-db3-uebung3-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung3-1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;49.1: Datenbankschema: Pflanzendatenbank (die gelben Schlüssel sind Primärschlüssel, die blauen Pfeile sind Fremdschlüssel).</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;51.1: Datenbankschema: Pflanzendatenbank (die gelben Schlüssel sind Primärschlüssel, die blauen Pfeile sind Fremdschlüssel).</figcaption>
 </figure>
 </div>
 <section id="übung-3-werkzeug-make-query-table-anwenden" class="level2">
@@ -640,7 +659,7 @@ Tipp
 <ol type="1">
 <li>Starten Sie pgAdmin und verbinden Sie mit der Pflanzendatenbank “modulagi_pdb” mit Ihrem Benutzer studentNr.</li>
 <li>Probieren Sie folgende SQL-Abfrage zu formulieren.</li>
-<li>Suchen Sie alle Gattungen der Familie “Asteraceae”. Zeigen Sie den Namen der Familie und den Namen der Gattung an (siehe <a href="#fig-db3-uebung3-2">Abbildung&nbsp;<span>49.2</span></a>).</li>
+<li>Suchen Sie alle Gattungen der Familie “Asteraceae”. Zeigen Sie den Namen der Familie und den Namen der Gattung an (siehe <a href="#fig-db3-uebung3-2">Abbildung&nbsp;<span>51.2</span></a>).</li>
 <li>Starten Sie ArcGIS Pro und öffnen das Projekt “Pflanzendatenbank”.</li>
 <li>Erstellen Sie eine neue Karte.</li>
 <li>Öffnen Sie das Werkzeug “Make Query Table”</li>
@@ -681,7 +700,7 @@ Tipp
 <div id="fig-db3-uebung3-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung3-2.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;49.2: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;51.2: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
 </figure>
 </div>
 </section>
@@ -703,7 +722,7 @@ Tipp
 </div>
 <ol type="1">
 <li>Probieren Sie folgende SQL-Abfrage in pgAdmin zu formulieren.</li>
-<li>Suchen Sie den Standort aller Eichen (Gattung = Quercus). Zeigen Sie Gattung, Art und den Standort mit der objectid (Attribut shape + objectid) (siehe <a href="#fig-db3-uebung4-1">Abbildung&nbsp;<span>49.3</span></a>).</li>
+<li>Suchen Sie den Standort aller Eichen (Gattung = Quercus). Zeigen Sie Gattung, Art und den Standort mit der objectid (Attribut shape + objectid) (siehe <a href="#fig-db3-uebung4-1">Abbildung&nbsp;<span>51.3</span></a>).</li>
 <li>Wechseln Sie zu ArcGIS Pro.</li>
 <li>Öffnen Sie das Werkzeug “Make Query Layer”.</li>
 <li>Schreiben Sie das SQL-Query.</li>
@@ -758,7 +777,7 @@ Tipp
 <div id="fig-db3-uebung4-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung4-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;49.3: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;51.3: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
 </figure>
 </div>
 </section>
@@ -780,7 +799,7 @@ Tipp
 </div>
 <ol type="1">
 <li>Probieren Sie folgende SQL-Abfrage in pgAdmin zu formulieren.</li>
-<li>Machen Sie eine Liste mit allen Pflanzen des Kurses “UÖ Stauden Gärtnerisch”. Die Liste soll dabei die ID der Spezies, die Gattung, Art und Sorte der Pflanze sowie den Namen des Kurses und den Standort (Attribut shape) enthalten. Speichern Sie diese Abfrage als View mit dem Namen “pdb.view_kursliste_stauden_gaertnerisch_studentNr” in der Datenbank. (CREATE VIEW … AS SELECT…) (siehe <a href="#fig-db3-uebung5-1">Abbildung&nbsp;<span>49.4</span></a>).</li>
+<li>Machen Sie eine Liste mit allen Pflanzen des Kurses “UÖ Stauden Gärtnerisch”. Die Liste soll dabei die ID der Spezies, die Gattung, Art und Sorte der Pflanze sowie den Namen des Kurses und den Standort (Attribut shape) enthalten. Speichern Sie diese Abfrage als View mit dem Namen “pdb.view_kursliste_stauden_gaertnerisch_studentNr” in der Datenbank. (CREATE VIEW … AS SELECT…) (siehe <a href="#fig-db3-uebung5-1">Abbildung&nbsp;<span>51.4</span></a>).</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -798,7 +817,7 @@ Tipp
 <ol start="4" type="1">
 <li>Wechseln Sie zu ArcGIS Pro.</li>
 <li>Erneuern Sie die Datenbankverbindung (Refresh / F5), damit die neue View sichtbar ist.</li>
-<li>Eine View verhält sich wie eine neue Tabelle in ArcGIS Pro. Aus diesem Grund müsste die Tabelle eigentlich mit der Datenbank registriert werden. Sie erkennen dies auch in der Catalog Ansicht an dem nicht ausgefüllten Rechteck (siehe <a href="#fig-db3-uebung5-2">Abbildung&nbsp;<span>49.5</span></a>).</li>
+<li>Eine View verhält sich wie eine neue Tabelle in ArcGIS Pro. Aus diesem Grund müsste die Tabelle eigentlich mit der Datenbank registriert werden. Sie erkennen dies auch in der Catalog Ansicht an dem nicht ausgefüllten Rechteck (siehe <a href="#fig-db3-uebung5-2">Abbildung&nbsp;<span>51.5</span></a>).</li>
 <li>Eine Registrierung bewirkt das Freischalten der Geodatenbank-Funktionen für diese Tabelle, damit auch neue Daten erfasst und bearbeitet werden können. Da Ihr Benutzer studentNr keine Berechtigungen zum Schreiben im Datenbankschema auf der Datenbank hat, kann die Tabelle jetzt nicht registriert werden. Da wir aber die Tabelle nur abfragen wollen ist dies nicht weiter schlimm.</li>
 <li>Öffnen Sie das Werkzeug “Create Database View”.</li>
 <li>Speichern Sie mit dem Werkzeug eine identische Liste für den Kurs “UÖ Gehölze”. Geben Sie der View den Namen “pdb.view_kursliste_gehoelze_studentNr”. Sie können hierzu wieder das SQL-Select-Statement von oben kopieren (ohne den CREATE VIEW Teil) und den Kursnamen entsprechend anpassen.</li>
@@ -808,13 +827,13 @@ Tipp
 <div id="fig-db3-uebung5-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung5-1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;49.4: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;51.4: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
 </figure>
 </div>
 <div id="fig-db3-uebung5-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung5-2.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;49.5: Catalog Ansicht in ArcGIS Pro</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;51.5: Catalog Ansicht in ArcGIS Pro</figcaption>
 </figure>
 </div>
 </section>
@@ -845,7 +864,9 @@ Tipp
 
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

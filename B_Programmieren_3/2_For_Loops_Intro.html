@@ -98,6 +98,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -111,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/2_For_Loops_Intro.html"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">Einführung in *for loop*</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/2_For_Loops_Intro.html"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Einführung in *for loop*</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -253,6 +262,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -272,6 +286,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -352,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -644,7 +663,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="die-grundform" class="level2">
 <h2 class="anchored" data-anchor-id="die-grundform">Die Grundform</h2>
-<p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for loops</em>. Loops sind “Schleifen” wo eine Aufgabe beliebig lange wiederholt wird. Auch <em>for loops</em> sind im Grunde genommen simple. Auf den ersten Blick sieht eine <em>for loop</em> aus wie eine <em>Function</em> definition (siehe <a href="../B_Programmieren_2/4_Functions_I.html"><span>Kapitel&nbsp;19</span></a> und <a href="../B_Programmieren_2/6_Functions_II.html"><span>Kapitel&nbsp;21</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>for loop</em>.</p>
+<p>Nirgends ist der Aspekt der Automatisierung so sichtbar wie in <em>for loops</em>. Loops sind “Schleifen” wo eine Aufgabe beliebig lange wiederholt wird. Auch <em>for loops</em> sind im Grunde genommen simple. Auf den ersten Blick sieht eine <em>for loop</em> aus wie eine <em>Function</em> definition (siehe <a href="../B_Programmieren_2/4_Functions_I.html"><span>Kapitel&nbsp;21</span></a> und <a href="../B_Programmieren_2/6_Functions_II.html"><span>Kapitel&nbsp;23</span></a>). Im folgenden Beispiel seht ihr ein minimales Beispiel einer <em>for loop</em>.</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> platzhalter <span class="kw">in</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>]:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Iteration"</span>,platzhalter)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -680,18 +699,20 @@ Iteration 2</code></pre>
 </section>
 <section id="der-platzhalter" class="level2">
 <h2 class="anchored" data-anchor-id="der-platzhalter">Der Platzhalter</h2>
-<p>Die Platzhaltervariabel liegt immer zwischen <code>for</code> und <code>in</code>, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel <code>platzhalter</code> genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des <em>Loops</em> ihren Wert verändert. Mehr dazu in <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;32</span></a>.</p>
+<p>Die Platzhaltervariabel liegt immer zwischen <code>for</code> und <code>in</code>, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel <code>platzhalter</code> genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des <em>Loops</em> ihren Wert verändert. Mehr dazu in <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;34</span></a>.</p>
 
 
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Mit <code>print</code> können wir Variabeln in die Konsole “ausdrucken” lassen. Innerhalb von <code>print</code> können dazu verschiedene Variablen kommagetrennt aufgeführt werden, ohne sie mit <code>+</code> verbinden zu müssen wie damals in <a href="../B_Programmieren_2/4_Functions_I.html"><span>Kapitel&nbsp;19</span></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Mit <code>print</code> können wir Variabeln in die Konsole “ausdrucken” lassen. Innerhalb von <code>print</code> können dazu verschiedene Variablen kommagetrennt aufgeführt werden, ohne sie mit <code>+</code> verbinden zu müssen wie damals in <a href="../B_Programmieren_2/4_Functions_I.html"><span>Kapitel&nbsp;21</span></a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

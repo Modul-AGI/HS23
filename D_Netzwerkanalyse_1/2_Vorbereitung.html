@@ -64,6 +64,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -77,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">Netzwerkanalyse I</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html"><span class="chapter-number">51</span>&nbsp; <span class="chapter-title">Vorbereitung</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">Netzwerkanalyse I</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Vorbereitung</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -219,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +252,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -637,7 +656,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Laden Sie das File <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=662257">netzwerkanalyse.gpkg</a> von Moodle herunter. Hier befinden sich alle Datensätze, die im Laufe des Blocks “Netzwerkanalyse” benötigt werden:</p>
 <div id="tbl-datensaetze-netzwerkanalyse" class="anchored">
 <table class="table">
-<caption>Tabelle&nbsp;51.1: Datensätze im File <em>netzwerkanalyse.gpkg</em> für den Block “Netzwerkanalyse”</caption>
+<caption>Tabelle&nbsp;53.1: Datensätze im File <em>netzwerkanalyse.gpkg</em> für den Block “Netzwerkanalyse”</caption>
 <colgroup>
 <col style="width: 33%">
 <col style="width: 33%">
@@ -659,22 +678,22 @@ ul.task-list li input[type="checkbox"] {
 <tr class="even">
 <td style="text-align: left;">osm_highway</td>
 <td style="text-align: left;">EPSG 4326</td>
-<td style="text-align: left;">Alle “Highway” Linien aus dem OpenStreetmaps (Stand nach* <a href="#sec-ex-network-osmdownload"><span>Kapitel&nbsp;51.6</span></a>)</td>
+<td style="text-align: left;">Alle “Highway” Linien aus dem OpenStreetmaps (Stand nach* <a href="#sec-ex-network-osmdownload"><span>Kapitel&nbsp;53.6</span></a>)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">osm_highway_prepared</td>
 <td style="text-align: left;">EPSG 2056</td>
-<td style="text-align: left;">Alle “Highway” Linien transformiert und neu projiziert (Output aus <a href="3_QGIS.html#sec-ex-clip"><span>Kapitel&nbsp;52.2</span></a>)</td>
+<td style="text-align: left;">Alle “Highway” Linien transformiert und neu projiziert (Output aus <a href="3_QGIS.html#sec-ex-clip"><span>Kapitel&nbsp;54.2</span></a>)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">shops_waedenswil</td>
 <td style="text-align: left;">EPSG 2056</td>
-<td style="text-align: left;">Alle Läden in Wädenswil, für <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html#sec-ex-network-traveling-shops"><span>Kapitel&nbsp;55.2</span></a></td>
+<td style="text-align: left;">Alle Läden in Wädenswil, für <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html#sec-ex-network-traveling-shops"><span>Kapitel&nbsp;57.2</span></a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">buildings_waedenswil_polygons</td>
 <td style="text-align: left;">EPSG 2056</td>
-<td style="text-align: left;">Alle Gebäudestandorte (Polygon Daten) in Wädenswil, für <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html#sec-ex-network-traveling-buildings"><span>Kapitel&nbsp;55.3</span></a></td>
+<td style="text-align: left;">Alle Gebäudestandorte (Polygon Daten) in Wädenswil, für <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html#sec-ex-network-traveling-buildings"><span>Kapitel&nbsp;57.3</span></a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">abfallentsorgung_waedenswil</td>
@@ -684,7 +703,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td style="text-align: left;">waedenswil_centrality</td>
 <td style="text-align: left;">EPSG 2056</td>
-<td style="text-align: left;">Zentralitätsmasse für Wädenswil (aus <a href="4_GRASS_GIS.html#sec-ex-centrality-calculate"><span>Kapitel&nbsp;53.3</span></a>)</td>
+<td style="text-align: left;">Zentralitätsmasse für Wädenswil (aus <a href="4_GRASS_GIS.html#sec-ex-centrality-calculate"><span>Kapitel&nbsp;55.3</span></a>)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Haltestellen_waedenswil</td>
@@ -701,7 +720,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-qgisVersion" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/qgis322.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;51.1: QGIS Standalone Installer “Longterm release (most stable)” auf qgis.org</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.1: QGIS Standalone Installer “Longterm release (most stable)” auf qgis.org</figcaption>
 </figure>
 </div>
 </section>
@@ -716,7 +735,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Neues QGIS Projekt starten und Projektdatei speichern (Beachten Sie dazu die Empfehlungen am Anfang)</li>
 <li>CRS auf EPSG 2056 setzen</li>
-<li>Aus dem File <em>netzwerkanalyse.gpgk</em> den Layer <em>Gemeinde_Waedenswil</em> (siehe <a href="#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>51.1</span></a>) in QGIS Importieren</li>
+<li>Aus dem File <em>netzwerkanalyse.gpgk</em> den Layer <em>Gemeinde_Waedenswil</em> (siehe <a href="#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>53.1</span></a>) in QGIS Importieren</li>
 <li>Symbologie folgendermassen ändern: Fläche transparent, Stadtgrenze schwarz</li>
 </ol>
 </section>
@@ -780,7 +799,9 @@ Merken Sie sich:
 </ol>
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

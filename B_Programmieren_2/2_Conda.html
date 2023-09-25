@@ -98,6 +98,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -111,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_2/2_Conda.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Conda</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_2/2_Conda.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conda</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -253,6 +262,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -272,6 +286,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -352,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -654,28 +673,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="conda-environment-erstellen" class="level2">
 <h2 class="anchored" data-anchor-id="conda-environment-erstellen">Conda environment erstellen</h2>
-<p>Wenn man den <a href="chap-python-command-prompt">Python Command Prompt</a> startet, ist Conda bereits aktiviert. Dies ist daran erkennbar, dass vor dem Pfad (<code>C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3</code>) noch etwas in Klammern steht (<code>arcgispro-py3</code>, siehe <a href="#fig-python-cmd3">Abbildung&nbsp;<span>17.1</span></a>).</p>
-<p><code>arcgispro-py3</code> ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das “default Python Environment”, welches ArcGIS Pro jeweils nutzt (siehe <a href="#fig-arcgis-conda">Abbildung&nbsp;<span>17.2</span></a>). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: <em>Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.</em> Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.</p>
-<p>Um ein neues Environment mit dem Namen <code>agi-env</code> zu erstellen und aktivieren geht man wie folgt vor:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> agi-env           <span class="co"># erstellt das Environment</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">activate</span> agi-env                      <span class="co"># aktiviert das Environment</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (<code>agi-env</code>). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.</p>
+<p>Wenn man den <a href="chap-python-command-prompt">Python Command Prompt</a> startet, ist Conda bereits aktiviert. Dies ist daran erkennbar, dass vor dem Pfad (<code>C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3</code>) noch etwas in Klammern steht (<code>arcgispro-py3</code>, siehe <a href="#fig-python-cmd3">Abbildung&nbsp;<span>18.1</span></a>).</p>
+<p><code>arcgispro-py3</code> ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das “default Python Environment”, welches ArcGIS Pro jeweils nutzt (siehe <a href="#fig-arcgis-conda">Abbildung&nbsp;<span>18.2</span></a>). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: <em>Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.</em> Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.</p>
+<p>Um ein neues Environment mit dem Namen <code>geopython</code> zu erstellen und aktivieren geht man wie folgt vor:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> geopython           <span class="co"># erstellt das Environment</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">activate</span> geopython                      <span class="co"># aktiviert das Environment</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (<code>geopython</code>). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.</p>
 <div id="fig-python-cmd3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/python-command-prompt.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;17.1: Python Command Prompt (i.e.&nbsp;“Eingabeaufforderung”)</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;18.1: Python Command Prompt (i.e.&nbsp;“Eingabeaufforderung”)</figcaption>
 </figure>
 </div>
 <div id="fig-arcgis-conda" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/arcgis-conda-zoom.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;17.2: ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu <em>Projekt &gt; Python</em> navigiert.</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;18.2: ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu <em>Projekt &gt; Python</em> navigiert.</figcaption>
 </figure>
 </div>
 </section>
 <section id="conda-packages-installieren" class="level2">
 <h2 class="anchored" data-anchor-id="conda-packages-installieren">Conda packages installieren</h2>
-<p>Jetzt wo wir ein eigenes Conda Environment erstellt haben (<code>agi-env</code>) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit <code>conda list</code> sehen könnt (versucht es aus!).</p>
+<p>Jetzt wo wir ein eigenes Conda Environment erstellt haben (<code>geopython</code>) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit <code>conda list</code> sehen könnt (versucht es aus!).</p>
 <p>Letzte Woche hatten wir die Packages <a href="chap-dataframes"><code>pandas</code></a> sowie <a href="../B_Programmieren_1/7_JupyterNotebook.html"><code>jupyter lab</code></a> gebraucht. Diese Packages waren im Environment <code>arcgispro-py3</code> bereits vorinstalliert.</p>
 <!--Wir installieren diese nun selbst und nutzen die gewonnene Freiheit um statt `jupyter notebook` das Package `jupyter lab` zu installieren (`lab` ist der Nachfolger von `notebook`). -->
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab   <span class="co"># installiert jupyterlab </span></span>
@@ -719,12 +738,12 @@ Hinweis
 <tr class="even">
 <td style="text-align: left;"><strong>2. <em>Virtual environment</em> erstellen</strong> (erstellt eine neue Arbeitsumgebung)</td>
 <td style="text-align: left;">einmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)</td>
-<td style="text-align: left;">in der Konsole: <code>conda create --name agi-env</code></td>
+<td style="text-align: left;">in der Konsole: <code>conda create --name geopython</code></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>3. <em>Virutal environment</em> aktivieren</strong> (schaltet den “Bearbeitungsmodus” ein)</td>
 <td style="text-align: left;">jedes mal nöig wenn ein *Erweiterung installiert<strong> oder </strong>jupyter lab gestartet** werden soll</td>
-<td style="text-align: left;">in der Konsole <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>: <code>activate agi-env</code></td>
+<td style="text-align: left;">in der Konsole <a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>: <code>activate geopython</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>4. Jupyter lab installieren</strong> (fügt der virtuellen Umgebung diese IDE hinzu)</td>
@@ -757,12 +776,12 @@ Hinweis
 <li id="fn1"><p>Neben Conda gibt es noch den “Package Manager” <code>pip</code>, welchen wir im Unterricht aber nicht nutzen werden.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Mit Konsole ist unter Windows <em>cmd</em> gemeint (Windowstaste &gt; cmd). Unter Linux wird bash, auf Mac der Terminal verwendet.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>Unter Linux: <code>conda activate agi-env</code><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate agi-env</code>).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate agi-env</code>).<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Unter Linux: <code>conda activate geopython</code><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>In Programmieren I - III brauchen wir die Module <code>pandas</code>, <code>matplotlib</code>, <code>geopandas</code> und <code>descartes</code><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Dies macht sich bemerkbar duch die Fehlermeldung <code>ModuleNotFoundError: No module named 'pandas'</code><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate agi-env</code>).<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B <code>activate geopython</code>).<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn10"><p>Falls JupyterLabs läuft und dadurch die Konsole blockiert ist, gibt es folgende Möglichkeiten:</p>
 <ol type="1">
 <li>JupyterLabs beenden (<kdb>Ctrl</kdb> + <kdb>C</kdb>) &gt; Modul installieren &gt; JupyterLab nochmal starten</li>
@@ -773,7 +792,9 @@ Hinweis
 </ol>
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

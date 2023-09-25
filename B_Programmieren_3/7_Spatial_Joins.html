@@ -98,6 +98,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -111,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/7_Spatial_Joins.html"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Spatial Joins</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/7_Spatial_Joins.html"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">Spatial Joins</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -253,6 +265,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -272,6 +289,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -352,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -640,7 +662,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald Layer kennt ihr bereits aus dem Block “Datenqualität und Unsicherheit” und wir haben ihn in <a href="5_GIS_in_Python.html#sec-pythongis-formate"><span>Kapitel&nbsp;36.4</span></a> kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe <a href="../B_Programmieren_1/1_Einleitung.html#tbl-datensaetze">Tabelle&nbsp;<span>1</span></a>) als Geodaten einzulesen und in einer grossem Plot zu visualisieren.</p>
+<p>In dieser Aufgabe wollen wir für jeden Zeckenstich ermitteln, ob er sich im Wald befindet oder nicht. Den Wald Layer kennt ihr bereits aus dem Block “Datenqualität und Unsicherheit” und wir haben ihn in <a href="5_GIS_in_Python.html#sec-pythongis-formate"><span>Kapitel&nbsp;38.4</span></a> kurz angeschaut. Nutzen wir hier nochmal die Gelegenheit, um den Wald und die Zeckenstiche (siehe <a href="../B_Programmieren_1/1_Einleitung.html#tbl-datensaetze">Tabelle&nbsp;<span>1</span></a>) als Geodaten einzulesen und in einer grossem Plot zu visualisieren.</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -651,36 +673,172 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> ListedColormap</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.plot(column <span class="op">=</span> <span class="st">"Wald_text"</span>, legend <span class="op">=</span> <span class="va">True</span>, cmap <span class="op">=</span> ListedColormap([<span class="st">"green"</span>,<span class="st">"lightgrey"</span>]), figsize <span class="op">=</span> (<span class="dv">12</span>,<span class="dv">12</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> wald.plot(column <span class="op">=</span> <span class="st">"Wald_text"</span>, legend <span class="op">=</span> <span class="va">True</span>, cmap <span class="op">=</span> ListedColormap([<span class="st">"green"</span>,<span class="st">"lightgrey"</span>]))</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>zeckenstiche_gpd.plot(color <span class="op">=</span> <span class="st">"Red"</span>, ax <span class="op">=</span> base)</span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>base.set_xlim(minx <span class="op">-</span> <span class="dv">10</span>, maxx <span class="op">+</span> <span class="dv">10</span>) </span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>base.set_ylim(miny <span class="op">-</span> <span class="dv">10</span>, maxy <span class="op">+</span> <span class="dv">10</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>ModuleNotFoundError: No module named 'geopandas'</code></pre>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>base.set_ylim(miny <span class="op">-</span> <span class="dv">5</span>, maxy <span class="op">+</span> <span class="dv">5</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>(1250643.0, 1250730.0)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="7_Spatial_Joins_files/figure-html/cell-2-output-2.png" width="479" height="442"></p>
 </div>
 </div>
 <section id="wie-funktioniert-ein-spatial-join" class="level2">
 <h2 class="anchored" data-anchor-id="wie-funktioniert-ein-spatial-join">Wie funktioniert ein <em>Spatial Join</em>?</h2>
-<p>In <a href="5_GIS_in_Python.html"><span>Kapitel&nbsp;36</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code>geopandas</code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten “Spatial Joins”. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft “Wald: ja” / “Wald: nein” aus `wald zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
+<p>In <a href="5_GIS_in_Python.html"><span>Kapitel&nbsp;38</span></a> habt ihr euch mit den GIS-Funktionalitäten von <code>geopandas</code> vertraut gemacht. Eine ganz zentrale Funktion in GIS sind die sogenannten “Spatial Joins”. Dabei werden Attribute von einem Geodatensatz auf einen anderen Geodatensatz aufgrund einer räumlichen Beziehung der beiden Datensätze übertragen. Konkret auf unsere Zeckenstiche bedeutet dies: Jedem Zeckenstich sollte die Eigenschaft “Wald: ja” / “Wald: nein” aus `wald zugewiesen werden. Am einfachsten lässt sich dies in einer Darstellung erklären:</p>
 <div id="fig-spatialjoin" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/spatialjoin.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;39.1: “Spatial Join” zwischen <code>zeckenstiche</code> und <code>wald</code>. In diesem Spatial Join wurde die Geometrie von <code>zeckenstiche</code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;41.1: “Spatial Join” zwischen <code>zeckenstiche</code> und <code>wald</code>. In diesem Spatial Join wurde die Geometrie von <code>zeckenstiche</code> übernommen, das heisst das Resultat des Joins ist ein Punkt-Layer.</figcaption>
 </figure>
 </div>
 <p>In Python wird ein <em>Spatial Join</em> zwischen <code>zeckenstiche</code> und <code>wald</code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code>left_df</code> bestimmt den Geometrietyp des Outputs):</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>NameError: name 'gpd' is not defined</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="36">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">ID</th>
+<th data-quarto-table-cell-role="th">accuracy</th>
+<th data-quarto-table-cell-role="th">x</th>
+<th data-quarto-table-cell-role="th">y</th>
+<th data-quarto-table-cell-role="th">geometry</th>
+<th data-quarto-table-cell-role="th">index_right</th>
+<th data-quarto-table-cell-role="th">Shape_Area</th>
+<th data-quarto-table-cell-role="th">Wald_text</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2550</td>
+<td>439.128951</td>
+<td>2681116</td>
+<td>1250648</td>
+<td>POINT (2681116.000 1250648.000)</td>
+<td>0</td>
+<td>2.380876e+08</td>
+<td>nein</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>10437</td>
+<td>301.748542</td>
+<td>2681092</td>
+<td>1250672</td>
+<td>POINT (2681092.000 1250672.000)</td>
+<td>0</td>
+<td>2.380876e+08</td>
+<td>nein</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>9174</td>
+<td>301.748542</td>
+<td>2681128</td>
+<td>1250683</td>
+<td>POINT (2681128.000 1250683.000)</td>
+<td>0</td>
+<td>2.380876e+08</td>
+<td>nein</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>8773</td>
+<td>301.748542</td>
+<td>2681111</td>
+<td>1250683</td>
+<td>POINT (2681111.000 1250683.000)</td>
+<td>0</td>
+<td>2.380876e+08</td>
+<td>nein</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2764</td>
+<td>301.748529</td>
+<td>2681131</td>
+<td>1250692</td>
+<td>POINT (2681131.000 1250692.000)</td>
+<td>0</td>
+<td>2.380876e+08</td>
+<td>nein</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>2513</td>
+<td>301.748529</td>
+<td>2681171</td>
+<td>1250711</td>
+<td>POINT (2681171.000 1250711.000)</td>
+<td>1</td>
+<td>7.963237e+07</td>
+<td>ja</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>9185</td>
+<td>301.748542</td>
+<td>2681107</td>
+<td>1250712</td>
+<td>POINT (2681107.000 1250712.000)</td>
+<td>1</td>
+<td>7.963237e+07</td>
+<td>ja</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>28521</td>
+<td>301.748542</td>
+<td>2681124</td>
+<td>1250720</td>
+<td>POINT (2681124.000 1250720.000)</td>
+<td>1</td>
+<td>7.963237e+07</td>
+<td>ja</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>26745</td>
+<td>301.748542</td>
+<td>2681117</td>
+<td>1250725</td>
+<td>POINT (2681117.000 1250725.000)</td>
+<td>1</td>
+<td>7.963237e+07</td>
+<td>ja</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>27391</td>
+<td>301.748542</td>
+<td>2681138</td>
+<td>1250725</td>
+<td>POINT (2681138.000 1250725.000)</td>
+<td>1</td>
+<td>7.963237e+07</td>
+<td>ja</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 
 
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -64,6 +64,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -77,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">Netzwerkanalyse I</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/3_QGIS.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Aufgabe 1: Operationen mit QGIS</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html">Netzwerkanalyse I</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_1/3_QGIS.html"><span class="chapter-number">54</span>&nbsp; <span class="chapter-title">Aufgabe 1: Operationen mit QGIS</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -219,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +252,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -607,16 +626,16 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Starten Sie QGIS, erstellen Sie ein neues QGIS Projekt und speichere dieses an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importiere die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe <a href="2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>51.1</span></a>).</p>
+<p>Starten Sie QGIS, erstellen Sie ein neues QGIS Projekt und speichere dieses an einem geeigneten Ort (siehe Vorbereitungsübungen) ab. Weisen Sie dem Projekt das Koordinatensystem EPSG 2056 zu und importiere die Gemeindegrenze sowie die OSM Strassendaten aus der Vorbereitungsübung (siehe <a href="2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>53.1</span></a>).</p>
 <section id="sec-ex-network-transfrom" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-network-transfrom">Übung 1.1: Daten Transformieren</h2>
-<p>Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool <code>Reproject Layer</code>. <strong>Wichtig</strong>: Speichern Sie den Transformierten Strassendatensatz <em>in einer neuen Datei</em> (siehe <a href="#fig-saveToFile">Abbildung&nbsp;<span>52.1</span></a>)</p>
+<p>Die OSM Daten sind aktuell noch im Koordinatensystem WGS84 (EPSG 4326). Die Gemeindegrenze hingegen ist mit den neuen Schweizer Landeskoordinaten CH1903+ LV95 (EPSG 2056) abgespeichert. Wir wollen in unserer Analyse mit CH1903+ LV95 (EPSG 2056) arbeiten. Transformieren Sie dazu den Strassendatensatz in das Koordinatensystem CH1903+ LV95 (EPSG 2056). Nutzen Sie dazu das Tool <code>Reproject Layer</code>. <strong>Wichtig</strong>: Speichern Sie den Transformierten Strassendatensatz <em>in einer neuen Datei</em> (siehe <a href="#fig-saveToFile">Abbildung&nbsp;<span>54.1</span></a>)</p>
 <p><img src="figures/reproject.png" id="fig-qgistools" class="img-fluid"></p>
 <p>Viele wichtige Tools lassen sich über die Menü Bar aufrufen (v.a. “Vector” und “Raster”). Die Tools lassen sich auch relativ rasch mit der Suchfunktion in “Processing Toolbox” finden.</p>
 <div id="fig-saveToFile" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/saveto.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.1: Tool Reproject Layer</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;54.1: Tool Reproject Layer</figcaption>
 </figure>
 </div>
 <p>Speichern Sie den neuen Strassendatensatz in einer <em>neuen</em> Datei, nicht als temporärer Layer. Normalerweise spielt dies keine Rolle, doch im Falle von “reproject” entsteht beim Speichern als temporärer Layer ein Fehler.</p>
@@ -645,7 +664,9 @@ Hinweis
 
 </section>
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

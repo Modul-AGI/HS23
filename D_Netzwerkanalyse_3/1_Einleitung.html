@@ -64,6 +64,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script>
+function presenter(){
+    var paragraphs = document.querySelectorAll("h2");
+    paragraphs.forEach(function (paragraph) {
+        paragraph.classList.toggle("padding-top-500");
+    });
+}
+</script>
+
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -219,6 +228,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +252,11 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basics of <em>for loop</em></span></a>
+  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -608,10 +627,10 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>Wir werden für jeden dieser drei Kriterien einen Rasterdatensatz kreieren, den wir zum Schluss miteinander verrechnen können. So finden wir den optimalen Standort unter der Berücksichtigung aller drei Kriterien. Starten Sie dazu QGIS und laden Sie folgende Daten in das Projekt:</p>
 <ol type="1">
-<li>Strassennetz Wädenswil (“osm_highway_prepared.gpkg”, siehe <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>51.1</span></a>)</li>
-<li>Entsorgungsstellen Wädenswil (“abfallentsorgung_waedenswil.gpkg”, siehe <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>51.1</span></a>)</li>
-<li>Gemeindegrenze Wädenswil (“Gemeinde_Waedenswil.gpkg”, siehe <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>51.1</span></a>)</li>
-<li>Optional: OSM Hintergrundkarte grau eingefärbt (siehe <a href="../D_Netzwerkanalyse_2/1_Shortest_Path.html#sec-ex-osm-background"><span>Kapitel&nbsp;54.1</span></a>)</li>
+<li>Strassennetz Wädenswil (“osm_highway_prepared.gpkg”, siehe <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>53.1</span></a>)</li>
+<li>Entsorgungsstellen Wädenswil (“abfallentsorgung_waedenswil.gpkg”, siehe <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>53.1</span></a>)</li>
+<li>Gemeindegrenze Wädenswil (“Gemeinde_Waedenswil.gpkg”, siehe <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>53.1</span></a>)</li>
+<li>Optional: OSM Hintergrundkarte grau eingefärbt (siehe <a href="../D_Netzwerkanalyse_2/1_Shortest_Path.html#sec-ex-osm-background"><span>Kapitel&nbsp;56.1</span></a>)</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -634,7 +653,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-</main> <!-- /main -->
+<button class="presenter-btn" onclick="presenter()">
+Presenter
+</button></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
