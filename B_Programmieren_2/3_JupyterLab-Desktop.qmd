@@ -1,0 +1,6 @@
+
+# JupyterLab Desktop
+
+Letzte Woche haben wir JupyterLab von der Konsole aus gestartet und im Browser verwendet. Dies was für den Einstieg sehr praktisch, da nichts installiert werden musste. Die Erfahrung hat aber gezeigt, dass die Verwendung von JupyterLab im Browser gerade für Einsteiger sehr verwirrend sein kann, weshalb wir euch letzte Woche in Auftrag gegeben haben, [JupyterLab Desktop zu installieren](#sec-jupyterlab-desktop). 
+
+Um diese Woche in Python zu coden, könnt ihr als erstes JupyterLab Desktop starten. Diese Anwendung solltet ihr in eurem Startmenü finden.

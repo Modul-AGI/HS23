@@ -45,9 +45,33 @@ for i in werte:
 ```
 
 
+## Übung  12.3 
+
+Nutze die Funktion `offset_coordinate` (Lösung aus [Übung 8.5](#sec-ex-offset-function)) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).
+
+```{python}
+import random
+
+def offset_coordinate(old, distance = 100):
+    new = old + random.normalvariate(0, distance)
+    return new
 
 
-## Übung  12.3 (fakultativ, für Fortgeschrittene!)
+x_start = 0
+y_start = 0
+
+x_random = []
+y_random = []
+for i in range(100):
+    x_new = offset_coordinate(x_start)
+    y_new = offset_coordinate(y_start)
+
+    x_random.append(x_new)
+    y_random.append(y_new)
+```
+
+
+## Übung  12.4 (fakultativ)
 
 Versuche die Monte Carlo Simulation für die Annäherung an Pi (aus der ersten Übung "Datenqualität und Unsicherheit) mit einer Funktion und einem For Loop zu lösen.
 
@@ -68,16 +92,22 @@ Tipps:
 
 ```{python}
 import random
+
+# erstelle eine Funktion, die zwei Zufallszahlen zwischen 0 und 1 generiert,
+# die Distanz zum Ursprung (0,0) berechnet und True retourniert, wenn der Wert ausserhalb des Kreisviertels liegt
 def get_pi(): 
     x = random.random()
     y = random.random()
     pythagoras = (x**2+y**2)**0.5
-    return pythagoras>1
+    ausserhalb = pythagoras > 1
+    return ausserhalb
 
 get_pi()
 
-res = [get_pi() for x in range(1000000)]
+# die Funktion 100x wiederholen und die Anzahl Werte > 1 zählen
+res = [get_pi() for x in range(100)]
 
-(len(res)-sum(res))/len(res)*4
+# Anteil der Werte > 1 berechnen und mit 4 multiplizieren
+(100-sum(res))/100*4
 ```
 

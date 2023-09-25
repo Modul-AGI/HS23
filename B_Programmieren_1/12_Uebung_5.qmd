@@ -1,0 +1,59 @@
+---
+output: false
+echo: false                      # set to true to show solution
+code-fold: false                 # set to true to show solution
+code-summary: "Musterlösung"    
+---
+
+# Übung 5
+
+Diese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr müsst die Übung nicht verstehen, sondern nur ausführen. Melde dich, falls es Probleme gibt.
+
+
+## Übung 5.1 Neue Conda Umgebung erstellen
+
+
+1. Starte Python Command Prompt (siehe [Python Command Prompt](#sec-python-command-prompt))
+2. Führe den Befehl: `conda create --name geopython` aus
+3. Bestätige die Installation mit `y`
+4. Prüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):
+
+```sh
+#
+# To activate this environment, use
+#
+#     $ activate geopython
+#
+# To deactivate an active environment, use
+#
+#     $ deactivate
+```
+
+
+
+5. Führe den Befehl: `conda activate geopython` aus
+6. Prüfe, ob die Eingabeforderung im Terminal nun mit `(geopython)` beginnt (melde dich falls nicht)
+
+```default
+# ↓ vorher
+(arcgispro-py3) C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3>
+
+# ↓ nachher
+(geopython)  C:\Users\rata\AppData\Local\ESRI\conda\envs\geopython>
+```
+
+7. Führe den folgenden Befehl aus: `conda install -c conda-forge jupyterlab geopandas matplotlib descartes`
+8. Bestätige die Installation mit `y`
+9. Prüfe, ob die installation erfolgreich war (erscheint folgende Meldung im Terminal?):
+
+```default
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+Retrieving notices: ...working... done
+```
+
+### Übung 5.2 JupyterLab Desktop installieren {#sec-jupyterlab-desktop}
+
+Die Tatsache, dass JupyterLab via dem *Command Prompt* gestartet wird und im Browser läuft, ist für viele Anwender ungewohnt. Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: https://github.com/jupyterlab/jupyterlab-desktop#installation.
+

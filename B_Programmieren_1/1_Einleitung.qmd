@@ -9,9 +9,9 @@ Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs un
 
 | Datensatz (inkl. Link) | Beschreibung          |
 |:-----------------------|:----------------------|                     
-| [zeckenstiche.csv](https://moodle.zhaw.ch/mod/resource/view.php?id=640830) | Eine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich |
-| [zeckenstiche_full.csv](https://moodle.zhaw.ch/mod/resource/view.php?id=640831) | Eine CSV mit 1'076 Zeckenstich-Meldungen im Kanton Zürich |
-| [wald.gpkg](https://moodle.zhaw.ch/mod/resource/view.php?id=640832) | Ein Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in "Wald" und "nicht Wald" unterscheidet |
+| zeckenstiche.csv | Eine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich |
+| zeckenstiche_full.csv | Eine CSV mit 1'076 Zeckenstich-Meldungen im Kanton Zürich |
+| wald.gpkg | Ein Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in "Wald" und "nicht Wald" unterscheidet |
 : Datensätze für den Teil "Programmieren I - III" {#tbl-datensaetze}
 
 :::{.callout-note}
@@ -24,10 +24,8 @@ Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs un
 :::
 
 
-Die Slides zur heutigen Vorlesung findet ihr hier: 
+<!-- Die Slides zur heutigen Vorlesung findet ihr hier:  
 
-
-<!--
 <iframe src="https://modul-agi.github.io/slides/ProgrammierenI" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%" allowfullscreen></iframe>
 
 In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)

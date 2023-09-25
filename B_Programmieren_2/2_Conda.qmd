@@ -22,14 +22,14 @@ Wenn man den [Python Command Prompt](chap-python-command-prompt) startet, ist Co
 
 `arcgispro-py3` ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das "default Python Environment", welches ArcGIS Pro jeweils nutzt (siehe @fig-arcgis-conda). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: *Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.* Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.
 
-Um ein neues Environment mit dem Namen `agi-env` zu erstellen und aktivieren geht man wie folgt vor:
+Um ein neues Environment mit dem Namen `geopython` zu erstellen und aktivieren geht man wie folgt vor:
 
 ```bash
-conda create --name agi-env           # erstellt das Environment
-activate agi-env                      # aktiviert das Environment
+conda create --name geopython           # erstellt das Environment
+activate geopython                      # aktiviert das Environment
 ```
 
-Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (`agi-env`). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.
+Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (`geopython`). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.
 
 
 ![Python Command Prompt (i.e. "Eingabeaufforderung")](figures/python-command-prompt.PNG){#fig-python-cmd3}
@@ -40,7 +40,7 @@ Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (`
 
 ## Conda packages installieren
 
-Jetzt wo wir ein eigenes Conda Environment erstellt haben (`agi-env`) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit `conda list` sehen könnt (versucht es aus!).
+Jetzt wo wir ein eigenes Conda Environment erstellt haben (`geopython`) müssen wir dieses mit Libraries befüllen. Aktuell ist es nämlich noch ziemlich leer, wie ihr mit `conda list` sehen könnt (versucht es aus!).
 
 Letzte Woche hatten wir die Packages [`pandas`](chap-dataframes) sowie [`jupyter lab`](#sec-jupyternotebook) gebraucht. Diese Packages waren im Environment `arcgispro-py3` bereits vorinstalliert. 
 
@@ -77,8 +77,8 @@ In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda n
 | Schritt  | Wann ist dies nötig?  | Details zum Vorgehen / Befehl für die Konsole[^konsole] | 
 |:---|:---|:---|
 | **1\. Conda installieren** (installiert das Program *conda*)  | einmalig (ist nicht nötig, wenn ArcGIS Pro installiert ist)  | [Miniconda](https://docs.conda.io/en/latest/miniconda.html) (empfohlen) oder [anaconda](https://www.anaconda.com/products/individual) herunterladen und installieren |
-| **2\. *Virtual environment* erstellen** (erstellt eine neue Arbeitsumgebung)  | einmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)  | in der Konsole: `conda create --name agi-env` |
-| **3\. *Virutal environment* aktivieren** (schaltet den "Bearbeitungsmodus" ein)  | jedes mal nöig wenn ein  *Erweiterung installiert** oder **jupyter lab gestartet** werden soll  | in der Konsole [^linux]: `activate agi-env` |
+| **2\. *Virtual environment* erstellen** (erstellt eine neue Arbeitsumgebung)  | einmal pro Projekt nötig (wobei eine environment auch wiederverwendet werden kann)  | in der Konsole: `conda create --name geopython` |
+| **3\. *Virutal environment* aktivieren** (schaltet den "Bearbeitungsmodus" ein)  | jedes mal nöig wenn ein  *Erweiterung installiert** oder **jupyter lab gestartet** werden soll  | in der Konsole [^linux]: `activate geopython` |
 | **4\. Jupyter lab installieren** (fügt der virtuellen Umgebung diese IDE hinzu)  | 1x pro  environment*  | in der Konsole [^activate]: ` conda install -c conda-forge jupyterlab` |
 | **5\. Jupyter lab starten** (startet die IDE "JupyterLab")  | jedes mal, wenn am Projekt gearbeitet wird  | in der Konsole [^activate]: ` jupyter lab` |
 | **6\. Jupyter lab (JL) beenden** (beendet "JupyterLab" in der Console)  | wenn ihr die Konsole wieder braucht  | Während JL läuft, ist die Konsole blockiert. Um JL zu beenden und die Konsole freizugeben: Tastenkombination <kbd>CTRL</kbd> + <kbd>C</kbd> |
@@ -88,9 +88,9 @@ In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda n
 
 [^condapath]: Wenn *conda* von ArcGIS Pro verwendet wird, befindet sich die *conda* installation vermutlich hier: *C:\Program Files\ArcGIS\Pro\bin\Python\Scripts*. Prüfen, ob dieser Folder existiert und dort `conda.exe` vorhanden ist.
 
-[^linux]: Unter Linux: `conda activate agi-env`
+[^linux]: Unter Linux: `conda activate geopython`
 
-[^activate]: Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B `activate agi-env`).
+[^activate]: Falls die richtige environment noch nicht aktiviert ist, muss dies zuerst noch erfolgen (z.B `activate geopython`).
 
 [^modulfehlt]: Dies macht sich bemerkbar duch die Fehlermeldung `ModuleNotFoundError: No module named 'pandas'`
 

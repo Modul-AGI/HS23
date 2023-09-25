@@ -20,7 +20,7 @@ Alle *conda environments* werden an einem zentralen Ort gespeichert. Typischerwe
 4. Erstelle eine neue conda environment in dieser neu erstellten directory:
 
     ```sh   
-    conda create --prefix=C:\conda-envs\agi-env
+    conda create --prefix=C:\conda-envs\geopython
     ```
 
 5. Prüfe, ob das geklappt hat, indem du die verfügbaren environments auflistest.
@@ -32,7 +32,7 @@ Alle *conda environments* werden an einem zentralen Ort gespeichert. Typischerwe
 6. Wenn das geklappt hat, kannst du nun deine environment aktivieren
 
     ```sh
-    conda activate agi-env
+    conda activate geopython
     ```
 
 
@@ -85,7 +85,7 @@ arcgisonline2            C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgisonlin
 arcgispro-py3-clone      C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone
 arcgispro-py3-clone1     C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone1
 cameratraps-detector     C:\Users\rata\AppData\Local\ESRI\conda\envs\cameratraps-detector
-agi-env                  C:\Users\rata\AppData\Local\ESRI\conda\envs\agi-env
+geopython                  C:\Users\rata\AppData\Local\ESRI\conda\envs\geopython
 test                     C:\Users\rata\AppData\Local\ESRI\conda\envs\test
 arcgispro-py3         *  C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3
 root                     C:\Program Files\ArcGIS\Pro\bin\Python

@@ -96,7 +96,7 @@ y_neu
 ```{python}
 #| echo: true
 #| code-fold: true
-#| code-summary: "Code für die Visualisierung (für euch noch unwichtig)"
+#| code-summary: "Code für die Visualisierung (nur FYI)"
 #| output: true
 
 import pandas as pd

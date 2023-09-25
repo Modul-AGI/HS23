@@ -1,6 +1,6 @@
 
 
-# Basics of *for loop* {#sec-forloops-2}
+# Basic *for loop* {#sec-forloops-2}
 
 Bis jetzt haben wir lediglich Sachen in die Konsole herausgeben lassen, doch wie schon bei Functions ist der Zweck einer *for loop* meist, dass nach Durchführung etwas davon zurückbleibt. Aber `return()` gibt es wie bereits erwähnt bei *for loops* nicht. Nehmen wir folgendes Beispiel:
 

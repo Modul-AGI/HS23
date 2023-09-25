@@ -128,3 +128,8 @@ Dies wird dann zu:
 :::
 
 Mehr zu diesen sogenannten *Callout Blocks*: <https://quarto.org/docs/authoring/callouts.html>
+
+
+## Presenter mode
+
+Führe in der Konsole den JS code `presenter()` aus, um in den Präsentationsmodus zu gelangen (`padding-top` für alle h2`).

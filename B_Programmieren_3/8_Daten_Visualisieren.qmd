@@ -87,25 +87,29 @@ Weitere Informationen dazu findet ihr hier: <https://geopandas.org/docs/user_gui
 
 Vollautomatisch, ohne Anpassungen:
 
-```python
+```{python}
+#| eval: false
 zeckenstiche.explore()
 ```
 
 Zeckenstiche Rot eingefärbt:
 
-```python
+```{python}
+#| eval: false
 zeckenstiche.explore(color = "red")
 ```
 
 Zeckenstiche nach `"accuracy"` eingefärbt:
 
-```python
+```{python}
+#| eval: false
 zeckenstiche.explore(column = "accuracy")
 ```
 
 Wald nach `"Wald_text"` eingefärbt (beachte, dass ich `my_cmap` weiter oben erstellt habe!):
 
-```python
+```{python}
+#| eval: false
 wald.explore(column = "Wald_text", cmap = my_cmap)
 ```
 
