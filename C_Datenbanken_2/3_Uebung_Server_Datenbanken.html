@@ -837,12 +837,12 @@ Tipp
 <li>Suchen Sie in der Datenbank “waelder” das schema “arcgispro_editor”.</li>
 <li>Öffnen Sie anschliessend den SQL Editor von pgadmin. Sie finden das so genannte Query Tool im Kontextmenü des Schemas oder in der Menüleiste oben unter Tools→Query Tool</li>
 <li>Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle “tierarten”.</li>
-<li>Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr ein.</li>
+<li>Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr (nur die Zahl) ein.</li>
 <li>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a href="#fig-db2-uebung6-1">Abbildung&nbsp;<span>47.9</span></a>)
 <ul>
 <li><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">INSERT</span> <span class="kw">INTO</span> arcgispro_editor.tierarten (id_tierart, name_tierart, id_erfasser) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">Values</span> (<span class="kw">DEFAULT</span>, ’Bär’, studentNr);</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</li>
+<li>Schliessen Sie die Eingabe mit Klick auf Execute ab.</li>
 </ul></li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -856,7 +856,7 @@ Tipp
 </div>
 <div class="callout-body-container callout-body">
 <p>DEFAULT ist ein SQL Befehlswort, welches den Zähler für die id_tierart automatisch auf den nächsten freien Wert setzt. So kann die id_tierart automatisch fortlaufend hochnummeriert werden. Sie dürfen gern ein eigenes Tier in die Datenbank einfüllen.</p>
-<p>Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der ?- Taste) gesetzt werden muss. Bei Copy &amp; Paste aus pdf-Dateien wird oft das Anführungszeichen verändert.Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas “arcgispro_editor” immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. Jedes Statement wird mit Semikolon abgeschlossen.</p>
+<p>Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der ?- Taste) gesetzt werden muss. Bei Copy &amp; Paste aus Dateien wird oft das Anführungszeichen verändert.Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas “arcgispro_editor” immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. Jedes Statement wird mit Semikolon abgeschlossen.</p>
 </div>
 </div>
 <ol start="6" type="1">
