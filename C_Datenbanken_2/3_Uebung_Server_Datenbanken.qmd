@@ -95,13 +95,13 @@ Da jetzt alle Tabellen vorliegen sollen diese noch mit ein paar Beispiel-Daten g
 2. Öffnen Sie anschliessend den SQL Editor von pgadmin. Sie finden das so genannte Query Tool im
 Kontextmenü des Schemas oder in der Menüleiste oben unter Tools→Query Tool
 3. Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle "tierarten".
-4. Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr ein.
+4. Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr (nur die Zahl) ein.
 5. Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe @fig-db2-uebung6-1)
     - ```SQL 
       INSERT INTO arcgispro_editor.tierarten (id_tierart, name_tierart, id_erfasser) 
       Values (DEFAULT, ’Bär’, studentNr);
       ```
-    - Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.
+    - Schliessen Sie die Eingabe mit Klick auf Execute ab.
 
 :::{.callout-tip}
 DEFAULT ist ein SQL Befehlswort, welches den Zähler für die id_tierart automatisch 
@@ -109,7 +109,7 @@ auf den nächsten freien Wert setzt. So kann die id_tierart automatisch fortlauf
 hochnummeriert werden. Sie dürfen gern ein eigenes Tier in die Datenbank einfüllen.
 
 Achten Sie darauf, dass Text immer in einfache Anführungszeichen (Das Zeichen auf der 
-?- Taste) gesetzt werden muss. Bei Copy & Paste aus pdf-Dateien wird oft das Anführungszeichen 
+?- Taste) gesetzt werden muss. Bei Copy & Paste aus Dateien wird oft das Anführungszeichen 
 verändert.Beachten Sie ausserdem die Punktschreibweise, dabei muss der Name des Schemas 
 "arcgispro_editor" immer mit Punkt verbunden vor dem Namen der Tabelle angegeben werden. 
 Jedes Statement wird mit Semikolon   abgeschlossen.
