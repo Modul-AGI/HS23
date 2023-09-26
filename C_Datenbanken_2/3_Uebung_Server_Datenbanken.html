@@ -914,7 +914,7 @@ Tipp
 <li>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort “studentNr” in Ihre studentNr ab. Denken Sie sich ausserdem ein paar eigene/andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a href="#fig-db2-uebung7-1">Abbildung&nbsp;<span>47.12</span></a>).</li>
 <li>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte “tierarten.sql” Datei in pgAdmin.</li>
 <li>Die Auswahl lädt den Inhalt der Datei ins Query Tool (siehe <a href="#fig-db2-uebung7-2">Abbildung&nbsp;<span>47.13</span></a>).</li>
-<li>Schliessen Sie die Eingabe mit Klick auf Execute (kleiner Blitz) ab.</li>
+<li>Schliessen Sie die Eingabe mit Klick auf Execute ab.</li>
 <li>Schauen Sie sich erneut den Inhalt der Tabelle “tierarten” an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -953,7 +953,7 @@ Tipp
 <li>Öffnen Sie die Attributtabelle.</li>
 <li>Erfassen Sie im Feld “id_erfasser” wiederum Ihre zugewiesene studentNr (Nur die Zahl). Alle weiteren Attribute können Sie beliebig erfassen. Denken Sie sich einfach etwas aus.</li>
 <li>Importieren Sie die Daten anschliessend folgendermassen in die Feature Class “waelder” in der Datenbank auf dem Server.</li>
-<li>Kontextmenü der Feature Class “waelder”→Load Data (siehe <a href="#fig-db2-uebung8-1">Abbildung&nbsp;<span>47.14</span></a>)
+<li>Kontextmenü der Feature Class “waelder”→Load Data. Es öffnet sich das Werkzeug “Append” (siehe <a href="#fig-db2-uebung8-1">Abbildung&nbsp;<span>47.14</span></a>)
 <ul>
 <li>Input Dataset: Shapefile “waelder”</li>
 <li>Target Dataset: waelder.arcgispro_editor.waelder</li>
@@ -1010,7 +1010,7 @@ Tipp
 <li>Laden Sie die Datei “sichtungsmeldungen.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=159551">aus dem Moodle</a>. Es handelt sich um eine SQL-Datei mit Sichtungsmeldungen von Tieren.</li>
 <li>Öffnen Sie die Datei in einem beliebigen Texteditor. Was sehen Sie? Was fällt auf?</li>
 <li>Sie werden bemerken, dass die Geometrie über die Funktion ST_GeomFromText lesbar dargestellt werden kann. Der Geometrietyp von ArcGIS Pro wird dann über diese Funktion automatisch umgewandelt. I.d.R. ist es aber sehr viel einfacher Geometrien über ArcGIS Pro zu importieren oder zu erstellen. Sie sollen hier aber einmal sehen, dass es auch direkt über SQL geht.</li>
-<li>Passen Sie die Datei an, indem Sie als objectid (erstes Attribut) ihre studentNr gefolgt von einer 0 eintragen und als id_erfasser (letztes Attribut) jeweils Ihre studentNr (Nur die Zahl ohne 0) eintragen. Denken Sie sich auch eine sinnvolle Schweizer-Koordinate aus, damit Sie nicht alle denselben Punkt importieren. Sie können eine Koordinate einfach im Map-Fenster von ArcGIS Pro ablesen und ebenfalls in der Datei anpassen. Es kommt jetzt hier nicht auf Genauigkeit der Lage des Punktes an. Über die id_tierart können Sie sich ein beliebiges Tier aussuchen. Tragen Sie eine vorhandene id_tierart aus Ihrer Tierarten Tabelle aus Übung 6 ein. Passen Sie zum Schluss auch noch das Datum an (siehe <a href="#fig-db2-uebung9-1">Abbildung&nbsp;<span>47.17</span></a>).</li>
+<li>Passen Sie die Datei an, indem Sie als objectid (erstes Attribut) ihre studentNr gefolgt von einer 0 eintragen und als id_erfasser (letztes Attribut) jeweils Ihre studentNr (Nur die Zahl ohne 0) eintragen. Denken Sie sich auch eine sinnvolle Schweizer-Koordinate in der Nähe der anderen Objekte aus, damit Sie nicht alle denselben Punkt importieren. Sie können eine Koordinate einfach im Map-Fenster von ArcGIS Pro ablesen und ebenfalls in der Datei anpassen. Es kommt jetzt hier nicht auf Genauigkeit der Lage des Punktes an. Über die id_tierart können Sie sich ein beliebiges Tier aussuchen. Tragen Sie eine vorhandene id_tierart aus Ihrer Tierarten Tabelle aus Übung 6 ein. Passen Sie zum Schluss auch noch das Datum an (siehe <a href="#fig-db2-uebung9-1">Abbildung&nbsp;<span>47.17</span></a>).</li>
 <li>Starten Sie pgAdmin und laden die Datenbank “waelder” im Schema “arcgispro_editor”</li>
 <li>Importieren Sie die Sichtungsmeldung mit Hilfe der SQL-Datei in die Datenbank.</li>
 <li>Schauen Sie sich die Daten in pgadmin und in ArcGIS Pro an. Sie sollten einige Punkte in der Karte sehen (siehe <a href="#fig-db2-uebung9-2">Abbildung&nbsp;<span>47.18</span></a> und <a href="#fig-db2-uebung9-3">Abbildung&nbsp;<span>47.19</span></a>).</li>
