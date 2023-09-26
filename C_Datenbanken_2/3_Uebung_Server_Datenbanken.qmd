@@ -120,7 +120,7 @@ Jedes Statement wird mit Semikolon   abgeschlossen.
       SELECT * FROM arcgispro_editor.tierarten;
       ```
 7. Sie können erkennen, dass ihr Tier mit Ihrer studentNr als id_erfasser in die Tabelle eingetragen wurde. Vermutlich sehen Sie auch bereits Einträge Ihrer Mit-Studierenden.
-8. Navigieren Sie im Browser von pgAdmin zur Tabelle "tierarten".
+8. Navigieren Sie im Object Explorer von pgAdmin zur Tabelle "tierarten".
 9. Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden (siehe @fig-db2-uebung6-3).
     a. Tabelle "tierarten"→Kontextmenü→View/Edit Data→All Rows
 10. Es öffnet sich automatisch das Query Tool und die Inhalte der Tabelle werden angezeigt.
