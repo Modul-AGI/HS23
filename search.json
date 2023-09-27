@@ -375,7 +375,7 @@
     "href": "B_Programmieren_1/11_Uebung_4.html#sec-ex-new-col",
     "title": "Übung 4",
     "section": "Übung 4.6",
-    "text": "Übung 4.6\nAuch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen Dictionary Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.)."
+    "text": "Übung 4.6\nAuch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen Dictionary Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).\n\nzeckenstiche[\"Stichtyp\"] = \"Zecke\""
   },
   {
     "objectID": "B_Programmieren_1/12_Uebung_5.html#übung-5.1-neue-conda-umgebung-erstellen",
