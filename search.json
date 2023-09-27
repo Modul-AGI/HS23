@@ -333,7 +333,7 @@
     "href": "B_Programmieren_1/10_Tabellarische_Daten.html",
     "title": "DataFrames",
     "section": "",
-    "text": "Schauen wir uns nochmals die Dictionary people aus der letzten Übung an. Diese ist ein Spezialfall einer Dictionary: Jeder Eintrag besteht aus einer Liste von gleich vielen Werten. Wie bereits erwähnt, kann es in einem solchen Fall sinnvoll sein, die Dictionary als Tabelle darzustellen.\n\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}\n\n\nimport pandas as pd # Was diese Zeile beudeutet lernen wir später\n\npeople_df = pd.DataFrame(people)\n\npeople_df\n\nModuleNotFoundError: No module named 'pandas'\n\n\n\n\n\n\nPresenter"
+    "text": "Schauen wir uns nochmals die Dictionary people aus der letzten Übung an. Diese ist ein Spezialfall einer Dictionary: Jeder Eintrag besteht aus einer Liste von gleich vielen Werten. Wie bereits erwähnt, kann es in einem solchen Fall sinnvoll sein, die Dictionary als Tabelle darzustellen.\n\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}\n\n\nimport pandas as pd # Was diese Zeile beudeutet lernen wir später\n\npeople_df = pd.DataFrame(people)\n\npeople_df\n\n\n\n\n\n\n\n\nvornamen\nnachnamen\ngroessen\n\n\n\n\n0\nChristopher\nAnnen\n174\n\n\n1\nHenning\nMay\n182\n\n\n2\nSeverin\nKantereit\n162\n\n\n\n\n\n\n\n\n\n\n\nPresenter"
   },
   {
     "objectID": "B_Programmieren_1/11_Uebung_4.html#übung-4.1",
@@ -347,14 +347,14 @@
     "href": "B_Programmieren_1/11_Uebung_4.html#sec-ex-to-csv",
     "title": "Übung 4",
     "section": "Übung 4.2",
-    "text": "Übung 4.2\nIn der Praxis kommen Tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.\n\n\n\n\n\n\nAchtung!\n\n\n\nFalls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel Kapitel 12 nochmals durchlesen.\nDie Working Directory zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür JupyterLab schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen."
+    "text": "Übung 4.2\nIn der Praxis kommen Tabellarische Daten meist als “csv” Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.\n\npeople_df.to_csv(\"people.csv\")\n\n\n\n\n\n\n\nAchtung!\n\n\n\nFalls ihr nicht wisst, wo das csv abgespeichet ist solltet ihr das Kapitel Kapitel 12 nochmals durchlesen.\nDie Working Directory zu kennen ist wichtig, besonders auch für die nächste Aufgabe. Falls ihr die aktuelle Working Directory neu setzen und dafür JupyterLab schliessen müsst, denkt daran die Notebook vorgängig zu speichern und im File Explorer aufzusuchen."
   },
   {
     "objectID": "B_Programmieren_1/11_Uebung_4.html#sec-ex-import-zeckenstiche",
     "href": "B_Programmieren_1/11_Uebung_4.html#sec-ex-import-zeckenstiche",
     "title": "Übung 4",
     "section": "Übung 4.3",
-    "text": "Übung 4.3\nGenau so einfach ist es eine csv zu importieren. Lade die Datei “zeckenstiche.csv” (siehe Tabelle 1) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei “zeckenstiche.csv”."
+    "text": "Übung 4.3\nGenau so einfach ist es eine csv zu importieren. Lade die Datei “zeckenstiche.csv” (siehe Tabelle 1) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei “zeckenstiche.csv”.\n\n# ich habe die Daten in einem Unterordner \"data\" abgespeichert\nzeckenstiche = pd.read_csv(\"data/zeckenstiche.csv\")"
   },
   {
     "objectID": "B_Programmieren_1/11_Uebung_4.html#sec-ex-scatterplot",
