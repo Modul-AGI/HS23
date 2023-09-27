@@ -361,7 +361,7 @@
     "href": "B_Programmieren_1/11_Uebung_4.html#sec-ex-scatterplot",
     "title": "Übung 4",
     "section": "Übung 4.4",
-    "text": "Übung 4.4\nDie DataFrame zeckenstiche beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus."
+    "text": "Übung 4.4\nDie DataFrame zeckenstiche beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus.\n\nfig = zeckenstiche.plot.scatter(\"x\",\"y\")\n\nfig.axis(\"equal\")\n# \"equal\" stellt sicher, das die x und y Achsen gleich skaliert sind\n# dies ist sinnvoll, da es sich ja um Schweizer Koordinaten (Meter) handelt"
   },
   {
     "objectID": "B_Programmieren_1/11_Uebung_4.html#sec-ex-sel-col",
