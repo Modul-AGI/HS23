@@ -53,7 +53,7 @@ Executing transaction: done
 Retrieving notices: ...working... done
 ```
 
-### Übung 5.2 JupyterLab Desktop installieren {#sec-jupyterlab-desktop}
+## Übung 5.2 JupyterLab Desktop installieren {#sec-jupyterlab-desktop}
 
 Die Tatsache, dass JupyterLab via dem *Command Prompt* gestartet wird und im Browser läuft, ist für viele Anwender ungewohnt. Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: https://github.com/jupyterlab/jupyterlab-desktop#installation.
 

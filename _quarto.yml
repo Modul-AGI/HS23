@@ -17,7 +17,7 @@ format:
       - custom.css
 #      - present-exercises.css
     include-in-header:
-        script.html
+      - script.html
 
 execute:
   freeze: true
