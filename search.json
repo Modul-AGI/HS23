@@ -228,7 +228,7 @@
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.3",
     "title": "Übung 2",
     "section": "Übung 2.3",
-    "text": "Übung 2.3\nListen können durch die Methode append ergänzt werden (s.u.). Ergänze die Listen vornamen, nachnamen und groessen durch je einen Eintrag."
+    "text": "Übung 2.3\nListen können durch die Methode append ergänzt werden (s.u.). Ergänze die Listen vornamen, nachnamen und groessen durch je einen Eintrag.\n\nvornamen.append(\"Malte\")"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#übung-2.4",
