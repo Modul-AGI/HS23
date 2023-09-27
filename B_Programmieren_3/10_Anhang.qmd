@@ -1,4 +1,6 @@
-
+---
+echo: true
+---
 
 # Anhang
 
@@ -43,6 +45,7 @@ plt.show()
 Mit der Erweiterung `contextily` kann man sehr schnell und einfach Hintergrundkarten in den Plot einbinden. Dafür muss das *GeoDataFrame* vorher aber in WGS84 Koordinaten (EPSG 3857) konvertiert werden (mit `to_crs`, s.u.).
 
 ```{python}
+
 import contextily as ctx
 
 f, ax = plt.subplots(1, figsize=(12, 12))

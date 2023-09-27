@@ -15,6 +15,7 @@ Um euer Gedächtnis etwas aufzufrischen: Letzte Woche hatten wir in @sec-ex-appl
 Starte mit einem neuen Jupyter Notebook und lade darin die nötigen Module (`pandas` und `random`), erstellt euch die Funktion `offset_point()` und importiert den Datensatz `zeckenstiche.csv` (s.u.).
 
 ```{python}
+#| echo: true
 import pandas as pd
 
 def offset_coordinate(old, distance = 100):
