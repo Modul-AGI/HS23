@@ -26,6 +26,7 @@ In der Praxis kommen Tabellarische Daten meist als "csv" Dateien daher. Wir kön
 
 ```{python}
 #| echo: true
+
 people_df.to_csv("people.csv")
 ```
 
@@ -43,6 +44,7 @@ Genau so einfach ist es eine csv zu importieren. Lade die Datei "zeckenstiche.cs
 
 ```{python}
 #| echo: true
+
 # ich habe die Daten in einem Unterordner "data" abgespeichert
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 ```
@@ -52,6 +54,8 @@ zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 Die *DataFrame* `zeckenstiche` beinhaltet x und y Koordinaten für jeden Unfall in den gleichnamigen Spalten. Wir können die Stiche mit einem Scatterplot räumlich visualisieren. Führe dazu folgenden Code aus. 
 
 ```{python}
+#| echo: true
+
 fig = zeckenstiche.plot.scatter("x","y")
 
 fig.axis("equal")
