@@ -33,6 +33,8 @@ vornamen[0]
 Listen können durch die Methode `append` ergänzt werden (s.u.). Ergänze die Listen `vornamen`, `nachnamen` und `groessen` durch je einen Eintrag.
 
 ```{python}
+#| echo: true
+
 vornamen.append("Malte")
 ```
 
