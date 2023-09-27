@@ -25,6 +25,7 @@ people_df = pd.DataFrame(people)
 In der Praxis kommen Tabellarische Daten meist als "csv" Dateien daher. Wir können aus unserer eben erstellten DataFrame sehr einfach eine csv Datei erstellen. Führe das mit folgendem Code aus und suche anschliessend die erstellte csv-Datei.
 
 ```{python}
+#| echo: true
 people_df.to_csv("people.csv")
 ```
 
@@ -41,6 +42,7 @@ Die *Working Directory* zu kennen ist wichtig, besonders auch für die nächste 
 Genau so einfach ist es eine csv zu importieren. Lade die Datei "zeckenstiche.csv" (siehe @tbl-datensaetze) herunter und speichere es im aktuellen Arbeitsverzeichnis ab. Importiere mit folgendem Code die Datei "zeckenstiche.csv".
 
 ```{python}
+#| echo: true
 # ich habe die Daten in einem Unterordner "data" abgespeichert
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 ```

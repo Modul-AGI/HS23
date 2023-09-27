@@ -28,11 +28,11 @@ me["nachname"]
 Nutze `me` um nachstehenden Satz (mit **deinen** *Values*) zu erstellen:
 
 ```{python}
-"Mein name ist "+me["nachname"] +", "+ me["vorname"]+" "+me["nachname"]
+"Mein Name ist "+me["nachname"] +", "+ me["vorname"]+" "+me["nachname"]
 ```
 
 ``` python
-'Mein name ist van Rossum, Guido van Rossum'
+'Mein Name ist van Rossum, Guido van Rossum'
 ```
 
 ## Übung 3.4
