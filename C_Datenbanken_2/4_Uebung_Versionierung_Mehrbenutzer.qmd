@@ -9,7 +9,7 @@ Die Nutzung von Enterprise Server Geodatenbanken wie z.B. PostgreSQL erlaubt ein
 3. Starten Sie jetzt den Editor und erfassen ein paar beliebige Sichtungsmeldungen. Erfassen Sie auch die Attribute über die Attributtabelle. Speichern Sie anschliessend Ihre neuen Punkte.
 4. Wechseln Sie anschliessend die Ansicht im Contents-Fenster von "List By Drawing Order" auf "List By Data Source" (siehe @fig-db2-uebung10-1).
 5.Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang "sde.DEFAULT". Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. "student1@..." zeigt hier auch noch den verbundenen Benutzer. (siehe @fig-db2-uebung10-2).
-6. Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register "Data Source" / "Versioning" angezeigt.
+6. Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register "Versioning" angezeigt.
 7. Hier sehen Sie alle Werkzeuge zur Verwaltung der Versionen. Erstellen Sie eine neue eigene Version durch Klick auf "New Version". Achten Sie darauf das Häkchen bei "Change to this new version" zu setzen, damit die neue Version aktiviert wird (siehe @fig-db2-uebung10-3). 
     a. Name: studentNr_name
     b. Description: beliebiger Text
@@ -21,7 +21,7 @@ Die Nutzung von Enterprise Server Geodatenbanken wie z.B. PostgreSQL erlaubt ein
 9. Schauen Sie wiederum die Datenbankverbindung im Contents-Fenster an. Die neue Version student1 ist jetzt aktiv. Ab sofort werden alle Änderungen innerhalb dieser Version gemacht und nicht mehr in der sde.DEFAULT Version (siehe @fig-db2-uebung10-4). 
 10.  Starten Sie den Editor und löschen einige der bereits von Ihnen erfassten Sichtungsmeldungen und erfassen auch ein paar neue Punkte. Speichern Sie die Änderungen im Editor.
 11. Merken Sie sich ungefähr die Lage der von Ihnen jetzt digitalisierten Punkte (siehe @fig-db2-uebung10-5).
-12. Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte "Data Source"→Versioning gewechselt werden.
+12. Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte "Versioning" gewechselt werden.
 13. Wechseln Sie die Version zurück auf die sde.DEFAULT Version. 
 14. Schauen Sie sich das Kartenbild an. Was fällt auf?
 15. Alle Ihre Anpassungen/Änderungen, welche Sie in der Version studentNr gemacht haben, sind in der sde.DEFAULT nicht mehr vorhanden. Dies ist normal, da die  Änderungen eben in einer anderen Version gemacht wurden (siehe @fig-db2-uebung10-6 und @fig-db2-uebung10-7).
