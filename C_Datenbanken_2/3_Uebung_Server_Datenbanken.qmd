@@ -45,8 +45,6 @@ Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerich
 ::: {layout="[[1], [1], [1,1]]" layout-valign="bottom"}
 ![Catalog Fenster in ArcGIS Pro](figures/screenshot_connect1.jpg){#fig-connect1}
 
-![Neue Datenbankverbindung herstellen](figures/screenshot_connect2.jpg){#fig-connect2}
-
 ![Notwendige Verbindungsparameter eingeben](figures/screenshot_connect3.jpg){#fig-connect3}
 
 ![Neue Datenbankverbindung ist erstellt](figures/screenshot_connect4.jpg){#fig-connect4}
