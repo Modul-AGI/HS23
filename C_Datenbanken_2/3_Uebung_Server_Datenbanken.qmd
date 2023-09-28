@@ -97,7 +97,7 @@ Kontextmenü des Schemas oder in der Menüleiste oben unter Tools→Query Tool
 5. Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe @fig-db2-uebung6-1)
     - ```SQL 
       INSERT INTO arcgispro_editor.tierarten (id_tierart, name_tierart, id_erfasser) 
-      Values (DEFAULT, ’Bär’, studentNr);
+      Values (DEFAULT, 'Bär', studentNr);
       ```
     - Schliessen Sie die Eingabe mit Klick auf Execute ab.
 
