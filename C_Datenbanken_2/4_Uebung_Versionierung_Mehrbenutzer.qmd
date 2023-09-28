@@ -62,7 +62,7 @@ In vielen Anwendungsfällen bearbeiten viele Mitarbeiter die Daten in derselben 
 10. Sie bekommen eine Fehlermeldung (siehe @fig-db2-uebung11-4).
 11. Wie bereits erwähnt können "fremde" Versionen nicht bearbeitet werden, wenn diese nicht öffentlich sind.
 12. Wechseln Sie wieder zurück zu Ihrer eigenen Version "studentNr".
-13. Zeigen Sie die Registerkarte "Data Source – Versioning" an.
+13. Zeigen Sie die Registerkarte "Versioning" an.
 14. Bevor wir unsere eigenen Änderungen zurück in die sde.DEFAULT Version einspielen können, müssen wir auf Fehler bzw. Versionierungsprobleme prüfen, um sicher zu stellen, dass keine Inkonsistenzen entstehen.
 15. Klicken Sie dazu im Menü auf "Manage Versions". Selektieren Sie Ihre Version und klicken "Reconcile/Post". Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Lassen Sie ansonsten die Voreinstellungen (siehe @fig-db2-uebung11-5). 
 16. Sollte der Prozess ohne Fehler durchgeführt werden, so können im Anschluss die Änderungen in die sde.DEFAULT Datenbank geschrieben werden.
