@@ -8,7 +8,7 @@ Die Nutzung von Enterprise Server Geodatenbanken wie z.B. PostgreSQL erlaubt ein
 2. Zeigen Sie die Sichtungsmeldungen aus der Datenbank in der Karte an.
 3. Starten Sie jetzt den Editor und erfassen ein paar beliebige Sichtungsmeldungen. Erfassen Sie auch die Attribute über die Attributtabelle. Speichern Sie anschliessend Ihre neuen Punkte.
 4. Wechseln Sie anschliessend die Ansicht im Contents-Fenster von "List By Drawing Order" auf "List By Data Source" (siehe @fig-db2-uebung10-1). 
-5.Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang "sde.DEFAULT". Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. "student1@..." zeigt hier auch noch den verbundenen Benutzer. (siehe @fig-db2-uebung10-2).
+5. Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang "sde.DEFAULT". Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. "student1@..." zeigt hier auch noch den verbundenen Benutzer. (siehe @fig-db2-uebung10-2).
 6. Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register "Versioning" angezeigt.
 7. Hier sehen Sie alle Werkzeuge zur Verwaltung der Versionen. Erstellen Sie eine neue eigene Version durch Klick auf "New Version". Achten Sie darauf das Häkchen bei "Change to this new version" zu setzen, damit die neue Version aktiviert wird (siehe @fig-db2-uebung10-3). 
     a. Name: studentNr_name
