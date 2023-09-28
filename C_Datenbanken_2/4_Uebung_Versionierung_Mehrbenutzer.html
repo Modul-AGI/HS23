@@ -608,7 +608,6 @@ function presenter(){
   <ul>
   <li><a href="#übung-10-version-erstellen-in-arcgis-pro" id="toc-übung-10-version-erstellen-in-arcgis-pro" class="nav-link active" data-scroll-target="#übung-10-version-erstellen-in-arcgis-pro">Übung 10: Version erstellen in ArcGIS Pro</a></li>
   <li><a href="#übung-11-versionen-zusammenführen-in-arcgis-pro" id="toc-übung-11-versionen-zusammenführen-in-arcgis-pro" class="nav-link" data-scroll-target="#übung-11-versionen-zusammenführen-in-arcgis-pro">Übung 11: Versionen zusammenführen in ArcGIS Pro</a></li>
-  <li><a href="#optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro" id="toc-optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro" class="nav-link" data-scroll-target="#optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</a></li>
   </ul>
 </nav>
     </div>
@@ -792,68 +791,6 @@ function presenter(){
 </div>
 </div>
 </div>
-</section>
-<section id="optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro" class="level2">
-<h2 class="anchored" data-anchor-id="optional-übung-12-abfragen-in-pgadmin-und-arcgis-pro">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</h2>
-<p>Wir haben in der Vorlesung ein paar SQL-Abfragen über die “waelder” Datenbank definiert. Da wir jetzt über die vorigen Übungen ein paar Beispiel Daten in die Datenbank importiert haben, können wir diese Datenbank nutzen, um noch ein paar Abfragen zu üben. Es ist nicht Ziel alle Abfragen gemacht zu haben. Machen Sie einfach so viele Abfragen wie Sie können. Beachten Sie auch, dass es oft mehr als einen Lösungsweg gibt.</p>
-<ol type="1">
-<li>Starten Sie pgAdmin und verbinden mit der Datenbank “waelder” mit Ihrem zugewiesenen Login (studentNr).</li>
-<li>Formulieren Sie die folgenden SQL-Abfragen und führen diese über das Query Tool von pgAdmin aus. Schauen Sie sich anschliessend das Ergebnis in der Attributtabelle und im Geometry Viewer an.</li>
-</ol>
-<ul>
-<li>Nicht räumliche Abfragen:
-<ol type="a">
-<li>Welche Sichtungsmeldungen wurden von “id_erfasser_x” erfasst?</li>
-<li>Wurden Löwen gesichtet? Wenn ja, wie viele?</li>
-<li>Wie viele Tiere von jeder Art wurden jeweils gesichtet. Geben Sie eine Liste mit den Namen der Tierarten und der Anzahl der Sichtungen aus.</li>
-<li>Wie viele Hasen wurden gesichtet? Geben Sie eine Zahl aus.</li>
-<li>Welcher Erfasser hat am meisten Meldungen erfasst? Geben Sie die id_erfasser und die Anzahl der erfassten Tiere aus.</li>
-<li>Welcher Erfasser hat am meisten unterschiedliche Tiere erfasst? Geben Sie die id_erfasser und die Anzahl der unterschiedlichen Tiere aus.</li>
-<li>In welchen Wäldern kommen Rehe vor? Geben Sie die Namen und die Beschreibung der betroffenen Wälder und die Tierart aus.</li>
-<li>Wie viele unterschiedliche Tierarten wurden gesichtet und welche sind das? Zeigen Sie jede Tierart mit dem Datum der letzten Sichtung. SQL→MAX(datum).</li>
-<li>Welche Tierarten wurden NICHT gesichtet?</li>
-<li>In welchen Monaten wurden die meisten Tiere gesichtet? Geben Sie die drei “besten” Monate für Tiersichtungen aus.</li>
-</ol></li>
-<li>Räumliche Abfragen:
-<ol start="11" type="a">
-<li>Wie gross sind die erfassten Wälder? Geben Sie eine Liste mit den Waldflächen in qm aus.
-<ul>
-<li>Funktion: ST_AREA</li>
-</ul></li>
-<li>Wie viel Fläche in qm haben alle Wälder zusammen?
-<ul>
-<li>Funktion: ST_AREA und SUM</li>
-</ul></li>
-<li>Welche Sichtungsmeldungen liegen innerhalb eines Waldes?
-<ul>
-<li>Funktion: ST_CONTAINS oder ST_WITHIN</li>
-</ul></li>
-<li>Welche Sichtungsmeldungen liegen ausserhalb des Waldes?
-<ul>
-<li>Funktion: ST_UNION und ST_CONTAINS</li>
-</ul></li>
-<li>In welchem Wald gibt es die meisten Sichtungen?
-<ul>
-<li>Funktion: ST_CONTAINS und SUM</li>
-</ul></li>
-<li>Wie weit sind die ausserhalb liegenden Sichtungsmeldungen vom Wald entfernt?
-<ul>
-<li>Funktion: ST_DISTANCE, ST_UNION und ST_CONTAINS</li>
-</ul></li>
-<li>Welche Tiere wurden ausserhalb vom Wald gesichtet?
-<ul>
-<li>Funktion: ST_UNION, ST_CONTAINS + JOIN</li>
-</ul></li>
-</ol></li>
-<li>Weitere Abfragen:
-<ol start="18" type="a">
-<li>Gibt es Tierarten, welche nur im Wald gesichtet wurden? Welche sind das?</li>
-<li>Gibt es Tierarten, welche nie im Wald gesichtet wurden? Welche sind das?</li>
-<li>In welchen Wäldern wurden Füchse gesichtet?</li>
-<li>In welchen Wäldern kommen Rehe und Füchse gemeinsam vor?</li>
-<li>Wo gibt es Hermeline aber keine Mauswiesel?</li>
-</ol></li>
-</ul>
 
 
 </section>
