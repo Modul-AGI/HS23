@@ -635,7 +635,7 @@ function presenter(){
 <li>Zeigen Sie die Sichtungsmeldungen aus der Datenbank in der Karte an.</li>
 <li>Starten Sie jetzt den Editor und erfassen ein paar beliebige Sichtungsmeldungen. Erfassen Sie auch die Attribute über die Attributtabelle. Speichern Sie anschliessend Ihre neuen Punkte.</li>
 <li>Wechseln Sie anschliessend die Ansicht im Contents-Fenster von “List By Drawing Order” auf “List By Data Source” (siehe <a href="#fig-db2-uebung10-1">Abbildung&nbsp;<span>48.1</span></a>). 5.Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang “sde.DEFAULT”. Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. “student1@…” zeigt hier auch noch den verbundenen Benutzer. (siehe <a href="#fig-db2-uebung10-2">Abbildung&nbsp;<span>48.2</span></a>).</li>
-<li>Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register “Data Source” / “Versioning” angezeigt.</li>
+<li>Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register “Versioning” angezeigt.</li>
 <li>Hier sehen Sie alle Werkzeuge zur Verwaltung der Versionen. Erstellen Sie eine neue eigene Version durch Klick auf “New Version”. Achten Sie darauf das Häkchen bei “Change to this new version” zu setzen, damit die neue Version aktiviert wird (siehe <a href="#fig-db2-uebung10-3">Abbildung&nbsp;<span>48.3</span></a>).
 <ol type="a">
 <li>Name: studentNr_name</li>
@@ -651,7 +651,7 @@ function presenter(){
 <li>Schauen Sie wiederum die Datenbankverbindung im Contents-Fenster an. Die neue Version student1 ist jetzt aktiv. Ab sofort werden alle Änderungen innerhalb dieser Version gemacht und nicht mehr in der sde.DEFAULT Version (siehe <a href="#fig-db2-uebung10-4">Abbildung&nbsp;<span>48.4</span></a>).</li>
 <li>Starten Sie den Editor und löschen einige der bereits von Ihnen erfassten Sichtungsmeldungen und erfassen auch ein paar neue Punkte. Speichern Sie die Änderungen im Editor.</li>
 <li>Merken Sie sich ungefähr die Lage der von Ihnen jetzt digitalisierten Punkte (siehe <a href="#fig-db2-uebung10-5">Abbildung&nbsp;<span>48.5</span></a>).</li>
-<li>Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte “Data Source”→Versioning gewechselt werden.</li>
+<li>Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte “Versioning” gewechselt werden.</li>
 <li>Wechseln Sie die Version zurück auf die sde.DEFAULT Version.</li>
 <li>Schauen Sie sich das Kartenbild an. Was fällt auf?</li>
 <li>Alle Ihre Anpassungen/Änderungen, welche Sie in der Version studentNr gemacht haben, sind in der sde.DEFAULT nicht mehr vorhanden. Dies ist normal, da die Änderungen eben in einer anderen Version gemacht wurden (siehe <a href="#fig-db2-uebung10-6">Abbildung&nbsp;<span>48.6</span></a> und <a href="#fig-db2-uebung10-7">Abbildung&nbsp;<span>48.7</span></a>).</li>
@@ -733,7 +733,7 @@ function presenter(){
 <li>Sie bekommen eine Fehlermeldung (siehe <a href="#fig-db2-uebung11-4">Abbildung&nbsp;<span>48.11</span></a>).</li>
 <li>Wie bereits erwähnt können “fremde” Versionen nicht bearbeitet werden, wenn diese nicht öffentlich sind.</li>
 <li>Wechseln Sie wieder zurück zu Ihrer eigenen Version “studentNr”.</li>
-<li>Zeigen Sie die Registerkarte “Data Source – Versioning” an.</li>
+<li>Zeigen Sie die Registerkarte “Versioning” an.</li>
 <li>Bevor wir unsere eigenen Änderungen zurück in die sde.DEFAULT Version einspielen können, müssen wir auf Fehler bzw. Versionierungsprobleme prüfen, um sicher zu stellen, dass keine Inkonsistenzen entstehen.</li>
 <li>Klicken Sie dazu im Menü auf “Manage Versions”. Selektieren Sie Ihre Version und klicken “Reconcile/Post”. Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Lassen Sie ansonsten die Voreinstellungen (siehe <a href="#fig-db2-uebung11-5">Abbildung&nbsp;<span>48.12</span></a>).</li>
 <li>Sollte der Prozess ohne Fehler durchgeführt werden, so können im Anschluss die Änderungen in die sde.DEFAULT Datenbank geschrieben werden.</li>
