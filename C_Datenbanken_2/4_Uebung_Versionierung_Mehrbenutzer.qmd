@@ -64,7 +64,7 @@ In vielen Anwendungsfällen bearbeiten viele Mitarbeiter die Daten in derselben 
 12. Wechseln Sie wieder zurück zu Ihrer eigenen Version "studentNr".
 13. Zeigen Sie die Registerkarte "Versioning" an.
 14. Bevor wir unsere eigenen Änderungen zurück in die sde.DEFAULT Version einspielen können, müssen wir auf Fehler bzw. Versionierungsprobleme prüfen, um sicher zu stellen, dass keine Inkonsistenzen entstehen.
-15. Klicken Sie dazu im Menü auf "Manage Versions". Selektieren Sie Ihre Version und klicken "Reconcile/Post". Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Lassen Sie ansonsten die Voreinstellungen (siehe @fig-db2-uebung11-5). 
+15. Klicken Sie dazu im Menü auf "Manage Versions". Selektieren Sie Ihre Version und klicken "Reconcile/Post". Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Setzen Sie noch den Haken bei "Post versions after reconcile". Lassen Sie ansonsten die Voreinstellungen (siehe @fig-db2-uebung11-5). 
 16. Sollte der Prozess ohne Fehler durchgeführt werden, so können im Anschluss die Änderungen in die sde.DEFAULT Datenbank geschrieben werden.
 17. Klicken Sie auf "Ok". Alle Ihre Änderungen sollten jetzt auch in die sde.DEFAULT Version importiert worden sein.
 18. Prüfen Sie dies, indem Sie zurück auf die sde.DEFAULT Version wechseln. Diese sollte jetzt identisch mit Ihrer eigenen Version sein
