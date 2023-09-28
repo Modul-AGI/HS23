@@ -712,11 +712,11 @@ function presenter(){
 <ol type="1">
 <li>Starten Sie ArcGIS Pro und erstellen ein neues Projekt mit dem Namen “Datenbankzugriff”</li>
 <li>Öffnen Sie das Catalog-Fenster oder das Register Catalog und wählen Sie “Databases” (siehe <a href="#fig-connect1">Abbildung&nbsp;<span>47.3</span></a>).</li>
-<li>Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden (siehe <a href="#fig-connect2">Abbildung&nbsp;<span>47.4</span></a>).
+<li>Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden (siehe <span class="quarto-unresolved-ref">?fig-connect2</span>).
 <ul>
 <li>Databases→Kontextmenü→New Database Connection</li>
 </ul></li>
-<li>Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein (siehe <a href="#fig-connect3">Abbildung&nbsp;<span>47.5</span></a>).
+<li>Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein (siehe <a href="#fig-connect3">Abbildung&nbsp;<span>47.4</span></a>).
 <ul>
 <li>Database Platform: PostgreSQL</li>
 <li>Instance: svma-s-01323.zhaw.ch</li>
@@ -727,7 +727,7 @@ function presenter(){
 </ul></li>
 <li>Ein Klick auf OK stellt die Verbindung zur Datenbank her.</li>
 <li>Sie können der Datenbankverbindung noch einen sinnvollen Namen geben. Es empfiehlt sich eine Kombination aus dem Servernamen, der verbundenen Datenbank und dem Benutzer. Z.B. “svma-s-01323_waelder_student1”</li>
-<li>Unter dem Eintrag “Databases” im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank (siehe <a href="#fig-connect4">Abbildung&nbsp;<span>47.6</span></a>).</li>
+<li>Unter dem Eintrag “Databases” im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank (siehe <a href="#fig-connect4">Abbildung&nbsp;<span>47.5</span></a>).</li>
 </ol>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-bottom">
@@ -742,28 +742,20 @@ function presenter(){
 </div>
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div id="fig-connect2" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-connect3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="figures/screenshot_connect2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.4: Neue Datenbankverbindung herstellen</figcaption>
+<p><img src="figures/screenshot_connect3.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;47.4: Notwendige Verbindungsparameter eingeben</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-bottom">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-connect3" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/screenshot_connect3.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.5: Notwendige Verbindungsparameter eingeben</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-connect4" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_connect4.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.6: Neue Datenbankverbindung ist erstellt</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.5: Neue Datenbankverbindung ist erstellt</figcaption>
 </figure>
 </div>
 </div>
@@ -775,8 +767,8 @@ function presenter(){
 <p>Nachdem die Datenbank erstellt wurde und alle Verbindungen eingerichtet sind, ist die Datenbank startklar. ArcGIS pro nutzt für die Daten jeweils ein eigenes Schema. Das Schema hat dabei den Namen des Datenbank Admin Users.</p>
 <ol type="1">
 <li>Nutzen Sie wieder die Verbindung mit der Datenbank “waelder” in pgAdmin und öffnen Sie die Inhalte/Eigenschaften mit Klick auf den kleinen Pfeil.</li>
-<li>Navigieren Sie zum Eintrag Schemas. Dort sind 4 Einträge zu sehen. Ein Schema ist eine Art abgeschlossener Namensraum für die Datenhaltung. Es empfiehlt sich thematisch zusammenpassende Tabellen in einem gemeinsamen Schema zu speichern. Für die meisten Datenbank-Anwendungen genügt es aber alle Tabellen im default Schema “public” zu erstellen. Für den Zugriff über ArcGIS wurde aber durch das Werkzeug “Create Database User” ein spezielles Schema mit dem Namen des Database Users erstellt. Dies ist notwendig damit auch ArcGIS Pro auf die Daten zugreifen und diese verwalten kann. Das entsprechende Schema bekommt dabei immer den Namen des Admin Datenbankbenutzers. In diesem Fall “arcgispro_editor”. Sie können dort z.B. auch ein Schema mit Namen “sde” vom Geodatenbank-Administrator sehen (siehe <a href="#fig-db2-uebung4-1">Abbildung&nbsp;<span>47.7</span></a>).</li>
-<li>Öffnen Sie das public Schema. Hier gibt es bereits Einträge. Hier werden die zugehörigen Informationen der Datenbank, wie Sichten, Funktionen usw. zugänglich gemacht. Interessant ist zunächst aber nur der Eintrag “Tables (3)”. In Klammern ist immer die Anzahl der vorhandenen Datenbanktabellen angegeben. Wie wir sehen, gibt es default-Tabellen, welche bereits erstellt wurden. Die Tabelle “spatial_ref_sys” enthält z.B. alle Koordinatensysteme. Die Tabelle “sde_spatial_references” ist eine Hilfstabelle für Koordinatensysteme von ArcGIS Pro. Löschen Sie diese beiden Tabellen NIEMALS. Ohne diese Tabellen sind bestimmte Funktionen nicht mehr ausführbar (siehe <a href="#fig-db2-uebung4-2">Abbildung&nbsp;<span>47.8</span></a>)</li>
+<li>Navigieren Sie zum Eintrag Schemas. Dort sind 4 Einträge zu sehen. Ein Schema ist eine Art abgeschlossener Namensraum für die Datenhaltung. Es empfiehlt sich thematisch zusammenpassende Tabellen in einem gemeinsamen Schema zu speichern. Für die meisten Datenbank-Anwendungen genügt es aber alle Tabellen im default Schema “public” zu erstellen. Für den Zugriff über ArcGIS wurde aber durch das Werkzeug “Create Database User” ein spezielles Schema mit dem Namen des Database Users erstellt. Dies ist notwendig damit auch ArcGIS Pro auf die Daten zugreifen und diese verwalten kann. Das entsprechende Schema bekommt dabei immer den Namen des Admin Datenbankbenutzers. In diesem Fall “arcgispro_editor”. Sie können dort z.B. auch ein Schema mit Namen “sde” vom Geodatenbank-Administrator sehen (siehe <a href="#fig-db2-uebung4-1">Abbildung&nbsp;<span>47.6</span></a>).</li>
+<li>Öffnen Sie das public Schema. Hier gibt es bereits Einträge. Hier werden die zugehörigen Informationen der Datenbank, wie Sichten, Funktionen usw. zugänglich gemacht. Interessant ist zunächst aber nur der Eintrag “Tables (3)”. In Klammern ist immer die Anzahl der vorhandenen Datenbanktabellen angegeben. Wie wir sehen, gibt es default-Tabellen, welche bereits erstellt wurden. Die Tabelle “spatial_ref_sys” enthält z.B. alle Koordinatensysteme. Die Tabelle “sde_spatial_references” ist eine Hilfstabelle für Koordinatensysteme von ArcGIS Pro. Löschen Sie diese beiden Tabellen NIEMALS. Ohne diese Tabellen sind bestimmte Funktionen nicht mehr ausführbar (siehe <a href="#fig-db2-uebung4-2">Abbildung&nbsp;<span>47.7</span></a>)</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -810,7 +802,7 @@ Tipp
 <div id="fig-db2-uebung4-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung4_1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.7: PG Admin Schemas</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.6: PG Admin Schemas</figcaption>
 </figure>
 </div>
 </div>
@@ -818,7 +810,7 @@ Tipp
 <div id="fig-db2-uebung4-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung4_2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.8: PG Admin Tables</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.7: PG Admin Tables</figcaption>
 </figure>
 </div>
 </div>
@@ -838,7 +830,7 @@ Tipp
 <li>Öffnen Sie anschliessend den SQL Editor von pgadmin. Sie finden das so genannte Query Tool im Kontextmenü des Schemas oder in der Menüleiste oben unter Tools→Query Tool</li>
 <li>Importieren Sie mit Hilfe eines SQL Statements eine Tierart in die Tabelle “tierarten”.</li>
 <li>Da Sie jetzt alle gemeinsam und gleichzeitig Daten in dieselbe Tabelle einfüllen und Sie die Einträge noch unterscheiden wollen, fügen Sie unter id_erfasser jeweils ihre zugewiesene studentNr (nur die Zahl) ein.</li>
-<li>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a href="#fig-db2-uebung6-1">Abbildung&nbsp;<span>47.9</span></a>)
+<li>Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe <a href="#fig-db2-uebung6-1">Abbildung&nbsp;<span>47.8</span></a>)
 <ul>
 <li><div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">INSERT</span> <span class="kw">INTO</span> arcgispro_editor.tierarten (id_tierart, name_tierart, id_erfasser) </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>   <span class="kw">Values</span> (<span class="kw">DEFAULT</span>, ’Bär’, studentNr);</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
@@ -860,13 +852,13 @@ Tipp
 </div>
 </div>
 <ol start="6" type="1">
-<li>Lassen Sie sich den Inhalt der Tabelle ausgeben. Dies können Sie über ein SELECT SQL Statement ausführen (siehe <a href="#fig-db2-uebung6-2">Abbildung&nbsp;<span>47.10</span></a>).
+<li>Lassen Sie sich den Inhalt der Tabelle ausgeben. Dies können Sie über ein SELECT SQL Statement ausführen (siehe <a href="#fig-db2-uebung6-2">Abbildung&nbsp;<span>47.9</span></a>).
 <ul>
 <li><div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> arcgispro_editor.tierarten;</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 <li>Sie können erkennen, dass ihr Tier mit Ihrer studentNr als id_erfasser in die Tabelle eingetragen wurde. Vermutlich sehen Sie auch bereits Einträge Ihrer Mit-Studierenden.</li>
 <li>Navigieren Sie im Object Explorer von pgAdmin zur Tabelle “tierarten”.</li>
-<li>Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden (siehe <a href="#fig-db2-uebung6-3">Abbildung&nbsp;<span>47.11</span></a>).
+<li>Über das Kontextmenü können ebenfalls die Inhalte der Tabelle angezeigt werden (siehe <a href="#fig-db2-uebung6-3">Abbildung&nbsp;<span>47.10</span></a>).
 <ol type="a">
 <li>Tabelle “tierarten”→Kontextmenü→View/Edit Data→All Rows</li>
 </ol></li>
@@ -888,19 +880,19 @@ Tipp
 <div id="fig-db2-uebung6-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung6_1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.9: Insert Statement</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.8: Insert Statement</figcaption>
 </figure>
 </div>
 <div id="fig-db2-uebung6-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung6_2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.10: Select Statement</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.9: Select Statement</figcaption>
 </figure>
 </div>
 <div id="fig-db2-uebung6-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung6_3.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.11: Überprüfen der Tabelleninhalte</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.10: Überprüfen der Tabelleninhalte</figcaption>
 </figure>
 </div>
 </section>
@@ -911,9 +903,9 @@ Tipp
 <li>Bleiben Sie in der Datenbank “waelder” im schema “arcgispro_editor”.</li>
 <li>Öffnen Sie das Query Tool.</li>
 <li>Laden Sie die Datei “tierarten.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=159550">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</li>
-<li>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort “studentNr” in Ihre studentNr ab. Denken Sie sich ausserdem ein paar eigene/andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a href="#fig-db2-uebung7-1">Abbildung&nbsp;<span>47.12</span></a>).</li>
+<li>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort “studentNr” in Ihre studentNr ab. Denken Sie sich ausserdem ein paar eigene/andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a href="#fig-db2-uebung7-1">Abbildung&nbsp;<span>47.11</span></a>).</li>
 <li>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte “tierarten.sql” Datei in pgAdmin.</li>
-<li>Die Auswahl lädt den Inhalt der Datei ins Query Tool (siehe <a href="#fig-db2-uebung7-2">Abbildung&nbsp;<span>47.13</span></a>).</li>
+<li>Die Auswahl lädt den Inhalt der Datei ins Query Tool (siehe <a href="#fig-db2-uebung7-2">Abbildung&nbsp;<span>47.12</span></a>).</li>
 <li>Schliessen Sie die Eingabe mit Klick auf Execute ab.</li>
 <li>Schauen Sie sich erneut den Inhalt der Tabelle “tierarten” an. Die Tabelle sollte jetzt die eigenen Tierarten plus ein paar Einträge Ihrer Mit-Studierenden enthalten.</li>
 </ol>
@@ -933,13 +925,13 @@ Tipp
 <div id="fig-db2-uebung7-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung7_1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.12: Insert statments</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.11: Insert statments</figcaption>
 </figure>
 </div>
 <div id="fig-db2-uebung7-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung7_2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.13: Query tool</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.12: Query tool</figcaption>
 </figure>
 </div>
 </section>
@@ -953,15 +945,15 @@ Tipp
 <li>Öffnen Sie die Attributtabelle.</li>
 <li>Erfassen Sie im Feld “id_erfasser” wiederum Ihre zugewiesene studentNr (Nur die Zahl). Alle weiteren Attribute können Sie beliebig erfassen. Denken Sie sich einfach etwas aus.</li>
 <li>Importieren Sie die Daten anschliessend folgendermassen in die Feature Class “waelder” in der Datenbank auf dem Server.</li>
-<li>Kontextmenü der Feature Class “waelder”→Load Data. Es öffnet sich das Werkzeug “Append” (siehe <a href="#fig-db2-uebung8-1">Abbildung&nbsp;<span>47.14</span></a>)
+<li>Kontextmenü der Feature Class “waelder”→Load Data. Es öffnet sich das Werkzeug “Append” (siehe <a href="#fig-db2-uebung8-1">Abbildung&nbsp;<span>47.13</span></a>)
 <ul>
 <li>Input Dataset: Shapefile “waelder”</li>
 <li>Target Dataset: waelder.arcgispro_editor.waelder</li>
-<li>Field Matching Type: Use the Field Map to reconcile schema differences. Shapefiles können nur Spaltenbezeichnungen mit 10 Zeichen speichern. Alles andere wird abgeschnitten. Das Attribut “beschreibung” ist deshalb in der Datenbank als “beschreibung” gespeichert, im Shapefile aber nur als “beschreibu”. Dies hat zur Folge, dass das Schema beider Feature Classes nicht gleich ist. Aus diesem Grund muss hier explizit die Übereinstimmung der Spalten bestimmt werden. Das gleiche gilt für das Feld “id_erfasser” bzw. “id_erfasse” (siehe <a href="#fig-db2-uebung8-2">Abbildung&nbsp;<span>47.15</span></a>).</li>
+<li>Field Matching Type: Use the Field Map to reconcile schema differences. Shapefiles können nur Spaltenbezeichnungen mit 10 Zeichen speichern. Alles andere wird abgeschnitten. Das Attribut “beschreibung” ist deshalb in der Datenbank als “beschreibung” gespeichert, im Shapefile aber nur als “beschreibu”. Dies hat zur Folge, dass das Schema beider Feature Classes nicht gleich ist. Aus diesem Grund muss hier explizit die Übereinstimmung der Spalten bestimmt werden. Das gleiche gilt für das Feld “id_erfasser” bzw. “id_erfasse” (siehe <a href="#fig-db2-uebung8-2">Abbildung&nbsp;<span>47.14</span></a>).</li>
 </ul></li>
 <li>Erstellen Sie eine neue Karte in ArcGIS Pro und laden Sie die Feature Class “waelder” aus der Server Datenbank.</li>
 <li>Sie haben jetzt die Wälder in die Datenbank importiert.</li>
-<li>Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Karten-Symbol (View all Geometries in this column). Dies öffnet den “Geometry Viewer”. Sie sollten auch dort die Geometrien der importierten Wälder sehen (siehe <a href="#fig-db2-uebung8-3">Abbildung&nbsp;<span>47.16</span></a>).</li>
+<li>Schauen Sie sich die Wälder auch in pgAdmin an. Machen Sie hierzu eine Select Abfrage im Query Tool. In der Ergebnis Tabelle sehen Sie in der Geometry-Spalte ein kleines Karten-Symbol (View all Geometries in this column). Dies öffnet den “Geometry Viewer”. Sie sollten auch dort die Geometrien der importierten Wälder sehen (siehe <a href="#fig-db2-uebung8-3">Abbildung&nbsp;<span>47.15</span></a>).</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -982,7 +974,7 @@ Tipp
 <div id="fig-db2-uebung8-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung8_1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.14: Load data</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.13: Load data</figcaption>
 </figure>
 </div>
 </div>
@@ -990,7 +982,7 @@ Tipp
 <div id="fig-db2-uebung8-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung8_2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.15: Geoprocessing Append</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.14: Geoprocessing Append</figcaption>
 </figure>
 </div>
 </div>
@@ -999,7 +991,7 @@ Tipp
 <div id="fig-db2-uebung8-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung8_3.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.16: GIS GUI mit Wälder</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.15: GIS GUI mit Wälder</figcaption>
 </figure>
 </div>
 </section>
@@ -1010,27 +1002,27 @@ Tipp
 <li>Laden Sie die Datei “sichtungsmeldungen.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=159551">aus dem Moodle</a>. Es handelt sich um eine SQL-Datei mit Sichtungsmeldungen von Tieren.</li>
 <li>Öffnen Sie die Datei in einem beliebigen Texteditor. Was sehen Sie? Was fällt auf?</li>
 <li>Sie werden bemerken, dass die Geometrie über die Funktion ST_GeomFromText lesbar dargestellt werden kann. Der Geometrietyp von ArcGIS Pro wird dann über diese Funktion automatisch umgewandelt. I.d.R. ist es aber sehr viel einfacher Geometrien über ArcGIS Pro zu importieren oder zu erstellen. Sie sollen hier aber einmal sehen, dass es auch direkt über SQL geht.</li>
-<li>Passen Sie die Datei an, indem Sie als objectid (erstes Attribut) ihre studentNr gefolgt von einer 0 eintragen und als id_erfasser (letztes Attribut) jeweils Ihre studentNr (Nur die Zahl ohne 0) eintragen. Denken Sie sich auch eine sinnvolle Schweizer-Koordinate in der Nähe der anderen Objekte aus, damit Sie nicht alle denselben Punkt importieren. Sie können eine Koordinate einfach im Map-Fenster von ArcGIS Pro ablesen und ebenfalls in der Datei anpassen. Es kommt jetzt hier nicht auf Genauigkeit der Lage des Punktes an. Über die id_tierart können Sie sich ein beliebiges Tier aussuchen. Tragen Sie eine vorhandene id_tierart aus Ihrer Tierarten Tabelle aus Übung 6 ein. Passen Sie zum Schluss auch noch das Datum an (siehe <a href="#fig-db2-uebung9-1">Abbildung&nbsp;<span>47.17</span></a>).</li>
+<li>Passen Sie die Datei an, indem Sie als objectid (erstes Attribut) ihre studentNr gefolgt von einer 0 eintragen und als id_erfasser (letztes Attribut) jeweils Ihre studentNr (Nur die Zahl ohne 0) eintragen. Denken Sie sich auch eine sinnvolle Schweizer-Koordinate in der Nähe der anderen Objekte aus, damit Sie nicht alle denselben Punkt importieren. Sie können eine Koordinate einfach im Map-Fenster von ArcGIS Pro ablesen und ebenfalls in der Datei anpassen. Es kommt jetzt hier nicht auf Genauigkeit der Lage des Punktes an. Über die id_tierart können Sie sich ein beliebiges Tier aussuchen. Tragen Sie eine vorhandene id_tierart aus Ihrer Tierarten Tabelle aus Übung 6 ein. Passen Sie zum Schluss auch noch das Datum an (siehe <a href="#fig-db2-uebung9-1">Abbildung&nbsp;<span>47.16</span></a>).</li>
 <li>Starten Sie pgAdmin und laden die Datenbank “waelder” im Schema “arcgispro_editor”</li>
 <li>Importieren Sie die Sichtungsmeldung mit Hilfe der SQL-Datei in die Datenbank.</li>
-<li>Schauen Sie sich die Daten in pgadmin und in ArcGIS Pro an. Sie sollten einige Punkte in der Karte sehen (siehe <a href="#fig-db2-uebung9-2">Abbildung&nbsp;<span>47.18</span></a> und <a href="#fig-db2-uebung9-3">Abbildung&nbsp;<span>47.19</span></a>).</li>
+<li>Schauen Sie sich die Daten in pgadmin und in ArcGIS Pro an. Sie sollten einige Punkte in der Karte sehen (siehe <a href="#fig-db2-uebung9-2">Abbildung&nbsp;<span>47.17</span></a> und <a href="#fig-db2-uebung9-3">Abbildung&nbsp;<span>47.18</span></a>).</li>
 </ol>
 <div id="fig-db2-uebung9-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung9_1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.17: Anpassungen INSERT Statement</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.16: Anpassungen INSERT Statement</figcaption>
 </figure>
 </div>
 <div id="fig-db2-uebung9-2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung9_2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.18: pgAdmin Select Statement</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.17: pgAdmin Select Statement</figcaption>
 </figure>
 </div>
 <div id="fig-db2-uebung9-3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot_uebung9_3.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;47.19: GIS GUI mit Wälder und Sichtungen</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;47.18: GIS GUI mit Wälder und Sichtungen</figcaption>
 </figure>
 </div>
 
