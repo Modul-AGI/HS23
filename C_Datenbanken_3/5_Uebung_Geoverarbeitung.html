@@ -86,7 +86,7 @@ function presenter(){
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html"><span class="chapter-number">52</span>&nbsp; <span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -432,6 +432,11 @@ function presenter(){
   <a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/5_Uebung_SQL_Abfragen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -633,7 +638,7 @@ function presenter(){
 <p>In diesem Kapitel sollen konkrete Geoverarbeitungsoperationen in ArcGIS Pro und PostGIS/SQL gegenübergestellt werden. Dafür bearbeiten wir die entsprechende Fragestellung zunächst in ArcGIS Pro und stellen anschliessend die gleiche Funktion in PostGIS nach. Zur Visualisierung des Ergebnisses der SQL-Abfrage nutzen wir das Werkzeug “Make Query Layer” in ArcGIS Pro aus Übung 4.</p>
 <section id="übung-7-geometrien-zusammenführen-mit-dissolve" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7-geometrien-zusammenführen-mit-dissolve">Übung 7: Geometrien zusammenführen mit “Dissolve”</h2>
-<p>Die importierten Flächen sind alle einem bestimmten Bereich zugeordnet. Um einen Überblick über die Grösse und Ausdehnung der Bereiche zu bekommen, möchten wir alle Flächen (Tabelle pdb.flaechen_shp) mit identischem Bereich (Attribut “name_bereich”) zusammenführen (<a href="#fig-db3-uebung7-1">Abbildung&nbsp;<span>52.1</span></a>).</p>
+<p>Die importierten Flächen sind alle einem bestimmten Bereich zugeordnet. Um einen Überblick über die Grösse und Ausdehnung der Bereiche zu bekommen, möchten wir alle Flächen (Tabelle pdb.flaechen_shp) mit identischem Bereich (Attribut “name_bereich”) zusammenführen (<a href="#fig-db3-uebung7-1">Abbildung&nbsp;<span>53.1</span></a>).</p>
 <ol type="1">
 <li>Führen Sie die Geometrien mit identischem Bereichsnamen (Attribut “name_bereich”) zusammen. Verwenden Sie wieder die Verbindung mit dem Benutzer studentNr.
 <ul>
@@ -660,13 +665,13 @@ Tipp
 <div id="fig-db3-uebung7-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung7-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.1: Auszug aus Datenbankschema</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.1: Auszug aus Datenbankschema</figcaption>
 </figure>
 </div>
 </section>
 <section id="übung-8-puffer-um-geometrie-erstellen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-8-puffer-um-geometrie-erstellen">Übung 8: Puffer um Geometrie erstellen</h2>
-<p>Auf dem Campus sollen die Wege im Päoniengarten auf jeder Seite um 25cm verbreitert werden. Um die neuen Wege darzustellen, erstellen wir einen Puffer. Die Wegflächen finden Sie in der Datenbank in der Feature Class “wege_paeoniengarten” (siehe <a href="#fig-db3-uebung8-1">Abbildung&nbsp;<span>52.2</span></a>).</p>
+<p>Auf dem Campus sollen die Wege im Päoniengarten auf jeder Seite um 25cm verbreitert werden. Um die neuen Wege darzustellen, erstellen wir einen Puffer. Die Wegflächen finden Sie in der Datenbank in der Feature Class “wege_paeoniengarten” (siehe <a href="#fig-db3-uebung8-1">Abbildung&nbsp;<span>53.2</span></a>).</p>
 <ol type="1">
 <li>Legen Sie jeweils einen Puffer von beidseitig 25cm um das Wegenetz.
 <ul>
@@ -695,13 +700,13 @@ Tipp
 <div id="fig-db3-uebung8-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung8-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.2: Auszug aus Datenbankschema</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.2: Auszug aus Datenbankschema</figcaption>
 </figure>
 </div>
 </section>
 <section id="übung-9-geometrien-überschneiden-mit-intersect" class="level2">
 <h2 class="anchored" data-anchor-id="übung-9-geometrien-überschneiden-mit-intersect">Übung 9: Geometrien überschneiden mit “Intersect”</h2>
-<p>An einigen Stellen muss für die Verbreiterung des Weges die Fläche einiger Beete weichen. Ermitteln Sie die betroffenen Beete, welche Fläche für die neuen Wege abgeben müssen (siehe <a href="#fig-db3-uebung9-1">Abbildung&nbsp;<span>52.3</span></a>).</p>
+<p>An einigen Stellen muss für die Verbreiterung des Weges die Fläche einiger Beete weichen. Ermitteln Sie die betroffenen Beete, welche Fläche für die neuen Wege abgeben müssen (siehe <a href="#fig-db3-uebung9-1">Abbildung&nbsp;<span>53.3</span></a>).</p>
 <ol type="1">
 <li>Bilden Sie die Schnittmenge (Intersection) der gepufferten Wegfläche und der restlichen Flächen aus der Tabelle “pdb.flaechen”.
 <ul>
@@ -727,13 +732,13 @@ Tipp
 <div id="fig-db3-uebung9-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung9-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.3: Auszug aus Datenbankschema</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.3: Auszug aus Datenbankschema</figcaption>
 </figure>
 </div>
 </section>
 <section id="übung-10-flächen-berechnen-in-arcgis-pro-und-sql" class="level2">
 <h2 class="anchored" data-anchor-id="übung-10-flächen-berechnen-in-arcgis-pro-und-sql">Übung 10: Flächen berechnen in ArcGIS Pro und SQL</h2>
-<p>In der Übung 10 wurden Flächen ausgeschieden, welche von den betroffenen Beeten abgegeben werden müssen. Die genauen Flächengrössen sollen jetzt berechnet werden (<a href="#fig-db3-uebung10-1">Abbildung&nbsp;<span>52.4</span></a>).</p>
+<p>In der Übung 10 wurden Flächen ausgeschieden, welche von den betroffenen Beeten abgegeben werden müssen. Die genauen Flächengrössen sollen jetzt berechnet werden (<a href="#fig-db3-uebung10-1">Abbildung&nbsp;<span>53.4</span></a>).</p>
 <ol type="1">
 <li>Welche Beete müssen wie viel Fläche abgeben? Berechnen Sie die Fläche pro Beet in qm.
 <ul>
@@ -745,13 +750,13 @@ Tipp
 <div id="fig-db3-uebung10-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung10-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.4: Auszug aus Datenbankschema</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.4: Auszug aus Datenbankschema</figcaption>
 </figure>
 </div>
 </section>
 <section id="übung-11-geometrien-ausschneiden-mit-erase" class="level2">
 <h2 class="anchored" data-anchor-id="übung-11-geometrien-ausschneiden-mit-erase">Übung 11: Geometrien ausschneiden mit “Erase”</h2>
-<p>Als nächstes wollen wir die grosse Hauptwege-Achse zu unseren Flächen hinzufügen. Hierzu haben wir eine weitere Feature Class in der Datenbank mit der Hauptwegeachse zur Verfügung. Leider enthält die Feature Class nur die Aussengrenzen des Weges. Da es auf dem Weg auch Beete gibt, wollen wir diese Beetflächen aus der Wegfläche ausschneiden (siehe <a href="#fig-db3-uebung11-1">Abbildung&nbsp;<span>52.5</span></a>).</p>
+<p>Als nächstes wollen wir die grosse Hauptwege-Achse zu unseren Flächen hinzufügen. Hierzu haben wir eine weitere Feature Class in der Datenbank mit der Hauptwegeachse zur Verfügung. Leider enthält die Feature Class nur die Aussengrenzen des Weges. Da es auf dem Weg auch Beete gibt, wollen wir diese Beetflächen aus der Wegfläche ausschneiden (siehe <a href="#fig-db3-uebung11-1">Abbildung&nbsp;<span>53.5</span></a>).</p>
 <ol type="1">
 <li>Schneiden Sie die Beetflächen aus der Wegeachse aus. Nutzen Sie dafür:
 <ul>
@@ -777,13 +782,13 @@ Tipp
 <div id="fig-db3-uebung11-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung11-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.5: Auszug aus Datenbankschema</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.5: Auszug aus Datenbankschema</figcaption>
 </figure>
 </div>
 </section>
 <section id="übung-12-geometrien-ausschneiden-mit-clip" class="level2">
 <h2 class="anchored" data-anchor-id="übung-12-geometrien-ausschneiden-mit-clip">Übung 12: Geometrien ausschneiden mit “Clip”</h2>
-<p>Als nächstes möchten wir alle Pflanzen suchen, welche auf bereits kartierten Flächen stehen. Hierzu nehmen wir den Punktdatensatz der Pflanzen und verschneiden diesen mit den bereits vorhandenen Beet-Flächen (siehe <a href="#fig-db3-uebung12-1">Abbildung&nbsp;<span>52.6</span></a>).</p>
+<p>Als nächstes möchten wir alle Pflanzen suchen, welche auf bereits kartierten Flächen stehen. Hierzu nehmen wir den Punktdatensatz der Pflanzen und verschneiden diesen mit den bereits vorhandenen Beet-Flächen (siehe <a href="#fig-db3-uebung12-1">Abbildung&nbsp;<span>53.6</span></a>).</p>
 <ol type="1">
 <li>Suchen Sie alle Standorte (Punkte) der Pflanzen, welche auf kartierten Flächen stehen.
 <ul>
@@ -794,7 +799,7 @@ Tipp
 <div id="fig-db3-uebung12-1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/screenshot-uebung12-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;52.6: Auszug aus Datenbankschema</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;53.6: Auszug aus Datenbankschema</figcaption>
 </figure>
 </div>
 

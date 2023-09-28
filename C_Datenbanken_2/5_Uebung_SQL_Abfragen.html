@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modul AGI HS23 - Primitive Datentypen</title>
+<title>Modul AGI HS23 - (Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../B_Programmieren_1/4_Uebung_1.html" rel="next">
-<link href="../B_Programmieren_1/2_Python-Command-Prompt.html" rel="prev">
+<link href="../C_Datenbanken_3/1_Einleitung.html" rel="next">
+<link href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -120,7 +86,7 @@ function presenter(){
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_1/1_Einleitung.html">Programmieren I</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_1/3_Primitive_Datentypen.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Primitive Datentypen</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_2/1_Einleitung.html">Datenbanken II</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_2/5_Uebung_SQL_Abfragen.html"><span class="chapter-number">49</span>&nbsp; <span class="chapter-title">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -207,11 +173,11 @@ function presenter(){
       <div class="sidebar-item-container"> 
             <a href="../B_Programmieren_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren I</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/2_Python-Command-Prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Command Prompt</span></a>
@@ -219,7 +185,7 @@ function presenter(){
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/3_Primitive_Datentypen.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Primitive Datentypen</span></a>
+  <a href="../B_Programmieren_1/3_Primitive_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primitive Datentypen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -446,11 +412,11 @@ function presenter(){
       <div class="sidebar-item-container"> 
             <a href="../C_Datenbanken_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken II</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../C_Datenbanken_2/2_Uebung_Datenintegritaet.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenintegrität</span></a>
@@ -468,7 +434,7 @@ function presenter(){
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_2/5_Uebung_SQL_Abfragen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</span></a>
+  <a href="../C_Datenbanken_2/5_Uebung_SQL_Abfragen.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</span></a>
   </div>
 </li>
       </ul>
@@ -636,23 +602,14 @@ function presenter(){
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Inhaltsverzeichnis</h2>
-   
-  <ul>
-  <li><a href="#boolean" id="toc-boolean" class="nav-link active" data-scroll-target="#boolean">Boolean</a></li>
-  <li><a href="#string" id="toc-string" class="nav-link" data-scroll-target="#string">String</a></li>
-  <li><a href="#integer" id="toc-integer" class="nav-link" data-scroll-target="#integer">Integer</a></li>
-  <li><a href="#float" id="toc-float" class="nav-link" data-scroll-target="#float">Float</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Primitive Datentypen</span></h1>
+<h1 class="title"><span class="chapter-title">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</span></h1>
 </div>
 
 
@@ -667,131 +624,67 @@ function presenter(){
 
 </header>
 
-<p>Bei primitiven Datentypen handelt es sich um die kleinste Einheit der Programmiersprache, sie werden deshalb auch “atomare Datentypen” genannt. Alle komplexeren Datentypen (Tabellarische Daten, Bilder, Geodaten) basieren auf diesen einfachen Strukturen. Die für uns wichtigsten Datentypen lauten: <em>Boolean</em>, <em>String</em>, <em>Integer</em> und <em>Float</em>. Das sind ähnliche Datentypen wie ihr bereits aus R kennt:</p>
-<table class="table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Python</th>
-<th style="text-align: left;">R</th>
-<th style="text-align: left;">Beschreibung</th>
-<th style="text-align: left;">Beispiel</th>
-<th style="text-align: left;">in Python</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Boolean</td>
-<td style="text-align: left;">Logical</td>
-<td style="text-align: left;">Logische Werte ja / nein</td>
-<td style="text-align: left;">Wahr / Falsch</td>
-<td style="text-align: left;"><code>regen = True</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">String</td>
-<td style="text-align: left;">Character</td>
-<td style="text-align: left;">Textinformation</td>
-<td style="text-align: left;">Bern, Luzern</td>
-<td style="text-align: left;"><code>stadt = "Bern"</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Integer</td>
-<td style="text-align: left;">Integer</td>
-<td style="text-align: left;">Zahl ohne Nachkommastelle</td>
-<td style="text-align: left;">Anzahl Einwohner</td>
-<td style="text-align: left;"><code>bern = 133115</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Float</td>
-<td style="text-align: left;">Double</td>
-<td style="text-align: left;">Zahl mit Nachkommastelle</td>
-<td style="text-align: left;">Temperatur</td>
-<td style="text-align: left;"><code>temp = 22.5</code></td>
-</tr>
-</tbody>
-</table>
-<section id="boolean" class="level2">
-<h2 class="anchored" data-anchor-id="boolean">Boolean</h2>
-<p>Hierbei handelt es sich um den einfachsten Datentyp. Er beinhaltet nur zwei Zustände: Wahr oder Falsch. In Python werden diese mit <code>True</code> oder <code>False</code> definiert (diese Schreibweise muss genau beachtet werden). Beispielsweise sind das Antworten auf geschlossene Fragen.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>regen <span class="op">=</span> <span class="va">True</span> <span class="co"># "es regnet"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>sonne <span class="op">=</span> <span class="va">False</span> <span class="co"># "die Sonne scheint nicht"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(sonne)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>bool</code></pre>
-</div>
-</div>
-<p>Um zu prüfen, ob ein bestimmter Wert <code>True</code> oder <code>False</code> ist verwendet man <code>is True</code>. Will man also fragen ob es regnet, wir dies folgendermassen formuliert:</p>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># regnet es?</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>regen <span class="kw">is</span> <span class="va">True</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>True</code></pre>
-</div>
-</div>
-<p>Ob die Sonne scheint, lautet folgendermassen (natürlich müssen dazu die Variabel <code>sonne</code> bereits existieren):</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># scheint die Sonne?</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sonne <span class="kw">is</span> <span class="va">True</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>False</code></pre>
-</div>
-</div>
-</section>
-<section id="string" class="level2">
-<h2 class="anchored" data-anchor-id="string">String</h2>
-<p>In sogenannten <em>Strings</em> werden Textinformationen gespeichert. Beispielsweise können das die Namen von Ortschaften sein.</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>stadt <span class="op">=</span> <span class="st">"Bern"</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>land <span class="op">=</span> <span class="st">"Schweiz"</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(stadt)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>str</code></pre>
-</div>
-</div>
-<p>Strings können mit <code>+</code> miteinander verbunden werden</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>stadt <span class="op">+</span> <span class="st">" ist die Hauptstadt der "</span> <span class="op">+</span> land</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>'Bern ist die Hauptstadt der Schweiz'</code></pre>
-</div>
-</div>
-</section>
-<section id="integer" class="level2">
-<h2 class="anchored" data-anchor-id="integer">Integer</h2>
-<p>In <em>Integer</em> werden ganzzahlige Werte gespeichert, beispielsweise die Anzahl Einwohner einer Stadt.</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bern_einwohner <span class="op">=</span> <span class="dv">133115</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(bern_einwohner)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>int</code></pre>
-</div>
-</div>
-</section>
-<section id="float" class="level2">
-<h2 class="anchored" data-anchor-id="float">Float</h2>
-<p>Als <em>Float</em> werden Zahlen mit Nachkommastellen gespeichert, wie zum Beispiel die Temperatur in Grad Celsius.</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>bern_flaeche <span class="op">=</span> <span class="fl">51.62</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(bern_flaeche)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>float</code></pre>
-</div>
-</div>
+<p>Wir haben in der Vorlesung ein paar SQL-Abfragen über die “waelder” Datenbank definiert. Da wir jetzt über die vorigen Übungen ein paar Beispiel Daten in die Datenbank importiert haben, können wir diese Datenbank nutzen, um noch ein paar Abfragen zu üben. Es ist nicht Ziel alle Abfragen gemacht zu haben. Machen Sie einfach so viele Abfragen wie Sie können. Beachten Sie auch, dass es oft mehr als einen Lösungsweg gibt.</p>
+<ol type="1">
+<li>Starten Sie pgAdmin und verbinden mit der Datenbank “waelder” mit Ihrem zugewiesenen Login (studentNr).</li>
+<li>Formulieren Sie die folgenden SQL-Abfragen und führen diese über das Query Tool von pgAdmin aus. Schauen Sie sich anschliessend das Ergebnis in der Attributtabelle und im Geometry Viewer an.</li>
+</ol>
+<ul>
+<li>Nicht räumliche Abfragen:
+<ol type="a">
+<li>Welche Sichtungsmeldungen wurden von “id_erfasser_x” erfasst?</li>
+<li>Wurden Löwen gesichtet? Wenn ja, wie viele?</li>
+<li>Wie viele Tiere von jeder Art wurden jeweils gesichtet. Geben Sie eine Liste mit den Namen der Tierarten und der Anzahl der Sichtungen aus.</li>
+<li>Wie viele Hasen wurden gesichtet? Geben Sie eine Zahl aus.</li>
+<li>Welcher Erfasser hat am meisten Meldungen erfasst? Geben Sie die id_erfasser und die Anzahl der erfassten Tiere aus.</li>
+<li>Welcher Erfasser hat am meisten unterschiedliche Tiere erfasst? Geben Sie die id_erfasser und die Anzahl der unterschiedlichen Tiere aus.</li>
+<li>In welchen Wäldern kommen Rehe vor? Geben Sie die Namen und die Beschreibung der betroffenen Wälder und die Tierart aus.</li>
+<li>Wie viele unterschiedliche Tierarten wurden gesichtet und welche sind das? Zeigen Sie jede Tierart mit dem Datum der letzten Sichtung. SQL→MAX(datum).</li>
+<li>Welche Tierarten wurden NICHT gesichtet?</li>
+<li>In welchen Monaten wurden die meisten Tiere gesichtet? Geben Sie die drei “besten” Monate für Tiersichtungen aus.</li>
+</ol></li>
+<li>Räumliche Abfragen:
+<ol start="11" type="a">
+<li>Wie gross sind die erfassten Wälder? Geben Sie eine Liste mit den Waldflächen in qm aus.
+<ul>
+<li>Funktion: ST_AREA</li>
+</ul></li>
+<li>Wie viel Fläche in qm haben alle Wälder zusammen?
+<ul>
+<li>Funktion: ST_AREA und SUM</li>
+</ul></li>
+<li>Welche Sichtungsmeldungen liegen innerhalb eines Waldes?
+<ul>
+<li>Funktion: ST_CONTAINS oder ST_WITHIN</li>
+</ul></li>
+<li>Welche Sichtungsmeldungen liegen ausserhalb des Waldes?
+<ul>
+<li>Funktion: ST_UNION und ST_CONTAINS</li>
+</ul></li>
+<li>In welchem Wald gibt es die meisten Sichtungen?
+<ul>
+<li>Funktion: ST_CONTAINS und SUM</li>
+</ul></li>
+<li>Wie weit sind die ausserhalb liegenden Sichtungsmeldungen vom Wald entfernt?
+<ul>
+<li>Funktion: ST_DISTANCE, ST_UNION und ST_CONTAINS</li>
+</ul></li>
+<li>Welche Tiere wurden ausserhalb vom Wald gesichtet?
+<ul>
+<li>Funktion: ST_UNION, ST_CONTAINS + JOIN</li>
+</ul></li>
+</ol></li>
+<li>Weitere Abfragen:
+<ol start="18" type="a">
+<li>Gibt es Tierarten, welche nur im Wald gesichtet wurden? Welche sind das?</li>
+<li>Gibt es Tierarten, welche nie im Wald gesichtet wurden? Welche sind das?</li>
+<li>In welchen Wäldern wurden Füchse gesichtet?</li>
+<li>In welchen Wäldern kommen Rehe und Füchse gemeinsam vor?</li>
+<li>Wo gibt es Hermeline aber keine Mauswiesel?</li>
+</ol></li>
+</ul>
 
 
-</section>
 
 <button class="presenter-btn" onclick="presenter()">
 Presenter
@@ -1146,13 +1039,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../B_Programmieren_1/2_Python-Command-Prompt.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Python Command Prompt</span></span>
+      <a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../B_Programmieren_1/4_Uebung_1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Übung 1</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../C_Datenbanken_3/1_Einleitung.html" class="pagination-link">
+        <span class="nav-page-text">Datenbanken III</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

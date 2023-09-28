@@ -86,7 +86,7 @@ function presenter(){
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_2/1_Einleitung.html">Netzwerkanalyse II</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html"><span class="chapter-number">57</span>&nbsp; <span class="chapter-title">Aufgabe 4: Traveling Salesperson</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_2/1_Einleitung.html">Netzwerkanalyse II</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html"><span class="chapter-number">58</span>&nbsp; <span class="chapter-title">Aufgabe 4: Traveling Salesperson</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -432,6 +432,11 @@ function presenter(){
   <a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../C_Datenbanken_2/5_Uebung_SQL_Abfragen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">(Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -655,8 +660,8 @@ function presenter(){
 <p>Der Traveling-Salesperson-Pfad für fünf Punkte zu berechnen ist relativ trivial und könnte “von Hand” gerechnet werden. Anspruchsvoller wird es jedoch, wenn sich die Anzahl der Standorte erhöht. Nehmen wir an, Sie wollen eine Einkaufstour durch alle Läden in Wädenswil machen: Nutzen Sie die OSM Daten und <code>v.net.salesman</code> um eine sinnvolle Route zu berechnen.</p>
 <ol type="1">
 <li>OSM Daten der Läden laden: Vector→QuickOSM→QuickOSM</li>
-<li>key “shop”→Run query sowie Gebiet wählen (siehe dazu <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#sec-ex-network-osmdownload"><span>Kapitel&nbsp;53.6</span></a>)</li>
-<li>Punkt-Daten der Shops in CRS 2056 konvertieren (reproject, siehe <a href="../D_Netzwerkanalyse_1/3_QGIS.html#sec-ex-network-transfrom"><span>Kapitel&nbsp;54.1</span></a>). Clippen ist fakultativ (nicht erreichbare Knotenpunkte werden schlicht ignoriert)</li>
+<li>key “shop”→Run query sowie Gebiet wählen (siehe dazu <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#sec-ex-network-osmdownload"><span>Kapitel&nbsp;54.6</span></a>)</li>
+<li>Punkt-Daten der Shops in CRS 2056 konvertieren (reproject, siehe <a href="../D_Netzwerkanalyse_1/3_QGIS.html#sec-ex-network-transfrom"><span>Kapitel&nbsp;55.1</span></a>). Clippen ist fakultativ (nicht erreichbare Knotenpunkte werden schlicht ignoriert)</li>
 <li><code>v.net.salesman</code> mit diesen Standorten durchführen</li>
 </ol>
 </section>
