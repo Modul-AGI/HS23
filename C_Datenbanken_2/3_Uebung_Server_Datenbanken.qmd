@@ -43,7 +43,7 @@ Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerich
 7. Unter dem Eintrag "Databases" im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank  (siehe @fig-connect4).
 
 ::: {layout="[[1], [1], [1,1]]" layout-valign="bottom"}
-![Catalog Fenster in ArcGIS Pro](figures/screenshot_connect1.jpg){#fig-connect1}
+![Neue Datenbankverbindung in ArcGIS Pro](figures/screenshot_connect1.jpg){#fig-connect1}
 
 ![Notwendige Verbindungsparameter eingeben](figures/screenshot_connect3.jpg){#fig-connect3}
 
