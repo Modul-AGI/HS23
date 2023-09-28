@@ -82,7 +82,7 @@ In vielen Anwendungsfällen bearbeiten viele Mitarbeiter die Daten in derselben 
 ![Fehlerbehebung mit Reconcile/Post](figures/screenshot_uebung11_5.jpg){#fig-db2-uebung11-5}
 :::
 
-## (Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro überprüfen
+## (Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro
 Wir haben in der Vorlesung ein paar SQL-Abfragen über die "waelder" Datenbank definiert. Da wir jetzt über die vorigen Übungen ein paar Beispiel Daten in die Datenbank importiert haben, können wir diese Datenbank nutzen, um noch ein paar Abfragen zu üben. Es ist nicht Ziel alle Abfragen gemacht zu haben. Machen Sie einfach so viele Abfragen wie Sie können. Beachten Sie auch, dass es oft mehr als einen Lösungsweg gibt.
 
 1. Starten Sie pgAdmin und verbinden mit der Datenbank "waelder" mit Ihrem zugewiesenen Login
