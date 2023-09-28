@@ -29,7 +29,7 @@ Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerich
 
 1. Starten Sie ArcGIS Pro und erstellen ein neues Projekt mit dem Namen "Datenbankzugriff"
 2. Öffnen Sie das Catalog-Fenster oder das Register Catalog und wählen Sie "Databases" (siehe @fig-connect1).
-3. Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden (siehe @fig-connect2).
+3. Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden.
     - Databases→Kontextmenü→New Database Connection
 4. Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein  (siehe @fig-connect3).
     - Database Platform: PostgreSQL
