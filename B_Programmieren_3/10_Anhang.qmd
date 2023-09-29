@@ -4,7 +4,7 @@ echo: true
 
 # Anhang
 
-## Geodaten visualisieren
+## Anhang 1: Geodaten visualisieren
 
 In folgenden Beispielen zeigen wir noch ein paar einfache Wege, wie ihr die Zeckenstichdaten visualisieren könnt.
 

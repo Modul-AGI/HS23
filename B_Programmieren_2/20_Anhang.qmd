@@ -185,3 +185,5 @@ Einige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort hab
     ```
 
 ![Nach den oben beschriebnen Schritten sollte nun ein `R` Kernel zur Verfügung stehen](figures/ir-kernel.png){#fig-irkernel}
+
+
