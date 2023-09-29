@@ -36,7 +36,7 @@ book:
     logo: zhaw_sw_neg.png
     collapse-level: 1
     style: floating
-  body-footer: <button class="presenter-btn" onClick="presenter()">Presenter</button>
+  # body-footer: <button class="presenter-btn" onClick="presenter()">Presenter</button>
   chapters:
     - index.qmd
     - part: "A_Unsicherheit/1_Einleitung.qmd"
