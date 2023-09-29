@@ -1,7 +1,7 @@
 ---
 output: false
-echo: false                      # set to true to show solution
-code-fold: false                 # set to true to show solution
+echo: true                      # set to true to show solution
+code-fold: true
 code-summary: "Musterlösung"    
 ---
 
@@ -9,9 +9,12 @@ code-summary: "Musterlösung"
 
 ## Übung 4.1
 
-Importiere `pandas` und nutze die Funktion `DataFrame` um `people` in eine DataFrame umzuwandeln (siehe dazu das Beispiel oben). Weise den Output der Variable `people_df` zu und schau dir `people_df` an.
+Importiere `pandas` und nutze die Funktion `DataFrame` um `people` in eine DataFrame umzuwandeln (siehe dazu das Beispiel unten). Weise den Output der Variable `people_df` zu und schau dir `people_df` an.
 
 ```{python}
+#| echo: true
+#| code-fold: false
+
 import pandas as pd
 
 people = {"vornamen": ["Christopher", "Henning", "Severin"], "nachnamen": ["Annen","May", "Kantereit"], "groessen": [174, 182, 162]}
@@ -26,6 +29,7 @@ In der Praxis kommen Tabellarische Daten meist als "csv" Dateien daher. Wir kön
 
 ```{python}
 #| echo: true
+#| code-fold: false
 
 people_df.to_csv("people.csv")
 ```
@@ -44,6 +48,7 @@ Genau so einfach ist es eine csv zu importieren. Lade die Datei "zeckenstiche.cs
 
 ```{python}
 #| echo: true
+#| code-fold: false
 
 # ich habe die Daten in einem Unterordner "data" abgespeichert
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
@@ -55,6 +60,7 @@ Die *DataFrame* `zeckenstiche` beinhaltet x und y Koordinaten für jeden Unfall 
 
 ```{python}
 #| echo: true
+#| code-fold: false
 
 fig = zeckenstiche.plot.scatter("x","y")
 
@@ -77,6 +83,8 @@ Auch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neu
 
 ```{python}
 #| echo: true
+#| code-fold: false
+
 zeckenstiche["Stichtyp"] = "Zecke"
 ```
 

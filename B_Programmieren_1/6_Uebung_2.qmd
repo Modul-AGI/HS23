@@ -1,7 +1,7 @@
 ---
 output: false
-echo: false                      # set to true to show solution
-code-fold: false                 # set to true to show solution
+echo: true                      # set to true to show solution
+code-fold: true
 code-summary: "Musterlösung"    
 ---
 
@@ -34,6 +34,7 @@ Listen können durch die Methode `append` ergänzt werden (s.u.). Ergänze die L
 
 ```{python}
 #| echo: true
+#| code-fold: false
 
 vornamen.append("Malte")
 ```
