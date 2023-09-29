@@ -14,46 +14,57 @@ Diese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr m
 
 
 1. Starte Python Command Prompt (siehe [Python Command Prompt](#sec-python-command-prompt))
-2. Führe den Befehl: `conda create --name geopython` aus
+2. Führe den Befehl: `conda create --name geopython2` aus
 3. Bestätige die Installation mit `y`
 4. Prüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):
 
-```sh
-#
-# To activate this environment, use
-#
-#     $ activate geopython
-#
-# To deactivate an active environment, use
-#
-#     $ deactivate
-```
+    ```sh
+    #
+    # To activate this environment, use
+    #
+    #     $ activate geopython2
+    #
+    # To deactivate an active environment, use
+    #
+    #     $ deactivate
+    ```
 
+5. Führe den Befehl aus, der in der Meldung steht:
 
+    ```bash
+    activate geopython2               # (Windows) 
+    conda activate geopython2         # (MacOS, Linux)
+    ```
 
-5. Führe den Befehl: `conda activate geopython` aus
-6. Prüfe, ob die Eingabeforderung im Terminal nun mit `(geopython)` beginnt (melde dich falls nicht)
+6. Prüfe, ob die Eingabeforderung im Terminal nun mit `(geopython2)` beginnt (melde dich falls nicht)
 
-```default
-# ↓ vorher
-(arcgispro-py3) C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3>
+    ```default
+    # ↓ vorher
+    (arcgispro-py3) C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3>
 
-# ↓ nachher
-(geopython)  C:\Users\rata\AppData\Local\ESRI\conda\envs\geopython>
-```
+    # ↓ nachher
+    (geopython2)  C:\Users\rata\AppData\Local\ESRI\conda\envs\geopython>
+    ```
 
-7. Führe den folgenden Befehl aus: `conda install -c conda-forge jupyterlab geopandas matplotlib descartes`
+7. Führe den folgenden Befehl aus:
+
+    ```bash 
+    conda install -c conda-forge jupyterlab geopandas matplotlib descartes
+    ```
+
 8. Bestätige die Installation mit `y`
 9. Prüfe, ob die installation erfolgreich war (erscheint folgende Meldung im Terminal?):
 
-```default
-Preparing transaction: done
-Verifying transaction: done
-Executing transaction: done
-Retrieving notices: ...working... done
-```
+    ```default
+    Preparing transaction: done
+    Verifying transaction: done
+    Executing transaction: done
+    Retrieving notices: ...working... done
+    ```
 
 ## Übung 5.2 JupyterLab Desktop installieren {#sec-jupyterlab-desktop}
 
-Die Tatsache, dass JupyterLab via dem *Command Prompt* gestartet wird und im Browser läuft, ist für viele Anwender ungewohnt. Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: https://github.com/jupyterlab/jupyterlab-desktop#installation.
+Die Tatsache, dass JupyterLab via dem *Command Prompt* gestartet wird und im Browser läuft, ist ungewohnt und auch etwas umständlich. Um nur schon eines der soeben erstellten Jupyter Notebooks (\*.ipynb File) zu *betrachten* muss (1) der Terminal geöffnet, (2) in den richtigen Ordner navigiert (3) die richtige Conda Umgebung aktiviert und (4) JupyterLab gestartet werden.
+
+Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: <https://github.com/jupyterlab/jupyterlab-desktop#installation>.
 

@@ -22,11 +22,12 @@ Wenn man den [Python Command Prompt](chap-python-command-prompt) startet, ist Co
 
 `arcgispro-py3` ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das "default Python Environment", welches ArcGIS Pro jeweils nutzt (siehe @fig-arcgis-conda). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: *Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.* Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.
 
-Um ein neues Environment mit dem Namen `geopython` zu erstellen und aktivieren geht man wie folgt vor:
+Um ein neues Environment mit dem Namen `geopython2` zu erstellen und aktivieren geht man wie folgt vor:
 
 ```bash
-conda create --name geopython           # erstellt das Environment
-activate geopython                      # aktiviert das Environment
+conda create --name geopython2           # erstellt das Environment
+activate geopython                       # aktiviert das Environment (Windows)
+conda activate geopython                 # aktiviert das Environment (Mac / Linux)
 ```
 
 Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (`geopython`). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.

@@ -5,7 +5,44 @@
 In diesem Block bekommt ihr euren ersten Kontakt mit Python und lernt dabei auch gerade JupyterLab kennen, um mit Python zu interagieren. Er soll einen Einstieg in die Programmierwelt von Python bieten und spezifisch zeigen wie man räumliche Fragestellungen mit frei verfügbarer Software lösen kann. 
 Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze kennen zu lernen, die Bereitschaft für lösungsorientiertes Arbeiten sowie etwas Hartnäckigkeit. 
 
-Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter *Programmieren I > Datensätze* herunterladen könnt.
+
+## Vorbereitung
+
+Im Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt [Mit ArcGIS Installation](sec-mit-arcgis) durch.
+
+Wer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt [Ohne ArcGIS Installation](sec-ohne-arcgis) durch.
+
+### Mit ArcGIS Installation (v.a. Windows Nutzer){#sec-mit-arcgis}
+
+Um zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte im Video (s.u.) ausführen:
+
+1. Python Command Prompt suchen und starten
+2. Mittels dem Befehl `cd` in dein Persönliches Laufwerk wechseln (`cd C:\Users\DeinUserName\Desktop`, siehe dazu [diesen Video](https://youtu.be/BfXh11ryBJg?si=xg1dl95C1bwfGm4J))
+3. Mittels des Befehls `jupyter lab` das Programm Juypter Lab starten
+4. Mit Klick auf den Button ein neues Notebook erstellen
+
+
+### Ohne ArcGIS Installation (v.a. Mac / Linux Nutzer){#sec-ohne-arcgis}
+
+Wer keine ArcGIS installation hat, sollte folgende Software installieren:
+
+1. Überprüfe, ob Python > 3.9 installiert ist. Tippe dafür folgenden Befehl in den Terminal: 
+    ```bash
+    python3 --version
+    ```
+2. Wenn die Python nicht vorhanden oder die Version älter / kleiner als 3.9 ist, installiert eine aktuelle Version von Python: <https://www.python.org/downloads/>
+3. Installiert Miniconda von dieser Website: <https://docs.conda.io/projects/miniconda/en/latest/>
+4. Tippt folgende Befehle in der Commandozeile ein:
+
+    ```bash
+    conda create --name geopython1
+    conda activate geopython1   # Windows nutzer: conda activate geopython1
+    conda install -c conda-forge jupyterlab pandas
+    ```
+
+## Daten
+
+Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter *Programmieren I → Datensätze* herunterladen könnt.
 
 | Datensatz (inkl. Link) | Beschreibung          |
 |:-----------------------|:----------------------|                     
@@ -24,9 +61,9 @@ Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs un
 :::
 
 
-<!-- Die Slides zur heutigen Vorlesung findet ihr hier:  
 
-<iframe src="https://modul-agi.github.io/slides/ProgrammierenI" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%" allowfullscreen></iframe>
 
-In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)
--->
+
+
+
+
