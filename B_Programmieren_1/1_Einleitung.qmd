@@ -8,9 +8,9 @@ Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze k
 
 ## Vorbereitung
 
-Im Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt [Mit ArcGIS Installation](sec-mit-arcgis) durch.
+Im Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt [Mit ArcGIS Installation](#sec-mit-arcgis) durch.
 
-Wer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt [Ohne ArcGIS Installation](sec-ohne-arcgis) durch.
+Wer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt [Ohne ArcGIS Installation](#sec-ohne-arcgis) durch.
 
 ### Mit ArcGIS Installation (v.a. Windows Nutzer){#sec-mit-arcgis}
 
