@@ -677,33 +677,81 @@ function presenter(){
 <li>Erstelle eine zweite Variable <code>nachnamen</code> bestehend aus einer <em>List</em> mit 3 Nachnamen</li>
 <li>Erstelle eine Variable <code>groessen</code> bestehend aus einer <em>List</em> mit 3 Grössenangaben in Zentimeter.</li>
 </ol>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vornamen <span class="op">=</span> [<span class="st">"Christopher"</span>, <span class="st">"Henning"</span>, <span class="st">"Severin"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>nachnamen <span class="op">=</span> [<span class="st">"Annen"</span>, <span class="st">"May"</span>, <span class="st">"Kantereit"</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>groessen <span class="op">=</span> [<span class="dv">174</span>, <span class="dv">182</span>, <span class="dv">162</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-2.2" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.2">Übung 2.2</h2>
 <p>Wie erhältst du den ersten Eintrag in der Variable <code>vornamen</code>?</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>vornamen[<span class="dv">0</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-2.3" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.3">Übung 2.3</h2>
 <p>Listen können durch die Methode <code>append</code> ergänzt werden (s.u.). Ergänze die Listen <code>vornamen</code>, <code>nachnamen</code> und <code>groessen</code> durch je einen Eintrag.</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vornamen.append(<span class="st">"Malte"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>vornamen.append(<span class="st">"Malte"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nachnamen.append(<span class="st">"Huck"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>groessen.append(<span class="dv">177</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
 <section id="übung-2.4" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.4">Übung 2.4</h2>
 <p>Ermittle die Summe aller Werte in <code>groessen</code>. Tip: Nutze dazu <code>sum()</code></p>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(groessen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-2.5" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.5">Übung 2.5</h2>
 <p>Ermittle die Anzahl Werte in <code>groessen</code> . Tip: Nutze dazu <code>len()</code></p>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(groessen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="sec-mittelwert" class="level2">
 <h2 class="anchored" data-anchor-id="sec-mittelwert">Uebung 2.6</h2>
 <p>Berechne die durchschnittliche Grösse aller Personen in <code>groessen</code>. Tip: Nutze dazu <code>len()</code> und <code>sum()</code>.</p>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(groessen) <span class="op">/</span> <span class="bu">len</span>(groessen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-2.7" class="level2">
 <h2 class="anchored" data-anchor-id="übung-2.7">Übung 2.7</h2>
 <p>Ermittle nun noch die Minimum- und Maximumwerte aus <code>groessen</code> (finde die dazugehörige Funktion selber heraus).</p>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span>(groessen)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(groessen)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 </section>

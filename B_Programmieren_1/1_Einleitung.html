@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -602,7 +636,18 @@ function presenter(){
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+  <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link active" data-scroll-target="#vorbereitung">Vorbereitung</a>
+  <ul class="collapse">
+  <li><a href="#sec-mit-arcgis" id="toc-sec-mit-arcgis" class="nav-link" data-scroll-target="#sec-mit-arcgis">Mit ArcGIS Installation (v.a. Windows Nutzer)</a></li>
+  <li><a href="#sec-ohne-arcgis" id="toc-sec-ohne-arcgis" class="nav-link" data-scroll-target="#sec-ohne-arcgis">Ohne ArcGIS Installation (v.a. Mac / Linux Nutzer)</a></li>
+  </ul></li>
+  <li><a href="#daten" id="toc-daten" class="nav-link" data-scroll-target="#daten">Daten</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -625,7 +670,37 @@ function presenter(){
 </header>
 
 <p>In diesem Block bekommt ihr euren ersten Kontakt mit Python und lernt dabei auch gerade JupyterLab kennen, um mit Python zu interagieren. Er soll einen Einstieg in die Programmierwelt von Python bieten und spezifisch zeigen wie man räumliche Fragestellungen mit frei verfügbarer Software lösen kann. Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze kennen zu lernen, die Bereitschaft für lösungsorientiertes Arbeiten sowie etwas Hartnäckigkeit.</p>
-<p>Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter <em>Programmieren I &gt; Datensätze</em> herunterladen könnt.</p>
+<section id="vorbereitung" class="level2">
+<h2 class="anchored" data-anchor-id="vorbereitung">Vorbereitung</h2>
+<p>Im Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt <a href="sec-mit-arcgis">Mit ArcGIS Installation</a> durch.</p>
+<p>Wer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt <a href="sec-ohne-arcgis">Ohne ArcGIS Installation</a> durch.</p>
+<section id="sec-mit-arcgis" class="level3">
+<h3 class="anchored" data-anchor-id="sec-mit-arcgis">Mit ArcGIS Installation (v.a. Windows Nutzer)</h3>
+<p>Um zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte im Video (s.u.) ausführen:</p>
+<ol type="1">
+<li>Python Command Prompt suchen und starten</li>
+<li>Mittels dem Befehl <code>cd</code> in dein Persönliches Laufwerk wechseln (<code>cd C:\Users\DeinUserName\Desktop</code>, siehe dazu <a href="https://youtu.be/BfXh11ryBJg?si=xg1dl95C1bwfGm4J">diesen Video</a>)</li>
+<li>Mittels des Befehls <code>jupyter lab</code> das Programm Juypter Lab starten</li>
+<li>Mit Klick auf den Button ein neues Notebook erstellen</li>
+</ol>
+</section>
+<section id="sec-ohne-arcgis" class="level3">
+<h3 class="anchored" data-anchor-id="sec-ohne-arcgis">Ohne ArcGIS Installation (v.a. Mac / Linux Nutzer)</h3>
+<p>Wer keine ArcGIS installation hat, sollte folgende Software installieren:</p>
+<ol type="1">
+<li><p>Überprüfe, ob Python &gt; 3.9 installiert ist. Tippe dafür folgenden Befehl in den Terminal: <code>bash     python3 --version</code></p></li>
+<li><p>Wenn die Python nicht vorhanden oder die Version älter / kleiner als 3.9 ist, installiert eine aktuelle Version von Python: <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a></p></li>
+<li><p>Installiert Miniconda von dieser Website: <a href="https://docs.conda.io/projects/miniconda/en/latest/" class="uri">https://docs.conda.io/projects/miniconda/en/latest/</a></p></li>
+<li><p>Tippt folgende Befehle in der Commandozeile ein:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> geopython1</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate geopython1   <span class="co"># Windows nutzer: conda activate geopython1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab pandas</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+</section>
+</section>
+<section id="daten" class="level2">
+<h2 class="anchored" data-anchor-id="daten">Daten</h2>
+<p>Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter <em>Programmieren I → Datensätze</em> herunterladen könnt.</p>
 <div id="tbl-datensaetze" class="anchored">
 <table class="table">
 <caption>Tabelle&nbsp;1: Datensätze für den Teil “Programmieren I - III”</caption>
@@ -673,14 +748,9 @@ function presenter(){
 </ul>
 </div>
 </div>
-<!-- Die Slides zur heutigen Vorlesung findet ihr hier:  
-
-<iframe src="https://modul-agi.github.io/slides/ProgrammierenI" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="100%" allowfullscreen></iframe>
-
-In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)
--->
 
 
+</section>
 
 <button class="presenter-btn" onclick="presenter()">
 Presenter

@@ -640,15 +640,15 @@ function presenter(){
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#probleme-mit-conda-umlaute-im-bentzernamen" id="toc-probleme-mit-conda-umlaute-im-bentzernamen" class="nav-link active" data-scroll-target="#probleme-mit-conda-umlaute-im-bentzernamen">Probleme mit Conda: Umlaute im Bentzernamen</a></li>
-  <li><a href="#conda-und-arcpy" id="toc-conda-und-arcpy" class="nav-link" data-scroll-target="#conda-und-arcpy">Conda und <code>arcpy</code></a>
+  <li><a href="#anhang-1-probleme-mit-conda-umlaute-im-bentzernamen" id="toc-anhang-1-probleme-mit-conda-umlaute-im-bentzernamen" class="nav-link active" data-scroll-target="#anhang-1-probleme-mit-conda-umlaute-im-bentzernamen">Anhang 1: Probleme mit Conda: Umlaute im Bentzernamen</a></li>
+  <li><a href="#anhang-2-conda-und-arcpy" id="toc-anhang-2-conda-und-arcpy" class="nav-link" data-scroll-target="#anhang-2-conda-und-arcpy">Anhang 2: Conda und <code>arcpy</code></a>
   <ul class="collapse">
   <li><a href="#schritt-1-arcgis-python-umgebung-klonen" id="toc-schritt-1-arcgis-python-umgebung-klonen" class="nav-link" data-scroll-target="#schritt-1-arcgis-python-umgebung-klonen">Schritt 1: ArcGIS Python Umgebung Klonen</a></li>
   <li><a href="#schritt-2-die-neue-environment-aktivieren" id="toc-schritt-2-die-neue-environment-aktivieren" class="nav-link" data-scroll-target="#schritt-2-die-neue-environment-aktivieren">Schritt 2: Die neue Environment aktivieren</a></li>
   <li><a href="#schritt-3-weitere-module-installieren" id="toc-schritt-3-weitere-module-installieren" class="nav-link" data-scroll-target="#schritt-3-weitere-module-installieren">Schritt 3: weitere Module installieren</a></li>
   <li><a href="#schritt-4-arcpy-verwenden" id="toc-schritt-4-arcpy-verwenden" class="nav-link" data-scroll-target="#schritt-4-arcpy-verwenden">Schritt 4: <code>arcpy</code> verwenden</a></li>
   </ul></li>
-  <li><a href="#jupyterlab-mit-r" id="toc-jupyterlab-mit-r" class="nav-link" data-scroll-target="#jupyterlab-mit-r">JupyterLab mit <code>R</code></a></li>
+  <li><a href="#anhang-3-jupyterlab-mit-r" id="toc-anhang-3-jupyterlab-mit-r" class="nav-link" data-scroll-target="#anhang-3-jupyterlab-mit-r">Anhang 3: JupyterLab mit <code>R</code></a></li>
   </ul>
 </nav>
     </div>
@@ -672,27 +672,27 @@ function presenter(){
 
 </header>
 
-<section id="probleme-mit-conda-umlaute-im-bentzernamen" class="level2">
-<h2 class="anchored" data-anchor-id="probleme-mit-conda-umlaute-im-bentzernamen">Probleme mit Conda: Umlaute im Bentzernamen</h2>
+<section id="anhang-1-probleme-mit-conda-umlaute-im-bentzernamen" class="level2">
+<h2 class="anchored" data-anchor-id="anhang-1-probleme-mit-conda-umlaute-im-bentzernamen">Anhang 1: Probleme mit Conda: Umlaute im Bentzernamen</h2>
 <p>Alle <em>conda environments</em> werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: <code>C:\Users\DEIN-WINDOWS-BENUTZERNAME\AppData\Local\ESRI\conda\envs\</code>. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet <code>conda</code> eure <em>environment</em> möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure <em>conda environments</em> zu definieren. Dazu geht ihr wie folgt vor<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
 <ol type="1">
 <li><p>Überlege dir eine Location, wo du deine conda nvironments abspeichern möchtest (z.B. <code>C:\conda-envs</code>). Erstelle diesen Ordnerpfad und prüfe ob du dort Schreibrechte hast indem du in diesem Orner <code>C:\conda-envs</code> eine Dateie erstellst. Wenn das klappt, hast du Schreibrechte.</p></li>
 <li><p>Füge diesen Pfad deiner conda configuration hinzu:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--append</span> envs_dirs C:<span class="dt">\c</span>onda-envs</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<pre class="cmd"><code>conda config --append envs_dirs C:\conda-envs</code></pre></li>
 <li><p>Prüfe ob der letzte Schritt funktioniert hat indem du folgendem Befehl laufen lässt und prüfst, ob <code>C:\conda-envs</code> vorkommt:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--show</span> envs_dirs</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<pre class="cmd"><code>conda config --show envs_dirs</code></pre></li>
 <li><p>Erstelle eine neue conda environment in dieser neu erstellten directory:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--prefix</span><span class="op">=</span>C:<span class="dt">\c</span>onda-envs<span class="dt">\g</span>eopython</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<pre class="cmd"><code>conda create --prefix=C:\conda-envs\geopython</code></pre></li>
 <li><p>Prüfe, ob das geklappt hat, indem du die verfügbaren environments auflistest.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> info <span class="at">--envs</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<pre class="cmd"><code>conda info --envs</code></pre></li>
 <li><p>Wenn das geklappt hat, kannst du nun deine environment aktivieren</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate geopython</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<pre class="cmd"><code>conda activate geopython</code></pre></li>
 </ol>
 </section>
-<section id="conda-und-arcpy" class="level2">
-<h2 class="anchored" data-anchor-id="conda-und-arcpy">Conda und <code>arcpy</code></h2>
+<section id="anhang-2-conda-und-arcpy" class="level2">
+<h2 class="anchored" data-anchor-id="anhang-2-conda-und-arcpy">Anhang 2: Conda und <code>arcpy</code></h2>
 <p>Um die ganzen Befehle von ArcGIS direkt in Python ansteuern zu können, muss das package arcpy installiert werden. Bisher haben wir alle unsere Packages mit conda installiert, z.B:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge geopandas</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="cmd"><code>conda install -c conda-forge geopandas</code></pre>
 <p>Mit <code>arcpy</code> geht dies leider nicht, weil <code>arcpy</code> ein kostenpflichtiges Modul ist welches eine ArcGIS Lizenz benötigt. Glücklicherweise nutzt ArcGIS aber auch Conda Environments. Wir müssen also nur bewerkstelligen, das Juypter Lab die gleiche Conda environment verwendet wie ArcGIS. Dazu gehen wir wie folgt vor:</p>
 <ul>
 <li>Schritt 1: ArcGIS Python Umgebung Klonen</li>
@@ -709,41 +709,41 @@ function presenter(){
 <section id="schritt-2-die-neue-environment-aktivieren" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-2-die-neue-environment-aktivieren">Schritt 2: Die neue Environment aktivieren</h3>
 <p>Nun haben wir uns eine wunderschöne Python Umgebung parat gemacht und können diese jetzt in CMD aktivieren. Starte dazu Command Prompt / CMD und schaue dir die verfügbaren environments an:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>conda env list</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Bei mir sieht der output folgendermassen aus:</p>
-<pre><code># conda environments:
-#
-arcgisonline             C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgisonline
-arcgisonline2            C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgisonline2
-arcgispro-py3-clone      C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone
-arcgispro-py3-clone1     C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone1
-cameratraps-detector     C:\Users\rata\AppData\Local\ESRI\conda\envs\cameratraps-detector
-geopython                  C:\Users\rata\AppData\Local\ESRI\conda\envs\geopython
-test                     C:\Users\rata\AppData\Local\ESRI\conda\envs\test
-arcgispro-py3         *  C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3
-root                     C:\Program Files\ArcGIS\Pro\bin\Python</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a># conda environments:</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>#</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>arcgisonline             C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgisonline</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>arcgisonline2            C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgisonline2</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>arcgispro-py3-clone      C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>arcgispro-py3-clone1     C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone1</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>cameratraps-detector     C:\Users\rata\AppData\Local\ESRI\conda\envs\cameratraps-detector</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>geopython                  C:\Users\rata\AppData\Local\ESRI\conda\envs\geopython</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>test                     C:\Users\rata\AppData\Local\ESRI\conda\envs\test</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>arcgispro-py3         *  C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>root                     C:\Program Files\ArcGIS\Pro\bin\Python</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Aktiviere nun die eben erstelle environment mit folgendem code (ersetzte <code>name-der-environment</code> mit dem tatsächlichen Namen deiner neuen environment aus dem letzten Schritt.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">activate</span> name-der-environment</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="cmd"><code>activate name-der-environment</code></pre>
 </section>
 <section id="schritt-3-weitere-module-installieren" class="level3">
 <h3 class="anchored" data-anchor-id="schritt-3-weitere-module-installieren">Schritt 3: weitere Module installieren</h3>
 <p>Glücklicherweise ist <code>jupyterlab</code> bereits in der <code>arcgis</code> environment installiert, dies können wir mit folgendem code überprüfen:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre><code># packages in environment at C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone1:
-#
-affine                    2.3.0                      py_0    anaconda
-arcgis                    1.8.2                 py36_1275    esri
-arcgispro                 2.6                           0    esri
-.
-.
-.
-jupyterlab                2.2.9                      py_0    conda-forge
-jupyterlab_pygments       0.1.2              pyh9f0ad1d_0    conda-forge
-jupyterlab_server         1.2.0                      py_0    conda-forge
-.
-.
-.
+<pre class="cmd"><code>conda list
 </code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a># packages in environment at C:\Users\rata\AppData\Local\ESRI\conda\envs\arcgispro-py3-clone1:</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>#</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>affine                    2.3.0                      py_0    anaconda</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>arcgis                    1.8.2                 py36_1275    esri</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>arcgispro                 2.6                           0    esri</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>jupyterlab                2.2.9                      py_0    conda-forge</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>jupyterlab_pygments       0.1.2              pyh9f0ad1d_0    conda-forge</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>jupyterlab_server         1.2.0                      py_0    conda-forge</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>.</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>.</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Wenn jetzt aber noch module fehlen (wie z.B. <code>geopandas</code>), dann können wir diese wie gewohnt installieren.</p>
 </section>
 <section id="schritt-4-arcpy-verwenden" class="level3">
@@ -764,8 +764,8 @@ jupyterlab_server         1.2.0                      py_0    conda-forge
 <p>Der Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt “Code Sample”, z.B. <a href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">hier</a>)</p>
 </section>
 </section>
-<section id="jupyterlab-mit-r" class="level2">
-<h2 class="anchored" data-anchor-id="jupyterlab-mit-r">JupyterLab mit <code>R</code></h2>
+<section id="anhang-3-jupyterlab-mit-r" class="level2">
+<h2 class="anchored" data-anchor-id="anhang-3-jupyterlab-mit-r">Anhang 3: JupyterLab mit <code>R</code></h2>
 <p>Einige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit <code>R</code> benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer <em>gehosteten</em> Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit <code>R</code> lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an <a href="https://richpauloo.github.io/2018-05-16-Installing-the-R-kernel-in-Jupyter-Lab/">diesen Blogpost</a>):</p>
 <ol type="1">
 <li><p>In eurem Python Command Prompt erstellt ihr eine neue <code>conda</code> environment, aktiviert diese und installiert <code>juypterlab</code> sowie <code>r-ikernel</code> (letzteres aus dem channel <code>r</code>, nicht wie gewohnt <code>conda-forge</code>).</p>

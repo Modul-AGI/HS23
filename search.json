@@ -112,11 +112,18 @@
     "text": "Als Leistungsnachweis wird eine schriftliche Dokumentation der Lösung dieser Übung erwartet. Die Dokumentation sollte vier A4-Seiten nicht überschreiten und muss Folgendes beinhalten:\n\nName und Vorname der Autorin oder des Autors.\nResultate der Übung aufbereitet mittels ansprechenden Grafiken, Tabellen und evtl. Karten.\nBeantwortung der in dieser Übung enthaltenen Fragen.\nKurze Diskussion der Resultate.\nBeschreibung des ModelBuilder Modells inklusive:\n\nGrafische Abbildung des ModelBuilder Modells\nWelche Modellparameter wurden definiert und weshalb\nStichwortartige Beschreibung was das Modell berechnet\n\n\nAbgabeform und -termin\nLade deine vollständige Dokumentation spätestens bis Freitag 6. Oktober 2023 als PDF über Moodle hoch (Abgabe Leistungsnachweis Datenqualität und Unsicherheit).\n\n\n\n\nPresenter"
   },
   {
-    "objectID": "B_Programmieren_1/1_Einleitung.html",
-    "href": "B_Programmieren_1/1_Einleitung.html",
+    "objectID": "B_Programmieren_1/1_Einleitung.html#vorbereitung",
+    "href": "B_Programmieren_1/1_Einleitung.html#vorbereitung",
     "title": "Programmieren I",
-    "section": "",
-    "text": "In diesem Block bekommt ihr euren ersten Kontakt mit Python und lernt dabei auch gerade JupyterLab kennen, um mit Python zu interagieren. Er soll einen Einstieg in die Programmierwelt von Python bieten und spezifisch zeigen wie man räumliche Fragestellungen mit frei verfügbarer Software lösen kann. Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze kennen zu lernen, die Bereitschaft für lösungsorientiertes Arbeiten sowie etwas Hartnäckigkeit.\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I &gt; Datensätze herunterladen könnt.\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\nDatensatz (inkl. Link)\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet\n\n\n\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nPython kennen lernen, erste Interaktionen mit Python durch die Commandline\nErste Erfahrungen mit JupyterLab sammeln\nDie wichtigsten Datentypen in Python kennen lernen (bool, str, int, float, list, dict)\nPandas DataFrames kennen lernen und einfache Manipulationen durchführen\n\n\n\n\n\n\n\n\nPresenter"
+    "section": "Vorbereitung",
+    "text": "Vorbereitung\nIm Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Mit ArcGIS Installation durch.\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt Ohne ArcGIS Installation durch.\n\nMit ArcGIS Installation (v.a. Windows Nutzer)\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte im Video (s.u.) ausführen:\n\nPython Command Prompt suchen und starten\nMittels dem Befehl cd in dein Persönliches Laufwerk wechseln (cd C:\\Users\\DeinUserName\\Desktop, siehe dazu diesen Video)\nMittels des Befehls jupyter lab das Programm Juypter Lab starten\nMit Klick auf den Button ein neues Notebook erstellen\n\n\n\nOhne ArcGIS Installation (v.a. Mac / Linux Nutzer)\nWer keine ArcGIS installation hat, sollte folgende Software installieren:\n\nÜberprüfe, ob Python &gt; 3.9 installiert ist. Tippe dafür folgenden Befehl in den Terminal: bash     python3 --version\nWenn die Python nicht vorhanden oder die Version älter / kleiner als 3.9 ist, installiert eine aktuelle Version von Python: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/\nTippt folgende Befehle in der Commandozeile ein:\nconda create --name geopython1\nconda activate geopython1   # Windows nutzer: conda activate geopython1\nconda install -c conda-forge jupyterlab pandas"
+  },
+  {
+    "objectID": "B_Programmieren_1/1_Einleitung.html#daten",
+    "href": "B_Programmieren_1/1_Einleitung.html#daten",
+    "title": "Programmieren I",
+    "section": "Daten",
+    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\nDatensatz (inkl. Link)\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet\n\n\n\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nPython kennen lernen, erste Interaktionen mit Python durch die Commandline\nErste Erfahrungen mit JupyterLab sammeln\nDie wichtigsten Datentypen in Python kennen lernen (bool, str, int, float, list, dict)\nPandas DataFrames kennen lernen und einfache Manipulationen durchführen"
   },
   {
     "objectID": "B_Programmieren_1/2_Python-Command-Prompt.html",
@@ -158,49 +165,49 @@
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.1",
     "title": "Übung 1",
     "section": "Übung 1.1",
-    "text": "Übung 1.1\nErstelle eine Variabel vorname mit deinem Vornamen und eine zweite Variabel nachname mit deinem Nachnamen. Was sind vorname und nachname für Datentypen?"
+    "text": "Übung 1.1\nErstelle eine Variabel vorname mit deinem Vornamen und eine zweite Variabel nachname mit deinem Nachnamen. Was sind vorname und nachname für Datentypen?\n\n\nCode\nvorname = \"Guido\"\nnachname = \"van Rossum\"\n\ntype(vorname) # es handelt sich um den Datentyp \"str\", also String (Text)"
   },
   {
     "objectID": "B_Programmieren_1/4_Uebung_1.html#übung-1.2",
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.2",
     "title": "Übung 1",
     "section": "Übung 1.2",
-    "text": "Übung 1.2\n“Klebe” Vor- und Nachname mit einem Leerschlag dazwischen zusammen."
+    "text": "Übung 1.2\n“Klebe” Vor- und Nachname mit einem Leerschlag dazwischen zusammen.\n\n\nCode\nvorname + \" \" + nachname"
   },
   {
     "objectID": "B_Programmieren_1/4_Uebung_1.html#übung-1.3",
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.3",
     "title": "Übung 1",
     "section": "Übung 1.3",
-    "text": "Übung 1.3\nErstelle eine Variabel groesse_cm mit deiner Körpergrösse in Zentimeter. Was ist das für ein Datentyp?"
+    "text": "Übung 1.3\nErstelle eine Variabel groesse_cm mit deiner Körpergrösse in Zentimeter. Was ist das für ein Datentyp?\n\n\nCode\ngroesse_cm = 184\ntype(groesse_cm) # es handelt sich hierbei um den Datentyp \"integer\""
   },
   {
     "objectID": "B_Programmieren_1/4_Uebung_1.html#übung-1.4",
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.4",
     "title": "Übung 1",
     "section": "Übung 1.4",
-    "text": "Übung 1.4\nErmittle deine Grösse in Fuss auf der Basis von groesse_cm (1 Fuss entspricht 30.48 cm). Was ist das für ein Datentyp?"
+    "text": "Übung 1.4\nErmittle deine Grösse in Fuss auf der Basis von groesse_cm (1 Fuss entspricht 30.48 cm). Was ist das für ein Datentyp?\n\n\nCode\ngroesse_fuss = groesse_cm / 30.48\ntype(groesse_fuss) # es handelt sich um den Datentyp \"float\""
   },
   {
     "objectID": "B_Programmieren_1/4_Uebung_1.html#übung-1.5",
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.5",
     "title": "Übung 1",
     "section": "Übung 1.5",
-    "text": "Übung 1.5\nErstelle eine boolsche Variable blond und setzte sie auf True wenn diese Eigenschaft auf dich zutrifft und False falls nicht."
+    "text": "Übung 1.5\nErstelle eine boolsche Variable blond und setzte sie auf True wenn diese Eigenschaft auf dich zutrifft und False falls nicht.\n\n\nCode\nblond = False"
   },
   {
     "objectID": "B_Programmieren_1/4_Uebung_1.html#übung-1.6",
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.6",
     "title": "Übung 1",
     "section": "Übung 1.6",
-    "text": "Übung 1.6\nErstelle eine Variabel einwohner mit der Einwohnerzahl der Schweiz (8’603’900, per 31. Dezember 2019). Erstelle eine zweite Variabel flaeche (ohne Umlaute!) mit der Flächengrösse der Schweiz (41’285 km\\(^2\\)). Berechne nun die Einwohnerdichte."
+    "text": "Übung 1.6\nErstelle eine Variabel einwohner mit der Einwohnerzahl der Schweiz (8’603’900, per 31. Dezember 2019). Erstelle eine zweite Variabel flaeche (ohne Umlaute!) mit der Flächengrösse der Schweiz (41’285 km\\(^2\\)). Berechne nun die Einwohnerdichte.\n\n\nCode\neinwohner = 8603900\nflaeche = 41285\n\ndichte = einwohner / flaeche\n\ndichte"
   },
   {
     "objectID": "B_Programmieren_1/4_Uebung_1.html#übung-1.7",
     "href": "B_Programmieren_1/4_Uebung_1.html#übung-1.7",
     "title": "Übung 1",
     "section": "Übung 1.7",
-    "text": "Übung 1.7\nErstelle eine Variabel gewicht_kg (kg) und groesse_m (m) und berechne aufgrund von gewicht_kg und groesse_m ein BodyMassIndex (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter)."
+    "text": "Übung 1.7\nErstelle eine Variabel gewicht_kg (kg) und groesse_m (m) und berechne aufgrund von gewicht_kg und groesse_m ein BodyMassIndex (\\(BMI=\\frac{m}{l^2}\\), \\(m\\): Körpermasse in Kilogramm, \\(l\\): Körpergrösse in Meter).\n\n\nCode\ngewicht_kg = 85\ngroesse_m = groesse_cm / 100\n\ngewicht_kg / (groesse_m * groesse_m)"
   },
   {
     "objectID": "B_Programmieren_1/5_Komplexe_Datentypen.html",
@@ -214,49 +221,49 @@
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.1",
     "title": "Übung 2",
     "section": "Übung 2.1",
-    "text": "Übung 2.1\n\nErstelle eine Variable vornamen bestehend aus einer List mit 3 Vornamen\nErstelle eine zweite Variable nachnamen bestehend aus einer List mit 3 Nachnamen\nErstelle eine Variable groessen bestehend aus einer List mit 3 Grössenangaben in Zentimeter."
+    "text": "Übung 2.1\n\nErstelle eine Variable vornamen bestehend aus einer List mit 3 Vornamen\nErstelle eine zweite Variable nachnamen bestehend aus einer List mit 3 Nachnamen\nErstelle eine Variable groessen bestehend aus einer List mit 3 Grössenangaben in Zentimeter.\n\n\n\nCode\nvornamen = [\"Christopher\", \"Henning\", \"Severin\"]\nnachnamen = [\"Annen\", \"May\", \"Kantereit\"]\n\ngroessen = [174, 182, 162]"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#übung-2.2",
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.2",
     "title": "Übung 2",
     "section": "Übung 2.2",
-    "text": "Übung 2.2\nWie erhältst du den ersten Eintrag in der Variable vornamen?"
+    "text": "Übung 2.2\nWie erhältst du den ersten Eintrag in der Variable vornamen?\n\n\nCode\nvornamen[0]"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#übung-2.3",
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.3",
     "title": "Übung 2",
     "section": "Übung 2.3",
-    "text": "Übung 2.3\nListen können durch die Methode append ergänzt werden (s.u.). Ergänze die Listen vornamen, nachnamen und groessen durch je einen Eintrag.\n\nvornamen.append(\"Malte\")"
+    "text": "Übung 2.3\nListen können durch die Methode append ergänzt werden (s.u.). Ergänze die Listen vornamen, nachnamen und groessen durch je einen Eintrag.\n\nvornamen.append(\"Malte\")\n\n\n\nCode\nnachnamen.append(\"Huck\")\n\ngroessen.append(177)"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#übung-2.4",
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.4",
     "title": "Übung 2",
     "section": "Übung 2.4",
-    "text": "Übung 2.4\nErmittle die Summe aller Werte in groessen. Tip: Nutze dazu sum()"
+    "text": "Übung 2.4\nErmittle die Summe aller Werte in groessen. Tip: Nutze dazu sum()\n\n\nCode\nsum(groessen)"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#übung-2.5",
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.5",
     "title": "Übung 2",
     "section": "Übung 2.5",
-    "text": "Übung 2.5\nErmittle die Anzahl Werte in groessen . Tip: Nutze dazu len()"
+    "text": "Übung 2.5\nErmittle die Anzahl Werte in groessen . Tip: Nutze dazu len()\n\n\nCode\nlen(groessen)"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#sec-mittelwert",
     "href": "B_Programmieren_1/6_Uebung_2.html#sec-mittelwert",
     "title": "Übung 2",
     "section": "Uebung 2.6",
-    "text": "Uebung 2.6\nBerechne die durchschnittliche Grösse aller Personen in groessen. Tip: Nutze dazu len() und sum()."
+    "text": "Uebung 2.6\nBerechne die durchschnittliche Grösse aller Personen in groessen. Tip: Nutze dazu len() und sum().\n\n\nCode\nsum(groessen) / len(groessen)"
   },
   {
     "objectID": "B_Programmieren_1/6_Uebung_2.html#übung-2.7",
     "href": "B_Programmieren_1/6_Uebung_2.html#übung-2.7",
     "title": "Übung 2",
     "section": "Übung 2.7",
-    "text": "Übung 2.7\nErmittle nun noch die Minimum- und Maximumwerte aus groessen (finde die dazugehörige Funktion selber heraus)."
+    "text": "Übung 2.7\nErmittle nun noch die Minimum- und Maximumwerte aus groessen (finde die dazugehörige Funktion selber heraus).\n\n\nCode\nmin(groessen)\nmax(groessen)"
   },
   {
     "objectID": "B_Programmieren_1/7_JupyterNotebook.html",
@@ -277,56 +284,56 @@
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.1",
     "title": "Übung 3",
     "section": "Übung 3.1",
-    "text": "Übung 3.1\nErstelle eine Dictionary mit folgenden Einträgen: Vorname und Nachname von (d)einer Person. Weise diese Dictionary der Variable me zu."
+    "text": "Übung 3.1\nErstelle eine Dictionary mit folgenden Einträgen: Vorname und Nachname von (d)einer Person. Weise diese Dictionary der Variable me zu.\n\n\nCode\nme = {\"vorname\": \"Guido\", \"nachname\": \"van Rossum\"}"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.2",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.2",
     "title": "Übung 3",
     "section": "Übung 3.2",
-    "text": "Übung 3.2\nRufe verschiedene Elemente aus der Dictionary via dem Key ab."
+    "text": "Übung 3.2\nRufe verschiedene Elemente aus der Dictionary via dem Key ab.\n\n\nCode\nme[\"nachname\"]"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.3",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.3",
     "title": "Übung 3",
     "section": "Übung 3.3",
-    "text": "Übung 3.3\nNutze me um nachstehenden Satz (mit deinen Values) zu erstellen:\n'Mein name ist van Rossum, Guido van Rossum'"
+    "text": "Übung 3.3\nNutze me um nachstehenden Satz (mit deinen Values) zu erstellen:\n\n\nCode\n\"Mein Name ist \"+me[\"nachname\"] +\", \"+ me[\"vorname\"]+\" \"+me[\"nachname\"]\n\n\n'Mein Name ist van Rossum, Guido van Rossum'"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.4",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.4",
     "title": "Übung 3",
     "section": "Übung 3.4",
-    "text": "Übung 3.4\nErgänze die Dictionary me durch einen Eintrag “groesse” mit (d)einer Grösse."
+    "text": "Übung 3.4\nErgänze die Dictionary me durch einen Eintrag “groesse” mit (d)einer Grösse.\n\n\nCode\nme[\"groesse\"] = 181"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.5",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.5",
     "title": "Übung 3",
     "section": "Übung 3.5",
-    "text": "Übung 3.5\nErstelle eine neue Dictionary people mit den Keys “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträgen pro Key."
+    "text": "Übung 3.5\nErstelle eine neue Dictionary people mit den Keys “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträgen pro Key.\n\n\nCode\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.6",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.6",
     "title": "Übung 3",
     "section": "Übung 3.6",
-    "text": "Übung 3.6\nRufe den ersten Vornamen deiner Dict auf. Dazu musst du dein Wissen über Listen und Dictionaries kombinieren."
+    "text": "Übung 3.6\nRufe den ersten Vornamen deiner Dict auf. Dazu musst du dein Wissen über Listen und Dictionaries kombinieren.\n\n\nCode\npeople[\"vornamen\"][0]"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.7",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.7",
     "title": "Übung 3",
     "section": "Übung 3.7",
-    "text": "Übung 3.7\nRufe den dritten Nachname deiner Dict auf."
+    "text": "Übung 3.7\nRufe den dritten Nachname deiner Dict auf.\n\n\nCode\npeople[\"nachnamen\"][2]"
   },
   {
     "objectID": "B_Programmieren_1/9_Uebung_3.html#übung-3.8",
     "href": "B_Programmieren_1/9_Uebung_3.html#übung-3.8",
     "title": "Übung 3",
     "section": "Übung 3.8",
-    "text": "Übung 3.8\nBerechne den Mittelwert aller grössen in deiner Dict"
+    "text": "Übung 3.8\nBerechne den Mittelwert aller grössen in deiner Dict\n\n\nCode\nsum(people[\"groessen\"])/len(people[\"groessen\"])"
   },
   {
     "objectID": "B_Programmieren_1/10_Tabellarische_Daten.html",
@@ -340,7 +347,7 @@
     "href": "B_Programmieren_1/11_Uebung_4.html#übung-4.1",
     "title": "Übung 4",
     "section": "Übung 4.1",
-    "text": "Übung 4.1\nImportiere pandas und nutze die Funktion DataFrame um people in eine DataFrame umzuwandeln (siehe dazu das Beispiel oben). Weise den Output der Variable people_df zu und schau dir people_df an."
+    "text": "Übung 4.1\nImportiere pandas und nutze die Funktion DataFrame um people in eine DataFrame umzuwandeln (siehe dazu das Beispiel unten). Weise den Output der Variable people_df zu und schau dir people_df an.\n\nimport pandas as pd\n\npeople = {\"vornamen\": [\"Christopher\", \"Henning\", \"Severin\"], \"nachnamen\": [\"Annen\",\"May\", \"Kantereit\"], \"groessen\": [174, 182, 162]}\n\n\npeople_df = pd.DataFrame(people)"
   },
   {
     "objectID": "B_Programmieren_1/11_Uebung_4.html#sec-ex-to-csv",
@@ -368,28 +375,28 @@
     "href": "B_Programmieren_1/11_Uebung_4.html#sec-ex-sel-col",
     "title": "Übung 4",
     "section": "Übung 4.5",
-    "text": "Übung 4.5\nUm eine einzelne Spalte zu selektieren (z.B. die Spalte “ID”), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer Dictionary. Probiere es aus."
+    "text": "Übung 4.5\nUm eine einzelne Spalte zu selektieren (z.B. die Spalte “ID”), kann man gleich vorgehen wie bei der Selektion eines Eintrags in einer Dictionary. Probiere es aus.\n\n\nCode\nzeckenstiche[\"ID\"]"
   },
   {
     "objectID": "B_Programmieren_1/11_Uebung_4.html#sec-ex-new-col",
     "href": "B_Programmieren_1/11_Uebung_4.html#sec-ex-new-col",
     "title": "Übung 4",
     "section": "Übung 4.6",
-    "text": "Übung 4.6\nAuch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen Dictionary Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).\n\nzeckenstiche[\"Stichtyp\"] = \"Zecke\""
+    "text": "Übung 4.6\nAuch das Erstellen einer neuen Spalte ist identisch mit der Erstellung eines neuen Dictionary Eintrags. Erstelle eine neue Spalte “Stichtyp” mit dem Wert “Zecke” auf jeder Zeile (s.u.).\n\nzeckenstiche[\"Stichtyp\"] = \"Zecke\"\n\n\n\nCode\nzeckenstiche"
   },
   {
     "objectID": "B_Programmieren_1/12_Uebung_5.html#übung-5.1-neue-conda-umgebung-erstellen",
     "href": "B_Programmieren_1/12_Uebung_5.html#übung-5.1-neue-conda-umgebung-erstellen",
     "title": "Übung 5",
     "section": "Übung 5.1 Neue Conda Umgebung erstellen",
-    "text": "Übung 5.1 Neue Conda Umgebung erstellen\n\nStarte Python Command Prompt (siehe Python Command Prompt)\nFühre den Befehl: conda create --name geopython aus\nBestätige die Installation mit y\nPrüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):\n\n#\n# To activate this environment, use\n#\n#     $ activate geopython\n#\n# To deactivate an active environment, use\n#\n#     $ deactivate\n\nFühre den Befehl: conda activate geopython aus\nPrüfe, ob die Eingabeforderung im Terminal nun mit (geopython) beginnt (melde dich falls nicht)\n\n# ↓ vorher\n(arcgispro-py3) C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3&gt;\n\n# ↓ nachher\n(geopython)  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython&gt;\n\nFühre den folgenden Befehl aus: conda install -c conda-forge jupyterlab geopandas matplotlib descartes\nBestätige die Installation mit y\nPrüfe, ob die installation erfolgreich war (erscheint folgende Meldung im Terminal?):\n\nPreparing transaction: done\nVerifying transaction: done\nExecuting transaction: done\nRetrieving notices: ...working... done"
+    "text": "Übung 5.1 Neue Conda Umgebung erstellen\n\nStarte Python Command Prompt (siehe Python Command Prompt)\nFühre den Befehl: conda create --name geopython2 aus\nBestätige die Installation mit y\nPrüfe, ob u.a. folgende Meldung im Terminal erscheint (melde dich falls nicht):\n#\n# To activate this environment, use\n#\n#     $ activate geopython2\n#\n# To deactivate an active environment, use\n#\n#     $ deactivate\nFühre den Befehl aus, der in der Meldung steht:\nactivate geopython2               # (Windows) \nconda activate geopython2         # (MacOS, Linux)\nPrüfe, ob die Eingabeforderung im Terminal nun mit (geopython2) beginnt (melde dich falls nicht)\n# ↓ vorher\n(arcgispro-py3) C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3&gt;\n\n# ↓ nachher\n(geopython2)  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython&gt;\nFühre den folgenden Befehl aus:\nconda install -c conda-forge jupyterlab geopandas matplotlib descartes\nBestätige die Installation mit y\nPrüfe, ob die installation erfolgreich war (erscheint folgende Meldung im Terminal?):\nPreparing transaction: done\nVerifying transaction: done\nExecuting transaction: done\nRetrieving notices: ...working... done"
   },
   {
     "objectID": "B_Programmieren_1/12_Uebung_5.html#sec-jupyterlab-desktop",
     "href": "B_Programmieren_1/12_Uebung_5.html#sec-jupyterlab-desktop",
     "title": "Übung 5",
     "section": "Übung 5.2 JupyterLab Desktop installieren",
-    "text": "Übung 5.2 JupyterLab Desktop installieren\nDie Tatsache, dass JupyterLab via dem Command Prompt gestartet wird und im Browser läuft, ist für viele Anwender ungewohnt. Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: https://github.com/jupyterlab/jupyterlab-desktop#installation."
+    "text": "Übung 5.2 JupyterLab Desktop installieren\nDie Tatsache, dass JupyterLab via dem Command Prompt gestartet wird und im Browser läuft, ist ungewohnt und auch etwas umständlich. Um nur schon eines der soeben erstellten Jupyter Notebooks (*.ipynb File) zu betrachten muss (1) der Terminal geöffnet, (2) in den richtigen Ordner navigiert (3) die richtige Conda Umgebung aktiviert und (4) JupyterLab gestartet werden.\nDeshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: https://github.com/jupyterlab/jupyterlab-desktop#installation."
   },
   {
     "objectID": "B_Programmieren_2/1_Einleitung.html",
@@ -417,7 +424,7 @@
     "href": "B_Programmieren_2/2_Conda.html#conda-environment-erstellen",
     "title": "Conda",
     "section": "Conda environment erstellen",
-    "text": "Conda environment erstellen\nWenn man den Python Command Prompt startet, ist Conda bereits aktiviert. Dies ist daran erkennbar, dass vor dem Pfad (C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3) noch etwas in Klammern steht (arcgispro-py3, siehe Abbildung 18.1).\narcgispro-py3 ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das “default Python Environment”, welches ArcGIS Pro jeweils nutzt (siehe Abbildung 18.2). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first. Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.\nUm ein neues Environment mit dem Namen geopython zu erstellen und aktivieren geht man wie folgt vor:\nconda create --name geopython           # erstellt das Environment\nactivate geopython                      # aktiviert das Environment\nNun sollte in der Klammer der Name des eben erstellten Environment erscheinen (geopython). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.\n\n\n\nAbbildung 18.1: Python Command Prompt (i.e. “Eingabeaufforderung”)\n\n\n\n\n\nAbbildung 18.2: ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu Projekt &gt; Python navigiert."
+    "text": "Conda environment erstellen\nWenn man den Python Command Prompt startet, ist Conda bereits aktiviert. Dies ist daran erkennbar, dass vor dem Pfad (C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3) noch etwas in Klammern steht (arcgispro-py3, siehe Abbildung 18.1).\narcgispro-py3 ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das “default Python Environment”, welches ArcGIS Pro jeweils nutzt (siehe Abbildung 18.2). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first. Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.\nUm ein neues Environment mit dem Namen geopython2 zu erstellen und aktivieren geht man wie folgt vor:\nconda create --name geopython2           # erstellt das Environment\nactivate geopython                       # aktiviert das Environment (Windows)\nconda activate geopython                 # aktiviert das Environment (Mac / Linux)\nNun sollte in der Klammer der Name des eben erstellten Environment erscheinen (geopython). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.\n\n\n\nAbbildung 18.1: Python Command Prompt (i.e. “Eingabeaufforderung”)\n\n\n\n\n\nAbbildung 18.2: ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu Projekt &gt; Python navigiert."
   },
   {
     "objectID": "B_Programmieren_2/2_Conda.html#conda-packages-installieren",
@@ -672,25 +679,25 @@
     "text": "Übung 9.5\nUm die Original x/y-Werte sowie die simulierten Daten im gleichen Plot darzustellen, wird folgendermassen vorgegangen: Der erste Datensatz wird mit .plot() visualisiert, wobei der Output einer Variabel (z.B. basemap) zugewiesen wird. Danach wird der zweite Datensatz ebenfalls mit .plot() visualisiert, wobei auf den ersten Plot via dem Argument ax verwiesen wird.\nBei den roten Punkten handelt es sich um die Original-Zeckenstichen, bei den blauen um die simulierten (leicht verschoben) Zeckenstiche. Visualisiere deine eigenen Zeckenstiche auf diese Weise.\n\nfrom matplotlib import pyplot as plt\n\nbasemap = zeckenstiche.plot(\"x\", \"y\", kind = \"scatter\", color = \"red\")\nzeckenstiche.plot(\"x_sim\", \"y_sim\", kind = \"scatter\", ax = basemap, color = \"blue\")\n\nplt.axis(\"equal\")\n\n(2681087.2211839478, 2681180.6048774896, 1250643.6361779496, 1250739.64026306)"
   },
   {
-    "objectID": "B_Programmieren_2/20_Anhang.html#probleme-mit-conda-umlaute-im-bentzernamen",
-    "href": "B_Programmieren_2/20_Anhang.html#probleme-mit-conda-umlaute-im-bentzernamen",
+    "objectID": "B_Programmieren_2/20_Anhang.html#anhang-1-probleme-mit-conda-umlaute-im-bentzernamen",
+    "href": "B_Programmieren_2/20_Anhang.html#anhang-1-probleme-mit-conda-umlaute-im-bentzernamen",
     "title": "Anhang",
-    "section": "Probleme mit Conda: Umlaute im Bentzernamen",
-    "text": "Probleme mit Conda: Umlaute im Bentzernamen\nAlle conda environments werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: C:\\Users\\DEIN-WINDOWS-BENUTZERNAME\\AppData\\Local\\ESRI\\conda\\envs\\. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet conda eure environment möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure conda environments zu definieren. Dazu geht ihr wie folgt vor1:\n\nÜberlege dir eine Location, wo du deine conda nvironments abspeichern möchtest (z.B. C:\\conda-envs). Erstelle diesen Ordnerpfad und prüfe ob du dort Schreibrechte hast indem du in diesem Orner C:\\conda-envs eine Dateie erstellst. Wenn das klappt, hast du Schreibrechte.\nFüge diesen Pfad deiner conda configuration hinzu:\nconda config --append envs_dirs C:\\conda-envs\nPrüfe ob der letzte Schritt funktioniert hat indem du folgendem Befehl laufen lässt und prüfst, ob C:\\conda-envs vorkommt:\nconda config --show envs_dirs\nErstelle eine neue conda environment in dieser neu erstellten directory:\nconda create --prefix=C:\\conda-envs\\geopython\nPrüfe, ob das geklappt hat, indem du die verfügbaren environments auflistest.\nconda info --envs\nWenn das geklappt hat, kannst du nun deine environment aktivieren\nconda activate geopython"
+    "section": "Anhang 1: Probleme mit Conda: Umlaute im Bentzernamen",
+    "text": "Anhang 1: Probleme mit Conda: Umlaute im Bentzernamen\nAlle conda environments werden an einem zentralen Ort gespeichert. Typischerweise im folgenden Verzeichnis: C:\\Users\\DEIN-WINDOWS-BENUTZERNAME\\AppData\\Local\\ESRI\\conda\\envs\\. Wenn ihr Umlaute in eurem Windows Benutzernamen habt, findet conda eure environment möglicherweise nicht. Eine Möglichkeit, dieses Problem zu beheben, ist einen alternativen Speicherort für eure conda environments zu definieren. Dazu geht ihr wie folgt vor1:\n\nÜberlege dir eine Location, wo du deine conda nvironments abspeichern möchtest (z.B. C:\\conda-envs). Erstelle diesen Ordnerpfad und prüfe ob du dort Schreibrechte hast indem du in diesem Orner C:\\conda-envs eine Dateie erstellst. Wenn das klappt, hast du Schreibrechte.\nFüge diesen Pfad deiner conda configuration hinzu:\nconda config --append envs_dirs C:\\conda-envs\nPrüfe ob der letzte Schritt funktioniert hat indem du folgendem Befehl laufen lässt und prüfst, ob C:\\conda-envs vorkommt:\nconda config --show envs_dirs\nErstelle eine neue conda environment in dieser neu erstellten directory:\nconda create --prefix=C:\\conda-envs\\geopython\nPrüfe, ob das geklappt hat, indem du die verfügbaren environments auflistest.\nconda info --envs\nWenn das geklappt hat, kannst du nun deine environment aktivieren\nconda activate geopython"
   },
   {
-    "objectID": "B_Programmieren_2/20_Anhang.html#conda-und-arcpy",
-    "href": "B_Programmieren_2/20_Anhang.html#conda-und-arcpy",
+    "objectID": "B_Programmieren_2/20_Anhang.html#anhang-2-conda-und-arcpy",
+    "href": "B_Programmieren_2/20_Anhang.html#anhang-2-conda-und-arcpy",
     "title": "Anhang",
-    "section": "Conda und arcpy",
-    "text": "Conda und arcpy\nUm die ganzen Befehle von ArcGIS direkt in Python ansteuern zu können, muss das package arcpy installiert werden. Bisher haben wir alle unsere Packages mit conda installiert, z.B:\nconda install -c conda-forge geopandas\nMit arcpy geht dies leider nicht, weil arcpy ein kostenpflichtiges Modul ist welches eine ArcGIS Lizenz benötigt. Glücklicherweise nutzt ArcGIS aber auch Conda Environments. Wir müssen also nur bewerkstelligen, das Juypter Lab die gleiche Conda environment verwendet wie ArcGIS. Dazu gehen wir wie folgt vor:\n\nSchritt 1: ArcGIS Python Umgebung Klonen\nSchritt 2: Die neue Environment aktivieren\nSchritt 3: weitere Module installieren\n\n\nSchritt 1: ArcGIS Python Umgebung Klonen\nZuerst prüfen wir die Python Umgebung in ArcGIS. Diese findet man in ArcGIS unter Project &gt; Python\n\nHier ist einerseits die Project Environement ersichtlich (1), andererseits steht aber auch, dass diese Environment “read only” ist (2). Das bedeutet, dass wir keine neuen module installieren können, wenn wir diese Environment benutzen. Wir folgen deshalb den Vorschlag “Clone and activate a new environment”. Dazu klicken wir auf “Manage Environment” (3). Übrigens: Das ArcGIS Conda benutzt sehen wir an (4).\nKlicke hier auf “Clone Default” um die Umgebung zu kopieren. Das dauert eine Weile, danach kann man die neue Environment auswählen (Klick auf den Button “Active”). Notiert dir den Namen der neuen Environment, speichere das ArcGIS Projekt ab und starte das ArcGIS neu\n\n\nSchritt 2: Die neue Environment aktivieren\nNun haben wir uns eine wunderschöne Python Umgebung parat gemacht und können diese jetzt in CMD aktivieren. Starte dazu Command Prompt / CMD und schaue dir die verfügbaren environments an:\nconda env list\nBei mir sieht der output folgendermassen aus:\n# conda environments:\n#\narcgisonline             C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgisonline\narcgisonline2            C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgisonline2\narcgispro-py3-clone      C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone\narcgispro-py3-clone1     C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone1\ncameratraps-detector     C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\cameratraps-detector\ngeopython                  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython\ntest                     C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\test\narcgispro-py3         *  C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3\nroot                     C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\nAktiviere nun die eben erstelle environment mit folgendem code (ersetzte name-der-environment mit dem tatsächlichen Namen deiner neuen environment aus dem letzten Schritt.\nactivate name-der-environment\n\n\nSchritt 3: weitere Module installieren\nGlücklicherweise ist jupyterlab bereits in der arcgis environment installiert, dies können wir mit folgendem code überprüfen:\nconda list\n# packages in environment at C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone1:\n#\naffine                    2.3.0                      py_0    anaconda\narcgis                    1.8.2                 py36_1275    esri\narcgispro                 2.6                           0    esri\n.\n.\n.\njupyterlab                2.2.9                      py_0    conda-forge\njupyterlab_pygments       0.1.2              pyh9f0ad1d_0    conda-forge\njupyterlab_server         1.2.0                      py_0    conda-forge\n.\n.\n.\n\nWenn jetzt aber noch module fehlen (wie z.B. geopandas), dann können wir diese wie gewohnt installieren.\n\n\nSchritt 4: arcpy verwenden\nWenn alles gewünschten Module installiert sind können wir nun JupyterLab starten.\nSobald JupyterLab gestartet ist, können wir innerhalb einer cell das Modul arcpy mit import arcpy importieren und nun auch verwenden. Zum Beispiel folgendermassen:\nimport arcpy\nfrom arcpy import env\n\n# Set environment settings\nenv.workspace = \"C:/data/Habitat_Analysis.gdb\"\n\n# Select suitable vegetation patches from all vegetation\nveg = \"vegtype\"\nsuitableVeg = \"C:/output/Output.gdb/suitable_vegetation\"\nwhereClause = \"HABITAT = 1\" \narcpy.Select_analysis(veg, suitableVeg, whereClause)\nDer Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt “Code Sample”, z.B. hier)"
+    "section": "Anhang 2: Conda und arcpy",
+    "text": "Anhang 2: Conda und arcpy\nUm die ganzen Befehle von ArcGIS direkt in Python ansteuern zu können, muss das package arcpy installiert werden. Bisher haben wir alle unsere Packages mit conda installiert, z.B:\nconda install -c conda-forge geopandas\nMit arcpy geht dies leider nicht, weil arcpy ein kostenpflichtiges Modul ist welches eine ArcGIS Lizenz benötigt. Glücklicherweise nutzt ArcGIS aber auch Conda Environments. Wir müssen also nur bewerkstelligen, das Juypter Lab die gleiche Conda environment verwendet wie ArcGIS. Dazu gehen wir wie folgt vor:\n\nSchritt 1: ArcGIS Python Umgebung Klonen\nSchritt 2: Die neue Environment aktivieren\nSchritt 3: weitere Module installieren\n\n\nSchritt 1: ArcGIS Python Umgebung Klonen\nZuerst prüfen wir die Python Umgebung in ArcGIS. Diese findet man in ArcGIS unter Project &gt; Python\n\nHier ist einerseits die Project Environement ersichtlich (1), andererseits steht aber auch, dass diese Environment “read only” ist (2). Das bedeutet, dass wir keine neuen module installieren können, wenn wir diese Environment benutzen. Wir folgen deshalb den Vorschlag “Clone and activate a new environment”. Dazu klicken wir auf “Manage Environment” (3). Übrigens: Das ArcGIS Conda benutzt sehen wir an (4).\nKlicke hier auf “Clone Default” um die Umgebung zu kopieren. Das dauert eine Weile, danach kann man die neue Environment auswählen (Klick auf den Button “Active”). Notiert dir den Namen der neuen Environment, speichere das ArcGIS Projekt ab und starte das ArcGIS neu\n\n\nSchritt 2: Die neue Environment aktivieren\nNun haben wir uns eine wunderschöne Python Umgebung parat gemacht und können diese jetzt in CMD aktivieren. Starte dazu Command Prompt / CMD und schaue dir die verfügbaren environments an:\nconda env list\nBei mir sieht der output folgendermassen aus:\n# conda environments:\n#\narcgisonline             C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgisonline\narcgisonline2            C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgisonline2\narcgispro-py3-clone      C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone\narcgispro-py3-clone1     C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone1\ncameratraps-detector     C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\cameratraps-detector\ngeopython                  C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\geopython\ntest                     C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\test\narcgispro-py3         *  C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3\nroot                     C:\\Program Files\\ArcGIS\\Pro\\bin\\Python\nAktiviere nun die eben erstelle environment mit folgendem code (ersetzte name-der-environment mit dem tatsächlichen Namen deiner neuen environment aus dem letzten Schritt.\nactivate name-der-environment\n\n\nSchritt 3: weitere Module installieren\nGlücklicherweise ist jupyterlab bereits in der arcgis environment installiert, dies können wir mit folgendem code überprüfen:\nconda list\n\n# packages in environment at C:\\Users\\rata\\AppData\\Local\\ESRI\\conda\\envs\\arcgispro-py3-clone1:\n#\naffine                    2.3.0                      py_0    anaconda\narcgis                    1.8.2                 py36_1275    esri\narcgispro                 2.6                           0    esri\n.\n.\n.\njupyterlab                2.2.9                      py_0    conda-forge\njupyterlab_pygments       0.1.2              pyh9f0ad1d_0    conda-forge\njupyterlab_server         1.2.0                      py_0    conda-forge\n.\n.\n.\nWenn jetzt aber noch module fehlen (wie z.B. geopandas), dann können wir diese wie gewohnt installieren.\n\n\nSchritt 4: arcpy verwenden\nWenn alles gewünschten Module installiert sind können wir nun JupyterLab starten.\nSobald JupyterLab gestartet ist, können wir innerhalb einer cell das Modul arcpy mit import arcpy importieren und nun auch verwenden. Zum Beispiel folgendermassen:\nimport arcpy\nfrom arcpy import env\n\n# Set environment settings\nenv.workspace = \"C:/data/Habitat_Analysis.gdb\"\n\n# Select suitable vegetation patches from all vegetation\nveg = \"vegtype\"\nsuitableVeg = \"C:/output/Output.gdb/suitable_vegetation\"\nwhereClause = \"HABITAT = 1\" \narcpy.Select_analysis(veg, suitableVeg, whereClause)\nDer Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt “Code Sample”, z.B. hier)"
   },
   {
-    "objectID": "B_Programmieren_2/20_Anhang.html#jupyterlab-mit-r",
-    "href": "B_Programmieren_2/20_Anhang.html#jupyterlab-mit-r",
+    "objectID": "B_Programmieren_2/20_Anhang.html#anhang-3-jupyterlab-mit-r",
+    "href": "B_Programmieren_2/20_Anhang.html#anhang-3-jupyterlab-mit-r",
     "title": "Anhang",
-    "section": "JupyterLab mit R",
-    "text": "JupyterLab mit R\nEinige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit R benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer gehosteten Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit R lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an diesen Blogpost):\n\nIn eurem Python Command Prompt erstellt ihr eine neue conda environment, aktiviert diese und installiert juypterlab sowie r-ikernel (letzteres aus dem channel r, nicht wie gewohnt conda-forge).\nconda create --name r-env\nconda activate r-env\nconda install -c conda-forge jupyterlab\nconda install -c r r-irkernel\nNun ist R in eurer conda environment aktiviert. Nun könnt ihr mit folgenden Befehlen das Package IRkernel installieren sowie den Kernel für JuypterLab verfügbar machen.\nRscript -e \"install.packages('IRkernel', repos = 'https://cloud.r-project.org')\"\nRscript -e \"IRkernel::installspec(user = FALSE)\"\nOptional: Wenn ihr ein paar nützliche shortcuts für R haben wollt, könnt ihr die extension techrah/text-shortcuts mit folgender Zeile installieren.\njupyter labextension install @techrah/text-shortcuts\nNun könnt ihr JupyterLab starten und sollet nun einen R-Kernel zur Verfügung haben:\njupyter lab\n\n\n\n\nAbbildung 31.1: Nach den oben beschriebnen Schritten sollte nun ein R Kernel zur Verfügung stehen"
+    "section": "Anhang 3: JupyterLab mit R",
+    "text": "Anhang 3: JupyterLab mit R\nEinige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort habt ihr JupyterLab mit R benutzt, dabei habt ihr aber nicht auf eurem lokalen PC, sondern auf einer gehosteten Version von JupyterLab gearbeitet, also auf einem Server. Dieser Server kann jeder Zeit wieder Offline geschaltet werden oder ihr könnt euren Zugriff darauf verlieren. Wenn ihr JupyterLab mit R lokal nutzen wollt, geht ihr wie folgt vor (Anleitung in Anlehnung an diesen Blogpost):\n\nIn eurem Python Command Prompt erstellt ihr eine neue conda environment, aktiviert diese und installiert juypterlab sowie r-ikernel (letzteres aus dem channel r, nicht wie gewohnt conda-forge).\nconda create --name r-env\nconda activate r-env\nconda install -c conda-forge jupyterlab\nconda install -c r r-irkernel\nNun ist R in eurer conda environment aktiviert. Nun könnt ihr mit folgenden Befehlen das Package IRkernel installieren sowie den Kernel für JuypterLab verfügbar machen.\nRscript -e \"install.packages('IRkernel', repos = 'https://cloud.r-project.org')\"\nRscript -e \"IRkernel::installspec(user = FALSE)\"\nOptional: Wenn ihr ein paar nützliche shortcuts für R haben wollt, könnt ihr die extension techrah/text-shortcuts mit folgender Zeile installieren.\njupyter labextension install @techrah/text-shortcuts\nNun könnt ihr JupyterLab starten und sollet nun einen R-Kernel zur Verfügung haben:\njupyter lab\n\n\n\n\nAbbildung 31.1: Nach den oben beschriebnen Schritten sollte nun ein R Kernel zur Verfügung stehen"
   },
   {
     "objectID": "B_Programmieren_2/20_Anhang.html#footnotes",

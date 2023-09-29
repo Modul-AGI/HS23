@@ -674,35 +674,83 @@ function presenter(){
 <section id="übung-3.1" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.1">Übung 3.1</h2>
 <p>Erstelle eine <em>Dictionary</em> mit folgenden Einträgen: Vorname und Nachname von (d)einer Person. Weise diese Dictionary der Variable <code>me</code> zu.</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>me <span class="op">=</span> {<span class="st">"vorname"</span>: <span class="st">"Guido"</span>, <span class="st">"nachname"</span>: <span class="st">"van Rossum"</span>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-3.2" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.2">Übung 3.2</h2>
 <p>Rufe verschiedene Elemente aus der Dictionary via dem <em>Key</em> ab.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>me[<span class="st">"nachname"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-3.3" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.3">Übung 3.3</h2>
 <p>Nutze <code>me</code> um nachstehenden Satz (mit <strong>deinen</strong> <em>Values</em>) zu erstellen:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">'Mein name ist van Rossum, Guido van Rossum'</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Mein Name ist "</span><span class="op">+</span>me[<span class="st">"nachname"</span>] <span class="op">+</span><span class="st">", "</span><span class="op">+</span> me[<span class="st">"vorname"</span>]<span class="op">+</span><span class="st">" "</span><span class="op">+</span>me[<span class="st">"nachname"</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">'Mein Name ist van Rossum, Guido van Rossum'</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="übung-3.4" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.4">Übung 3.4</h2>
 <p>Ergänze die Dictionary <code>me</code> durch einen Eintrag “groesse” mit (d)einer Grösse.</p>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>me[<span class="st">"groesse"</span>] <span class="op">=</span> <span class="dv">181</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-3.5" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.5">Übung 3.5</h2>
 <p>Erstelle eine neue Dictionary <code>people</code> mit den <em>Keys</em> “vornamen”, “nachnamen” und “groesse” und jeweils 3 Einträgen pro <em>Key</em>.</p>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>people <span class="op">=</span> {<span class="st">"vornamen"</span>: [<span class="st">"Christopher"</span>, <span class="st">"Henning"</span>, <span class="st">"Severin"</span>], <span class="st">"nachnamen"</span>: [<span class="st">"Annen"</span>,<span class="st">"May"</span>, <span class="st">"Kantereit"</span>], <span class="st">"groessen"</span>: [<span class="dv">174</span>, <span class="dv">182</span>, <span class="dv">162</span>]}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-3.6" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.6">Übung 3.6</h2>
 <p>Rufe den <strong>ersten</strong> Vornamen deiner <em>Dict</em> auf. Dazu musst du dein Wissen über Listen und Dictionaries kombinieren.</p>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>people[<span class="st">"vornamen"</span>][<span class="dv">0</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-3.7" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.7">Übung 3.7</h2>
 <p>Rufe den <strong>dritten</strong> Nachname deiner <em>Dict</em> auf.</p>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>people[<span class="st">"nachnamen"</span>][<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
 <section id="übung-3.8" class="level2">
 <h2 class="anchored" data-anchor-id="übung-3.8">Übung 3.8</h2>
 <p>Berechne den Mittelwert aller grössen in deiner Dict</p>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(people[<span class="st">"groessen"</span>])<span class="op">/</span><span class="bu">len</span>(people[<span class="st">"groessen"</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 </section>
