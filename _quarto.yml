@@ -99,6 +99,7 @@ book:
       - C_Datenbanken_2/2_Uebung_Datenintegritaet.qmd
       - C_Datenbanken_2/3_Uebung_Server_Datenbanken.qmd
       - C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.qmd
+      - C_Datenbanken_2/5_Uebung_SQL_Abfragen.qmd
     - part: "C_Datenbanken_3/1_Einleitung.qmd"
       chapters: 
       - C_Datenbanken_3/2_Leistungsnachweis.qmd

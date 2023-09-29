@@ -29,7 +29,7 @@ Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerich
 
 1. Starten Sie ArcGIS Pro und erstellen ein neues Projekt mit dem Namen "Datenbankzugriff"
 2. Öffnen Sie das Catalog-Fenster oder das Register Catalog und wählen Sie "Databases" (siehe @fig-connect1).
-3. Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden (siehe @fig-connect2).
+3. Im Kontextmenü (rechte Maustaste) kann eine neue Datenbankverbindung zur Server Datenbank hergestellt werden.
     - Databases→Kontextmenü→New Database Connection
 4. Geben Sie im Database Connection Fenster die notwendigen Verbindungsparameter ein  (siehe @fig-connect3).
     - Database Platform: PostgreSQL
@@ -43,9 +43,7 @@ Nachdem die Datenbank erstellt wurde und eine Verbindung über pgadmin eingerich
 7. Unter dem Eintrag "Databases" im Catalog gibt es jetzt eine neue Datenbankverbindung zur Datenbank  (siehe @fig-connect4).
 
 ::: {layout="[[1], [1], [1,1]]" layout-valign="bottom"}
-![Catalog Fenster in ArcGIS Pro](figures/screenshot_connect1.jpg){#fig-connect1}
-
-![Neue Datenbankverbindung herstellen](figures/screenshot_connect2.jpg){#fig-connect2}
+![Neue Datenbankverbindung in ArcGIS Pro](figures/screenshot_connect1.jpg){#fig-connect1}
 
 ![Notwendige Verbindungsparameter eingeben](figures/screenshot_connect3.jpg){#fig-connect3}
 
@@ -99,7 +97,7 @@ Kontextmenü des Schemas oder in der Menüleiste oben unter Tools→Query Tool
 5. Benutzen Sie dazu das INSERT Statement und tippen es in das Query Tool (siehe @fig-db2-uebung6-1)
     - ```SQL 
       INSERT INTO arcgispro_editor.tierarten (id_tierart, name_tierart, id_erfasser) 
-      Values (DEFAULT, ’Bär’, studentNr);
+      Values (DEFAULT, 'Bär', studentNr);
       ```
     - Schliessen Sie die Eingabe mit Klick auf Execute ab.
 
@@ -204,7 +202,8 @@ Auch Geometrien können ebenso wie Sachdaten über eine SQL-Datei in die Datenba
 1. Laden Sie die Datei "sichtungsmeldungen.sql" [aus dem Moodle](https://moodle.zhaw.ch/mod/resource/view.php?id=159551). Es handelt sich um eine SQL-Datei mit Sichtungsmeldungen von Tieren.
 2. Öffnen Sie die Datei in einem beliebigen Texteditor. Was sehen Sie? Was fällt auf?
 3. Sie werden bemerken, dass die Geometrie über die Funktion ST_GeomFromText lesbar dargestellt werden kann. Der Geometrietyp von ArcGIS Pro wird dann über diese Funktion automatisch umgewandelt. I.d.R. ist es aber sehr viel einfacher Geometrien über ArcGIS Pro zu importieren oder zu erstellen. Sie sollen hier aber einmal sehen, dass es auch direkt über SQL geht.
-4. Passen Sie die Datei an, indem Sie als objectid (erstes Attribut) ihre studentNr gefolgt von einer 0 eintragen und als id_erfasser (letztes Attribut) jeweils Ihre studentNr (Nur die Zahl ohne 0) eintragen. Denken Sie sich auch eine sinnvolle Schweizer-Koordinate in der Nähe der anderen Objekte aus, damit Sie nicht alle denselben Punkt importieren. Sie können eine Koordinate einfach im Map-Fenster von ArcGIS Pro ablesen und ebenfalls in der Datei anpassen. Es kommt jetzt hier nicht auf Genauigkeit der Lage des Punktes an. Über die id_tierart können Sie sich ein beliebiges Tier aussuchen. Tragen Sie eine vorhandene id_tierart aus Ihrer Tierarten Tabelle aus Übung 6 ein. Passen Sie zum Schluss auch noch das Datum an (siehe @fig-db2-uebung9-1).
+5. Die Attribute (Spalten in der DB) in der Datei sind Kommagetrennt in Klammern nach dem Wert VALUE. Die Reihenfolge ist diesselbe wie in der Klammer vor dem VALUE.
+4. Passen Sie die Datei an, indem Sie als objectid (erstes Attribut) ihre studentNr gefolgt von einer 0 eintragen und als id_erfasser (letztes Attribut) jeweils Ihre studentNr (Nur die Zahl ohne 0) eintragen. Denken Sie sich auch eine sinnvolle Schweizer-Koordinate in der Nähe der anderen Objekte aus, damit Sie nicht alle denselben Punkt importieren. Die Punkte dürfen, müssen aber nicht im Wald liegen. Variieren Sie etwas. Sie können eine Koordinate einfach im Map-Fenster von ArcGIS Pro ablesen und ebenfalls in der Datei anpassen. Es kommt jetzt hier nicht auf Genauigkeit der Lage des Punktes an. Über die id_tierart können Sie sich ein beliebiges Tier aussuchen. Tragen Sie eine vorhandene id_tierart aus Ihrer Tierarten Tabelle aus Übung 6 ein. Passen Sie zum Schluss auch noch das Datum an (siehe @fig-db2-uebung9-1).
 5. Starten Sie pgAdmin und laden die Datenbank "waelder" im Schema "arcgispro_editor"
 6. Importieren Sie die Sichtungsmeldung mit Hilfe der SQL-Datei in die Datenbank.
 7. Schauen Sie sich die Daten in pgadmin und in ArcGIS Pro an. Sie sollten einige Punkte in der Karte sehen (siehe @fig-db2-uebung9-2 und @fig-db2-uebung9-3).

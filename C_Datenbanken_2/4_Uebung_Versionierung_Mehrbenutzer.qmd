@@ -7,9 +7,9 @@ Die Nutzung von Enterprise Server Geodatenbanken wie z.B. PostgreSQL erlaubt ein
 1. Kehren Sie in das Projekt "Datenbankzugriff" in ArcGIS Pro zurück und verbinden zur Datenbank "waelder" mit Ihrem zugewiesenen Benutzer (studentNr).
 2. Zeigen Sie die Sichtungsmeldungen aus der Datenbank in der Karte an.
 3. Starten Sie jetzt den Editor und erfassen ein paar beliebige Sichtungsmeldungen. Erfassen Sie auch die Attribute über die Attributtabelle. Speichern Sie anschliessend Ihre neuen Punkte.
-4. Wechseln Sie anschliessend die Ansicht im Contents-Fenster von "List By Drawing Order" auf "List By Data Source" (siehe @fig-db2-uebung10-1).
-5.Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang "sde.DEFAULT". Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. "student1@..." zeigt hier auch noch den verbundenen Benutzer. (siehe @fig-db2-uebung10-2).
-6. Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register "Data Source" / "Versioning" angezeigt.
+4. Wechseln Sie anschliessend die Ansicht im Contents-Fenster von "List By Drawing Order" auf "List By Data Source" (siehe @fig-db2-uebung10-1). 
+5. Schauen Sie sich die Verbindung zum Layer im Contents-Fenster an. Sie sehen dort zu Anfang "sde.DEFAULT". Dies ist wie der Name vermuten lässt die Standard-Version in welche automatisch alle Änderungen usw. eingespielt werden, sofern keine weiteren Versionen vorhanden sind. "student1@..." zeigt hier auch noch den verbundenen Benutzer. (siehe @fig-db2-uebung10-2).
+6. Selektieren Sie die Verbindung und achten auf die Registerkarten im ArcGIS Pro Hauptmenü (ganz oben). Es wird ein neues Register "Versioning" angezeigt.
 7. Hier sehen Sie alle Werkzeuge zur Verwaltung der Versionen. Erstellen Sie eine neue eigene Version durch Klick auf "New Version". Achten Sie darauf das Häkchen bei "Change to this new version" zu setzen, damit die neue Version aktiviert wird (siehe @fig-db2-uebung10-3). 
     a. Name: studentNr_name
     b. Description: beliebiger Text
@@ -21,7 +21,7 @@ Die Nutzung von Enterprise Server Geodatenbanken wie z.B. PostgreSQL erlaubt ein
 9. Schauen Sie wiederum die Datenbankverbindung im Contents-Fenster an. Die neue Version student1 ist jetzt aktiv. Ab sofort werden alle Änderungen innerhalb dieser Version gemacht und nicht mehr in der sde.DEFAULT Version (siehe @fig-db2-uebung10-4). 
 10.  Starten Sie den Editor und löschen einige der bereits von Ihnen erfassten Sichtungsmeldungen und erfassen auch ein paar neue Punkte. Speichern Sie die Änderungen im Editor.
 11. Merken Sie sich ungefähr die Lage der von Ihnen jetzt digitalisierten Punkte (siehe @fig-db2-uebung10-5).
-12. Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte "Data Source"→Versioning gewechselt werden.
+12. Wechseln Sie jetzt zurück auf die DEFAULT Version. Dies können Sie über das Kontextmenü des Eintrags im Contents-Fenster→Change Version. Alternativ kann die Version auch in der Registerkarte "Versioning" gewechselt werden.
 13. Wechseln Sie die Version zurück auf die sde.DEFAULT Version. 
 14. Schauen Sie sich das Kartenbild an. Was fällt auf?
 15. Alle Ihre Anpassungen/Änderungen, welche Sie in der Version studentNr gemacht haben, sind in der sde.DEFAULT nicht mehr vorhanden. Dies ist normal, da die  Änderungen eben in einer anderen Version gemacht wurden (siehe @fig-db2-uebung10-6 und @fig-db2-uebung10-7).
@@ -62,9 +62,9 @@ In vielen Anwendungsfällen bearbeiten viele Mitarbeiter die Daten in derselben 
 10. Sie bekommen eine Fehlermeldung (siehe @fig-db2-uebung11-4).
 11. Wie bereits erwähnt können "fremde" Versionen nicht bearbeitet werden, wenn diese nicht öffentlich sind.
 12. Wechseln Sie wieder zurück zu Ihrer eigenen Version "studentNr".
-13. Zeigen Sie die Registerkarte "Data Source – Versioning" an.
+13. Zeigen Sie die Registerkarte "Versioning" an.
 14. Bevor wir unsere eigenen Änderungen zurück in die sde.DEFAULT Version einspielen können, müssen wir auf Fehler bzw. Versionierungsprobleme prüfen, um sicher zu stellen, dass keine Inkonsistenzen entstehen.
-15. Klicken Sie dazu im Menü auf "Manage Versions". Selektieren Sie Ihre Version und klicken "Reconcile/Post". Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Lassen Sie ansonsten die Voreinstellungen (siehe @fig-db2-uebung11-5). 
+15. Klicken Sie dazu im Menü auf "Manage Versions". Selektieren Sie Ihre Version und klicken "Reconcile/Post". Wählen Sie die Zielversion so wie Einstellungen für das Fehlerhandling. Wählen Sie als Zielversion die sde.DEFAULT Datenbank und als Edit versions Ihre zuvor erstellte Version. Setzen Sie noch den Haken bei "Post versions after reconcile". Lassen Sie ansonsten die Voreinstellungen (siehe @fig-db2-uebung11-5). 
 16. Sollte der Prozess ohne Fehler durchgeführt werden, so können im Anschluss die Änderungen in die sde.DEFAULT Datenbank geschrieben werden.
 17. Klicken Sie auf "Ok". Alle Ihre Änderungen sollten jetzt auch in die sde.DEFAULT Version importiert worden sein.
 18. Prüfen Sie dies, indem Sie zurück auf die sde.DEFAULT Version wechseln. Diese sollte jetzt identisch mit Ihrer eigenen Version sein
@@ -81,43 +81,3 @@ In vielen Anwendungsfällen bearbeiten viele Mitarbeiter die Daten in derselben 
 :::
 ![Fehlerbehebung mit Reconcile/Post](figures/screenshot_uebung11_5.jpg){#fig-db2-uebung11-5}
 :::
-
-## (Optional) Übung 12: Abfragen in pgAdmin und ArcGIS Pro überprüfen
-Wir haben in der Vorlesung ein paar SQL-Abfragen über die "waelder" Datenbank definiert. Da wir jetzt über die vorigen Übungen ein paar Beispiel Daten in die Datenbank importiert haben, können wir diese Datenbank nutzen, um noch ein paar Abfragen zu üben. Es ist nicht Ziel alle Abfragen gemacht zu haben. Machen Sie einfach so viele Abfragen wie Sie können. Beachten Sie auch, dass es oft mehr als einen Lösungsweg gibt.
-
-1. Starten Sie pgAdmin und verbinden mit der Datenbank "waelder" mit Ihrem zugewiesenen Login
-(studentNr).
-2. Formulieren Sie die folgenden SQL-Abfragen und führen diese über das Query Tool von pgAdmin aus.
-Schauen Sie sich anschliessend das Ergebnis in der Attributtabelle und im Geometry Viewer an.
-- Nicht räumliche Abfragen:
-    a. Welche Sichtungsmeldungen wurden von "id_erfasser_x" erfasst?
-    b. Wurden Löwen gesichtet? Wenn ja, wie viele?
-    c. Wie viele Tiere von jeder Art wurden jeweils gesichtet. Geben Sie eine Liste mit den Namen der Tierarten und der Anzahl der Sichtungen aus.
-    d. Wie viele Hasen wurden gesichtet? Geben Sie eine Zahl aus.
-    e. Welcher Erfasser hat am meisten Meldungen erfasst? Geben Sie die id_erfasser und die Anzahl der erfassten Tiere aus.
-    f. Welcher Erfasser hat am meisten unterschiedliche Tiere erfasst? Geben Sie die id_erfasser und die Anzahl der unterschiedlichen Tiere aus.
-    g. In welchen Wäldern kommen Rehe vor? Geben Sie die Namen und die Beschreibung der betroffenen Wälder und die Tierart aus.
-    h. Wie viele unterschiedliche Tierarten wurden gesichtet und welche sind das? Zeigen Sie jede Tierart mit dem Datum der letzten Sichtung. SQL→MAX(datum).
-    i. Welche Tierarten wurden NICHT gesichtet?
-    j. In welchen Monaten wurden die meisten Tiere gesichtet? Geben Sie die drei "besten" Monate für Tiersichtungen aus.
-- Räumliche Abfragen:
-    k. Wie gross sind die erfassten Wälder? Geben Sie eine Liste mit den Waldflächen in qm aus.
-        - Funktion: ST_AREA
-    l. Wie viel Fläche in qm haben alle Wälder zusammen?
-        - Funktion: ST_AREA und SUM
-    m. Welche Sichtungsmeldungen liegen innerhalb eines Waldes?
-        - Funktion: ST_CONTAINS oder ST_WITHIN
-    n. Welche Sichtungsmeldungen liegen ausserhalb des Waldes?
-        - Funktion: ST_UNION und ST_CONTAINS
-    o. In welchem Wald gibt es die meisten Sichtungen?
-        - Funktion: ST_CONTAINS und SUM
-    p. Wie weit sind die ausserhalb liegenden Sichtungsmeldungen vom Wald entfernt?
-        - Funktion: ST_DISTANCE, ST_UNION und ST_CONTAINS
-    q. Welche Tiere wurden ausserhalb vom Wald gesichtet?
-        - Funktion: ST_UNION, ST_CONTAINS + JOIN
-- Weitere Abfragen:
-    r. Gibt es Tierarten, welche nur im Wald gesichtet wurden? Welche sind das?
-    s. Gibt es Tierarten, welche nie im Wald gesichtet wurden? Welche sind das?
-    t. In welchen Wäldern wurden Füchse gesichtet?
-    u. In welchen Wäldern kommen Rehe und Füchse gemeinsam vor?
-    v. Wo gibt es Hermeline aber keine Mauswiesel?
