@@ -8,7 +8,7 @@ code-summary: "Musterlösung"
 
 Bevor du mit den Übungen anfägst, solltest du bereits eine eigene Conda Environment nach der Anleitung in Kapitel "@sec-conda" erstellt haben.
 
-### Übung 5.1 {#sec-functions1-ex-gruezi}
+## Übung 5.1 {#sec-functions1-ex-gruezi}
 
 Erstelle eine Function, die `gruezi` heisst, einen Nachnamen als Input annimmt und per Sie grüsst. 
 
@@ -26,7 +26,7 @@ def gruezi(nachname):
 gruezi(nachname = "van Rossum")
 ```
 
-### Übung 5.2 {#sec-gruezi2}
+## Übung 5.2 {#sec-gruezi2}
 
 Erstelle eine neue Funktion `gruezi2` welche im Vergleich zu `gruezi` einen weiteren Parameter namens `anrede` annimmt. 
 
@@ -45,7 +45,7 @@ def gruezi2(nachname, anrede):
 gruezi2(nachname = "van Rossum", anrede = "Herr")
 ```
 
-### Übung 5.3
+## Übung 5.3
 
 Erstelle eine Funktion `add` die zwei Zahlen summiert.
 
@@ -63,7 +63,7 @@ def add(zahl1, zahl2):
 add(zahl1 = 2, zahl2 = 10)
 ```
 
-### Übung 5.4
+## Übung 5.4
 
 Erstelle eine Funktion `square`, welche den Input quadriert.
 
@@ -86,7 +86,7 @@ def square(zahl):
 square(zahl = 5)
 ```
 
-### Übung 5.5
+## Übung 5.5
 
 Erstelle eine Funktion `meter_zu_fuss`, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Errinnerung: 30.48 cm ergeben 1 Fuss. 
 
