@@ -7,7 +7,7 @@
 // the following function adds padding to all h2 elements, so that I can 
 // easily present the content of the page in a more readable way
 function presenter(){
-    var paragraphs = document.querySelectorAll("h2");
+    var paragraphs = document.querySelectorAll("h2", "h3");
     paragraphs.forEach(function (paragraph) {
         paragraph.classList.toggle("padding-top-500");
     });
