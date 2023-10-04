@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 // the following function adds padding to all h2 elements, so that I can 
 // easily present the content of the page in a more readable way
 function presenter(){
-    var paragraphs = document.querySelectorAll("h2");
+    var paragraphs = document.querySelectorAll("h2", "h3");
     paragraphs.forEach(function (paragraph) {
         paragraph.classList.toggle("padding-top-500");
     });
@@ -695,7 +695,7 @@ window.onload = function() {
 
 <section id="sec-ex-ifelse-gruezi2" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-ifelse-gruezi2">Übung 7.1</h2>
-<p>Erstelle eine neue Funktion <code>gruezi3</code> die <code>gruezi</code> (aus <a href="5_Uebung_5.html#sec-functions1-ex-gruezi"><span>Kapitel&nbsp;22.0.1</span></a>) um einem weiteren Parameter <code>uhrzeit</code> erweitert. Die Funktion soll vor 18 Uhr (<code>uhrzeit &lt; 18</code>) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht <code>20:15 Uhr</code> sondern <code>20.25</code>).</p>
+<p>Erstelle eine neue Funktion <code>gruezi3</code> die <code>gruezi</code> (aus <a href="5_Uebung_5.html#sec-functions1-ex-gruezi"><span>Kapitel&nbsp;22.1</span></a>) um einem weiteren Parameter <code>uhrzeit</code> erweitert. Die Funktion soll vor 18 Uhr (<code>uhrzeit &lt; 18</code>) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht <code>20:15 Uhr</code> sondern <code>20.25</code>).</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Lösung sollte etwa folgendermasssen funktionieren:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>

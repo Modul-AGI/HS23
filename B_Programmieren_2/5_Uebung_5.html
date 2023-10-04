@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 // the following function adds padding to all h2 elements, so that I can 
 // easily present the content of the page in a more readable way
 function presenter(){
-    var paragraphs = document.querySelectorAll("h2");
+    var paragraphs = document.querySelectorAll("h2", "h3");
     paragraphs.forEach(function (paragraph) {
         paragraph.classList.toggle("padding-top-500");
     });
@@ -696,8 +696,8 @@ window.onload = function() {
 </header>
 
 <p>Bevor du mit den Übungen anfägst, solltest du bereits eine eigene Conda Environment nach der Anleitung in Kapitel “<a href="2_Conda.html"><span>Kapitel&nbsp;18</span></a>” erstellt haben.</p>
-<section id="sec-functions1-ex-gruezi" class="level3">
-<h3 class="anchored" data-anchor-id="sec-functions1-ex-gruezi">Übung 5.1</h3>
+<section id="sec-functions1-ex-gruezi" class="level2">
+<h2 class="anchored" data-anchor-id="sec-functions1-ex-gruezi">Übung 5.1</h2>
 <p>Erstelle eine Function, die <code>gruezi</code> heisst, einen Nachnamen als Input annimmt und per Sie grüsst.</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat soll in etwa folgendermassen aussehen:</span></span>
@@ -707,8 +707,8 @@ window.onload = function() {
 </div>
 </div>
 </section>
-<section id="sec-gruezi2" class="level3">
-<h3 class="anchored" data-anchor-id="sec-gruezi2">Übung 5.2</h3>
+<section id="sec-gruezi2" class="level2">
+<h2 class="anchored" data-anchor-id="sec-gruezi2">Übung 5.2</h2>
 <p>Erstelle eine neue Funktion <code>gruezi2</code> welche im Vergleich zu <code>gruezi</code> einen weiteren Parameter namens <code>anrede</code> annimmt.</p>
 <div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat soll in etwa folgendermassen aussehen:</span></span>
@@ -718,8 +718,8 @@ window.onload = function() {
 </div>
 </div>
 </section>
-<section id="übung-5.3" class="level3">
-<h3 class="anchored" data-anchor-id="übung-5.3">Übung 5.3</h3>
+<section id="übung-5.3" class="level2">
+<h2 class="anchored" data-anchor-id="übung-5.3">Übung 5.3</h2>
 <p>Erstelle eine Funktion <code>add</code> die zwei Zahlen summiert.</p>
 <div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
@@ -729,8 +729,8 @@ window.onload = function() {
 </div>
 </div>
 </section>
-<section id="übung-5.4" class="level3">
-<h3 class="anchored" data-anchor-id="übung-5.4">Übung 5.4</h3>
+<section id="übung-5.4" class="level2">
+<h2 class="anchored" data-anchor-id="übung-5.4">Übung 5.4</h2>
 <p>Erstelle eine Funktion <code>square</code>, welche den Input quadriert.</p>
 <div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
@@ -740,8 +740,8 @@ window.onload = function() {
 </div>
 </div>
 </section>
-<section id="übung-5.5" class="level3">
-<h3 class="anchored" data-anchor-id="übung-5.5">Übung 5.5</h3>
+<section id="übung-5.5" class="level2">
+<h2 class="anchored" data-anchor-id="übung-5.5">Übung 5.5</h2>
 <p>Erstelle eine Funktion <code>meter_zu_fuss</code>, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Errinnerung: 30.48 cm ergeben 1 Fuss.</p>
 <div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sollte folgendermassen aussehen:</span></span>
