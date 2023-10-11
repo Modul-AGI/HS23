@@ -704,6 +704,9 @@ window.onload = function() {
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>ModuleNotFoundError: No module named 'geopandas'</code></pre>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -721,11 +724,14 @@ Hinweis
 <li>Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst <code>x</code>)</li>
 </ul>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoDataFrame zu Geoseries:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>zecken_geoseries <span class="op">=</span> gpd.GeoSeries(zeckenstiche[<span class="st">"geometry"</span>])          </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoSeries zurück zu GeoDataFrame:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>zecken_geodataframe <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> zecken_geoseries) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoDataFrame zu Geoseries:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>zecken_geoseries <span class="op">=</span> gpd.GeoSeries(zeckenstiche[<span class="st">"geometry"</span>])          </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoSeries zurück zu GeoDataFrame:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>zecken_geodataframe <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> zecken_geoseries) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -733,18 +739,18 @@ Hinweis
 <h2 class="anchored" data-anchor-id="buffer">Buffer</h2>
 <p>Eine typische GIS Operation ist das “Buffern” von Objekten. Der ArcGIS Befehl <a href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">“Buffer”</a> erreichen wir in Geopandas mit <code>.buffer()</code>. Folgender Code macht einen Buffer mit einer Distanz von 10m.</p>
 <div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>buffered <span class="op">=</span> zeckenstiche.<span class="bu">buffer</span>(<span class="dv">10</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>buffered <span class="op">=</span> zeckenstiche.<span class="bu">buffer</span>(<span class="dv">10</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche' is not defined</code></pre>
+</div>
 </div>
 <p>Um Geopandas-Objekte zu plotten kann man einfach <code>.plot()</code> verwenden. Zudem kann man mit <code>boundary</code> die Umrisse eines Polygons extrahieren:</p>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> buffered.boundary.plot() <span class="co"># plottet die boundries    </span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"black"</span>) <span class="co"># plottet die Punkte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<pre><code>&lt;AxesSubplot:&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-5-output-2.png" width="431" height="442"></p>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> buffered.boundary.plot() <span class="co"># plottet die boundries    </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"black"</span>) <span class="co"># plottet die Punkte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'buffered' is not defined</code></pre>
 </div>
 </div>
 </section>
@@ -752,18 +758,18 @@ Hinweis
 <h2 class="anchored" data-anchor-id="union">Union</h2>
 <p>Mit <code>unary_union</code> können wir aus unserer <em>Point</em>-Geometrie ein <em>MultiPoint</em> erstellen (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;39.2</span></a>). Dieser Befehl lautet in ArcGIS <a href="https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm">Union</a>.</p>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_union <span class="op">=</span> zeckenstiche[<span class="st">"geometry"</span>].unary_union</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(zeckenstiche_union) <span class="co"># Es handelt sich nun um den Typ "MultiPoint"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<pre><code>shapely.geometry.multipoint.MultiPoint</code></pre>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_union <span class="op">=</span> zeckenstiche[<span class="st">"geometry"</span>].unary_union</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(zeckenstiche_union) <span class="co"># Es handelt sich nun um den Typ "MultiPoint"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche' is not defined</code></pre>
 </div>
 </div>
 <p>Wenn wir uns <code>zeckenstiche_union</code> nun mit <code>print</code> anschauen sehen wir, dass sämtliche Koordinaten in einem Objekt zusammengepackt sind:</p>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeckenstiche_union)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>MULTIPOINT (2681092 1250672, 2681107 1250712, 2681111 1250683, 2681116 1250648, 2681117 1250725, 2681124 1250720, 2681128 1250683, 2681131 1250692, 2681138 1250725, 2681171 1250711)</code></pre>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeckenstiche_union)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche_union' is not defined</code></pre>
 </div>
 </div>
 </section>
@@ -771,33 +777,39 @@ Hinweis
 <h2 class="anchored" data-anchor-id="sec-raeumliche-operationen-mbg">Minimum Bounding Geometry</h2>
 <p>Über ein <em>MultiPoint</em> lassen sich jetzt wunderbar sogenannte (in ESRI Terminologie) <a href="https://pro.arcgis.com/de/pro-app/tool-reference/data-management/minimum-bounding-geometry.htm">Minimum Bounding Geometries</a> rechnen. Mit den gleichnamigen Funktionen können wir nun eine <code>convex_hull</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> sowie eine <code>envelope</code> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> über alle Punkte rechnen.</p>
 <div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> zeckenstiche_union.convex_hull</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> zeckenstiche_union.envelope</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> zeckenstiche_union.convex_hull</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> zeckenstiche_union.envelope</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche_union' is not defined</code></pre>
+</div>
 </div>
 <p>Nun konvertiere ich beide Polygon-Geometrien in <em>GeoSeries</em>, damit sie einfacher zu visualisieren sind:</p>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> gpd.GeoSeries(my_convex_hull)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> gpd.GeoSeries(my_envelope)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> gpd.GeoSeries(my_convex_hull)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> gpd.GeoSeries(my_envelope)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 <p>Um die beiden Objekte nebeneinander zu visualisieren importiere ich zuerst <code>pyplot</code> aus <code>matplotlib</code> (mit dem alias <code>plt</code>) und erstelle <code>subplots</code></p>
 <div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>,figsize <span class="op">=</span> (<span class="dv">9</span>, <span class="dv">9</span>))</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den linken Plot</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>my_convex_hull.plot(ax <span class="op">=</span> ax1)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"Convex Hull"</span>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax1, color <span class="op">=</span> <span class="st">"black"</span>)</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den rechten Plot</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>my_envelope.plot(ax <span class="op">=</span> ax2)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"Envelope"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax2, color <span class="op">=</span> <span class="st">"black"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
-<pre><code>&lt;AxesSubplot:title={'center':'Envelope'}&gt;</code></pre>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>,figsize <span class="op">=</span> (<span class="dv">9</span>, <span class="dv">9</span>))</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den linken Plot</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>my_convex_hull.plot(ax <span class="op">=</span> ax1)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"Convex Hull"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax1, color <span class="op">=</span> <span class="st">"black"</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den rechten Plot</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>my_envelope.plot(ax <span class="op">=</span> ax2)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"Envelope"</span>)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax2, color <span class="op">=</span> <span class="st">"black"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'my_convex_hull' is not defined</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-10-output-2.png" width="724" height="375"></p>
+<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-10-output-2.png" width="730" height="712"></p>
 </div>
 </div>
 </section>
@@ -805,33 +817,42 @@ Hinweis
 <h2 class="anchored" data-anchor-id="overlay">Overlay</h2>
 <p>Viele der Funktionen aus dem ESRI Toolset <a href="https://pro.arcgis.com/de/pro-app/tool-reference/analysis/an-overview-of-the-overlay-toolset.htm">“Overlay”</a> sind in der <em>Geopandas</em> Funktion <code>overlay</code> verpackt. Um sie zu demonstrieren nutze ich die Geometrien, die wir in weiter oben erstellt haben (<code>buffered</code> und <code>my_convex_hull</code>). Zuerst muss ich sie aber noch von <em>GeoSeries</em> in <em>GeoDataFrames</em> konverieren.</p>
 <div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>buffered_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> buffered, crs <span class="op">=</span> <span class="dv">2056</span>)               </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> my_convex_hull, crs <span class="op">=</span> <span class="dv">2056</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>buffered_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> buffered, crs <span class="op">=</span> <span class="dv">2056</span>)               </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> my_convex_hull, crs <span class="op">=</span> <span class="dv">2056</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 <p>Nun kann ich zum beispielsweise die Overlay-Funktion <code>difference</code> ausführen:</p>
 <div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_difference <span class="op">=</span> gpd.overlay(my_convex_hull_gdf,buffered_gdf, how<span class="op">=</span><span class="st">'difference'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>my_difference <span class="op">=</span> gpd.overlay(my_convex_hull_gdf,buffered_gdf, how<span class="op">=</span><span class="st">'difference'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 <div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereitet die drei Subplots vor ################</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot links ####################################</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf.plot(ax <span class="op">=</span> ax1)               <span class="co">#</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"1. Das Minimum Convex Polygon"</span>)  <span class="co"># </span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>ax1.set_axis_off()                              <span class="co">#</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot mitte ####################################</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>buffered_gdf.plot(ax <span class="op">=</span> ax2)                     <span class="co">#</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"2. Die gebufferten Punkte"</span>)      <span class="co"># </span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>ax2.set_axis_off()                              <span class="co">#</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot rechts ###################################</span></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>my_difference.plot(ax <span class="op">=</span> ax3)                    <span class="co">#</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">"Differenz aus 1. &amp; 2."</span>)          <span class="co"># </span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>ax3.set_axis_off()                              <span class="co">#</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereitet die drei Subplots vor ################</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot links ####################################</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf.plot(ax <span class="op">=</span> ax1)               <span class="co">#</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"1. Das Minimum Convex Polygon"</span>)  <span class="co"># </span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>ax1.set_axis_off()                              <span class="co">#</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot mitte ####################################</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>buffered_gdf.plot(ax <span class="op">=</span> ax2)                     <span class="co">#</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"2. Die gebufferten Punkte"</span>)      <span class="co"># </span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>ax2.set_axis_off()                              <span class="co">#</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot rechts ###################################</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>my_difference.plot(ax <span class="op">=</span> ax3)                    <span class="co">#</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">"Differenz aus 1. &amp; 2."</span>)          <span class="co"># </span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>ax3.set_axis_off()                              <span class="co">#</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'my_convex_hull_gdf' is not defined</code></pre>
+</div>
 <div class="cell-output cell-output-display">
-<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-13-output-1.png" width="722" height="232"></p>
+<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-13-output-2.png" width="734" height="712"></p>
 </div>
 </div>
 

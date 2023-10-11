@@ -133,9 +133,6 @@ window.onload = function() {
 };
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../custom.css">
@@ -677,7 +674,7 @@ window.onload = function() {
   <ul>
   <li><a href="#sec-ex-import-wald" id="toc-sec-ex-import-wald" class="nav-link active" data-scroll-target="#sec-ex-import-wald">Übung 15.1</a></li>
   <li><a href="#sec-ex-spatialjoin" id="toc-sec-ex-spatialjoin" class="nav-link" data-scroll-target="#sec-ex-spatialjoin">Übung 15.2</a></li>
-  <li><a href="#übung-15.3" id="toc-übung-15.3" class="nav-link" data-scroll-target="#übung-15.3">Übung 15.3</a></li>
+  <li><a href="#sec-ex-count" id="toc-sec-ex-count" class="nav-link" data-scroll-target="#sec-ex-count">Übung 15.3</a></li>
   <li><a href="#übung-15.4" id="toc-übung-15.4" class="nav-link" data-scroll-target="#übung-15.4">Übung 15.4</a></li>
   </ul>
 </nav>
@@ -743,13 +740,14 @@ Wichtig!
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> wald, right_df <span class="op">=</span> zeckenstiche_gpd) </span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># in beiden Fällen hat der Output geich viele Zeilen. In der ersten Variante ist die Geometrie</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># des Outputs "Point", im zweiten Fall "Multipolygon"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># in beiden Fällen hat der Output geich viele Zeilen. </span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># In der ersten Variante ist die Geometrie</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># des Outputs "Point", im zweiten Fall "Multipolygon"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="übung-15.3" class="level2">
-<h2 class="anchored" data-anchor-id="übung-15.3">Übung 15.3</h2>
+<section id="sec-ex-count" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ex-count">Übung 15.3</h2>
 <p>Führe nun den SpatialJoin aus <a href="#sec-ex-spatialjoin"><span>Kapitel&nbsp;43.2</span></a> in der Reihenfolge aus, der dir am sinnvollsten erscheint. Weise den Output dieser Operation der Variabel <code>zeckenstiche_join</code> zu.</p>
 <p>Nutze nun die dazugewonnene Spalte <code>Wald_text</code> um die Anzahl Zeckenstich-Meldungen <em>im Wald</em> zu zählen. Dazu musst du wie folgt vorgehen:</p>
 <ol type="1">
@@ -760,9 +758,11 @@ Wichtig!
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_join <span class="op">=</span> gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(zeckenstiche_join[<span class="st">"Wald_text"</span>] <span class="op">==</span> <span class="st">"ja"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die folgende Variante (mit dem Output "point") ist sinnvoller, da auch</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># wir uns primär für die Punkte (Zeckenstiche) interessieren.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche_join <span class="op">=</span> gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(zeckenstiche_join[<span class="st">"Wald_text"</span>] <span class="op">==</span> <span class="st">"ja"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>

@@ -717,7 +717,7 @@ window.onload = function() {
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># eines Histogramms (lernen wir ebenfalls später)</span></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>pd.Series(a).plot(kind <span class="op">=</span> <span class="st">"hist"</span>, bins <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">11</span>), edgecolor <span class="op">=</span> <span class="st">"black"</span>, align <span class="op">=</span> <span class="st">"left"</span>, xticks <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>&lt;AxesSubplot:ylabel='Frequency'&gt;</code></pre>
+<pre><code>&lt;Axes: ylabel='Frequency'&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="10_Zufallzahlen_files/figure-html/cell-5-output-2.png" width="585" height="411"></p>
@@ -737,7 +737,7 @@ window.onload = function() {
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> [random.normalvariate(mu <span class="op">=</span> <span class="dv">5</span>, sigma <span class="op">=</span> <span class="dv">2</span>) <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10000</span>)]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pd.Series(b).plot(kind <span class="op">=</span> <span class="st">"hist"</span>, bins <span class="op">=</span> <span class="dv">30</span>, edgecolor <span class="op">=</span> <span class="st">"black"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>&lt;AxesSubplot:ylabel='Frequency'&gt;</code></pre>
+<pre><code>&lt;Axes: ylabel='Frequency'&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="10_Zufallzahlen_files/figure-html/cell-7-output-2.png" width="602" height="411"></p>

@@ -133,9 +133,6 @@ window.onload = function() {
 };
 
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../custom.css">
@@ -715,11 +712,8 @@ window.onload = function() {
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>base.set_xlim(minx <span class="op">-</span> <span class="dv">10</span>, maxx <span class="op">+</span> <span class="dv">10</span>) </span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>base.set_ylim(miny <span class="op">-</span> <span class="dv">5</span>, maxy <span class="op">+</span> <span class="dv">5</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
-<pre><code>(1250643.0, 1250730.0)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="7_Spatial_Joins_files/figure-html/cell-2-output-2.png" width="479" height="442"></p>
+<div class="cell-output cell-output-error">
+<pre><code>ModuleNotFoundError: No module named 'geopandas'</code></pre>
 </div>
 </div>
 <section id="wie-funktioniert-ein-spatial-join" class="level2">
@@ -734,139 +728,8 @@ window.onload = function() {
 <p>In Python wird ein <em>Spatial Join</em> zwischen <code>zeckenstiche</code> und <code>wald</code> wie folgt durchgeführt (wichtig ist dabei auch die Reihenfolge der Argumente: <code>left_df</code> bestimmt den Geometrietyp des Outputs):</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gpd.sjoin(left_df <span class="op">=</span> zeckenstiche_gpd, right_df <span class="op">=</span> wald)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="36">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">ID</th>
-<th data-quarto-table-cell-role="th">accuracy</th>
-<th data-quarto-table-cell-role="th">x</th>
-<th data-quarto-table-cell-role="th">y</th>
-<th data-quarto-table-cell-role="th">geometry</th>
-<th data-quarto-table-cell-role="th">index_right</th>
-<th data-quarto-table-cell-role="th">Shape_Area</th>
-<th data-quarto-table-cell-role="th">Wald_text</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>2550</td>
-<td>439.128951</td>
-<td>2681116</td>
-<td>1250648</td>
-<td>POINT (2681116.000 1250648.000)</td>
-<td>0</td>
-<td>2.380876e+08</td>
-<td>nein</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>10437</td>
-<td>301.748542</td>
-<td>2681092</td>
-<td>1250672</td>
-<td>POINT (2681092.000 1250672.000)</td>
-<td>0</td>
-<td>2.380876e+08</td>
-<td>nein</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>9174</td>
-<td>301.748542</td>
-<td>2681128</td>
-<td>1250683</td>
-<td>POINT (2681128.000 1250683.000)</td>
-<td>0</td>
-<td>2.380876e+08</td>
-<td>nein</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>8773</td>
-<td>301.748542</td>
-<td>2681111</td>
-<td>1250683</td>
-<td>POINT (2681111.000 1250683.000)</td>
-<td>0</td>
-<td>2.380876e+08</td>
-<td>nein</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>2764</td>
-<td>301.748529</td>
-<td>2681131</td>
-<td>1250692</td>
-<td>POINT (2681131.000 1250692.000)</td>
-<td>0</td>
-<td>2.380876e+08</td>
-<td>nein</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>2513</td>
-<td>301.748529</td>
-<td>2681171</td>
-<td>1250711</td>
-<td>POINT (2681171.000 1250711.000)</td>
-<td>1</td>
-<td>7.963237e+07</td>
-<td>ja</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">6</td>
-<td>9185</td>
-<td>301.748542</td>
-<td>2681107</td>
-<td>1250712</td>
-<td>POINT (2681107.000 1250712.000)</td>
-<td>1</td>
-<td>7.963237e+07</td>
-<td>ja</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">7</td>
-<td>28521</td>
-<td>301.748542</td>
-<td>2681124</td>
-<td>1250720</td>
-<td>POINT (2681124.000 1250720.000)</td>
-<td>1</td>
-<td>7.963237e+07</td>
-<td>ja</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">8</td>
-<td>26745</td>
-<td>301.748542</td>
-<td>2681117</td>
-<td>1250725</td>
-<td>POINT (2681117.000 1250725.000)</td>
-<td>1</td>
-<td>7.963237e+07</td>
-<td>ja</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">9</td>
-<td>27391</td>
-<td>301.748542</td>
-<td>2681138</td>
-<td>1250725</td>
-<td>POINT (2681138.000 1250725.000)</td>
-<td>1</td>
-<td>7.963237e+07</td>
-<td>ja</td>
-</tr>
-</tbody>
-</table>
-
-</div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
 </div>
 </div>
 

@@ -700,11 +700,20 @@ window.onload = function() {
 <section id="sec-ex-for-loops-gruesse" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-for-loops-gruesse">Übung 11.1</h2>
 <p>Nehmen wir nochmals das Beispiel aus <a href="2_Uebung_10.html#sec-for-gruss"><span>Kapitel&nbsp;34.2</span></a>. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. <code>mylist</code>) gespeichert werden.</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> []</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> [<span class="st">"Il Buono"</span>, <span class="st">"Il Brutto"</span>, <span class="st">"Il Cattivo"</span>]:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    mylist.append(<span class="st">"Ciao "</span><span class="op">+</span>name)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sieht dann so aus:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mylist</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sieht dann so aus:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mylist</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']</code></pre>
@@ -714,11 +723,26 @@ window.onload = function() {
 <section id="sec-ex-loopoutput" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-loopoutput">Übung 11.2</h2>
 <p>Der im Beispiel verwendete Refrain aus <a href="https://www.metrolyrics.com/bitch-lyrics-meredith-brooks.html">dem Lied “Bitch” von Meredith Brooks</a> besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit <strong>zwei verschiedenen</strong>, aneinander gereihten <em>for loops</em> den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“<em>I do not feel ashamed</em>” und “<em>You know you wouldn’t want it any other way</em>”) kannst du auch ausserhalb der Loops in die Listen einfügen (<code>append</code>).</p>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>refrain <span class="op">=</span> []</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> rolle <span class="kw">in</span> [<span class="st">"bitch"</span>,<span class="st">"lover"</span>,<span class="st">"child"</span>,<span class="st">"mother"</span>,<span class="st">"sinner"</span>,<span class="st">"saint"</span>]:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    liedzeile <span class="op">=</span> <span class="st">"I'm a "</span><span class="op">+</span> rolle </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    refrain.append(liedzeile)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>refrain.append(<span class="st">"I do not feel ashamed"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> rolle <span class="kw">in</span> [<span class="st">"your hell"</span>,<span class="st">"your dream"</span>,<span class="st">"nothing in between"</span>]:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    liedzeile <span class="op">=</span> <span class="st">"I'm "</span><span class="op">+</span> rolle </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    refrain.append(liedzeile)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>refrain.append(<span class="st">"You know you wouldn't want it any other way"</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell" data-execution_count="4">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sieht dann so aus:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>refrain</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sieht dann so aus:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>refrain</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>["I'm a bitch",
