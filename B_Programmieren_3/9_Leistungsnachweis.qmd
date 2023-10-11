@@ -16,6 +16,7 @@ Gehe dazu wie folgt vor: Erstelle einen `for loop` (siehe @sec-forloops-2), welc
 6. Schritt: Schritte 2 - 5 mindestens 50x Wiederholen (`for loop`)
 7. Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe @sec-viz)
 8. Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen
+9. Schritt: Eine Karte mit den simulierten Zeckenstichen erstellen (siehe @sec-geoviz)
 
 
 ![](figures/mermaid-diagram-2022-10-13-112927.svg)

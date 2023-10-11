@@ -1,7 +1,7 @@
 ---
 output: false
-echo: false                      # set to true to show solution
-code-fold: false                 # set to true to show solution
+echo: true                      # set to true to show solution
+code-fold: true                 # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 # Übung 5
@@ -88,7 +88,7 @@ square(zahl = 5)
 
 ## Übung 5.5
 
-Erstelle eine Funktion `meter_zu_fuss`, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Errinnerung: 30.48 cm ergeben 1 Fuss. 
+Erstelle eine Funktion `meter_zu_fuss`, die eine beliebige Zahl von Meter in Fuss konvertiert. Zur Erinnerung: 30.48 cm ergeben 1 Fuss. 
 
 ```{python}
 def meter_zu_fuss(meter):
