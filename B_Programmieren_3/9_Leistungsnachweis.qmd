@@ -11,12 +11,12 @@ Gehe dazu wie folgt vor: Erstelle einen `for loop` (siehe @sec-forloops-2), welc
 1. Schritt: Zeckenstiche importieren
 2. Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe @sec-offset-dataframe)
 3. Schritt: Simulierte Zeckenstiche von pandas DataFrame in *geo*pandas *Geo*DataFrame umwandeln (siehe @sec-pythongis-geodataframe)
-4. Schritt: Spatial Join mit wald.gpkg
-5. Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe @sec-spatialjoin)
+4. Schritt: Spatial Join mit wald.gpkg (siehe @sec-ex-spatialjoin)
+5. Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe @sec-ex-count)
 6. Schritt: Schritte 2 - 5 mindestens 50x Wiederholen (`for loop`)
 7. Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe @sec-viz)
 8. Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen
-9. Schritt: Eine Karte mit den simulierten Zeckenstichen erstellen (siehe @sec-geoviz)
+9. Schritt (Optional): Eine Karte mit den simulierten Zeckenstichen erstellen (siehe @sec-geoviz)
 
 
 ![](figures/mermaid-diagram-2022-10-13-112927.svg)
