@@ -147,7 +147,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_2/9_Uebung_7.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Übung 7</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_2/9_Uebung_7.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Übung 7</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -292,6 +292,11 @@ window.onload = function() {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -443,12 +448,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -695,11 +700,23 @@ window.onload = function() {
 
 <section id="sec-ex-ifelse-gruezi2" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-ifelse-gruezi2">Übung 7.1</h2>
-<p>Erstelle eine neue Funktion <code>gruezi3</code> die <code>gruezi</code> (aus <a href="5_Uebung_5.html#sec-functions1-ex-gruezi"><span>Kapitel&nbsp;22.1</span></a>) um einem weiteren Parameter <code>uhrzeit</code> erweitert. Die Funktion soll vor 18 Uhr (<code>uhrzeit &lt; 18</code>) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht <code>20:15 Uhr</code> sondern <code>20.25</code>).</p>
+<p>Erstelle eine neue Funktion <code>gruezi3</code> die <code>gruezi</code> (aus <a href="5_Uebung_5.html#sec-functions1-ex-gruezi"><span>Kapitel&nbsp;23.1</span></a>) um einem weiteren Parameter <code>uhrzeit</code> erweitert. Die Funktion soll vor 18 Uhr (<code>uhrzeit &lt; 18</code>) mit “Guten Tag” und sonst mit “Guten Abend” grüssen. Um es einfach zu halten: Die Zeitangbe muss in Dezimalzahlen erfolgen (also nicht <code>20:15 Uhr</code> sondern <code>20.25</code>).</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gruezi3(nachname, uhrzeit):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(uhrzeit <span class="op">&lt;</span> <span class="dv">18</span>):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        grussform <span class="op">=</span> <span class="st">"Tag"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        grussform <span class="op">=</span> <span class="st">"Abend"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Guten "</span> <span class="op">+</span> grussform <span class="op">+</span> <span class="st">" "</span> <span class="op">+</span> nachname</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Lösung sollte etwa folgendermasssen funktionieren:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>gruezi3(<span class="st">"Guido"</span>, uhrzeit <span class="op">=</span> <span class="dv">21</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Lösung sollte etwa folgendermasssen funktionieren:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>gruezi3(<span class="st">"Guido"</span>, uhrzeit <span class="op">=</span> <span class="dv">21</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>'Guten Abend Guido'</code></pre>
 </div>
@@ -710,7 +727,7 @@ window.onload = function() {
 <p>Erweitere die Funktion <code>gruezi2</code> so, dass zwischen folgende Uhrzeiten berücksichtigt werden:</p>
 <div id="tbl-begruesung" class="anchored">
 <table class="table">
-<caption>Tabelle&nbsp;26.1: Uhrzeiten und ihre Begrüssungsformen</caption>
+<caption>Tabelle&nbsp;27.1: Uhrzeiten und ihre Begrüssungsformen</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Uhrzeit</th>
@@ -759,14 +776,32 @@ Hinweis
 </div>
 </div>
 </div>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gruezi2(nachname, anrede, uhrzeit):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(uhrzeit <span class="op">&lt;</span> <span class="dv">5</span>):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        was <span class="op">=</span> <span class="st">"Gute Nacht"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(uhrzeit <span class="op">&lt;</span> <span class="dv">11</span>):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        was <span class="op">=</span> <span class="st">"Guten Morgen"</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(uhrzeit <span class="op">&lt;</span> <span class="dv">18</span>):</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        was <span class="op">=</span> <span class="st">"Guten Tag"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(uhrzeit <span class="op">&lt;</span> <span class="dv">22</span>):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        was <span class="op">=</span> <span class="st">"Guten Abend"</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        was <span class="op">=</span> <span class="st">"Gute Nacht"</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> was <span class="op">+</span> <span class="st">", "</span> <span class="op">+</span> anrede <span class="op">+</span> <span class="st">" "</span><span class="op">+</span> nachname</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p>Teste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.</p>
 </section>
 <section id="übung-7.2-1" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.2-1">Übung 7.2</h2>
-<p>Erweitere die Funktion <code>bmi</code> aus <a href="7_Uebung_6.html#sec-ex-functions-bmi"><span>Kapitel&nbsp;24.3</span></a> so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der <a href="https://www.euro.who.int/en/health-topics/disease-prevention/nutrition/a-healthy-lifestyle/body-mass-index-bmi">WHO Klassifizierung</a> ausgegeben wird:</p>
+<p>Erweitere die Funktion <code>bmi</code> aus <a href="7_Uebung_6.html#sec-ex-functions-bmi"><span>Kapitel&nbsp;25.3</span></a> so, dass statt dem berechneten BMI der “Nutritional status” aufgrund der <a href="https://www.euro.who.int/en/health-topics/disease-prevention/nutrition/a-healthy-lifestyle/body-mass-index-bmi">WHO Klassifizierung</a> ausgegeben wird:</p>
 <div id="tbl-who-bmi" class="anchored">
 <table class="table">
-<caption>Tabelle&nbsp;26.2: WHO Nutritional status</caption>
+<caption>Tabelle&nbsp;27.2: WHO Nutritional status</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">BMI</th>
@@ -801,9 +836,29 @@ Hinweis
 </tbody>
 </table>
 </div>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> bmi2(groesse_m, gewicht_kg):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    bmi <span class="op">=</span> gewicht_kg <span class="op">/</span> (groesse_m <span class="op">*</span> groesse_m)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(bmi <span class="op">&lt;</span> <span class="fl">18.5</span>):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        cat <span class="op">=</span> <span class="st">"Underweight"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(bmi <span class="op">&lt;=</span> <span class="fl">24.9</span>):</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        cat <span class="op">=</span> <span class="st">"Normal weight"</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(bmi <span class="op">&lt;=</span> <span class="fl">29.9</span>):</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        cat <span class="op">=</span> <span class="st">"Pre-obesity"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(bmi <span class="op">&lt;=</span> <span class="fl">34.9</span>):</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        cat <span class="op">=</span> <span class="st">"Obesity class I"</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span>(bmi <span class="op">&lt;=</span> <span class="fl">39.9</span>):</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        cat <span class="op">=</span> <span class="st">"Obesity class II"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        cat <span class="op">=</span> <span class="st">"Obesity class III"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Who classification: "</span> <span class="op">+</span> cat</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Der Output sollte etwa folgedermassen aussehen</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>bmi2(<span class="fl">1.7</span>, <span class="dv">70</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Der Output sollte etwa folgedermassen aussehen</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>bmi2(<span class="fl">1.7</span>, <span class="dv">70</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>'Who classification: Normal weight'</code></pre>
 </div>

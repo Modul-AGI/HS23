@@ -147,7 +147,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/6_Raeumliche_Operationen.html"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">Räumliche Operationen</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/6_Raeumliche_Operationen.html"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Räumliche Operationen</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -292,6 +292,11 @@ window.onload = function() {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -443,12 +448,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -694,7 +699,7 @@ window.onload = function() {
 
 </header>
 
-<p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in <a href="5_GIS_in_Python.html"><span>Kapitel&nbsp;38</span></a> beschrieben.</p>
+<p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in <a href="5_GIS_in_Python.html"><span>Kapitel&nbsp;39</span></a> beschrieben.</p>
 <div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -711,7 +716,7 @@ Hinweis
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen <em>Geometrien</em>, <em>Geoseries</em> und <em>GeoDataFrames</em> hin- und her konvertieren (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;38.2</span></a>).</li>
+<li>Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen <em>Geometrien</em>, <em>Geoseries</em> und <em>GeoDataFrames</em> hin- und her konvertieren (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;39.2</span></a>).</li>
 <li>Welcher Datentyp eure Operation <em>braucht</em> seht ihr in <a href="https://geopandas.org/">der Dokumentation</a>. Welcher Datentyp ihr <em>habt</em> seht ihr mit <code>type()</code>.</li>
 <li>Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst <code>x</code>)</li>
 </ul>
@@ -745,7 +750,7 @@ Hinweis
 </section>
 <section id="union" class="level2">
 <h2 class="anchored" data-anchor-id="union">Union</h2>
-<p>Mit <code>unary_union</code> können wir aus unserer <em>Point</em>-Geometrie ein <em>MultiPoint</em> erstellen (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;38.2</span></a>). Dieser Befehl lautet in ArcGIS <a href="https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm">Union</a>.</p>
+<p>Mit <code>unary_union</code> können wir aus unserer <em>Point</em>-Geometrie ein <em>MultiPoint</em> erstellen (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;39.2</span></a>). Dieser Befehl lautet in ArcGIS <a href="https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm">Union</a>.</p>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_union <span class="op">=</span> zeckenstiche[<span class="st">"geometry"</span>].unary_union</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>

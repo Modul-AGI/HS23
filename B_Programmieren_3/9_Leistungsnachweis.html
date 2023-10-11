@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../C_Datenbanken_1/1_Einleitung.html" rel="next">
-<link href="../B_Programmieren_3/8_Daten_Visualisieren.html" rel="prev">
+<link href="../B_Programmieren_3/10_Anhang.html" rel="next">
+<link href="../B_Programmieren_3/7_Uebung_15.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -260,6 +260,11 @@ window.onload = function() {
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -409,12 +414,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -663,16 +668,17 @@ window.onload = function() {
 <section id="ziel-und-vorgehen" class="level2">
 <h2 class="anchored" data-anchor-id="ziel-und-vorgehen">Ziel und Vorgehen</h2>
 <p>Für den Leistungsnachweis von <em>Programmieren</em> sollt ihr den Anteil der Zeckenstiche im Wald unter der Berücksichtigung der Unsicherheit mit einer Monte Carlo Simulation ermitteln.</p>
-<p>Gehe dazu wie folgt vor: Erstelle einen <code>for loop</code> (siehe <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;34</span></a>), welcher pro Iteration folgende Schritte ausführt:</p>
+<p>Gehe dazu wie folgt vor: Erstelle einen <code>for loop</code> (siehe <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;35</span></a>), welcher pro Iteration folgende Schritte ausführt:</p>
 <ol type="1">
 <li>Schritt: Zeckenstiche importieren</li>
-<li>Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html"><span>Kapitel&nbsp;29</span></a>)</li>
-<li>Schritt: Simulierte Zeckenstiche von pandas DataFrame in <em>geo</em>pandas <em>Geo</em>DataFrame umwandeln (siehe <a href="5_GIS_in_Python.html#sec-pythongis-geodataframe"><span>Kapitel&nbsp;38.1</span></a>)</li>
+<li>Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html"><span>Kapitel&nbsp;30</span></a>)</li>
+<li>Schritt: Simulierte Zeckenstiche von pandas DataFrame in <em>geo</em>pandas <em>Geo</em>DataFrame umwandeln (siehe <a href="5_GIS_in_Python.html#sec-pythongis-geodataframe"><span>Kapitel&nbsp;39.1</span></a>)</li>
 <li>Schritt: Spatial Join mit wald.gpkg</li>
-<li>Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe <a href="7_Spatial_Joins.html"><span>Kapitel&nbsp;41</span></a>)</li>
+<li>Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe <a href="7_Spatial_Joins.html"><span>Kapitel&nbsp;42</span></a>)</li>
 <li>Schritt: Schritte 2 - 5 mindestens 50x Wiederholen (<code>for loop</code>)</li>
-<li>Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe <a href="8_Daten_Visualisieren.html"><span>Kapitel&nbsp;43</span></a>)</li>
+<li>Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe <a href="10_Anhang.html#sec-viz"><span>Kapitel&nbsp;45.1</span></a>)</li>
 <li>Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen</li>
+<li>Schritt: Eine Karte mit den simulierten Zeckenstichen erstellen (siehe <a href="10_Anhang.html#sec-geoviz"><span>Kapitel&nbsp;45.2</span></a>)</li>
 </ol>
 <p><img src="figures/mermaid-diagram-2022-10-13-112927.svg" class="img-fluid"></p>
 </section>
@@ -682,7 +688,7 @@ window.onload = function() {
 <ul>
 <li>mit dem <strong>ganzen</strong> Datensatz <code>zeckenstiche_full.csv</code> (1’076 Meldungen, siehe <a href="../B_Programmieren_1/1_Einleitung.html#tbl-datensaetze">Tabelle&nbsp;<span>1</span></a>)</li>
 <li>mit mindestens 50 Iterationen</li>
-<li>mit drei verschiedenen Distanz-Werten (<code>distance =</code> in <a href="../B_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function"><span>Kapitel&nbsp;28.5</span></a>).</li>
+<li>mit drei verschiedenen Distanz-Werten (<code>distance =</code> in <a href="../B_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function"><span>Kapitel&nbsp;29.5</span></a>).</li>
 </ul>
 <p>Visualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)</p>
 </section>
@@ -1078,13 +1084,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Daten visualisieren</span></span>
+      <a href="../B_Programmieren_3/7_Uebung_15.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Übung 15</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../C_Datenbanken_1/1_Einleitung.html" class="pagination-link">
-        <span class="nav-page-text">Datenbanken I</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../B_Programmieren_3/10_Anhang.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-title">Anhang</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

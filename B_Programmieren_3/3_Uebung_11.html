@@ -147,7 +147,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/3_Uebung_11.html"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Übung 11</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/3_Uebung_11.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Übung 11</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -292,6 +292,11 @@ window.onload = function() {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -443,12 +448,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -694,10 +699,13 @@ window.onload = function() {
 
 <section id="sec-ex-for-loops-gruesse" class="level2">
 <h2 class="anchored" data-anchor-id="sec-ex-for-loops-gruesse">Übung 11.1</h2>
-<p>Nehmen wir nochmals das Beispiel aus <a href="2_Uebung_10.html#sec-for-gruss"><span>Kapitel&nbsp;33.2</span></a>. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. <code>mylist</code>) gespeichert werden.</p>
+<p>Nehmen wir nochmals das Beispiel aus <a href="2_Uebung_10.html#sec-for-gruss"><span>Kapitel&nbsp;34.2</span></a>. Erstelle nochmal ein Loop, wo drei Personen aus einer Liste gegrüsst werden. Diesmal sollen aber die drei Grüsse in einer Liste (z.B. <code>mylist</code>) gespeichert werden.</p>
 <div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sieht dann so aus:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>mylist</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>['Ciao Il Buono', 'Ciao Il Brutto', 'Ciao Il Cattivo']</code></pre>
 </div>
@@ -707,8 +715,11 @@ window.onload = function() {
 <h2 class="anchored" data-anchor-id="sec-ex-loopoutput">Übung 11.2</h2>
 <p>Der im Beispiel verwendete Refrain aus <a href="https://www.metrolyrics.com/bitch-lyrics-meredith-brooks.html">dem Lied “Bitch” von Meredith Brooks</a> besteht bis auf zwei Zeilen aus Wiederholungen. Versuche mit <strong>zwei verschiedenen</strong>, aneinander gereihten <em>for loops</em> den ganzen Refrain in einer Liste zu speichern. Die beiden Teile die vom Muster Abweichen (“<em>I do not feel ashamed</em>” und “<em>You know you wouldn’t want it any other way</em>”) kannst du auch ausserhalb der Loops in die Listen einfügen (<code>append</code>).</p>
 <div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Das Resultat sieht dann so aus:</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>refrain</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>["I'm a bitch",
  "I'm a lover",

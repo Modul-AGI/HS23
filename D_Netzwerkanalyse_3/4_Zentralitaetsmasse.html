@@ -113,7 +113,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_3/1_Einleitung.html">Netzwerkanalyse III</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html"><span class="chapter-number">61</span>&nbsp; <span class="chapter-title">Aufgabe 7: Zentralitätsmasse</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_3/1_Einleitung.html">Netzwerkanalyse III</a></li><li class="breadcrumb-item"><a href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html"><span class="chapter-number">62</span>&nbsp; <span class="chapter-title">Aufgabe 7: Zentralitätsmasse</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -258,6 +258,11 @@ window.onload = function() {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -409,12 +414,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -660,11 +665,11 @@ window.onload = function() {
 
 <section id="übung-7.1-zentralitätsmasse-betrachten-und-auswählen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.1-zentralitätsmasse-betrachten-und-auswählen">Übung 7.1: Zentralitätsmasse betrachten und auswählen</h2>
-<p>Da Sie aber auf keinen Fall an einer Durchfahrtsstrasse wohnen möchten, müssen Sie dies in der Wohnungssuche ebenfalls berücksichtigen. Laden Sie deshalb den Datensatz “waedenswil_centrality.gpkg” aus <a href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html#sec-ex-centrality-calculate"><span>Kapitel&nbsp;56.3</span></a>. Falls Sie diesen nicht mehr haben, können Sie die Zentralitätsmasse neu berechnen (<code>v.net</code> sowie <code>v.net.centrality</code>) oder Sie verwenden den Datensatz “waedenswil_centrality.gpkg” in <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>54.1</span></a>. Prüfen Sie anhand der Symbolisierung, welches Mass “Durchfahrtsstrassen” am besten abbildet.</p>
+<p>Da Sie aber auf keinen Fall an einer Durchfahrtsstrasse wohnen möchten, müssen Sie dies in der Wohnungssuche ebenfalls berücksichtigen. Laden Sie deshalb den Datensatz “waedenswil_centrality.gpkg” aus <a href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html#sec-ex-centrality-calculate"><span>Kapitel&nbsp;57.3</span></a>. Falls Sie diesen nicht mehr haben, können Sie die Zentralitätsmasse neu berechnen (<code>v.net</code> sowie <code>v.net.centrality</code>) oder Sie verwenden den Datensatz “waedenswil_centrality.gpkg” in <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html#tbl-datensaetze-netzwerkanalyse">Tabelle&nbsp;<span>55.1</span></a>. Prüfen Sie anhand der Symbolisierung, welches Mass “Durchfahrtsstrassen” am besten abbildet.</p>
 </section>
 <section id="übung-7.2-zentralitätsmasse-in-fläche-überführen" class="level2">
 <h2 class="anchored" data-anchor-id="übung-7.2-zentralitätsmasse-in-fläche-überführen">Übung 7.2: Zentralitätsmasse in Fläche überführen</h2>
-<p>Das gewählte Zentralitätsmass können wir nun ebenfalls mit dem Tool “Inverse distance weighted” (SAGA) in eine Oberfläche überführen. Führen sie das Tool analog <a href="2_Entsorgungsstelle.html#sec-ex-interpolate-points"><span>Kapitel&nbsp;59.3</span></a>, mit dem gewählten Zenralitätsmass aus. Sie können die Parameter des Tools nach eigenem Gutdünken auch anpassen (wir empfehlen auf jedenfall die gleiche Output Cellsize von 25m zu verwenden um im Anschluss die Flächen miteinander verrechnen zu können).</p>
+<p>Das gewählte Zentralitätsmass können wir nun ebenfalls mit dem Tool “Inverse distance weighted” (SAGA) in eine Oberfläche überführen. Führen sie das Tool analog <a href="2_Entsorgungsstelle.html#sec-ex-interpolate-points"><span>Kapitel&nbsp;60.3</span></a>, mit dem gewählten Zenralitätsmass aus. Sie können die Parameter des Tools nach eigenem Gutdünken auch anpassen (wir empfehlen auf jedenfall die gleiche Output Cellsize von 25m zu verwenden um im Anschluss die Flächen miteinander verrechnen zu können).</p>
 <p>Clippen sie anschliessend den Output mit dem Werkezeug “Clip raster by Mask Layer” (GDAL). Speichern Sie den Output unter <strong>centrality_raster.tif</strong> in ihrem Projektordner und gruppieren Sie alle Layers im Zusammenhang mit den Zentralitätsmassen.</p>
 
 

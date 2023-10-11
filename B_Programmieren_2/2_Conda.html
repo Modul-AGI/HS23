@@ -147,7 +147,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_2/2_Conda.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Conda</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_2/1_Einleitung.html">Programmieren II</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_2/2_Conda.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Conda</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -292,6 +292,11 @@ window.onload = function() {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -443,12 +448,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -705,8 +710,8 @@ window.onload = function() {
 </section>
 <section id="conda-environment-erstellen" class="level2">
 <h2 class="anchored" data-anchor-id="conda-environment-erstellen">Conda environment erstellen</h2>
-<p>Wenn man den <a href="chap-python-command-prompt">Python Command Prompt</a> startet, ist Conda bereits aktiviert. Dies ist daran erkennbar, dass vor dem Pfad (<code>C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3</code>) noch etwas in Klammern steht (<code>arcgispro-py3</code>, siehe <a href="#fig-python-cmd3">Abbildung&nbsp;<span>18.1</span></a>).</p>
-<p><code>arcgispro-py3</code> ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das “default Python Environment”, welches ArcGIS Pro jeweils nutzt (siehe <a href="#fig-arcgis-conda">Abbildung&nbsp;<span>18.2</span></a>). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: <em>Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.</em> Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.</p>
+<p>Wenn man den <a href="chap-python-command-prompt">Python Command Prompt</a> startet, ist Conda bereits aktiviert. Dies ist daran erkennbar, dass vor dem Pfad (<code>C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3</code>) noch etwas in Klammern steht (<code>arcgispro-py3</code>, siehe <a href="#fig-python-cmd3">Abbildung&nbsp;<span>19.1</span></a>).</p>
+<p><code>arcgispro-py3</code> ist der Name des Conda Environments, das automatisch aktiviert wurde. Gleichzeitig ist dies das “default Python Environment”, welches ArcGIS Pro jeweils nutzt (siehe <a href="#fig-arcgis-conda">Abbildung&nbsp;<span>19.2</span></a>). Das heisst, dieses Environment wird verwendet wenn man Python innerhalb von ArcGIS nutzen möchte und hat dafür gewisse Libraries vorinstalliert. Dabei macht ArcGIS aber folgenden Hinweis: <em>Note: Cannot modify the default Python environment (arcigspro-py3). Clone then activate a new environment first.</em> Genau diese Freiheit wollen wir aber haben und erstellen deswegen ein eigenes Environment.</p>
 <p>Um ein neues Environment mit dem Namen <code>geopython2</code> zu erstellen und aktivieren geht man wie folgt vor:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> geopython2           <span class="co"># erstellt das Environment</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">activate</span> geopython                       <span class="co"># aktiviert das Environment (Windows)</span></span>
@@ -715,13 +720,13 @@ window.onload = function() {
 <div id="fig-python-cmd3" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/python-command-prompt.PNG" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;18.1: Python Command Prompt (i.e.&nbsp;“Eingabeaufforderung”)</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;19.1: Python Command Prompt (i.e.&nbsp;“Eingabeaufforderung”)</figcaption>
 </figure>
 </div>
 <div id="fig-arcgis-conda" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="figures/arcgis-conda-zoom.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;18.2: ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu <em>Projekt &gt; Python</em> navigiert.</figcaption>
+<figcaption class="figure-caption">Abbildung&nbsp;19.2: ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu <em>Projekt &gt; Python</em> navigiert.</figcaption>
 </figure>
 </div>
 </section>

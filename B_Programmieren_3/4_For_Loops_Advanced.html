@@ -147,7 +147,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/4_For_Loops_Advanced.html"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Advanced *for loops*</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/4_For_Loops_Advanced.html"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Advanced *for loops*</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -292,6 +292,11 @@ window.onload = function() {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -443,12 +448,12 @@ window.onload = function() {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/8_Daten_Visualisieren.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Daten visualisieren</span></a>
+  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
@@ -754,7 +759,7 @@ Hinweis
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Ein anderes Beispiel: In <a href="2_Uebung_10.html#sec-forloops-ex-party"><span>Kapitel&nbsp;33.5</span></a> haben wir die beiden Zeilen <code>"Who likes to party?"</code>, “We like to party?” 5x wiederholt. Dabei werden die Wörter `to party für jede Wiederholung zwei mal wiederholt:</p>
+<p>Ein anderes Beispiel: In <a href="2_Uebung_10.html#sec-forloops-ex-party"><span>Kapitel&nbsp;34.5</span></a> haben wir die beiden Zeilen <code>"Who likes to party?"</code>, “We like to party?” 5x wiederholt. Dabei werden die Wörter `to party für jede Wiederholung zwei mal wiederholt:</p>
 <pre><code>Who likes to party?
 We like to party!
 Who likes to party?
@@ -777,7 +782,7 @@ We like to party!
 </section>
 <section id="verkürzte-schreibweise" class="level2">
 <h2 class="anchored" data-anchor-id="verkürzte-schreibweise">Verkürzte Schreibweise</h2>
-<p>Es ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;34</span></a> gelernt:</p>
+<p>Es ist äusserst häufig der Fall, dass wir den Output aus einem Loop in einer Liste abspeichern wollen. Wie das geht haben wir ja bereits in <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;35</span></a> gelernt:</p>
 <div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>rollen <span class="op">=</span> [<span class="st">"bitch"</span>,<span class="st">"lover"</span>,<span class="st">"child"</span>,<span class="st">"mother"</span>,<span class="st">"sinner"</span>,<span class="st">"saint"</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -786,7 +791,7 @@ We like to party!
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    liedzeile <span class="op">=</span> <span class="st">"I'm a "</span><span class="op">+</span> rolle </span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    refrain.append(liedzeile)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Nur ist das ein <em>bisschen</em> umständlich, weil wir dafür viele Zeilen Code brauchen, um etwas eigentlich ganz simples zu bewerkstelligen. Es gibt deshalb dafür auch eine verkürzte Schreibweise, welche ich in der letzten Woche bereits einmal verwendet habe (siehe <a href="../B_Programmieren_2/11_Uebung_8.html#sec-offset-vis"><span>Kapitel&nbsp;28.6</span></a>). Der obige Loop hat in der verkürzten Schreibweise die folgende Form:</p>
+<p>Nur ist das ein <em>bisschen</em> umständlich, weil wir dafür viele Zeilen Code brauchen, um etwas eigentlich ganz simples zu bewerkstelligen. Es gibt deshalb dafür auch eine verkürzte Schreibweise, welche ich in der letzten Woche bereits einmal verwendet habe (siehe <a href="../B_Programmieren_2/11_Uebung_8.html#sec-offset-vis"><span>Kapitel&nbsp;29.6</span></a>). Der obige Loop hat in der verkürzten Schreibweise die folgende Form:</p>
 <div class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>refrain <span class="op">=</span> [<span class="st">"I'm a "</span><span class="op">+</span> rolle <span class="cf">for</span> rolle <span class="kw">in</span> rollen]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
