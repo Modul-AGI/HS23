@@ -676,7 +676,7 @@ window.onload = function() {
   <li><a href="#conda-installieren" id="toc-conda-installieren" class="nav-link" data-scroll-target="#conda-installieren">Conda installieren</a></li>
   <li><a href="#conda-environment-erstellen" id="toc-conda-environment-erstellen" class="nav-link" data-scroll-target="#conda-environment-erstellen">Conda environment erstellen</a></li>
   <li><a href="#conda-packages-installieren" id="toc-conda-packages-installieren" class="nav-link" data-scroll-target="#conda-packages-installieren">Conda packages installieren</a></li>
-  <li><a href="#sec-conda-cheet-sheet" id="toc-sec-conda-cheet-sheet" class="nav-link" data-scroll-target="#sec-conda-cheet-sheet">Conda cheat sheet</a></li>
+  <li><a href="#sec-conda-cheat-sheet" id="toc-sec-conda-cheat-sheet" class="nav-link" data-scroll-target="#sec-conda-cheat-sheet">Conda cheat sheet</a></li>
   </ul>
 </nav>
     </div>
@@ -739,25 +739,9 @@ window.onload = function() {
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge pandas       <span class="co"># installiert pandas</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>-c</code> ist in den obigen <code>install</code> Befehlen ein sogenannter Flag welcher ankündigt, dass gleich der “Channel” angegeben wird. In beiden Fällen nutzen wir den “Channel” <code>conda-forge</code>, d.h. die Packages werden von <a href="https://conda-forge.org/">conda-forge</a> geladen. Welcher Channel angegeben werden muss kann über eine kurze Internetsuche in Erfahrung gebracht werden (z.B. nach “conda install pandas” suchen).</p>
 <p>Bestätigt die Rückfragen (<code>Proceed ([y]/n)?</code>) mit <kbd>y</kbd> + <kbd>Enter</kbd>. Schaut euch nun euer Environment mit <code>conda list</code> an und startet danach <code>jupyter lab</code> indem ihr eben diesen Befehl in der Konsole eingebt. Wechselt aber vorher das Verzeichnis zu einem sinvolleren Ort (wie in Kapitel <a href="../B_Programmieren_1/7_JupyterNotebook.html"><span>Kapitel&nbsp;12</span></a> beschrieben).</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Bekommst du beim Aufstarten von JupyterLab nachstehende Fehlermelung?</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">AttributeError:</span> <span class="st">'ExtensionManager'</span> object has no attribute <span class="st">'_extensions'</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Diese kann man mit <a href="https://github.com/jupyterlab/jupyterlab/issues/10228#issuecomment-837574430">folgender Eingabe</a> in die Konsole beheben:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> server extension disable nbclassic</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
 </section>
-<section id="sec-conda-cheet-sheet" class="level2">
-<h2 class="anchored" data-anchor-id="sec-conda-cheet-sheet">Conda cheat sheet</h2>
+<section id="sec-conda-cheat-sheet" class="level2">
+<h2 class="anchored" data-anchor-id="sec-conda-cheat-sheet">Conda cheat sheet</h2>
 <p>In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda nochmal zusammengefasst. Wichtig ist vor allem, wann dieser Schritt nötig ist und wie er ausgeführt wird. Um die Tabelle kompakt zu halten werden gewisse Details als Fussnote verlinkt.</p>
 <table class="table">
 <thead>
