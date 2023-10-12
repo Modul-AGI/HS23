@@ -1,7 +1,7 @@
 ---
 output: false
-echo: false                      # set to true to show solution
-code-fold: false                 # set to true to show solution
+echo: true                       # set to true to show solution
+code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
@@ -66,7 +66,7 @@ for platzhalter in range(-5,6):
 
 Bis jetzt haben unsere *Loops* nicht viel Arbeiten müssen. Erstelle nun einen *For Loop*, welcher für die Werte -5 bis +5 folgendes ausgibt:
 
-```python
+```default
 Das Quadrat von -5 ist 25
 Das Quadrat von -4 ist 16
 ...

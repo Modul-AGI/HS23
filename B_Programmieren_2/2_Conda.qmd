@@ -56,22 +56,7 @@ conda install -c conda-forge pandas       # installiert pandas
 
 Bestätigt die Rückfragen (`Proceed ([y]/n)?`) mit <kbd>y</kbd> + <kbd>Enter</kbd>. Schaut euch nun euer Environment mit `conda list` an und startet danach `jupyter lab` indem ihr eben diesen Befehl in der Konsole eingebt. Wechselt aber vorher das Verzeichnis zu einem sinvolleren Ort (wie in Kapitel @sec-jupyternotebook beschrieben).
 
-:::{.callout-note}
-Bekommst du beim Aufstarten von JupyterLab nachstehende Fehlermelung? 
-
-```bash
-AttributeError: 'ExtensionManager' object has no attribute '_extensions'
-```
-
-Diese kann man mit [folgender Eingabe](https://github.com/jupyterlab/jupyterlab/issues/10228#issuecomment-837574430) in die Konsole beheben:
-
-```bash
-jupyter server extension disable nbclassic
-```
-
-:::
-
-## Conda cheat sheet {#sec-conda-cheet-sheet}
+## Conda cheat sheet {#sec-conda-cheat-sheet}
 
 In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda nochmal zusammengefasst. Wichtig ist vor allem, wann dieser Schritt nötig ist und wie er ausgeführt wird. Um die Tabelle kompakt zu halten werden gewisse Details als Fussnote verlinkt.
 

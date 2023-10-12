@@ -60,6 +60,7 @@ book:
       - B_Programmieren_1/10_Tabellarische_Daten.qmd
       - B_Programmieren_1/11_Uebung_4.qmd
       - B_Programmieren_1/12_Uebung_5.qmd
+      - B_Programmieren_1/13_Anhang.qmd
     - part: "B_Programmieren_2/1_Einleitung.qmd"
       chapters:
       - B_Programmieren_2/2_Conda.qmd
@@ -89,8 +90,9 @@ book:
       - B_Programmieren_3/6_Uebung_14.qmd
       - B_Programmieren_3/7_Spatial_Joins.qmd
       - B_Programmieren_3/7_Uebung_15.qmd
-      - B_Programmieren_3/8_Daten_Visualisieren.qmd
+      # - B_Programmieren_3/8_Daten_Visualisieren.qmd moved to 10_Anhang.qmd
       - B_Programmieren_3/9_Leistungsnachweis.qmd
+      - B_Programmieren_3/10_Anhang.qmd
     - part: "C_Datenbanken_1/1_Einleitung.qmd"
       chapters: 
       - C_Datenbanken_1/2_Uebung.qmd

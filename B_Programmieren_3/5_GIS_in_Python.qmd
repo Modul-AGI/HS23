@@ -132,11 +132,3 @@ Noch einfacher und sogar mit einer Basemap und Zoom möglichkeit, geht es mit de
 base = wald.explore()
 zeckenstiche_gpd.explore(m = base, color = "red")
 ```
-
-:::{.callout-caution}
-
-Von `R` bin ich mir gewohnt, dass sich Objekte nur verändern, wenn sie explizit überschrieben werden. In Python passiert es immer wieder, dass diese Annahme nicht zutifft. Schaut euch beispielsweise an dieser Stelle `zeckenstiche` an. Diese hat nun *auch* eine `geometry`-Spalte, **obwohl wir `zeckenstiche` nicht überschrieben haben**. Es handelt sich hier um einen Bug (<https://github.com/geopandas/geopandas/issues/1179>), welcher hoffentlich bald gelöst sein wird.
-
-Das führt zu sehr unangenehmen Nebeneffekten. Zum Beispiel kann die letzte Aufgabe nicht in einem For Loop gelöst werden.
-
-:::

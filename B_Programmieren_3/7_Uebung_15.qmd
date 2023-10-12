@@ -1,7 +1,7 @@
 ---
 output: false
-echo: false                      # set to true to show solution
-code-fold: false                 # set to true to show solution
+echo: true                       # set to true to show solution
+code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
 
@@ -42,11 +42,12 @@ zeckenstiche_gpd = gpd.read_file("data/zeckenstiche.gpkg")
 gpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)
 gpd.sjoin(left_df = wald, right_df = zeckenstiche_gpd) 
 
-# in beiden Fällen hat der Output geich viele Zeilen. In der ersten Variante ist die Geometrie
+# in beiden Fällen hat der Output geich viele Zeilen. 
+# In der ersten Variante ist die Geometrie
 # des Outputs "Point", im zweiten Fall "Multipolygon"
 ```
 
-## Übung 15.3
+## Übung 15.3 {#sec-ex-count}
 
 Führe nun den SpatialJoin aus @sec-ex-spatialjoin in der Reihenfolge aus, der dir am sinnvollsten erscheint. Weise den Output dieser Operation der Variabel `zeckenstiche_join` zu.
 
@@ -57,6 +58,8 @@ Nutze nun die dazugewonnene Spalte `Wald_text` um die Anzahl Zeckenstich-Meldung
 3. Anzahl `True` mit `sum()` zählen (`True` entspricht immer `1`, `False` entspricht immer `0`)
 
 ```{python}
+# die folgende Variante (mit dem Output "point") ist sinnvoller, da auch
+# wir uns primär für die Punkte (Zeckenstiche) interessieren.
 zeckenstiche_join = gpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)
 
 sum(zeckenstiche_join["Wald_text"] == "ja")

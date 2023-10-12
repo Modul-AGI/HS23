@@ -1,0 +1,35 @@
+# Anhang
+
+## Anhang 1: Arbeiten mit GoogleCollab
+
+In diesem Modul fokussieren wir uns darauf, dass ihr eure Lokale Programmierumgebung aufsetzen und pflegen könnt. Falls das nicht möglich ist, könnt ihr auch mit GoogleCollab arbeiten. GoogleCollab ist eine kostenlose Online-Plattform, die euch die Möglichkeit gibt, Python-Notebooks zu erstellen und auszuführen. Ihr könnt dort auch eure Notebooks speichern und mit anderen teilen.
+
+1. **Daten auf GoogleDrive Hochladen**: Erstellt einen Ordner auf GoogleDrive mit dem Namen `Modul-AGI` und ladet die Daten (siehe @tbl-datensaetze) dort hoch.
+2. **GoogleCollab öffnen**: Öffnet GoogleCollab unter <https://colab.research.google.com/> und clickt auf den Button "New Notebook" / "Neues Notebook".
+3. **Google Drive Mounten**: Mountet GoogleDrive, indem ihr folgenden Code in die erste Zelle eures Notebooks schreibt und ausführt:
+
+   ```python
+   from google.colab import drive
+   drive.mount('/content/drive')
+   ```
+
+4. **Libraries laden**: Auf GoogleCollab sind die meisten Libraries bereits installiert. Ihr müsst sie nur noch laden. Fügt dazu folgenden Code in die nächste Zelle ein und führt ihn aus:
+
+   ```python
+   import pandas as pd
+   import geopandas as gpd
+   ```
+
+   Unter Umständen müsst ihr zusätzliche Libraries installieren. GoogleCollab wird euch darauf hinweisen und liefert auch den passenden `pip`-Befehl (`pip` ist eine alternative zu `conda`). Um diesen Befehl auf GoogleCollab auszuführen, führt ihr den Befehl *in eurem Notebook* mit vorangestelltem Ausrufezeichen aus. Z.B:
+
+   ```bash
+   !pip install folium matplotlib mapclassify
+   ```
+
+5. **Daten laden**: Ladet die Daten, indem ihr folgenden Code in die nächste Zelle einfügt und ausführt:
+
+   ```python
+   # Solltet ihr der Ordner nicht Modul-AGI benannt haben, Pfad anpassen
+   zeckenstiche = pd.read_csv("/content/drive/MyDrive/Modul-AGI/zeckenstiche.csv")
+   ```
+
