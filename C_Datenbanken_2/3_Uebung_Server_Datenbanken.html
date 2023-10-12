@@ -939,7 +939,7 @@ Tipp
 <ol type="1">
 <li>Bleiben Sie in der Datenbank “waelder” im schema “arcgispro_editor”.</li>
 <li>Öffnen Sie das Query Tool.</li>
-<li>Laden Sie die Datei “tierarten.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=159550">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</li>
+<li>Laden Sie die Datei “tierarten.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=974486">aus dem Moodle</a> und speichern Sie in Ihrem Ordner.</li>
 <li>Öffnen Sie die Datei in einem beliebigen Texteditor und ändern das Wort “studentNr” in Ihre studentNr ab. Denken Sie sich ausserdem ein paar eigene/andere Tierarten aus und schreiben diese ebenfalls in die Datei (siehe <a href="#fig-db2-uebung7-1">Abbildung&nbsp;<span>48.11</span></a>).</li>
 <li>Über das kleine Ordner Symbol (Im Menü des Query Tools links oben) kann eine SQL-Datei geladen werden. Laden Sie die geänderte “tierarten.sql” Datei in pgAdmin.</li>
 <li>Die Auswahl lädt den Inhalt der Datei ins Query Tool (siehe <a href="#fig-db2-uebung7-2">Abbildung&nbsp;<span>48.12</span></a>).</li>
@@ -976,7 +976,7 @@ Tipp
 <h2 class="anchored" data-anchor-id="übung-8-geometrieimport-in-die-datenbank">Übung 8: Geometrieimport in die Datenbank</h2>
 <p>Herkömmliche GIS Methoden zum Erstellen und Importieren von Geometrien ins GIS sollten Ihnen aus dem GIS Basic Modul bereits bekannt sein. Auch in ArcGIS Pro können Geometrien z.B. über ein Shapefile in eine Geodatenbank importiert werden. Ausserdem können Geometrien z.B. aus einem Luftbild digitalisiert und direkt in der Geodatenbank gespeichert werden.</p>
 <ol type="1">
-<li>Laden Sie die Datei “waelder.zip” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=159552">aus dem Moodle</a> und entpacken Sie die Dateien. Es handelt sich um ein Shapefile mit einigen Wäldern.</li>
+<li>Laden Sie die Datei “waelder.zip” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=974488">aus dem Moodle</a> und entpacken Sie die Dateien. Es handelt sich um ein Shapefile mit einigen Wäldern.</li>
 <li>Starten Sie ArcGIS Pro und laden das Projekt “Datenbankzugriff”.</li>
 <li>Fügen Sie das Shapefile ein und erfassen Sie mit dem Digitalisierungsmöglichkeiten von ArcGIS Pro zusätzlich ein paar eigene fehlende Wälder.</li>
 <li>Öffnen Sie die Attributtabelle.</li>
@@ -1036,7 +1036,7 @@ Tipp
 <h2 class="anchored" data-anchor-id="übung-9-geometrieimport-in-die-datenbank-mit-sql-datei">Übung 9: Geometrieimport in die Datenbank mit SQL-Datei</h2>
 <p>Auch Geometrien können ebenso wie Sachdaten über eine SQL-Datei in die Datenbank kopiert werden.</p>
 <ol type="1">
-<li>Laden Sie die Datei “sichtungsmeldungen.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=159551">aus dem Moodle</a>. Es handelt sich um eine SQL-Datei mit Sichtungsmeldungen von Tieren.</li>
+<li>Laden Sie die Datei “sichtungsmeldungen.sql” <a href="https://moodle.zhaw.ch/mod/resource/view.php?id=974487">aus dem Moodle</a>. Es handelt sich um eine SQL-Datei mit Sichtungsmeldungen von Tieren.</li>
 <li>Öffnen Sie die Datei in einem beliebigen Texteditor. Was sehen Sie? Was fällt auf?</li>
 <li>Sie werden bemerken, dass die Geometrie über die Funktion ST_GeomFromText lesbar dargestellt werden kann. Der Geometrietyp von ArcGIS Pro wird dann über diese Funktion automatisch umgewandelt. I.d.R. ist es aber sehr viel einfacher Geometrien über ArcGIS Pro zu importieren oder zu erstellen. Sie sollen hier aber einmal sehen, dass es auch direkt über SQL geht.</li>
 <li>Die Attribute (Spalten in der DB) in der Datei sind Kommagetrennt in Klammern nach dem Wert VALUE. Die Reihenfolge ist diesselbe wie in der Klammer vor dem VALUE.</li>
