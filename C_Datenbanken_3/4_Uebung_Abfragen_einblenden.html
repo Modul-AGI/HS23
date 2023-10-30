@@ -697,7 +697,7 @@ Tipp
 <li>Starten Sie pgAdmin und verbinden Sie mit der Pflanzendatenbank “modulagi_pdb” mit Ihrem Benutzer studentNr.</li>
 <li>Probieren Sie folgende SQL-Abfrage zu formulieren.</li>
 <li>Suchen Sie alle Gattungen der Familie “Asteraceae”. Zeigen Sie den Namen der Familie und den Namen der Gattung an (siehe <a href="#fig-db3-uebung3-2">Abbildung&nbsp;<span>53.2</span></a>).</li>
-<li>Starten Sie ArcGIS Pro und öffnen das Projekt “Pflanzendatenbank”.</li>
+<li>Starten Sie ArcGIS Pro und öffnen das Projekt “Pflanzendatenbank_III”.</li>
 <li>Erstellen Sie eine neue Karte.</li>
 <li>Öffnen Sie das Werkzeug “Make Query Table”</li>
 <li>Wählen Sie die beteiligten Tabellen familien und gattungen (über die Datenbankverbindung)</li>
@@ -857,7 +857,7 @@ Tipp
 <li>Eine View verhält sich wie eine neue Tabelle in ArcGIS Pro. Aus diesem Grund müsste die Tabelle eigentlich mit der Datenbank registriert werden. Sie erkennen dies auch in der Catalog Ansicht an dem nicht ausgefüllten Rechteck (siehe <a href="#fig-db3-uebung5-2">Abbildung&nbsp;<span>53.5</span></a>).</li>
 <li>Eine Registrierung bewirkt das Freischalten der Geodatenbank-Funktionen für diese Tabelle, damit auch neue Daten erfasst und bearbeitet werden können. Da Ihr Benutzer studentNr keine Berechtigungen zum Schreiben im Datenbankschema auf der Datenbank hat, kann die Tabelle jetzt nicht registriert werden. Da wir aber die Tabelle nur abfragen wollen ist dies nicht weiter schlimm.</li>
 <li>Öffnen Sie das Werkzeug “Create Database View”.</li>
-<li>Speichern Sie mit dem Werkzeug eine identische Liste für den Kurs “UÖ Gehölze”. Geben Sie der View den Namen “pdb.view_kursliste_gehoelze_studentNr”. Sie können hierzu wieder das SQL-Select-Statement von oben kopieren (ohne den CREATE VIEW Teil) und den Kursnamen entsprechend anpassen.</li>
+<li>Speichern Sie mit dem Werkzeug eine identische Liste für den Kurs “UÖ Gehölze”. Geben Sie der View den Namen “pdb.view_kursliste_gehoelze_studentNr”. Achten Sie auf das “pdb.” vor dem eigentlichen Namen. Dies gibt das Schema an indem die View gespeichert werden soll. Sie können hierzu wieder das SQL-Select-Statement von oben kopieren (ohne den CREATE VIEW Teil) und den Kursnamen entsprechend anpassen.</li>
 <li>Schauen Sie sich das Ergebnis in der Attributtabelle und in der Karte an.</li>
 <li>Sie sehen an dieser Übung, dass nur der Datenbankbesitzer neue Tabellen erstellen und hinzufügen kann. Andere Benutzer wie der student1 können nur vorhandene Tabellen und Daten bearbeiten und ändern. Neue Tabellen können nur ohne Schreibberechtigung erstellt werden.</li>
 </ol>
@@ -891,7 +891,7 @@ Tipp
 </div>
 </div>
 <ol type="1">
-<li>Starten Sie ArcGIS Pro und laden das Projekt mit dem Namen “Pflanzendatenbank”</li>
+<li>Starten Sie ArcGIS Pro und laden das Projekt mit dem Namen “Pflanzendatenbank_III”</li>
 <li>Öffnen Sie das Werkzeug “Make Table View”.</li>
 <li>Erstellen Sie eine Abfrage wie in Übung 5 und filtern nach der Art “japonicum”.</li>
 <li>Wählen Sie als Input Table die zuvor erstellte View, lassen Sie aber das Geometriefeld (shape) in der Abfrage weg und filtern über eine “new Expression” nach name_art = “japonicum”.</li>
