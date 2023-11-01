@@ -72,7 +72,7 @@ In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda n
 
 [^konsole]: Mit Konsole ist unter Windows *cmd* gemeint (Windowstaste > cmd). Unter Linux wird bash, auf Mac der Terminal verwendet. 
 
-[^condapath]: Wenn *conda* von ArcGIS Pro verwendet wird, befindet sich die *conda* installation vermutlich hier: *C:\Program Files\ArcGIS\Pro\bin\Python\Scripts*. Prüfen, ob dieser Folder existiert und dort `conda.exe` vorhanden ist.
+<!-- [^condapath]: Wenn *conda* von ArcGIS Pro verwendet wird, befindet sich die *conda* installation vermutlich hier: *C:\Program Files\ArcGIS\Pro\bin\Python\Scripts*. Prüfen, ob dieser Folder existiert und dort `conda.exe` vorhanden ist. -->
 
 [^linux]: Unter Linux: `conda activate geopython`
 
@@ -82,10 +82,7 @@ In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda n
 
 [^weiteremodule]: In Programmieren I - III brauchen wir die Module `pandas`, `matplotlib`, `geopandas` und `descartes`
 
-[^jupyterlabbeenden]: Falls JupyterLabs läuft und dadurch die Konsole blockiert ist, gibt es folgende Möglichkeiten:
+[^jupyterlabbeenden]: Falls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende *environment*. Danach könnt ihr das Modul installieren
 
-    1. JupyterLabs beenden (<kdb>Ctrl</kdb> + <kdb>C</kdb>) > Modul installieren > JupyterLab nochmal starten
-    2. einen neue Konsole starten > *environment* aktivieren > Modul installieren
-    3. den Terminal innerhalb von JupyterLabs verwenden (File > New > Terminal) und dort die *environment* aktivieren und Modul installieren 
 
 

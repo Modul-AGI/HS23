@@ -33,9 +33,7 @@ Hier befinden sich alle Datensätze, die im Laufe des Blocks "Netzwerkanalyse" b
 
 ## Übung 1: QGIS installieren
 
-Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des "Longterm release (most stable)" herunter. Installieren Sie QGIS nach dem Download.
-
-![QGIS Standalone Installer "Longterm release (most stable)" auf qgis.org](figures/qgis322.png){#fig-qgisVersion}
+Auf der QGIS Homepage [qgis.org](https://www.qgis.org/de/site/forusers/download.html) finden Sie die aktuellen QGIS Versionen für Windows, Linux, Mac und weitere Betriebssysteme in 32 und 64 bit. Laden Sie den passenden Standalone Installer des "Longterm release (most stable)" herunter (aktuell **3.28**). Installieren Sie QGIS nach dem Download.
 
 ## Übung 2: Tutorials anschauen
 
@@ -44,8 +42,6 @@ Schauen Sie sich danach zum Einstieg einzelne Videos vom Youtube Nutzer [Marshal
 ## Übung 3: Daten importieren
 
 Während Shapefiles im GIS-Unterricht bisher oft zur Speicherung von Vectordaten verwendet wurden, werden in QGIS vor allem Geopackage Dateien verwendet (.gpkg). QGIS kann Shapefiles durchaus lesen und schreiben, wir werden in den Übungen aber vor allem mit Geopackage Daten arbeiten. Geopackages sind eine alternative Methode, Vektordaten abzuspeichern. Sie beheben einige Defizite, die Shapefiles mit sich bringen. Siehe dazu auch die Website ["Shapefiles must die"](http://switchfromshapefile.org/). 
-
-PS: Twitternutzer können auch einen spannenden Schlagabtausch der Benutzer [\@shapefile](https://twitter.com/shapefiIe) versus [\@geopackage1](https://twitter.com/geopackage1) und [\@sfkeller](https://twitter.com/sfkeller) mitverfolgen.
 
 1. Neues QGIS Projekt starten und Projektdatei speichern (Beachten Sie dazu die Empfehlungen am Anfang)
 2. CRS auf EPSG 2056 setzen
