@@ -5,7 +5,7 @@ aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisier
 
 OPTIONAL: Es ist Ihnen selbst überlassen, ob Sie in den kommenden Übungen die bestehende Server Datenbank nutzen möchten oder Ihre eigene lokale Pflanzendatenbank. Die Übungen beziehen sich auf die Server Variante. Bei eigener Datenbank passen Sie die Datanbank Verbindungsparameter entsprechend an. Wie Sie Ihre eigene lokale Pflanzendatenbank aufsetzen ist in den Vorbereitungsübungen auf Moodle beschrieben.
 
-[Unterlagen auf Moodle](https://moodle.zhaw.ch/pluginfile.php/817700/mod_resource/content/15/%C3%9Cbung_Datenbanken3_Vorbereitung_HS22.pdf)
+[Unterlagen auf Moodle](https://moodle.zhaw.ch/mod/resource/view.php?id=974496)
 
 ## Übung 1: (Wiederholung) Datenbankverbindung zum Server in pgAdmin herstellen
 
