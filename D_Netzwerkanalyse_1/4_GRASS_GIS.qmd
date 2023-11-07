@@ -59,6 +59,6 @@ Visualisieren Sie die Ausprägung "Closeness" der berechneten Zentralitätswerte
 
 ## Übung 2.5: Zentralitätsmasse vergleichen
 
-Installieren Sie das Plugin "QuickMapServices" um eine OSM Hintergrundkarte einzubinden. Um direkt in QGIS die Zentralitätsmasse zu vergleichen, duplizieren sie den entsprechenden Layer noch zweimal (rechtsklick > Duplicate) – so können Sie jede der Zentralitäten separat symbolisieren und vergleichen. Sie können auch für jedes der Zentralitätsmasse eine Karte exportieren via *Project > Import / Export Export Map to Image*.
+Installieren Sie das Plugin "QuickMapServices" um eine OSM Hintergrundkarte einzubinden (e.g. Web → QuickMapServices → OSM → OSM Standard). Um direkt in QGIS die Zentralitätsmasse zu vergleichen, duplizieren sie den entsprechenden Layer noch zweimal (rechtsklick > Duplicate) – so können Sie jede der Zentralitäten separat symbolisieren und vergleichen. Sie können auch für jedes der Zentralitätsmasse eine Karte exportieren via *Project > Import / Export Export Map to Image*.
 
 Vergleichen Sie die drei Zentralitätsmasse und setzen Sie sie in den Kontext der Theorie.
