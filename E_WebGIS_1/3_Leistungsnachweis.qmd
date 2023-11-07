@@ -13,13 +13,15 @@ Veröffentliche die Web Map inklusive Web App aus Übung 10 für alle Mitglieder
 
 Sende bis spätestens Sonntagabend **18. Dezember 2022** eine E-Mail mit folgendem Inhalt an ***pascal.ochsner@zhaw.ch***: 
 
-    Betreff:
-    Modul AGI: Leistungsnachweis Web GIS 
+:::{.callout}
+Betreff:
+Modul AGI: Leistungsnachweis Web GIS 
 
-    Text:
-    Hallo Pascal
+Text:
+Hallo Pascal
 
-    Den Nachweis für meinen Leistungsnachweis – meine persönliche Web App – kannst Du via folgendem Link aufrufen Link: https://zhaw.maps.arcgis.com/..... 
+Den Nachweis für meinen Leistungsnachweis – meine persönliche Web App – kannst Du via folgendem Link aufrufen Link: https://zhaw.maps.arcgis.com/..... 
 
-    Beste Grüsse,
-    Vorname Name
+Beste Grüsse,
+Vorname Name
+:::

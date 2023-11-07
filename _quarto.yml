@@ -36,8 +36,9 @@ book:
     logo: zhaw_sw_neg.png
     collapse-level: 1
     style: floating
-  # body-footer: <button class="presenter-btn" onClick="presenter()">Presenter</button>
-  chapters:
+  repo-url: https://github.com/modul-AGI/hs23
+  repo-actions: [edit]
+  chapters: 
     - index.qmd
     - part: "A_Unsicherheit/1_Einleitung.qmd"
       chapters:
@@ -131,4 +132,4 @@ book:
     - part: "E_WebGIS_2/1_Einleitung.qmd"
       chapters: 
       - E_WebGIS_2/2_Uebung.qmd  
-    - "Anleitung_fuer_Dozierende.qmd"
+    - Markdown.qmd
