@@ -673,8 +673,9 @@ window.onload = function() {
    
   <ul>
   <li><a href="#text" id="toc-text" class="nav-link active" data-scroll-target="#text">Text</a></li>
-  <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
-  <li><a href="#bilder" id="toc-bilder" class="nav-link" data-scroll-target="#bilder">Bilder</a></li>
+  <li><a href="#querverweise" id="toc-querverweise" class="nav-link" data-scroll-target="#querverweise">Querverweise</a></li>
+  <li><a href="#sec-md-tables" id="toc-sec-md-tables" class="nav-link" data-scroll-target="#sec-md-tables">Tabellen</a></li>
+  <li><a href="#sec-md-images" id="toc-sec-md-images" class="nav-link" data-scroll-target="#sec-md-images">Bilder</a></li>
   <li><a href="#übungsziele" id="toc-übungsziele" class="nav-link" data-scroll-target="#übungsziele">Übungsziele</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/Markdown.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
@@ -723,18 +724,46 @@ window.onload = function() {
 <li>… usw. (bis Stufe 6)</li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mehr zum Markdown Syntax: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
+</div>
+</div>
+</section>
+<section id="querverweise" class="level3">
+<h3 class="anchored" data-anchor-id="querverweise">Querverweise</h3>
 <p>Um im Text einen Querverweis auf ein Kapitel zu machen, müsst ihr diesem Zuerst eine eindeutige “ID” geben. Zum Beispiel sieht der Titel in <a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;19</span></a> folgendermassen aus:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conda {#sec-conda}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Nun kann ich auf dieses Kapitel mit <code>@id</code> verweisen.</p>
+<p>Nun kann ich auf dieses Kapitel mit <code>@sec-conda</code> verweisen.</p>
 <ul>
 <li><code>@sec-conda</code> wird zu</li>
 <li><a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;19</span></a></li>
 </ul>
-<p>Das Verweisen funktioniert aber nur auf Nummerierte Kapitel und deren Unterkapitel.</p>
-<p>Mehr zum Markdown Syntax: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
+<p>Das Verweisen funktioniert aber nur auf Nummerierte Kapitel und deren Unterkapitel. Wichtig ist auch, das die “ID” ein <code>sec-</code> vorangestellt wird. Dieses <code>sec-</code> kommuniziert Quarto, dass es sich bei der Referenz um einen Kapitelverweis handelt. Bilder werden mit <code>fig-</code> referenziert und Tabellen mit <code>tbl-</code>. Mehr dazu später, in <a href="#sec-md-tables"><span>Kapitel&nbsp;0.3</span></a> und <a href="#sec-md-images"><span>Kapitel&nbsp;0.4</span></a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mehr zu Querverweisen: <a href="https://quarto.org/docs/authoring/cross-references.html" class="uri">https://quarto.org/docs/authoring/cross-references.html</a></p>
+</div>
+</div>
 </section>
-<section id="tabellen" class="level3">
-<h3 class="anchored" data-anchor-id="tabellen">Tabellen</h3>
+<section id="sec-md-tables" class="level3">
+<h3 class="anchored" data-anchor-id="sec-md-tables">Tabellen</h3>
 <p>Tabellen werden ebenfalls im Markdown-Syntax erstellt, und zwar folgendermassen:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>| BMI         | Nutritional status       | </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>|:------------|:-------------------------|</span>
@@ -795,10 +824,22 @@ window.onload = function() {
 <li><code>siehe @tbl-beispielstabelle</code> wird zu:</li>
 <li>siehe <a href="#tbl-beispielstabelle">Tabelle&nbsp;<span>1</span></a></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mehr zum einfügen von Tabellen: <a href="https://quarto.org/docs/authoring/tables.html" class="uri">https://quarto.org/docs/authoring/tables.html</a></p>
+</div>
+</div>
 </section>
-<section id="bilder" class="level3">
-<h3 class="anchored" data-anchor-id="bilder">Bilder</h3>
+<section id="sec-md-images" class="level3">
+<h3 class="anchored" data-anchor-id="sec-md-images">Bilder</h3>
 <p>Um Bilder einzufügen muss man diese erstmals auf Github hochladen. Dafür wählt man auf Github.com den “Parent Folder” des Dokuments, wo das Bild hin soll und dort dann <em>Add file &gt; Upload file</em>. Nun kann man das Bild folgendermasen einfügen:</p>
 <ul>
 <li>Nur Bild: <code>![](bild.jpg)</code></li>
@@ -818,19 +859,23 @@ window.onload = function() {
 <li><code>@fig-zhaw-logo</code> wird zu</li>
 <li><a href="#fig-zhaw-logo">Abbildung&nbsp;<span>1</span></a></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mehr zum einfügen von Bildern: <a href="https://quarto.org/docs/authoring/figures.html" class="uri">https://quarto.org/docs/authoring/figures.html</a></p>
+</div>
+</div>
 </section>
 <section id="übungsziele" class="level3">
 <h3 class="anchored" data-anchor-id="übungsziele">Übungsziele</h3>
-<p>Um “Übungsziele” festzulegen verwendet man folgender Syntax:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Übungsziele</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 1</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 2</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 3</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Dies wird dann zu:</p>
+<p>Übungsziele werden folgendermassen dargestellt:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -848,7 +893,27 @@ window.onload = function() {
 </ul>
 </div>
 </div>
+<p>Um diese zu erstellen verwendet man folgender Syntax:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Übungsziele</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 1</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 2</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 3</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mehr zu diesen sogenannten <em>Callout Blocks</em>: <a href="https://quarto.org/docs/authoring/callouts.html" class="uri">https://quarto.org/docs/authoring/callouts.html</a></p>
+</div>
+</div>
 
 
 </section>
