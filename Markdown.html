@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modul AGI HS23 - Anleitung für Dozierende</title>
+<title>Modul AGI HS23 - Markdown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -146,7 +146,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Anleitung_fuer_Dozierende.html">Anleitung für Dozierende</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Markdown.html">Markdown</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -165,7 +165,8 @@ window.onload = function() {
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Modul AGI HS23</a> 
-        <div class="sidebar-tools-main">
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/modul-AGI/hs23" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
@@ -657,8 +658,8 @@ window.onload = function() {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Anleitung_fuer_Dozierende.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Anleitung für Dozierende</span></a>
+  <a href="./Markdown.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Markdown</span></a>
   </div>
 </li>
     </ul>
@@ -672,19 +673,19 @@ window.onload = function() {
    
   <ul>
   <li><a href="#text" id="toc-text" class="nav-link active" data-scroll-target="#text">Text</a></li>
-  <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
-  <li><a href="#bilder" id="toc-bilder" class="nav-link" data-scroll-target="#bilder">Bilder</a></li>
+  <li><a href="#querverweise" id="toc-querverweise" class="nav-link" data-scroll-target="#querverweise">Querverweise</a></li>
+  <li><a href="#sec-md-tables" id="toc-sec-md-tables" class="nav-link" data-scroll-target="#sec-md-tables">Tabellen</a></li>
+  <li><a href="#sec-md-images" id="toc-sec-md-images" class="nav-link" data-scroll-target="#sec-md-images">Bilder</a></li>
   <li><a href="#übungsziele" id="toc-übungsziele" class="nav-link" data-scroll-target="#übungsziele">Übungsziele</a></li>
-  <li><a href="#presenter-mode" id="toc-presenter-mode" class="nav-link" data-scroll-target="#presenter-mode">Presenter mode</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/Markdown.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Anleitung für Dozierende</h1>
+<h1 class="title">Markdown</h1>
 </div>
 
 
@@ -699,7 +700,11 @@ window.onload = function() {
 
 </header>
 
-<p>Um Änderungen an diesem Dokument machen zu können, braucht man einen kostenlosen Github Account <a href="https://github.com/signup" class="uri">https://github.com/signup</a>. Sobald ihr Nils euren GitHub Benutzernamen mitgeteilt hat wird er euch auf dem Repository (“Repo”) freischalten.</p>
+<p>Um Änderungen an diesem Dokument machen zu können, braucht man einen kostenlosen Github Account <a href="https://github.com/signup" class="uri">https://github.com/signup</a>.</p>
+<ul>
+<li>Kursleiter melden sich am besten bei Nils, damit er sie als “Collaborator” hinzufügen kann.</li>
+<li>Kursteilnehmer arbeiten über ein “Fork” des Repositories, siehe <a href="https://modul-agi.github.io/GitHub-Anleitung/" target="_blank">diese Anleitung</a>.</li>
+</ul>
 <p>Um bestehende Einträge zu verändern, navigiert ihr auf der Webseite (<a href="https://modul-agi.github.io">modul-agi.github.io</a>) zum entsprechenden Eintrag und klickt dort auf den Button <code>Seite editieren</code> (ganz Rechts unter dem Inhaltsverzeichnis). Nun könnt ihr eure Änderungen im Online Editor auf Github.com vornehmen. Anders als mit Microsoft Word, arbeiten wir hier in einer “Markup” Sprache. Das heisst, der Inhalt wird gewissermassen programmiert. Beispiele findet ihr unten:</p>
 <section id="text" class="level3">
 <h3 class="anchored" data-anchor-id="text">Text</h3>
@@ -719,18 +724,46 @@ window.onload = function() {
 <li>… usw. (bis Stufe 6)</li>
 </ul></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mehr zum Markdown Syntax: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
+</div>
+</div>
+</section>
+<section id="querverweise" class="level3">
+<h3 class="anchored" data-anchor-id="querverweise">Querverweise</h3>
 <p>Um im Text einen Querverweis auf ein Kapitel zu machen, müsst ihr diesem Zuerst eine eindeutige “ID” geben. Zum Beispiel sieht der Titel in <a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;19</span></a> folgendermassen aus:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conda {#sec-conda}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Nun kann ich auf dieses Kapitel mit <code>@id</code> verweisen.</p>
+<p>Nun kann ich auf dieses Kapitel mit <code>@sec-conda</code> verweisen.</p>
 <ul>
 <li><code>@sec-conda</code> wird zu</li>
 <li><a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;19</span></a></li>
 </ul>
-<p>Das Verweisen funktioniert aber nur auf Nummerierte Kapitel und deren Unterkapitel.</p>
-<p>Mehr zum Markdown Syntax: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
+<p>Das Verweisen funktioniert aber nur auf Nummerierte Kapitel und deren Unterkapitel. Wichtig ist auch, das die “ID” ein <code>sec-</code> vorangestellt wird. Dieses <code>sec-</code> kommuniziert Quarto, dass es sich bei der Referenz um einen Kapitelverweis handelt. Bilder werden mit <code>fig-</code> referenziert und Tabellen mit <code>tbl-</code>. Mehr dazu später, in <a href="#sec-md-tables"><span>Kapitel&nbsp;0.3</span></a> und <a href="#sec-md-images"><span>Kapitel&nbsp;0.4</span></a>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mehr zu Querverweisen: <a href="https://quarto.org/docs/authoring/cross-references.html" class="uri">https://quarto.org/docs/authoring/cross-references.html</a></p>
+</div>
+</div>
 </section>
-<section id="tabellen" class="level3">
-<h3 class="anchored" data-anchor-id="tabellen">Tabellen</h3>
+<section id="sec-md-tables" class="level3">
+<h3 class="anchored" data-anchor-id="sec-md-tables">Tabellen</h3>
 <p>Tabellen werden ebenfalls im Markdown-Syntax erstellt, und zwar folgendermassen:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>| BMI         | Nutritional status       | </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>|:------------|:-------------------------|</span>
@@ -791,10 +824,22 @@ window.onload = function() {
 <li><code>siehe @tbl-beispielstabelle</code> wird zu:</li>
 <li>siehe <a href="#tbl-beispielstabelle">Tabelle&nbsp;<span>1</span></a></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mehr zum einfügen von Tabellen: <a href="https://quarto.org/docs/authoring/tables.html" class="uri">https://quarto.org/docs/authoring/tables.html</a></p>
+</div>
+</div>
 </section>
-<section id="bilder" class="level3">
-<h3 class="anchored" data-anchor-id="bilder">Bilder</h3>
+<section id="sec-md-images" class="level3">
+<h3 class="anchored" data-anchor-id="sec-md-images">Bilder</h3>
 <p>Um Bilder einzufügen muss man diese erstmals auf Github hochladen. Dafür wählt man auf Github.com den “Parent Folder” des Dokuments, wo das Bild hin soll und dort dann <em>Add file &gt; Upload file</em>. Nun kann man das Bild folgendermasen einfügen:</p>
 <ul>
 <li>Nur Bild: <code>![](bild.jpg)</code></li>
@@ -814,19 +859,23 @@ window.onload = function() {
 <li><code>@fig-zhaw-logo</code> wird zu</li>
 <li><a href="#fig-zhaw-logo">Abbildung&nbsp;<span>1</span></a></li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mehr zum einfügen von Bildern: <a href="https://quarto.org/docs/authoring/figures.html" class="uri">https://quarto.org/docs/authoring/figures.html</a></p>
+</div>
+</div>
 </section>
 <section id="übungsziele" class="level3">
 <h3 class="anchored" data-anchor-id="übungsziele">Übungsziele</h3>
-<p>Um “Übungsziele” festzulegen verwendet man folgender Syntax:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Übungsziele</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 1</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 2</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 3</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Dies wird dann zu:</p>
+<p>Übungsziele werden folgendermassen dargestellt:</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -844,11 +893,27 @@ window.onload = function() {
 </ul>
 </div>
 </div>
+<p>Um diese zu erstellen verwendet man folgender Syntax:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Übungsziele</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 1</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 2</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 3</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Mehr zu diesen sogenannten <em>Callout Blocks</em>: <a href="https://quarto.org/docs/authoring/callouts.html" class="uri">https://quarto.org/docs/authoring/callouts.html</a></p>
-</section>
-<section id="presenter-mode" class="level2">
-<h2 class="anchored" data-anchor-id="presenter-mode">Presenter mode</h2>
-<p>Führe in der Konsole den JS code <code>presenter()</code> aus, um in den Präsentationsmodus zu gelangen (<code>padding-top</code> für alle h2`).</p>
+</div>
+</div>
 
 
 </section>
