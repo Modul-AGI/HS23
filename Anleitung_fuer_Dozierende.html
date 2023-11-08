@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modul AGI HS23 - Leistungsnachweis</title>
+<title>Modul AGI HS23 - Markdown</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../B_Programmieren_3/10_Anhang.html" rel="next">
-<link href="../B_Programmieren_3/7_Uebung_15.html" rel="prev">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./E_WebGIS_2/2_Uebung.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +134,7 @@ window.onload = function() {
 </script>
 
 
-<link rel="stylesheet" href="../custom.css">
+<link rel="stylesheet" href="custom.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -113,7 +146,7 @@ window.onload = function() {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/9_Leistungsnachweis.html"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Leistungsnachweis</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Anleitung_fuer_Dozierende.html">Markdown</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,11 +160,11 @@ window.onload = function() {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      <img src="../zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Modul AGI HS23</a> 
+      <a href="./">Modul AGI HS23</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/modul-AGI/hs23" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
@@ -152,13 +185,13 @@ window.onload = function() {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Willkommen!</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Unsicherheit</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -167,39 +200,39 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../A_Unsicherheit/2_Datengrundlage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datengrundlage</span></a>
+  <a href="./A_Unsicherheit/2_Datengrundlage.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datengrundlage</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../A_Unsicherheit/3_Datenvorverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenvorverarbeitung</span></a>
+  <a href="./A_Unsicherheit/3_Datenvorverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenvorverarbeitung</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unsicherheit der gemeldeten Zeckenstichstandorte</span></a>
+  <a href="./A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unsicherheit der gemeldeten Zeckenstichstandorte</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unschärfe des Waldrandes</span></a>
+  <a href="./A_Unsicherheit/5_Unschaerfe-des-Waldrandes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Unschärfe des Waldrandes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../A_Unsicherheit/6_Automatisieren-Modelbuilder.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Automatisierung mit ModelBuilder</span></a>
+  <a href="./A_Unsicherheit/6_Automatisieren-Modelbuilder.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Automatisierung mit ModelBuilder</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../A_Unsicherheit/7_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="./A_Unsicherheit/7_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../B_Programmieren_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./B_Programmieren_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren I</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -208,69 +241,69 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/2_Python-Command-Prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Command Prompt</span></a>
+  <a href="./B_Programmieren_1/2_Python-Command-Prompt.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Command Prompt</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/3_Primitive_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primitive Datentypen</span></a>
+  <a href="./B_Programmieren_1/3_Primitive_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Primitive Datentypen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/4_Uebung_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 1</span></a>
+  <a href="./B_Programmieren_1/4_Uebung_1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/5_Komplexe_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Komplexe Datentypen</span></a>
+  <a href="./B_Programmieren_1/5_Komplexe_Datentypen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Komplexe Datentypen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/6_Uebung_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 2</span></a>
+  <a href="./B_Programmieren_1/6_Uebung_2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/7_JupyterNotebook.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab</span></a>
+  <a href="./B_Programmieren_1/7_JupyterNotebook.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/8_Dictionary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dictionaries</span></a>
+  <a href="./B_Programmieren_1/8_Dictionary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/9_Uebung_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 3</span></a>
+  <a href="./B_Programmieren_1/9_Uebung_3.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/10_Tabellarische_Daten.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">DataFrames</span></a>
+  <a href="./B_Programmieren_1/10_Tabellarische_Daten.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">DataFrames</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
+  <a href="./B_Programmieren_1/11_Uebung_4.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  <a href="./B_Programmieren_1/12_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
+  <a href="./B_Programmieren_1/13_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../B_Programmieren_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./B_Programmieren_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren II</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -279,155 +312,155 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/2_Conda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conda</span></a>
+  <a href="./B_Programmieren_2/2_Conda.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Conda</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
+  <a href="./B_Programmieren_2/3_Python_Module.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Python Modules</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
+  <a href="./B_Programmieren_2/3_JupyterLab-Desktop.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">JupyterLab Desktop</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/4_Functions_I.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Basics</span></a>
+  <a href="./B_Programmieren_2/4_Functions_I.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/5_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
+  <a href="./B_Programmieren_2/5_Uebung_5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 5</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/6_Functions_II.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Advanced</span></a>
+  <a href="./B_Programmieren_2/6_Functions_II.html" class="sidebar-item-text sidebar-link"><span class="chapter-title"><em>Function</em> Advanced</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/7_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 6</span></a>
+  <a href="./B_Programmieren_2/7_Uebung_6.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 6</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/8_If_else.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">If / Else</span></a>
+  <a href="./B_Programmieren_2/8_If_else.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">If / Else</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/9_Uebung_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 7</span></a>
+  <a href="./B_Programmieren_2/9_Uebung_7.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 7</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/10_Zufallzahlen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Zufallszahlen generieren</span></a>
+  <a href="./B_Programmieren_2/10_Zufallzahlen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Zufallszahlen generieren</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/11_Uebung_8.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 8</span></a>
+  <a href="./B_Programmieren_2/11_Uebung_8.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 8</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Funktionen in <em>DataFrames</em></span></a>
+  <a href="./B_Programmieren_2/12_Funktionen_in_DataFrames.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Funktionen in <em>DataFrames</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/13_Uebung_9.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 9</span></a>
+  <a href="./B_Programmieren_2/13_Uebung_9.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 9</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_2/20_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
+  <a href="./B_Programmieren_2/20_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../B_Programmieren_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./B_Programmieren_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren III</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/2_For_Loops_Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Einführung in <em>for loop</em></span></a>
+  <a href="./B_Programmieren_3/2_For_Loops_Intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Einführung in <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/2_Uebung_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 10</span></a>
+  <a href="./B_Programmieren_3/2_Uebung_10.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 10</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
+  <a href="./B_Programmieren_3/3_For_Loops_Basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Basic <em>for loop</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/3_Uebung_11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 11</span></a>
+  <a href="./B_Programmieren_3/3_Uebung_11.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 11</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/4_For_Loops_Advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced <em>for loops</em></span></a>
+  <a href="./B_Programmieren_3/4_For_Loops_Advanced.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Advanced <em>for loops</em></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/4_Uebung_12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 12</span></a>
+  <a href="./B_Programmieren_3/4_Uebung_12.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 12</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/5_GIS_in_Python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Input: GIS in Python</span></a>
+  <a href="./B_Programmieren_3/5_GIS_in_Python.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Input: GIS in Python</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/6_Raeumliche_Operationen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Räumliche Operationen</span></a>
+  <a href="./B_Programmieren_3/6_Raeumliche_Operationen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Räumliche Operationen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/6_Uebung_14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 14</span></a>
+  <a href="./B_Programmieren_3/6_Uebung_14.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 14</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/7_Spatial_Joins.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spatial Joins</span></a>
+  <a href="./B_Programmieren_3/7_Spatial_Joins.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Spatial Joins</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/7_Uebung_15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 15</span></a>
+  <a href="./B_Programmieren_3/7_Uebung_15.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung 15</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="./B_Programmieren_3/9_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
+  <a href="./B_Programmieren_3/10_Anhang.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Anhang</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../C_Datenbanken_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./C_Datenbanken_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken I</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -436,14 +469,14 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  <a href="./C_Datenbanken_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../C_Datenbanken_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./C_Datenbanken_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken II</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -452,29 +485,29 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_2/2_Uebung_Datenintegritaet.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenintegrität</span></a>
+  <a href="./C_Datenbanken_2/2_Uebung_Datenintegritaet.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenintegrität</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_2/3_Uebung_Server_Datenbanken.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin</span></a>
+  <a href="./C_Datenbanken_2/3_Uebung_Server_Datenbanken.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Arbeiten mit Server Datenbanken in ArcGIS Pro und pgAdmin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a>
+  <a href="./C_Datenbanken_2/4_Uebung_Versionierung_Mehrbenutzer.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Versionierung und Mehrbenutzerbetrieb in ArcGIS Pro</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_2/5_Uebung_SQL_Abfragen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Abfragen in SQL mit pgAdmin und ArcGIS Pro</span></a>
+  <a href="./C_Datenbanken_2/5_Uebung_SQL_Abfragen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Abfragen in SQL mit pgAdmin und ArcGIS Pro</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../C_Datenbanken_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./C_Datenbanken_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken III</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -483,29 +516,29 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_3/2_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="./C_Datenbanken_3/2_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></a>
+  <a href="./C_Datenbanken_3/3_Uebung_Datenbankverbindung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a>
+  <a href="./C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a>
+  <a href="./C_Datenbanken_3/5_Uebung_Geoverarbeitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" class="sidebar-item-text sidebar-link">
+            <a href="./D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Netzwerkanalyse I</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -514,24 +547,24 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_1/2_Vorbereitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vorbereitung</span></a>
+  <a href="./D_Netzwerkanalyse_1/2_Vorbereitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Vorbereitung</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_1/3_QGIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 1: Operationen mit QGIS</span></a>
+  <a href="./D_Netzwerkanalyse_1/3_QGIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 1: Operationen mit QGIS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_1/4_GRASS_GIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 2: Zentralitätsmasse berechnen</span></a>
+  <a href="./D_Netzwerkanalyse_1/4_GRASS_GIS.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 2: Zentralitätsmasse berechnen</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../D_Netzwerkanalyse_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./D_Netzwerkanalyse_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Netzwerkanalyse II</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -540,19 +573,19 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_2/1_Shortest_Path.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 3: Kürzeste Pfade (shortest path)</span></a>
+  <a href="./D_Netzwerkanalyse_2/1_Shortest_Path.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 3: Kürzeste Pfade (shortest path)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_2/2_Travelling_Salesman.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 4: Traveling Salesperson</span></a>
+  <a href="./D_Netzwerkanalyse_2/2_Travelling_Salesman.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 4: Traveling Salesperson</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../D_Netzwerkanalyse_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./D_Netzwerkanalyse_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Netzwerkanalyse III</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -561,34 +594,34 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_3/2_Entsorgungsstelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 5: Entsorgungsstelle</span></a>
+  <a href="./D_Netzwerkanalyse_3/2_Entsorgungsstelle.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 5: Entsorgungsstelle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_3/3_OEV-Gueteklassen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 6: ÖV-Güteklassen</span></a>
+  <a href="./D_Netzwerkanalyse_3/3_OEV-Gueteklassen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 6: ÖV-Güteklassen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 7: Zentralitätsmasse</span></a>
+  <a href="./D_Netzwerkanalyse_3/4_Zentralitaetsmasse.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 7: Zentralitätsmasse</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 8: Flächen verrechnen</span></a>
+  <a href="./D_Netzwerkanalyse_3/5_Flaechen_verrechnen.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Aufgabe 8: Flächen verrechnen</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../D_Netzwerkanalyse_3/6_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="./D_Netzwerkanalyse_3/6_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebGIS I</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -597,19 +630,19 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../E_WebGIS_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  <a href="./E_WebGIS_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../E_WebGIS_1/3_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="./E_WebGIS_1/3_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
+            <a href="./E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebGIS II</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -618,14 +651,14 @@ window.onload = function() {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../E_WebGIS_2/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  <a href="./E_WebGIS_2/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Markdown.html" class="sidebar-item-text sidebar-link">
+  <a href="./Anleitung_fuer_Dozierende.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Markdown</span></a>
   </div>
 </li>
@@ -639,19 +672,20 @@ window.onload = function() {
     <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-  <li><a href="#ziel-und-vorgehen" id="toc-ziel-und-vorgehen" class="nav-link active" data-scroll-target="#ziel-und-vorgehen">Ziel und Vorgehen</a></li>
-  <li><a href="#anforderungen" id="toc-anforderungen" class="nav-link" data-scroll-target="#anforderungen">Anforderungen</a></li>
-  <li><a href="#struktur" id="toc-struktur" class="nav-link" data-scroll-target="#struktur">Struktur</a></li>
-  <li><a href="#abgabeformat" id="toc-abgabeformat" class="nav-link" data-scroll-target="#abgabeformat">Abgabeformat</a></li>
+  <li><a href="#text" id="toc-text" class="nav-link active" data-scroll-target="#text">Text</a></li>
+  <li><a href="#tabellen" id="toc-tabellen" class="nav-link" data-scroll-target="#tabellen">Tabellen</a></li>
+  <li><a href="#bilder" id="toc-bilder" class="nav-link" data-scroll-target="#bilder">Bilder</a></li>
+  <li><a href="#übungsziele" id="toc-übungsziele" class="nav-link" data-scroll-target="#übungsziele">Übungsziele</a></li>
+  <li><a href="#presenter-mode" id="toc-presenter-mode" class="nav-link" data-scroll-target="#presenter-mode">Presenter mode</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/B_Programmieren_3/9_Leistungsnachweis.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/Anleitung_fuer_Dozierende.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Leistungsnachweis</span></h1>
+<h1 class="title">Markdown</h1>
 </div>
 
 
@@ -666,70 +700,156 @@ window.onload = function() {
 
 </header>
 
-<section id="ziel-und-vorgehen" class="level2">
-<h2 class="anchored" data-anchor-id="ziel-und-vorgehen">Ziel und Vorgehen</h2>
-<p>Für den Leistungsnachweis von <em>Programmieren</em> sollt ihr den Anteil der Zeckenstiche im Wald unter der Berücksichtigung der Unsicherheit mit einer Monte Carlo Simulation ermitteln.</p>
-<p>Gehe dazu wie folgt vor: Erstelle einen <code>for loop</code> (siehe <a href="3_For_Loops_Basics.html"><span>Kapitel&nbsp;35</span></a>), welcher pro Iteration folgende Schritte ausführt:</p>
-<ol type="1">
-<li>Schritt: Zeckenstiche importieren</li>
-<li>Schritt: Zeckenstiche auf der Basis von gemeldeten Stiche simulieren (siehe <a href="../B_Programmieren_2/12_Funktionen_in_DataFrames.html"><span>Kapitel&nbsp;30</span></a>)</li>
-<li>Schritt: Simulierte Zeckenstiche von pandas DataFrame in <em>geo</em>pandas <em>Geo</em>DataFrame umwandeln (siehe <a href="5_GIS_in_Python.html#sec-pythongis-geodataframe"><span>Kapitel&nbsp;39.1</span></a>)</li>
-<li>Schritt: Spatial Join mit wald.gpkg (siehe <a href="7_Uebung_15.html#sec-ex-spatialjoin"><span>Kapitel&nbsp;43.2</span></a>)</li>
-<li>Schritt: Der Anteil der Zeckenstiche im Wald Berechnen (siehe <a href="7_Uebung_15.html#sec-ex-count"><span>Kapitel&nbsp;43.3</span></a>)</li>
-<li>Schritt: Schritte 2 - 5 mindestens 50x Wiederholen (<code>for loop</code>)</li>
-<li>Schritt: Die verschiedenen Waldanteile visualiseren (z.B. in einem Boxplot, siehe <a href="10_Anhang.html#sec-viz"><span>Kapitel&nbsp;45.1</span></a>)</li>
-<li>Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen</li>
-<li>Schritt (Optional): Eine Karte mit den simulierten Zeckenstichen erstellen (siehe <a href="10_Anhang.html#sec-geoviz"><span>Kapitel&nbsp;45.2</span></a>)</li>
-</ol>
-<p><img src="figures/mermaid-diagram-2022-10-13-112927.svg" class="img-fluid"></p>
-</section>
-<section id="anforderungen" class="level2">
-<h2 class="anchored" data-anchor-id="anforderungen">Anforderungen</h2>
-<p>Führe die Analyse folgendermassen durch:</p>
+<p>Um Änderungen an diesem Dokument machen zu können, braucht man einen kostenlosen Github Account <a href="https://github.com/signup" class="uri">https://github.com/signup</a>. Sobald ihr Nils euren GitHub Benutzernamen mitgeteilt hat wird er euch auf dem Repository (“Repo”) freischalten.</p>
+<p>Um bestehende Einträge zu verändern, navigiert ihr auf der Webseite (<a href="https://modul-agi.github.io">modul-agi.github.io</a>) zum entsprechenden Eintrag und klickt dort auf den Button <code>Seite editieren</code> (ganz Rechts unter dem Inhaltsverzeichnis). Nun könnt ihr eure Änderungen im Online Editor auf Github.com vornehmen. Anders als mit Microsoft Word, arbeiten wir hier in einer “Markup” Sprache. Das heisst, der Inhalt wird gewissermassen programmiert. Beispiele findet ihr unten:</p>
+<section id="text" class="level3">
+<h3 class="anchored" data-anchor-id="text">Text</h3>
 <ul>
-<li>mit dem <strong>ganzen</strong> Datensatz <code>zeckenstiche_full.csv</code> (1’076 Meldungen, siehe <a href="../B_Programmieren_1/1_Einleitung.html#tbl-datensaetze">Tabelle&nbsp;<span>1</span></a>)</li>
-<li>mit mindestens 50 Iterationen</li>
-<li>mit drei verschiedenen Distanz-Werten (<code>distance =</code> in <a href="../B_Programmieren_2/11_Uebung_8.html#sec-ex-offset-function"><span>Kapitel&nbsp;29.5</span></a>).</li>
-</ul>
-<p>Visualisiere für jeden Distanzwert die Verteilung der Anteile (z.B: mittels einem Boxplot)</p>
-</section>
-<section id="struktur" class="level2">
-<h2 class="anchored" data-anchor-id="struktur">Struktur</h2>
-<p>Führe die Datenanalyse durch, indem du Python Code mit Markdown Text ergänzt.</p>
-<p>Strukturiere den Bericht <strong>mithilfe von Markdown</strong> in folgende Unterkapitel</p>
+<li>Kursiv: Wörter, die mit * umgeben werden, sind Kursiv: <code>*kursiv*</code> wird zu <em>kursiv</em></li>
+<li>Fett: Wörter die mit doppelten * umgeben werden, sind Fett: <code>**fett**</code> wird zu <strong>fett</strong></li>
+<li>Hyperlinks: Eine hyperlink wird folgenermassen erstellt:
 <ul>
-<li>Einleitung</li>
-<li>Material &amp; Methoden</li>
-<li>Resultate</li>
-<li>Diskussion</li>
+<li><code>[ZHAW Website](https://www.zhaw.ch)</code> wird zu <a href="https://www.zhaw.ch">ZHAW Website</a></li>
+<li><code>&lt;https://www.zhaw.ch&gt;</code> wird zu <a href="https://www.zhaw.ch" class="uri">https://www.zhaw.ch</a></li>
+</ul></li>
+<li>Überschriften werden mit vorangestelltem <code>#</code> erstellt
+<ul>
+<li>Kapitel: <code># Programmieren I</code></li>
+<li>Unterkapitel: <code>## Komplexe Datentypen</code></li>
+<li>Unter-Unterkapitel: <code>### Integer und Floats</code></li>
+<li>… usw. (bis Stufe 6)</li>
+</ul></li>
 </ul>
-<p>Sorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code). ührt die Datenanalyse durch, indem ihr den Python Code <strong>mit Markdown Text</strong> unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpretieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate.</p>
+<p>Um im Text einen Querverweis auf ein Kapitel zu machen, müsst ihr diesem Zuerst eine eindeutige “ID” geben. Zum Beispiel sieht der Titel in <a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;19</span></a> folgendermassen aus:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Conda {#sec-conda}</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Nun kann ich auf dieses Kapitel mit <code>@id</code> verweisen.</p>
+<ul>
+<li><code>@sec-conda</code> wird zu</li>
+<li><a href="B_Programmieren_2/2_Conda.html"><span>Kapitel&nbsp;19</span></a></li>
+</ul>
+<p>Das Verweisen funktioniert aber nur auf Nummerierte Kapitel und deren Unterkapitel.</p>
+<p>Mehr zum Markdown Syntax: <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a></p>
 </section>
-<section id="abgabeformat" class="level2">
-<h2 class="anchored" data-anchor-id="abgabeformat">Abgabeformat</h2>
-<p>Das Jupyter-Notebook File via Moodle. <strong>Wichtig:</strong> Zuerst alle Zellen ausführen (<em>Run &gt; Restart Kernel and Run all cells…</em>). <strong>Notebooks, bei denen dieser Schritt nicht ausgeführt wurden, werden nicht akzeptiert!</strong></p>
-<!--
-
-
-
-| Teilaufgabe  | Status  | Voraussetzung | 
-|:---|:---|:---|
-| Einen Einzelpunkt zufällig verschieben  | ✓ haben wir in @sec-ex-offset-function gelöst  | @sec-function-basics und @sec-function-advanced |
-| Alle Punkte einer DataFrame zufällig verschieben  | ✓ haben wir in @sec-ex-apply gelöst  | @sec-random-numbers und @sec-offset-dataframe |
-| Wiederholung von Schritt 2 (zum Beispiel 50-mal)  | ✓ haben wir in @sec-simulation gelöst  | @sec-forloops-1 und @sec-forloops-2 |
-| Für jeden simulierten Punkt ermitteln, ob er sich im Wald / ausserhalb des Waldes befindet  | ✓ haben wir in @sec-ex-spatialjoin gelöst  | @sec-pythongis |
-
-: Teilaufgaben für das Lösen der Monte Carlo Simulation {#tbl-monte-carlo-workflow}
-
-
-:::{.callout-note collapse="true"}
-
-| Anteil der Punkte im Wald pro Run ermitteln  | werden wir in @sec-ex-groupby lösen  | Programmieren I - III |
-
-**Für Profis**: Statt das ihr den *For Loop* 3x kopiert könnt ihr auch einen verschachtelten *For Loop* konstuieren, wo der äussere *Loop* über die Radien iteriert, der innere besteht aus dem bisherigen *For Loop*. Wichtig dabei ist, dass die Liste `monte_carlo` vor dem äusseren Loop kontruiert wird und im DataFrame jeweils gespeichert wird, was für ein Radius verwendet wurde. Diese Spalte kann danach in `groupby` wie auch bei `.boxplot()` verwendet werden (siehe unten).
-:::
-
--->
+<section id="tabellen" class="level3">
+<h3 class="anchored" data-anchor-id="tabellen">Tabellen</h3>
+<p>Tabellen werden ebenfalls im Markdown-Syntax erstellt, und zwar folgendermassen:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>| BMI         | Nutritional status       | </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>|:------------|:-------------------------|</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>| Below 18.5  | Underweight              |</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>| 18.5–24.9   | Normal weight            |</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>| 25.0–29.9   | Pre-obesity              |</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>| 30.0–34.9   | Obesity class I          |</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>| 35.0–39.9   | Obesity class II         |</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>| Above 40    | Obesity class III        |</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>: WHO Nutritional status {#tbl-beispielstabelle}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Diese obige Markdown tabelle wird in eine html Tabelle umgewandelt. Diese Markdown Tabelle muss nicht von hand erstellt werden, auf <a href="https://www.tablesgenerator.com/markdown_tables">tablesgenerator.com</a> können bestehende Tabellen in den Markdown Syntax konvertiert werden.</p>
+<div id="tbl-beispielstabelle" class="anchored">
+<table class="table">
+<caption>Tabelle&nbsp;1: WHO Nutritional status</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">BMI</th>
+<th style="text-align: left;">Nutritional status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Below 18.5</td>
+<td style="text-align: left;">Underweight</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">18.5–24.9</td>
+<td style="text-align: left;">Normal weight</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25.0–29.9</td>
+<td style="text-align: left;">Pre-obesity</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30.0–34.9</td>
+<td style="text-align: left;">Obesity class I</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">35.0–39.9</td>
+<td style="text-align: left;">Obesity class II</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Above 40</td>
+<td style="text-align: left;">Obesity class III</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Beachtet, dass man eine Tabellenüberschrift nach einen <code>:</code> anbringen kann. Nach der Tabellenüberschrift kann man einen “Key” erstellen, mit dem man diese Tabelle referenzieren kann. Der “Key” muss</p>
+<ul>
+<li><em>nach</em> der Tabellenüberschrift angebracht werden (mit leerschlag!)</li>
+<li>sich in geschweiften Klammern befinden</li>
+<li>mit <code>#tbl-</code> beginnen</li>
+</ul>
+<p>Nun kann ich mich im Text auf diese Tabelle beziehen.</p>
+<ul>
+<li><code>siehe @tbl-beispielstabelle</code> wird zu:</li>
+<li>siehe <a href="#tbl-beispielstabelle">Tabelle&nbsp;<span>1</span></a></li>
+</ul>
+<p>Mehr zum einfügen von Tabellen: <a href="https://quarto.org/docs/authoring/tables.html" class="uri">https://quarto.org/docs/authoring/tables.html</a></p>
+</section>
+<section id="bilder" class="level3">
+<h3 class="anchored" data-anchor-id="bilder">Bilder</h3>
+<p>Um Bilder einzufügen muss man diese erstmals auf Github hochladen. Dafür wählt man auf Github.com den “Parent Folder” des Dokuments, wo das Bild hin soll und dort dann <em>Add file &gt; Upload file</em>. Nun kann man das Bild folgendermasen einfügen:</p>
+<ul>
+<li>Nur Bild: <code>![](bild.jpg)</code></li>
+<li>Bild mit Bildunterschrift: <code>![Hier kommt die Bildunterschrift ](bild.jpg)</code></li>
+<li>Bild mit Querverweis: <code>![Bildunterschrift](bild.jpg){#fig-test}</code> (Bildunterschrift zwingend notwendig)</li>
+</ul>
+<pre><code>![Logo der ZHAW](zhaw_lsfm_iunr_blau.jpg){#fig-zhaw-logo}</code></pre>
+<p>Wird dann zu:</p>
+<div id="fig-zhaw-logo" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="zhaw_lsfm_iunr_blau.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;1: Logo der ZHAW</figcaption>
+</figure>
+</div>
+<p>Genau wie auf Tabellen verweist man folgendermasssen auf Bilder im Text:</p>
+<ul>
+<li><code>@fig-zhaw-logo</code> wird zu</li>
+<li><a href="#fig-zhaw-logo">Abbildung&nbsp;<span>1</span></a></li>
+</ul>
+<p>Mehr zum einfügen von Bildern: <a href="https://quarto.org/docs/authoring/figures.html" class="uri">https://quarto.org/docs/authoring/figures.html</a></p>
+</section>
+<section id="übungsziele" class="level3">
+<h3 class="anchored" data-anchor-id="übungsziele">Übungsziele</h3>
+<p>Um “Übungsziele” festzulegen verwendet man folgender Syntax:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">## Übungsziele</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 1</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 2</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ziel 3</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Dies wird dann zu:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Übungsziele
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Ziel 1</li>
+<li>Ziel 2</li>
+<li>Ziel 3</li>
+</ul>
+</div>
+</div>
+<p>Mehr zu diesen sogenannten <em>Callout Blocks</em>: <a href="https://quarto.org/docs/authoring/callouts.html" class="uri">https://quarto.org/docs/authoring/callouts.html</a></p>
+</section>
+<section id="presenter-mode" class="level2">
+<h2 class="anchored" data-anchor-id="presenter-mode">Presenter mode</h2>
+<p>Führe in der Konsole den JS code <code>presenter()</code> aus, um in den Präsentationsmodus zu gelangen (<code>padding-top</code> für alle h2`).</p>
 
 
 </section>
@@ -1085,14 +1205,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../B_Programmieren_3/7_Uebung_15.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Übung 15</span></span>
+      <a href="./E_WebGIS_2/2_Uebung.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Übung</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../B_Programmieren_3/10_Anhang.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-title">Anhang</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

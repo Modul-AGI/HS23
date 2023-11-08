@@ -1040,7 +1040,7 @@
     "href": "B_Programmieren_3/9_Leistungsnachweis.html#struktur",
     "title": "Leistungsnachweis",
     "section": "Struktur",
-    "text": "Struktur\nFühre die Datenanalyse durch, indem du Python Code mit Markdown Text ergänzt.\nStrukturiere den Bericht mithilfe von Markdown in folgende Unterkapitel\n\nEinleitung\nMaterial & Methoden\nResultate\nDiskussion\n\nSorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code). ührt die Datenanalyse durch, indem ihr den Python Code mit Markdown Text unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpretieren sind.. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpetieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate."
+    "text": "Struktur\nFühre die Datenanalyse durch, indem du Python Code mit Markdown Text ergänzt.\nStrukturiere den Bericht mithilfe von Markdown in folgende Unterkapitel\n\nEinleitung\nMaterial & Methoden\nResultate\nDiskussion\n\nSorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code). ührt die Datenanalyse durch, indem ihr den Python Code mit Markdown Text unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpretieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate."
   },
   {
     "objectID": "B_Programmieren_3/9_Leistungsnachweis.html#abgabeformat",
