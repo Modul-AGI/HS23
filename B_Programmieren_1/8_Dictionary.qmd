@@ -1,4 +1,3 @@
-
 # Dictionaries
 
 In den letzten Übungen haben wir einen Fokus auf Listen gelegt. Nun wollen wir ein besonderen Fokus auf den Datentyp *Dictionary* legen.
@@ -47,4 +46,3 @@ langenscheidt["trumpery"]
 ```{python}
 len(langenscheidt["trumpery"])
 ```
-

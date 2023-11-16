@@ -4,6 +4,7 @@ echo: true                       # set to true to show solution
 code-fold: true                  # set to true to show solution
 code-summary: "Musterlösung"    
 ---
+
 ## Übung 14
 
 Nun ist es Zeit, dass ihr selbst mit *GeoDataFrames* Hand anlegt. Achtet dabei immer auf die Datentypen eurer Daten (mit `type`) und konsultiert dazu @sec-pythongis-datenstruktur. Zudem ist Geopandas gut dokumentiert, es lohnt ich diese immer wieder zu konsultieren: [geopandas.org](https://geopandas.org)
@@ -14,10 +15,8 @@ Nun ist es Zeit, dass ihr selbst mit *GeoDataFrames* Hand anlegt. Achtet dabei i
 Importiere *Geopandas* und wandle `zeckenstiche` in eine *GeoDataFrame* um (`zeckenstiche`). Vergiss nicht, das Koordinatenbezugssystem festzulegen!
 
 ```{python}
-
 import pandas as pd
 import geopandas as gpd
-
 
 # Übung 14.1
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
@@ -26,7 +25,6 @@ geom = gpd.points_from_xy(
   zeckenstiche['x'],    # ↘
   zeckenstiche['y']     # → die Geometrie Spalte
   )   
-
 
 zeckenstiche_gpd = gpd.GeoDataFrame(
     zeckenstiche,    # die DataFrame ("Attributtabelle")
@@ -80,10 +78,8 @@ zeckenstiche_gpd.plot(ax = ax, color = "pink")
 #| output: true
 
 # Interaktiv:
-
 base = zeckenstiche_buffer_outline.explore(color = "green")
 zeckenstiche_gpd.explore(m = base, color = "pink")
-
 ```
 
 <!-- % Envelope -->
@@ -110,7 +106,5 @@ Exportiere `zeckenstiche_gpd` als "Geopackage" mit dem Namen "zeckenstiche.gpkg"
 ```{python}
 #| eval: false
 
-
 zeckenstiche.to_file("data/zeckenstiche.gpkg")
 ```
-

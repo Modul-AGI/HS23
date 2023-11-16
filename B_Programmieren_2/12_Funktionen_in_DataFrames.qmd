@@ -1,5 +1,3 @@
-
-
 # Funktionen in *DataFrames* {#sec-offset-dataframe}
 
 In dieser Aufgabe haben wir das Ziel, die in der letzten Aufgabe (@sec-random-numbers) erstellte Funktion `offset_coordinate()` auf alle Zeckenstich-Koordinaten anwenden. Bildlich gesprochen: Wir nehmen unsere Zeckenstichdatensatz und schütteln ihn **einmal** durch. So erhalten wir einen Datensatz ähnlich wie in @fig-arcgiszecken mit dem Unterschied, dass jede Zeckenstichmeldung nicht eine *Wolke* von simulierten Punkten enthält, sondern nur einen einzelnen Punkt.
@@ -23,5 +21,3 @@ zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
 
 zeckenstiche
 ```
-
-

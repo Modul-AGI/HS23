@@ -1,5 +1,3 @@
-
-
 # Python Modules
 
 ## Vergleich R vs. Python
@@ -11,7 +9,6 @@ Der Umgang mit Modulen ist in Python in vielerlei Hinsicht ähnlich wie in R. An
 In R ist die Installation einer *Library* selbst ein R-Befehl und wird innerhalb von R ausgeführt. Wenn wir keine Quelle angeben, woher die Library heruntergeladen werden soll, wird eine Default-Quelle verwendet, die im System hinterlegt ist (z.B. "https://cloud.r-project.org"). 
 
 In Python ist dies leider etwas komplizierter, es braucht für die Installation einer Python *Library* eine Zusatzsoftware wie zum Beispiel `conda` (siehe dazu das Kapitel @sec-conda). Es gibt auch noch andere Wege, wie zum Beispiel `pip`, aber diese lassen wir der Einfachheit an dieser Stelle weg.
-
 
 :::: columns
 
@@ -37,14 +34,11 @@ conda install -c conda-foge maler
 ```
 :::
 
-
-
 :::: 
 
 ### Erweiterung laden {#sec-modules-import}
 
 Um eine Erweiterung nutzen zu können, müssen wir diese sowohl in R wie auch in Python in die aktuelle Session importieren. In R und Python sehen die Befehle folgendermassen aus:
-
 
 :::: columns
 
@@ -78,7 +72,6 @@ import maler
 Um eine Funktion aus einer *Library* in R zu verwenden, kann ich diese *Function* direkt aufrufen. In Python hingegen muss ich entsprechende Erweiterung der *Function* mit einem Punkt voranstellen. 
 
 Das ist zwar umständlicher, dafür aber weniger fehleranfällig. Angenommen zwei leicht unterschiedliche Funktionen heissen beide `wand_bemalen()`. Die eine stammt aus der Erweiterung `maler`, die andere aus der Erweiterung `maurer`. Wenn die Funktion in R aufgerufen wird ist nicht klar, aus welcher Library die Funktion verwendet werden soll. In Python ist im nachstehenden Beispiel unmissverständlich, dass `wand_bemalen()` aus dem Modul `maler` gemeint ist.
-
 
 :::: columns
 
@@ -138,4 +131,3 @@ Zusätzlich ist es möglich, **alle** *Functions* aus einem Modul so zu importie
 from maler import *             # importier alle Funktionen (*) von "maler"
 wand_bemalen()                  # das Voranstellen von "maler." ist nun nicht nötig
 ```
-

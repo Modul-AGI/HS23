@@ -19,7 +19,6 @@ def gruezi3(nachname, uhrzeit):
         grussform = "Abend"
 
     return "Guten " + grussform + " " + nachname
-
 ```
 
 ```{python}
@@ -67,7 +66,6 @@ def gruezi2(nachname, anrede, uhrzeit):
         was = "Gute Nacht"
 
     return was + ", " + anrede + " "+ nachname
-
 ```
 
 Teste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richtig funktioniert.
@@ -75,9 +73,6 @@ Teste die Funktion mit verschiedenen Optionen um sicherzustellen, dass sie richt
 ## Übung 7.2
 
 Erweitere die Funktion `bmi` aus @sec-ex-functions-bmi so, dass statt dem berechneten BMI der "Nutritional status" aufgrund der [WHO Klassifizierung](https://www.euro.who.int/en/health-topics/disease-prevention/nutrition/a-healthy-lifestyle/body-mass-index-bmi) ausgegeben wird:
-
-
-
 
 | BMI  | Nutritional status | 
 |:---|:---|
@@ -116,4 +111,3 @@ def bmi2(groesse_m, gewicht_kg):
 # Der Output sollte etwa folgedermassen aussehen
 bmi2(1.7, 70)
 ```
-

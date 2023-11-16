@@ -1,5 +1,3 @@
-
-
 # Leistungsnachweis
 
 ## Ziel und Vorgehen
@@ -18,10 +16,8 @@ Gehe dazu wie folgt vor: Erstelle einen `for loop` (siehe @sec-forloops-2), welc
 8. Schritt: Schritte 6 und 7 für drei verschiedene Radien wiederholen
 9. Schritt (Optional): Eine Karte mit den simulierten Zeckenstichen erstellen (siehe @sec-geoviz)
 
-
 ![](figures/mermaid-diagram-2022-10-13-112927.svg)
  
-
 ## Anforderungen
 
 Führe die Analyse folgendermassen durch:
@@ -45,17 +41,11 @@ Strukturiere den Bericht **mithilfe von Markdown** in folgende Unterkapitel
 
 Sorge dafür, dass der Bericht sauber und ordentlich daher kommt (vermeide zum Beispiel lange Python Messages im Bericht, entferne unnötigen Code). Führt die Datenanalyse durch, indem ihr den Python Code **mit Markdown Text** unterstützt. Beschreibt und begründet eure Analyseschritte und wie die Resultate zu interpretieren sind. Der Fokus soll auf der technischen Umsetzung liegen, nicht auf der Interpretation der Resultate.
 
-
 ## Abgabeformat
 
 Das Jupyter-Notebook File via Moodle. **Wichtig:** Zuerst alle Zellen ausführen (*Run > Restart Kernel and Run all cells...*). **Notebooks, bei denen dieser Schritt nicht ausgeführt wurden, werden nicht akzeptiert!**
 
-
-
 <!--
-
-
-
 | Teilaufgabe  | Status  | Voraussetzung | 
 |:---|:---|:---|
 | Einen Einzelpunkt zufällig verschieben  | ✓ haben wir in @sec-ex-offset-function gelöst  | @sec-function-basics und @sec-function-advanced |
@@ -72,7 +62,4 @@ Das Jupyter-Notebook File via Moodle. **Wichtig:** Zuerst alle Zellen ausführen
 
 **Für Profis**: Statt das ihr den *For Loop* 3x kopiert könnt ihr auch einen verschachtelten *For Loop* konstuieren, wo der äussere *Loop* über die Radien iteriert, der innere besteht aus dem bisherigen *For Loop*. Wichtig dabei ist, dass die Liste `monte_carlo` vor dem äusseren Loop kontruiert wird und im DataFrame jeweils gespeichert wird, was für ein Radius verwendet wurde. Diese Spalte kann danach in `groupby` wie auch bei `.boxplot()` verwendet werden (siehe unten).
 :::
-
 -->
-
-

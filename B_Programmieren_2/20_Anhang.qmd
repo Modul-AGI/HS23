@@ -35,10 +35,7 @@ Alle *conda environments* werden an einem zentralen Ort gespeichert. Typischerwe
     conda activate geopython
     ```
 
-
 [^envsdirs]: Aus: <https://stackoverflow.com/a/67376348/4139249>
-
-
 
 ## Anhang 2: Conda und `arcpy`
 
@@ -75,7 +72,6 @@ conda env list
 ```
 
 Bei mir sieht der output folgendermassen aus:
-
 
 ```default
 # conda environments:
@@ -120,12 +116,9 @@ jupyterlab_server         1.2.0                      py_0    conda-forge
 .
 .
 .
-
 ```
 
 Wenn jetzt aber noch module fehlen (wie z.B. `geopandas`), dann können wir diese wie gewohnt installieren.
-
-
 
 ### Schritt 4: `arcpy` verwenden
 
@@ -148,8 +141,6 @@ arcpy.Select_analysis(veg, suitableVeg, whereClause)
 ```
 
 Der Syntax ist auf jeder jeweiligen Tool Beschreibung gut dokumentiert (Abschnitt "Code Sample", z.B. [hier](https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm))
-
-
 
 ## Anhang 3: JupyterLab mit `R`
 
@@ -184,5 +175,3 @@ Einige von euch kennen JupyterLab bereits aus dem Statistik Unterricht. Dort hab
     ```
 
 ![Nach den oben beschriebnen Schritten sollte nun ein `R` Kernel zur Verfügung stehen](figures/ir-kernel.png){#fig-irkernel}
-
-

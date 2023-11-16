@@ -9,9 +9,7 @@ code-summary: "Musterlösung"
 
 Diese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr müsst die Übung nicht verstehen, sondern nur ausführen. Melde dich, falls es Probleme gibt.
 
-
 ## Übung 5.1 Neue Conda Umgebung erstellen
-
 
 1. Starte Python Command Prompt (siehe [Python Command Prompt](#sec-python-command-prompt))
 2. Führe den Befehl: `conda create --name geopython2` aus
@@ -67,4 +65,3 @@ Diese letzte Übung dient lediglich der Vorbereitung auf Programmieren II. Ihr m
 Die Tatsache, dass JupyterLab via dem *Command Prompt* gestartet wird und im Browser läuft, ist ungewohnt und auch etwas umständlich. Um nur schon eines der soeben erstellten Jupyter Notebooks (\*.ipynb File) zu *betrachten* muss (1) der Terminal geöffnet, (2) in den richtigen Ordner navigiert (3) die richtige Conda Umgebung aktiviert und (4) JupyterLab gestartet werden.
 
 Deshalb empfehlen wir die Installation von JupyterLab Desktop, welches JupyterLab als Desktop Applikation zur Verfügung stellt. JupyterLab Desktop kann man gemäss folgender Anleitung installieren: <https://github.com/jupyterlab/jupyterlab-desktop#installation>.
-

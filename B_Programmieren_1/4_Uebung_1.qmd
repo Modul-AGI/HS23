@@ -7,9 +7,6 @@ code-summary: "Musterlösung"
 
 # Übung 1 {#sec-aufgabe1}
 
-
-
-
 <!-- % Variablen erstellen -->
 ## Übung 1.1
 
@@ -80,4 +77,3 @@ groesse_m = groesse_cm / 100
 
 gewicht_kg / (groesse_m * groesse_m)
 ```
-

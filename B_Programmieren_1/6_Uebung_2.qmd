@@ -77,4 +77,3 @@ Ermittle nun noch die Minimum- und Maximumwerte aus `groessen` (finde die dazuge
 min(groessen)
 max(groessen)
 ```
-

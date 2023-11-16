@@ -32,4 +32,3 @@ In diesem Modul fokussieren wir uns darauf, dass ihr eure Lokale Programmierumge
    # Solltet ihr der Ordner nicht Modul-AGI benannt haben, Pfad anpassen
    zeckenstiche = pd.read_csv("/content/drive/MyDrive/Modul-AGI/zeckenstiche.csv")
    ```
-

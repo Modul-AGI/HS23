@@ -105,7 +105,6 @@ sag_hallo()
 
 Mit dem Begriff `lambda` kann eine *Function* verkürzt geschrieben werden. Wir werden dies im Unterricht kaum verwenden, es ist aber doch gut davon gehört zu haben. Nachstehend wird die Funktion `sag_hallo()` in der bekannten, wie auch in der verkürzten Form definiert. 
 
-
 :::: columns
 
 ::: {.column width="48%"}
@@ -134,7 +133,3 @@ sag_hallo = lambda vorname: "Hi "+vorname
 :::
 
 ::::
-
-
-
-

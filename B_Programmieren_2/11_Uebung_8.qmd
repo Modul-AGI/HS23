@@ -11,7 +11,6 @@ Nun wollen wir diesen Zufallszahlengenerator `random` nutzen um eine Funktion zu
 
 ![Ausschnitt der simulierten Zeckenstiche. Der rote Punkt stellt jeweils den gemeldeten Zeckenstich dar, die blaue Punktwolke drum herum sind simulierte Punkte welche die Ungenauigkeit der Daten wiederspiegelt.](figures/arcgiszecken.jpg){#fig-arcgiszecken}
 
-
 Das Ziel dieser Übung ist es also, dass wir eine Funktion entwickeln, die uns einen zufälligen Punkt in der Nähe eines Ursprungspunktes vorschlägt. Unser Vorgehen: Wir addieren jedem Koordinatenwert (`x`/`y`) des Ursprungspunktes einen Zufallswert, zum Beispiel zwischen -100 bis +100.
 
 <!-- % Zufallszahlen aus Uniformverteilung -->
@@ -48,11 +47,9 @@ Generiere danach eine zweite Zufallszahl (auf die gleiche Art) und weise diese `
 
 Überlege dir als nächstes, welche Standartabweichung sinnvoll wäre. Zur Erinnerung: Etwa 68% der Werte liegen inerhalb von +/- 1 Standartabweichung (SD), 95% innerhalb von +/- 2 SD, 99% innerhalb von 3 SD (siehe unten):
 
-
 ![Normalverteilung und die Anteile innerhalb von 1 Standartabweichung (Mittelwert $\mu$ minus Standartabweichung $\sigma$), 2 Standartabweichungen ($\mu - 2\times\sigma)$ und 2 Standartabweichungen ($\mu - 3\times\sigma)$. Quelle: [cobocards](https://www.cobocards.com/)](figures/normalverteilung.jpg){#fig-normal}
 
 :::
-
 
 ```{python}
 # Normalverteilte Werte mit Mittelwert 0 und Standartabweichung 100  
@@ -63,7 +60,6 @@ y_offset = random.normalvariate(0, 100)
 x_offset
 y_offset
 ```
-
 
 ## Übung 8.4
 
@@ -136,7 +132,6 @@ def offset_coordinate(old, distance = 100):
 offset_coordinate(x_start)
 ```
 
-
 ## Übung 8.6 {#sec-offset-vis}
 
 Nun ist es wichtig, dass wir unser Resultat visuell überprüfen. Im Beispiel unten wende ich die in der letzten Übung erstellte Funktion `offset_coordinate()` 1'000 mal auf die Dummykoordinate an. Nutze *deine* Funktion `offset_coordinate` um eine Visualisierung gemäss untenstehendem beispiel zu machen.
@@ -157,4 +152,3 @@ mysim.plot("x", "y", kind = "scatter")
 from matplotlib import pyplot as plt
 plt.axis("equal")
 ```
-

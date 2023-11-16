@@ -27,7 +27,6 @@ for katze in katzen:
         print(hund, "beisst", katze+" und "+katze, "kratzt ", hund)
 ```
 
-
 <!-- % Nested Loop: Multiplikation -->
 ## Übung  12.2 
 
@@ -44,7 +43,6 @@ for i in werte:
         addition.append(resultat)
 ```
 
-
 ## Übung  12.3 
 
 Nutze die Funktion `offset_coordinate` (Lösung aus [Übung 8.5](#sec-ex-offset-function)) um einen Punkt in einem Koordinatensystem zu verschieben. Diesmal soll der Punkt aber nicht nur 1x, sondern 100x verschoben werden (100 Simulationen).
@@ -55,7 +53,6 @@ import random
 def offset_coordinate(old, distance = 100):
     new = old + random.normalvariate(0, distance)
     return new
-
 
 x_start = 0
 y_start = 0
@@ -69,7 +66,6 @@ for i in range(100):
     x_random.append(x_new)
     y_random.append(y_new)
 ```
-
 
 ## Übung  12.4 (fakultativ)
 
@@ -110,4 +106,3 @@ res = [get_pi() for x in range(100)]
 # Anteil der Werte > 1 berechnen und mit 4 multiplizieren
 (100-sum(res))/100*4
 ```
-

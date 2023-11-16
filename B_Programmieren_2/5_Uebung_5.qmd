@@ -30,7 +30,6 @@ gruezi(nachname = "van Rossum")
 
 Erstelle eine neue Funktion `gruezi2` welche im Vergleich zu `gruezi` einen weiteren Parameter namens `anrede` annimmt. 
 
-
 ```{python}
 def gruezi2(nachname, anrede):
     return "Guten Tag, " + anrede + " " + nachname
@@ -106,4 +105,3 @@ def meter_zu_fuss(meter):
 
 meter_zu_fuss(meter = 1.80)
 ```
-

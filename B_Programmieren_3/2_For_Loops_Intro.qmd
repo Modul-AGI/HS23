@@ -1,5 +1,3 @@
-
-
 # Einführung in *for loop*  {#sec-forloops-1}
 
 ## Die Grundform
@@ -34,4 +32,3 @@ for platzhalter in range(3):
 ## Der Platzhalter
 
 Die Platzhaltervariabel liegt immer zwischen `for` und `in`, den Namen dieser Variabel könnt ihr frei wählen. Ich habe sie im obigen Beispiel `platzhalter` genannt. Speziell an dieser Variabel ist, dass sie während der Dauer des *Loops* ihren Wert verändert. Mehr dazu in @sec-forloops-2.
-

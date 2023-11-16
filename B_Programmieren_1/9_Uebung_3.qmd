@@ -74,4 +74,3 @@ Berechne den Mittelwert aller grössen in deiner Dict
 ```{python}
 sum(people["groessen"])/len(people["groessen"])
 ```
-

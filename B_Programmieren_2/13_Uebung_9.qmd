@@ -26,7 +26,6 @@ def offset_coordinate(old, distance = 100):
     return new
 
 zeckenstiche = pd.read_csv("data/zeckenstiche.csv")
-
 ```
 
 ## Übung 9.1
@@ -146,6 +145,3 @@ zeckenstiche.plot("x_sim", "y_sim", kind = "scatter", ax = basemap, color = "blu
 
 plt.axis("equal")
 ```
-
-
-

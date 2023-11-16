@@ -47,4 +47,3 @@ def sag_hallo(vorname, nachname):
 ```{python}
 sag_hallo(vorname = "Guido", nachname = "van Rossum")
 ```
-

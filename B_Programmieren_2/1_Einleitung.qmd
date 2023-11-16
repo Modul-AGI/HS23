@@ -1,9 +1,6 @@
-
-
 # Programmieren II
 
 Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Juypter Notebook verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei *conda* kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (*Functions*), Fallunterscheidungen (`if` und `else`) sowie dem Erstellen von Zufallszahlen.
-
 
 :::{.callout-note}
 ## Übungsziele
@@ -22,4 +19,3 @@ Die Slides zur heutigen Vorlesung findet ihr hier:
 In einem neuen Fenster öffnen: [modul-agi.github.io/slides](https://modul-agi.github.io/slides)
 
 -->
-

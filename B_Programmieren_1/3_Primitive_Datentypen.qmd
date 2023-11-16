@@ -2,14 +2,12 @@
 
 Bei primitiven Datentypen handelt es sich um die kleinste Einheit der Programmiersprache, sie werden deshalb auch "atomare Datentypen" genannt. Alle komplexeren Datentypen (Tabellarische Daten, Bilder, Geodaten) basieren auf diesen einfachen Strukturen. Die für uns wichtigsten Datentypen lauten: *Boolean*, *String*, *Integer* und *Float*. Das sind ähnliche Datentypen wie ihr bereits aus R kennt:
 
-
 | Python | R | Beschreibung | Beispiel | in Python | 
 |:---|:---|:---|:---|:---|
 | Boolean | Logical | Logische Werte ja / nein | Wahr / Falsch | `regen = True` |
 | String | Character | Textinformation | Bern, Luzern | `stadt = "Bern"` |
 | Integer | Integer | Zahl ohne Nachkommastelle | Anzahl Einwohner | `bern = 133115` |
 | Float | Double | Zahl mit Nachkommastelle | Temperatur | `temp = 22.5` |
-
 
 ## Boolean
 
@@ -73,4 +71,3 @@ bern_flaeche = 51.62
 
 type(bern_flaeche)
 ```
-

@@ -1,4 +1,3 @@
-
 # JupyterLab {#sec-jupyternotebook}
 
 Bisher haben wir ohne Enwicklungsumgebung (IDE) gearbeitet, was auf die Dauer sehr mühsam sein kann. Erstens wird unser Code nirgens gespeichert und zweitens wird bei der Entwicklung des Codes wenig unterstützt (z.B. keine Autovervollständigung).
@@ -9,7 +8,6 @@ Deshalb arbeiten wir von nun an in einer ordentlichen Entwicklungsumgebung, und 
 2. über den Webbrowser bedient
 
 Um JupyterLab zu starten verlässt ihr Python im Command Prompt in dem ihr `exit()` oder `quit()` eintippt und mit Enter bestätigt. Danach könnt ihr mit dem Befehl `jupyter lab` eben diesen starten.
-
 
 ![Beendet den Python mit dem Befehl `quit()` oder `exit()`](figures/chdir.jpg){#fig-cwd}
 
@@ -33,11 +31,9 @@ Nun sollte sich der angezeigte Pfad (vor dem `>`) in eurer Konsole ändern. **Is
 
 ![JupyterLab starten](figures/notebook.jpg){#fig-notebook}
 
-
 Öffnet nun ein neues Jupyter Notebook File in dem ihr auf *New > Python 3* klickt (siehe @fig-notebook). 
 
 ![Öffnen eines neuen Jupyter Notebook Files](figures/newFile.png){#fig-newfile}
-
 
 Das Bedienen von JupyterLab lässt sich nicht gut in Worte fassen. Wir wollen diese deshalb in einer kurzen Demo vorzeigen, alternativ (falls du selbständig arbeitest) kannst du dir auch nachstehenden Video anschauen (ab 1:46):
 

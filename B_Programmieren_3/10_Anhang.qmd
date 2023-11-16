@@ -123,8 +123,6 @@ base = wald.explore(column = "Wald_text", cmap = my_cmap)
 zeckenstiche.explore(m = base, color = "red")
 ```
 
-
-
 ## Anhang 2: Geodaten visualisieren {#sec-geoviz}
 
 In folgenden Beispielen zeigen wir noch ein paar einfache Wege, wie ihr die Zeckenstichdaten visualisieren könnt.
@@ -144,8 +142,6 @@ zeckenstiche_gpd = gpd.GeoDataFrame(
     zeckenstiche_full,
     geometry=geom,
     crs = 2056)
-                                         
-
 ```
 
 ### Kernel Density Plot
@@ -197,4 +193,3 @@ ctx.add_basemap(ax)
 ax.set_axis_off()
 plt.show()
 ```
-

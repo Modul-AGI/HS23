@@ -91,4 +91,3 @@ zeckenstiche["Stichtyp"] = "Zecke"
 ```{python}
 zeckenstiche
 ```
-

@@ -1,6 +1,4 @@
-
 # Conda {#sec-conda}
-
 
 ## Was ist Conda?
 
@@ -9,12 +7,9 @@ Conda ist ein (von im Wesentlichen zwei[^pip]) Verwaltungssystem für Python[^co
 [^pip]: Neben Conda gibt es noch den "Package Manager" `pip`, welchen wir im Unterricht aber nicht nutzen werden.
 [^conda]: Genau genommen ist Conda universell einsetzbar und kann auch Libraries von R und weiteren Programmiersprachen installieren.
 
-
 ## Conda installieren
 
 Mit der Installation von ArcGIS wird (Mini-) Conda bereits mitgeliefert. Wer ArcGIS also schon hat, muss Conda nicht mehr installieren. Wer aber auf einem anderen Betriebssystem arbeiten möchte (oder ArcGIS auf Windows nicht installiert hat), kann Conda sehr einfach herunterladen und installieren: <https://docs.conda.io/en/latest/miniconda.html>. 
-
-
 
 ## Conda environment erstellen
 
@@ -32,12 +27,9 @@ conda activate geopython                 # aktiviert das Environment (Mac / Linu
 
 Nun sollte in der Klammer der Name des eben erstellten Environment erscheinen (`geopython`). Selbstverständlich kann man den Namen des Environments selbst wählen, dabei sollten aber Umlaute, Sonderzeichen und Grossbuchstaben vermieden werden.
 
-
 ![Python Command Prompt (i.e. "Eingabeaufforderung")](figures/python-command-prompt.PNG){#fig-python-cmd3}
 
 ![ArcGIS nutzt ebenfalls Conda. Welches Conda Environment in der aktuellen ArcGIS Session benutzt wird ist ersichtlich, wenn man in ArcGIS zu *Projekt > Python* navigiert.](figures/arcgis-conda-zoom.png){#fig-arcgis-conda}
-
-
 
 ## Conda packages installieren
 
@@ -83,6 +75,3 @@ In der folgenden Tabelle werden die Einzelschritte in der Verwendung von Conda n
 [^weiteremodule]: In Programmieren I - III brauchen wir die Module `pandas`, `matplotlib`, `geopandas` und `descartes`
 
 [^jupyterlabbeenden]: Falls JupyterLabs läuft und dadurch die Konsole blockiert ist, startet ihr am besten eine neue Konsole und aktiviert dort die entsprechende *environment*. Danach könnt ihr das Modul installieren
-
-
-

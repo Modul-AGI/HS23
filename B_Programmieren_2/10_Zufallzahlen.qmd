@@ -1,5 +1,3 @@
-
-
 ## Zufallszahlen generieren {#sec-random-numbers}
 
 Im Block "*Datenqualität und Unsicherheit*" habt ihr euch bereits mit Zufallszahlen und Simulationen auseinandergesetzt. Programmiersprachen sind für eine solche Anwendung sehr gut geeignet, und deshalb werden wir in diesem Abschnitt eine Erweiterung zur Erstellung von Zufallszahlen kennenlernen. Diese Erweiterung lautet `random` und ist Teil der ["Python Standard Library"](https://en.wikibooks.org/wiki/Python_Programming/Standard_Library), was bedeutet das dieses Erweiterung bereits installiert ist, und wir sie nicht installieren müssen. 
@@ -51,5 +49,3 @@ Wenn wir die obige Funktion 10'000x laufen lassen und uns das Histogramm der gen
 b = [random.normalvariate(mu = 5, sigma = 2) for b in range(10000)]
 pd.Series(b).plot(kind = "hist", bins = 30, edgecolor = "black")
 ```
-
-

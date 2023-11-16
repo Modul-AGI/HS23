@@ -50,4 +50,3 @@ refrain.append("You know you wouldn't want it any other way")
 # Das Resultat sieht dann so aus:
 refrain
 ```
-

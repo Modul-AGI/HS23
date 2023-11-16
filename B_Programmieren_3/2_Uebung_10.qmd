@@ -19,9 +19,6 @@ for platzhalter in [0,1,2,5,10]:
     print("Iteration",platzhalter)
 ```
 
-
-
-
 ## Übung 10.2 {#sec-for-gruss}
 
 Konstruiere eine Liste bestehend aus 3 Namen und nenne diese Liste `namen`. Erstelle danach einen *for loop*, mit welcher jede Person in der Liste gegrüsst wird. Nutze dafür `print`.
@@ -32,7 +29,6 @@ namen = ["Il Buono", "Il Brutto", "Il Cattivo"]
 for name in namen:
     print("Ciao ",name)
 ```
-
 
 Der Output könnte etwa so aussehen:
 
@@ -54,7 +50,6 @@ Kopiere den folgenden *For Loop* und spiele hier mit den Werten herum. Veränder
 for nonsense in range(3, 5):
     print("Iteration",nonsense)
 ```
-
 
 ```{python}
 # Iteriert von -5 bis +5
@@ -91,12 +86,11 @@ Who likes to party?
 :::{.callout-note collapse="true"}
 
 Nutze dafür zwei verschiedene `print` Befehle auf zwei Zeilen.
-:::
 
+:::
 
 ```{python}
 for i in range(5):
     print("Who likes to party?")
     print("We like to party!")
 ```
-

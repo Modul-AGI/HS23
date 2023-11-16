@@ -1,4 +1,3 @@
-
 # Input: GIS in Python {#sec-pythongis}
 
 Manche mag das jetzt überraschen, andere haben es vielleicht schon gemerkt: Mit **GIS** hatte unseres bisheriges Wirken in Python eigentlich wenig zu tun. Unsere Zeckenstiche haben zwar x/y-Koordinaten, aber diese haben wir bisher gleich behandlet wie alle anderen Spalten.
@@ -27,12 +26,10 @@ Beide Bestandteile müssen wir bei der Erstellung der *GeoDataFrame* festlegen. 
 ```{python}
 import geopandas as gpd
 
-
 geom = gpd.points_from_xy(
   zeckenstiche['x'],    # ↘
   zeckenstiche['y']     # → die Geometrie Spalte
   )   
-
 
 zeckenstiche_gpd = gpd.GeoDataFrame(
     zeckenstiche,    # die DataFrame ("Attributtabelle")
@@ -117,7 +114,6 @@ wald
 ```
 
 Es handelt sich also um einen Datensatz mit nur zwei Zeilen, aber mehreren Polygonen pro Zeile (das macht es zu einem ***Multi**polygon*[^multi]). Mit `plot` können wir diesen Datensatz einfach visualisieren und mit den Zeckenstichdaten überlagern.
-
 
 [^multi]: Der Unterschied zwischen Point und *Multi*point, Linesstring und *Multi*linestring und Polygon *Multi*polyon ist folgendermassen: Typischerweise hat jedes Attribut *eine* Geometrie. Zum Beispiel hat jede Zeckenstichmeldung eine ID, eine Ungenauigkeitsangabe und eben *eine* Punkgeometrie. Somit handelt es sich bei diesem Datensatz um einen einfach *Point* Datensatz. Wenn pro Attribut mehrere Geometrien zugewiesen sind handelt es sich um ein *Multi*point Objekt.
 

@@ -28,7 +28,6 @@ wald.plot()
 
 Führe einen SpatialJoin zwischen `wald` und `zeckenstiche` durch. Vertausche die Reihenfolge (`left_df`, `right_df`) und schaue dir den Output an. Wodurch unterscheiden sich die beiden outputs? Was sagt dir das über die Funktionsweise von `sjoin`?
 
-
 :::{.callout-note}
 ## Wichtig!
 
@@ -36,7 +35,6 @@ Melde dich bei den Betreuern wenn der *SpatialJoin* bei dir nicht funktioniert u
 :::
 
 ```{python}
-
 zeckenstiche_gpd = gpd.read_file("data/zeckenstiche.gpkg")
 
 gpd.sjoin(left_df = zeckenstiche_gpd, right_df = wald)
@@ -72,5 +70,3 @@ Berechne nun *Anteil* der Zeckenstiche im Wald (gemessen an der Anzahl Zeckensti
 ```{python}
 anteil_wald = sum(zeckenstiche_join["Wald_text"] == "ja")/len(zeckenstiche_join["Wald_text"])
 ```
-
-

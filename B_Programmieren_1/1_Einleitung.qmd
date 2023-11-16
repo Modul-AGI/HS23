@@ -1,10 +1,7 @@
-
-
 # Programmieren I {#sec-intro-cig1}
 
 In diesem Block bekommt ihr euren ersten Kontakt mit Python und lernt dabei auch gerade JupyterLab kennen, um mit Python zu interagieren. Er soll einen Einstieg in die Programmierwelt von Python bieten und spezifisch zeigen wie man räumliche Fragestellungen mit frei verfügbarer Software lösen kann. 
 Die Voraussetzung für diesen Kurs ist eine Offenheit, neue Tools und Ansätze kennen zu lernen, die Bereitschaft für lösungsorientiertes Arbeiten sowie etwas Hartnäckigkeit. 
-
 
 ## Vorbereitung
 
@@ -59,11 +56,3 @@ Im Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs un
 - Die wichtigsten Datentypen in Python kennen lernen (`bool`, `str`, `int`, `float`, `list`, `dict`)
 - Pandas DataFrames kennen lernen und einfache Manipulationen durchführen 
 :::
-
-
-
-
-
-
-
-

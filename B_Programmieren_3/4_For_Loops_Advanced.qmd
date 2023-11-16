@@ -1,5 +1,3 @@
-
-
 # Advanced *for loops* {#sec-forloops-3}
 
 In diesem Kapitel kommen noch zwei Aspekte von *for loops*, die als "*Advanced*" eingestuft werden können aber in der Praxis sehr nützlich sind. Dabei geht es einerseits um verschachtelte *for loops* und zum andere um eine verkürzte Schreibweise von *for loops*. 
@@ -11,6 +9,7 @@ Wir können verschiedene *for loops* auch ineinander verschachteln (englisch: *n
 :::{.callout-note collapse="true"}
 
 Als Platzhaltervariabel nutze ich wenn immer möglich das Singulär und für den Iterator das Plural von dem Objekt, über das ich iteriere. `for bandmitglied in band`, `for vogel in voegel` usw, dies hilft mir den Überblick im *loop* zu bewahren.
+
 :::
 
 ```{python}
@@ -37,7 +36,6 @@ We like to party!
 
 ```
 
-
 Dies kann man in zwei verschachtelte *For Loops* umschreiben:
 
 ```python
@@ -50,7 +48,6 @@ Who likes to party
 We like to party
 Who likes to party
 We like to party
-
 ```
 
 :::
@@ -76,12 +73,10 @@ refrain = ["I'm a "+ rolle for rolle in rollen]
 
 Diese verkürzte Schreibweise heisst in Python *list comprehension* und sie ist äusserst praktisch, wenn man sie beherrscht. Das Beherrschen ist aber nicht zentral, es reicht schon wenn ihr eine solche Schreibweise wieder erkennt und richtig interpretieren könnt (im Sinne von "*Aha, hier wird also in einem Loop eine Liste erstellt*"). In der folgenden Darstellung seht ihr farblich, welche Elemente sich in der verkürzten Schreibweise wo wiederfinden und welche Elemente gar nicht wiederverwendet werden.
 
-
 ```{python}
 #| echo: true
 rollen = ["bitch","lover","child","mother","sinner","saint"]
 ```
-
 
 :::: columns
 
