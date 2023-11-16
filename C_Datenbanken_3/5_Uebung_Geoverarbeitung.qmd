@@ -95,7 +95,7 @@ ein Eintrag, welche aber alle dieselbe Geometrie aufweisen. Der Parameter LIMIT 
 limitiert die Ausgabe auf ein Feature.
 :::
 
-![Auszug aus Datenbankschema](figures/screenshot-uebung11-1.jpg){#fig-db3-uebung11-1 width="50%"}
+![Auszug aus Datenbankschema](figures/uebung11.jpg){#fig-db3-uebung11-1 width="50%"}
 
 ## Übung 12: Geometrien ausschneiden mit "Clip"
 
