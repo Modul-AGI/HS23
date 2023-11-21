@@ -9,6 +9,7 @@ In einem ersten Schritt müssen wir alle drei Rasterdatensätze auf eine einheit
 $X_{new}$ = $\frac{x_{i} - x_{min}}{x_{max} - x_{min}} * 100$
 
 In Worten: Ziehen Sie vom Rasterwert $x_{i}$ den Minimumwert ($x_{min}$) ab und dividieren sie diesen durch die Spannweite der Zahlen ($x_{max}$-$x_{min}$)
+
 - $x_{i}$ ist der jeweilige Rasterdatensatz, $x_{min}$ und $x_{max}$ sind jeweils die Zahlenwerte, die sie eingangs notiert haben.
 - Achten sie darauf, dass Sie die richtigen Klammern setzen.
 - Speichern Sie die Ergebnisse unter folgenden Namen ab: oev_scaled.tif, abfall_scaled.tif, centrality_scaled.tif.
