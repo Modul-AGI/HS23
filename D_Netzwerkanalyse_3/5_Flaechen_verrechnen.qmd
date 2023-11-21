@@ -5,7 +5,7 @@ In einem ersten Schritt müssen wir alle drei Rasterdatensätze auf eine einheit
 
 ## Übung 8.1: Rasterdatensätze skalieren
 
-Öffnen Sie anschliessend das Tool `Rescale Raster` und skalieren Skalieren sie jeden der drei Rasterdatensätze jeweils so, dass Sie Werte von 0 bis 100 erhalten. Geben Sie dabei bei "New minimum value" 0 und bei "New maximum value" 100 ein.
+Öffnen Sie anschliessend das Tool `Rescale Raster` und skalieren Sie jeden der drei Rasterdatensätze jeweils so, dass Sie Werte von 0 bis 100 erhalten. Geben Sie dabei bei "New minimum value" 0 und bei "New maximum value" 100 ein.
 
 Speichern Sie die Ergebnisse unter folgenden Namen ab: oev_scaled.tif, abfall_scaled.tif, centrality_scaled.tif.
 
@@ -23,4 +23,4 @@ Optional kann man auch die drei Rasterdatensätze unterschiedlich gewichten, wie
 
 $raster_{neu}$ = $\frac{oev_{scaled}\times1+abfall_{scaled}\times10+centrality_{scaled}\times5}{16}$
 
-Zum Abschluss clippen sie den Output mit dem Werkezeug `Clip raster by Mask Layer (GDAL)`. Speichern Sie den Output unter final_result.tif in ihrem Projektordner ab. Passen Sie die Symbolisierung entsprechend an.
+Zum Abschluss clippen Sie den Output mit dem Werkezeug `Clip raster by Mask Layer (GDAL)` auf die Gemeindegrenze von Wädenswil. Speichern Sie den Output unter final_result.tif in ihrem Projektordner ab. Passen Sie die Symbolisierung entsprechend an.
