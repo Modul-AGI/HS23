@@ -129,7 +129,8 @@ Im Folgenden wird diese Karte mitsamt all ihren Inhalten, Symbolisierung und Fun
     ![](figures/arcgis_online_17.PNG){width="50%" fig-align="center"}
 
 4. Klicke auf «Analyze» und löse bei Bedarf die angezeigten Probleme. Nutze zur Lösung der etwaigen Probleme die ArcGIS Webhelp. Sofern die Warnung «Layer does not have a feature template set» erscheint, kann diese vernachlässigt werden.
-5. Veröffentliche anschliessend die Web Map mit «Share». Dieser Vorgang kann einige Zeit in Anspruch nehmen.
+5. Die Meldung «00374 Unique numeric IDs are not assigned» kann über das Kontextmenü gelöst werden. (Kontextmenü -> «Auto-Assign IDs Sequentially»)
+6. Veröffentliche anschliessend die Web Map mit «Share». Dieser Vorgang kann einige Zeit in Anspruch nehmen.
 
 ## Übung 8: ArcGIS Pro: Veröffentlichen (Publishing) eines Layers
 
