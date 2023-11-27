@@ -107,7 +107,7 @@ Aktiviere nun für den Layer «zeckenstiche» die Zeiteigenschaften:
     - Layer Time: Each feature has a single time field
     - Time Field: date
 
-    ![](figures/arcgis_online_15.PNG)
+    ![](figures/arcgis_online_15.png)
 
 Für den Layer «zeckenstiche» hast Du die Zeiteigenschaften aktiviert und Du kannst nun im Menüband «Time» die Eigenschaften der Zeitanimation definieren und anpassen.
 
