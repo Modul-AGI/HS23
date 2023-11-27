@@ -142,15 +142,16 @@ In der vorangehenden Übung 7 hast Du eine gesamte Karte als Web Map veröffentl
 
 2. Gebe dem Layer den Namen «Velowege Vorname Name», schreibe eine kurze Zusammenfassung und definiere Tags. Wähle folgende Einstellungen:
 
-    - Select a Configuration: 	Feature
+    - Layer Type: 	Feature
     - Location Folder: 	Modul AGI (Der Layer wird in ArcGIS Online in diesem Ordner abgelegt)
     - Share With: 	Groups (wähle «Modul Angewandte Geoinformatik HS 2022»; der Feature Layer wird nur für diese Gruppe freigegeben).
 
     ![](figures/arcgis_online_19.PNG){width="50%" fig-align="center"}
 
 3. Klicke auf «Analyze» und löse angezeigte Probleme.
-4. Veröffentliche anschliessend den Web Layer «Velowege Vorname Name» mit «Share». Dieser Vorgang kann einige Zeit in Anspruch nehmen.
-5. Speichere das ArcGIS Pro Projekt.
+4. Die Meldung «00374 Unique numeric IDs are not assigned» kann über das Kontextmenü gelöst werden. (Kontextmenü -> «Auto-Assign IDs Sequentially»)
+5. Veröffentliche anschliessend den Web Layer «Velowege Vorname Name» mit «Share». Dieser Vorgang kann einige Zeit in Anspruch nehmen.
+6. Speichere das ArcGIS Pro Projekt.
 
 ## Übung 9: ArcGIS Online: Web Map anpassen
 
