@@ -257,7 +257,7 @@ Erstelle nun eine Web Mapping Applikation basierend auf der vorher konfigurierte
     ![](figures/arcgis_online_42.PNG){width="70%" fig-align="center"}
 
 3. Gehe durch die 5 Schritte, aktiviere die Pop-Ups, die Lesezeichen und die Layer Liste. Veröffentliche anschliessend die Web App.
-4. Ergänze die Web App nun noch mit einem zusätzlichen WMS-Layer. Gehe hierfür zuerst auf www.geolion.zh.ch und suche nach «Klimamodell». Gehe auf «Klimamodell ZH: Analysekarten (Raster)», öffne das Register «Datenbezug» und wähle den Link unter «WMS».
+4. Ergänze die Web App nun noch mit einem zusätzlichen WMS-Layer. Gehe hierfür zuerst auf www.geolion.zh.ch und suche nach «Klimamodell». Gehe auf «Klimamodell ZH: Analysekarten (Raster)», öffne das Register «Datenbezug» und wähle den Link unter Datenbezug -> «WMS».
 5. Wechsle in ArcGIS Online auf «Inhalt» und füge den WMS-Klimamodell via « + Neues Element» hinzu. Wähle die Option «URL».
 
     ![](figures/arcgis_online_43.PNG)
