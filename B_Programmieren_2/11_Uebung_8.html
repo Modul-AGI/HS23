@@ -622,43 +622,16 @@ window.onload = function() {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">WebGIS I</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Abschnitt umschalten">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../E_WebGIS_1/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
+  <a href="../E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">WebGIS I</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../E_WebGIS_1/3_Leistungsnachweis.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Leistungsnachweis</span></a>
+  <a href="../E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">WebGIS II</span></a>
   </div>
 </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">WebGIS II</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Abschnitt umschalten">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../E_WebGIS_2/2_Uebung.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Übung</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../Markdown.html" class="sidebar-item-text sidebar-link">
@@ -819,11 +792,8 @@ Hinweis
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>mypoints.plot(<span class="st">"x"</span>, <span class="st">"y"</span>, kind <span class="op">=</span> <span class="st">"scatter"</span>, xlim <span class="op">=</span> [<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>], ylim <span class="op">=</span> [<span class="op">-</span><span class="dv">100</span>, <span class="dv">100</span>], c <span class="op">=</span> [<span class="st">"red"</span>, <span class="st">"blue"</span>], title <span class="op">=</span> <span class="st">"Ursprung (rot) und Simulation (blau)"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>&lt;Axes: title={'center': 'Ursprung (rot) und Simulation (blau)'}, xlabel='x', ylabel='y'&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="11_Uebung_8_files/figure-html/cell-8-output-2.png" width="617" height="449"></p>
+<div class="cell-output cell-output-error">
+<pre><code>ModuleNotFoundError: No module named 'pandas'</code></pre>
 </div>
 </div>
 </section>
@@ -844,7 +814,7 @@ Hinweis
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># die Funktion sollte so funktionieren:</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>offset_coordinate(x_start)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>-26.83800659622428</code></pre>
+<pre><code>-80.05799383041366</code></pre>
 </div>
 </div>
 </section>
@@ -862,14 +832,8 @@ Hinweis
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">"equal"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(-299.3862802390766,
- 388.74417228812996,
- -364.04913212927266,
- 342.3679078282011)</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="11_Uebung_8_files/figure-html/cell-11-output-2.png" width="604" height="429"></p>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'pd' is not defined</code></pre>
 </div>
 </div>
 
