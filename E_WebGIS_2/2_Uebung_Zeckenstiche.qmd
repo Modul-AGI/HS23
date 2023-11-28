@@ -1,0 +1,251 @@
+---
+output: false
+echo: false                      # set to true to show solution
+code-fold: false                 # set to true to show solution
+code-summary: "Musterlösung"    
+---
+
+# Übung Zeckenstiche
+
+In dieser Übung wollen wir unseren Leistungsnachweis aus Programmieren erweitern. Dabei soll eine Karte mit verschiedenen Layern erstellt werden.
+Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euer Jupyter Notebook aufwerten und zum Schluss Online über GitHub publizieren könnt.
+
+## Übung 1: Vorbereitung
+
+Bitte ladet zuerst die Musterlösung [hier]() runter.
+
+Wir werden in dieser Übung mit der Library [Folium](https://python-visualization.github.io/folium/version-v0.14.0/index.html) arbeiten. Wenn ihr lokal auf eurem Rechner arbeitet, müsst ihr dieses Package zuerst noch über conda installieren (siehe: @sec-conda).
+
+## Übung 2: Base Map
+Zuerst müssen wir eine Basiskarte erstellen, zu welcher wir dann die weiteren Layer hinzufügen können. Dazu nutzen wir nun Folium.
+Als Mittelpunkt der Karte wählen wir die Koordinaten der Stadt Zürich (Zurich latitude: 47.36667, longitude: 8.55) aus.
+
+```{python}
+#| eval: false
+#| echo: true
+#| output: true
+#| code-fold: false
+
+# Zurich latitude longitude: 47.36667, 8.55
+map = folium.Map(location=[47.36667, 8.55], zoom_start = 13, tiles = "cartodbpositron")
+```
+
+Ihr könnt mit den Tiles und dem Zoom Level experimentieren. Information zu den Tiles findet ihr [hier](https://python-visualization.github.io/folium/latest/user_guide/raster_layers/tiles.html).
+
+## Übung 3: Wald Layer hinzufügen
+
+Nun wollen wir die Waldflächen als unseren ersten Layer hinzufügen. Ihr habt die .explore() Funktion bereits kennengelernt. Sie verfügt aber über diverse interessante Attribute, welche wir nun benutzen wollen.
+
+Da unser Wald Datensatz aus zwei Zeilen mit Wald und nicht Wald besteht, müssen wir die Waldflächen zuerst noch rausfiltern. 
+
+Folium kann nur das weltweite CRS WGS84 (EPSG:4326) verarbeiten und weil der Geodataframe Wald das Schweizer CRS CH1903+ / LV95 (EPSG:2056) verwendet, müssen wir dieses mittels `to_crs()` transformieren, bevor wir ihn visualisieren können.
+
+```{python}
+#| eval: false
+#| echo: true
+#| output: true
+#| code-fold: false
+
+# Wald zur Karte hinzufügen
+is_wald = wald[wald["Wald_text"] == "ja"] # Selektieren nur den Wald
+is_wald.to_crs(4326).explore(
+    m = map,           # Fügt diesen Layer der Map map hinzu
+    color = "green",   # Der Layer wird grün dargestellt
+    tooltip = False,   # Es werden keine Daten angezeigt, wenn man über ein Objekt hovered.
+    highlight = False, # Das Objekt wird nicht hervorgehoben, wenn man darüber hovered.
+    name = "Wald"      # Der Name des Layers
+)
+```
+
+Wenn wir nun map aufrufen, wird die Basemap zusammen mit dem Wald Layer dargestellt.
+
+## Übung 4: Original und simulierter Zeckenstich Layer hinzufügen
+
+Nun wollen wir neben dem Wald Layer (Polygon) den originalen Zeckenstiche Layer (Punkte) hinzufügen. Kopiere dazu den unteren Code. 
+
+```{python}
+#| eval: false
+#| echo: true
+#| output: true
+#| code-fold: false
+
+# Original Zeckenstiche zur Karte hinzufügen
+zeckenstiche_original_gpd.to_crs(4326).explore(
+    m = map,                                     
+    color = "red",                              
+    marker_kwds = dict(radius = 1, fill = True), # Optionen für das Aussehen der Punkte
+    tooltip = "ID",                              # Beim Hovern über das Objekt wird die ID dargestellt
+    name = "Original Zeckenstiche"               # Der Name des Layers
+)
+```
+
+Nun wollen wir die simulierten Zeckenstiche darstellen. Als Vorlage könnt ihr den Code von oben kopieren. Erweitere die Funktion `explore` um folgende Logik:
+
+- Gerne würden wir die Spalte "Radius" mit der Farbvariation viridis visualisieren. Nutze hierfür die Attribute `column` und `cmap`.
+- Zudem soll die Legende des Layers dargestellt werden. Zudem wollen wir keine Colorbar als Legende haben. Nutze dafür die Optionen der Legende `legend_kwds = dict(colorbar = False)`. 
+- In den Tooltips sollen neben der ID noch der Radius und der Run dargestellt werden. 
+- Nenne den Layer "Simulation Zeckenstiche".
+
+Weitere Informationen zur `explore` Funktion findet ihr [hier](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.explore.html).
+
+```{python}
+#| eval: false
+
+# Visualisieren der Simulierten Zeckenstiche
+zeckenstiche_sim_gpd.to_crs(4326).explore(
+    m = map,
+    column = "Radius",                              # Die Spalte Radius wird dargestellt 
+    cmap = "viridis",                               # Einfärbung der Werte anhand des column Wert (Radius)
+    legend = True,                                  # Legende soll angezeigt werden
+    legend_kwds = dict(colorbar = False),           # Optionen der Legende, die Colorbar soll nicht angezeigt werden
+    marker_kwds = dict(radius = 1, fill = True),
+    tooltip = ["ID", "Radius", "Run"],              # Beim Hovern über das Objekt wird die ID, Radius, Run dargestellt 
+    name = "Simulation Zeckenstiche",
+)
+```
+
+## Übung 5: Layer Control hinzufügen
+
+Zum Abschluss wollen wir noch ein `Layer Control` hinzufügen, damit wir die verschiedenen Layer ein- und ausblenden können.
+Schaut dafür im [User Guide von Folium](https://python-visualization.github.io/folium/latest/user_guide.html) und sucht nach den Layer Control und versucht diesen eurer `map` hinzuzufügen.
+
+```{python}
+#| eval: false
+
+folium.LayerControl().add_to(map)
+```
+
+Nun ist unsere Map fertig. Inspiziert diese und spielt mit den `Radien` und `Runs` herum und versucht auch die Grössen und Farben der Points anzupassen, bis Ihr mit dem Resultat zufrieden seid.
+
+## (Optional) Übung 6: Notebook verschönern
+
+### Input
+
+#### Tags
+
+Tags können dazu benutzt werden, um das Verhalten der Cell zu verändern. Es gibt dafür folgende Möglichkeiten:
+
+- `hide-input`: Verstecke die Cell (sie kann aber noch aufgeklappt werden)
+- `hide-output`: Verstecke den Output der Cell
+- `hide-cell`: Verstecke sowohl den Input als auch den Output der Zelle
+- `remove-input`: Entferne die Cell komplett
+- `remove-output`: Entferne den Output der Cell
+- `remove-cell`: Entferne den Cell Input und Output komplett
+
+#### UI Elements
+
+Ihr könnt auch verschiedene Elemente in Grids einteilen. Dies funktioniert folgendermassen:
+
+```{.default}
+::::{grid}
+
+:::{grid-item}
+:outline:
+:columns: 3
+Hier kommt ein Text / Bild / Karte
+:::
+
+:::{grid-item}
+:outline:
+:columns: 9
+Hier kommt ein weiteres Text / Bild / Karte
+:::
+
+::::
+```
+
+Weitere Möglichkeiten findet ihr [hier](https://jupyterbook.org/en/stable/content/components.html)
+
+#### Tabellen
+
+Eine Tabelle muss nach folgender Markdown Syntax erstellt werden:
+
+```{.default}
+|Name |Gender|Age  |Origin | 
+|-----|:-----|:---:|:-----:|
+|Jack |Male  |23   |USA    |
+|Susan|Female|22   |Canada |
+```
+
+- Die erste Zeile ist die Tabellenüberschrift
+- Die zweite Zeile beinhaltet Bindestriche "-" und optionalen Doppelpunkten ":", um den Text in den Spalten auszurichten.
+    - `:---` für die linke Ausrichtung
+    - `:---:` für die mittlere Ausrichtung
+    - `---:` für die rechte Ausrichtung
+- Die weiteren Zeilen beinhalten der Tabelleninhalt. 
+
+#### Bilder
+
+Ein Bild kann ebenfalls via Markdown Syntax hinzugefügt werden:
+
+```{.default}
+![Abbildungstext](../images/test.png)
+```
+
+### Aufgabe 
+
+- Fügt nun ein Bild einer Zecke in eure Einführungstext ein. Benutzt dazu ein Grid, womit ihr auf einer Seite eueren Text habt und auf der anderen Seite euer Bild. Als Abbildungstext könnt ihr die die Quelle des Bilds angeben.
+
+- Fügt nun eine Tabelle im Abschnitt Methodik hinzu, welche die verwendeten Daten (`zeckenstiche_full` und `wald`) beschreibt (Name, Datentyp, Herkunft, Koordinatensystem, Beschreibung).
+
+- Fügt einige Tags in Cells ein, wo ihr den Input, Output oder beides nicht sehen wollt.
+
+## Übung 7: Notebook in HTML konvertieren
+
+Damit wir nun unser Jupyter Notebook publizieren können, müssen wir davon ein HTML Output generieren.
+
+TODO: HOW TO 
+
+Nenne das File `index.html`, damit GitHub Pages das File automatisch als Startseite erkennt.
+
+## Übung 8: GitHub und Publizieren
+
+:::{.callout-note}
+GitHub ist eine webbasierte Plattform, die Hosting für Git-Repositories bereitstellt. Es bietet Tools für die Zusammenarbeit, Codeüberprüfung und Projektverwaltung. GitHub wird von Entwicklern weit verbreitet genutzt, um Open-Source-Projekte zu teilen, dazu beizutragen und zusammenzuarbeiten. Es bietet auch Funktionen wie die Verfolgung von Problemen (Issues) und Pull-Anfragen (Pull Requests).
+:::
+
+1. Registriert euch mit eurer privaten Email Adresse auf [GitHub](https://github.com/).
+
+2. Nun da ihr auf eingeloggt seid, könnt ihr euer Repository erstellen. Drücke hierfür oben rechts auf den Avatar und wähle dann "Your repositories". Klicke anschliessend auf das grüne Symbol "New". Im neuen Fenster kannst du nun einen Namen für dein Repository definieren. Zudem kannst du die Sichtbarkeit des Repository anpassen, aber wir belassen es bei Public, damit wir dann auch das HTML File publizieren können. Schliesse die Ganze mit "Create repository" ab.
+
+    ![Repository erstellen Schritt 1](figures/github_1.PNG)
+
+    ![Repository erstellen Schritt 2](figures/github_2.PNG)
+
+3. Nun hast du ein leeres Repository. Es gibt verschiedene Möglichkeiten nun Daten in dieses Repository zu kriegen. Am einfachsten ist aber das direkte Hochladen von Files. Klicke hierfür auf "uploading an existing file" und ziehe anschliessend das Jupyter Notebook und dein daraus generiertes HTML File (`index.html`) in die. Gib eine kurze Commit Beschreibung und klicke auf "Commit changes". 
+
+    ![](figures/github_3.PNG)
+
+    ![](figures/github_4.PNG)
+
+:::{.callout-note}
+# Update existierende Files
+
+Wenn ihr nochmals Änderungen an den Files vornehmt, könnte ihr diese auf der Repository Seite über `Add File` hinzufügen. Achte darauf das die Files den gleichen Namen hat, damit wird sichergestellt, dass das auf GitHub existierende File überschrieben wird.
+
+![](figures/github_11.PNG)
+:::
+
+4. Ihr seht nun eure Files im Repository. Geht nun auf Einstellungen um unsere Webseite zu Publizieren. 
+
+    ![](figures/github_5.PNG)
+
+    Geht auf Pages und setzt auf Branch die Einstellungen auf `main` und `/root` und klickt auf Save. Dies bewirkt, dass GitHub nun nach einem index.html in deinem main Branch sucht und aus diesem eine Webseite macht. 
+
+    ![](figures/github_6.PNG)
+
+    Diesen Vorgang könnt ihr unter Actions finden. Sobald der orange Punkt zu einem grünen Häkchen wird, ist die Webseite fertig erstellt. 
+
+    ![](figures/github_7.PNG)
+
+    Kehr nun zurück zu Pages in den Settings. Ihr sollten nun eine URL sehen, auf welcher eure Webseite läuft.
+
+    ![](figures/github_8.PNG) 
+
+5. Zum Abschluss könnt ihr diese URL im About des Repositorys hinzufügen. Dies macht es euch einfacher auf die Webseite zuzugreifen, da ihr nicht immer den Link in den Settings suchen müsst, sondern direkt in eurem Repository angezeigt wird. 
+
+    ![](figures/github_9.PNG)
+
+    Kopiere hierfür die URL und gehe auf den Code Tab und wählt dort das Rädchen neben dem About. Im Feld Webseite könnt ihr nun die URL reinkopieren. Speichert das mit "Save Changes". Nun sieht ihr unter dem About eure Webseite.
+
+    ![](figures/github_10.PNG)

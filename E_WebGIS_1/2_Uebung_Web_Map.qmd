@@ -1,4 +1,4 @@
-# Übung
+# Übung Web Map
 
 ## Übung 1: Erste Schritte mit ArcGIS Online (Online Tutorial)
 
@@ -13,6 +13,7 @@ Führe das Online Tutorial «Erste Schritte mit ArcGIS Online» durch. Damit erl
 In ArcGIS Online kann die eigene Inhaltsseite personalisiert werden. Es können Ordner erstellt werden in denen Inhalte verwaltet und organisiert werden können.
 
 1. Melde Dich mit Deinen persönlichen Nutzerdaten auf dem ArcGIS Online Organisationskonto der ZHAW an: [ZHAW ArcGIS Maps](https://zhaw.maps.arcgis.com)
+
 2. Wechsle von der Startseite in das Register Inhalt. Im Ordner «Alle eigenen Inhalte» sollten die beiden Inhalte «At-Risk Population in Houston» (Instant App) und «Houston Evacuation Map» (Web Map) welche Du im Rahmen der ersten Übung (Online Tutorial) erstellt hast, aufgeführt sein.
 
     ![](figures/arcgis_online_2.PNG){fig-align="center"}
@@ -30,6 +31,7 @@ In ArcGIS Online kann die eigene Inhaltsseite personalisiert werden. Es können 
     ![](figures/arcgis_online_5.PNG){width="50%" fig-align="center"}
 
 5. Lege alle Deine Inhalte, welche Du im Rahmen dieses Moduls auf ArcGIS Online hochlädst im Ordner «Modul AGI» ab.
+
 6. Du kannst jederzeit neue Ordner erstellen und so Deine Inhalte auf ArcGIS Online organisieren.
 
 ## Übung 3: ArcGIS Online: Freigabeeigenschaften bei bestehenden Inhalten ändern
@@ -37,6 +39,7 @@ In ArcGIS Online kann die eigene Inhaltsseite personalisiert werden. Es können 
 Bei der Durchführung des Esri Online Tutorials «Erste Schritte mit ArcGIS Online» hast Du sowohl die Web Map als auch die Web Mapping Application für «Alle (öffentlich)» freigegeben. Ändere nun die Freigabe dieser beiden Inhalte, damit diese nur noch von Dir aufgerufen werden können.
 
 1. Zeige die Inhalte im Ordner «Modul AGI».
+
 2. Klicke bei der Web Mapping Application «At-Risk Population in Houston» auf das Globus-Symbol.
 
     ![](figures/arcgis_online_6.PNG)
@@ -57,7 +60,9 @@ Projekt speichern
 :::
 
 1. Starte ArcGIS Pro und erstelle ein neues ArcGIS Pro Projekt mit dem Namen «E_ArcGIS_Online».      
+
 2. Melde Dich mit Deinen persönlichen Benutzerdaten (kürzel_student / PW) in ArcGIS Pro beim ArcGIS Online Portal der ZHAW an (sofern Du noch nicht angemeldet bist).
+
 3. Benenne die neue Map als «Einführung» (Contents Pane > Kontextmenü Map > Properties > Map Properties > General Tab > bei Name Eingabe vornehmen > mit OK bestätigen).
 
     ![](figures/arcgis_online_9.PNG)
@@ -76,9 +81,9 @@ Projekt speichern
 Damit die Daten später auf ArcGIS Online veröffentlicht werden können, muss den Daten das Koordinatensystem «WGS 1984 Web Mercator Auxiliary Sphere» zugewiesen werden. Momentan ist den fünf Layern noch das Schweizerische Koordinatensystem zugewiesen. Führe für jeden einzelnen Layer eine Koordinatentransformation durch.
 
 :::{.callout-tip}
-    Um Probleme bei der Veröffentlichung auf ArcGIS Online zu vermeiden 
-    empfiehlt es sich, immer mit dem Koordinatensystem «WGS 1984 Web Mercator 
-    Auxiliary Sphere» zu arbeiten.
+Um Probleme bei der Veröffentlichung auf ArcGIS Online zu vermeiden 
+empfiehlt es sich, immer mit dem Koordinatensystem «WGS 1984 Web Mercator 
+Auxiliary Sphere» zu arbeiten.
 :::
 
 1. Öffne das Geoprocessing Window (Menü Analysis > Tools)
@@ -102,12 +107,13 @@ Symbolisiere die vier Layer in einer Art und Weise, dass sie gut voneinander unt
 Aktiviere nun für den Layer «zeckenstiche» die Zeiteigenschaften:
 
 1. Contents Window > Kontextmenü Layer «zeckenstiche» > Properties.
+
 2. Wähle unter Time folgende Einstellungen und bestätige sie mit OK:
 
     - Layer Time: Each feature has a single time field
     - Time Field: date
 
-    ![](figures/arcgis_online_15.png)
+    ![](figures/arcgis_online_15.PNG)
 
 Für den Layer «zeckenstiche» hast Du die Zeiteigenschaften aktiviert und Du kannst nun im Menüband «Time» die Eigenschaften der Zeitanimation definieren und anpassen.
 
@@ -116,6 +122,7 @@ Für den Layer «zeckenstiche» hast Du die Zeiteigenschaften aktiviert und Du k
 Im Folgenden wird diese Karte mitsamt all ihren Inhalten, Symbolisierung und Funktionalitäten als Web Map auf ArcGIS Online veröffentlicht (direkt via ArcGIS Pro). Vergewissere Dich, dass Du mit dem ZHAW ArcGIS Online Organisationskonto verbunden bist (Portal Connection) und speichere das ArcGIS Pro Projekt.
 
 1. Wechsle in das Menüband «Share»
+
 2. Wähle anschliessend «Web Map»
 
     ![](figures/arcgis_online_16.PNG)
@@ -129,7 +136,9 @@ Im Folgenden wird diese Karte mitsamt all ihren Inhalten, Symbolisierung und Fun
     ![](figures/arcgis_online_17.PNG){width="50%" fig-align="center"}
 
 4. Klicke auf «Analyze» und löse bei Bedarf die angezeigten Probleme. Nutze zur Lösung der etwaigen Probleme die ArcGIS Webhelp. Sofern die Warnung «Layer does not have a feature template set» erscheint, kann diese vernachlässigt werden.
+
 5. Die Meldung «00374 Unique numeric IDs are not assigned» kann über das Kontextmenü gelöst werden. (Kontextmenü -> «Auto-Assign IDs Sequentially»)
+
 6. Veröffentliche anschliessend die Web Map mit «Share». Dieser Vorgang kann einige Zeit in Anspruch nehmen.
 
 ## Übung 8: ArcGIS Pro: Veröffentlichen (Publishing) eines Layers
@@ -149,8 +158,11 @@ In der vorangehenden Übung 7 hast Du eine gesamte Karte als Web Map veröffentl
     ![](figures/arcgis_online_19.PNG){width="50%" fig-align="center"}
 
 3. Klicke auf «Analyze» und löse angezeigte Probleme.
+
 4. Die Meldung «00374 Unique numeric IDs are not assigned» kann über das Kontextmenü gelöst werden. (Kontextmenü -> «Auto-Assign IDs Sequentially»)
+
 5. Veröffentliche anschliessend den Web Layer «Velowege Vorname Name» mit «Share». Dieser Vorgang kann einige Zeit in Anspruch nehmen.
+
 6. Speichere das ArcGIS Pro Projekt.
 
 ## Übung 9: ArcGIS Online: Web Map anpassen
@@ -171,7 +183,9 @@ Inhalte können auch gelöscht werden, beispielsweise benötigst Du die Web Mapp
 Die Web Map enthält die vier Feature Layer «zeckenstiche», «picknickplatz», «vitaparcours» und «stadtkreis». Ändere nun die Namen der Layer (bsp. Zeckenstiche Zeit-animiert statt zeckenstiche):
 
 1. Gehe auf «Inhalt».
+
 2. Öffne bei Layer «zeckenstiche» das Kontextmenü durch Klicken auf «…»
+
 3. Wähle «Umbenennen» und ändere den Layernamen auf «Zeckenstiche Zeit-animiert»
 
     ![](figures/arcgis_online_23.PNG){width="50%" fig-align="center"}
@@ -191,6 +205,7 @@ Füge nun das Veloweg-Netz der Stadt Zürich als zusätzlichen Feature Layer zur
 Verändere die Layer-Reihenfolge. Verschiebe den Layer «Velowege» unterhalb von «Vita Parcours». 
 
 7. Gehe in den Reiter «Layer».
+
 8. Verschiebe mittels drag and drop den Layer «Velowege» an die gewünschte Position und ändere den Namen des Layers. 
     
     Alternative: Klicke unter Inhalt beim Layer «Velowege» auf die drei vertikalen Punkte und verschiebe den Layer an den gewünschten Ort.
@@ -200,11 +215,13 @@ Verändere die Layer-Reihenfolge. Verschiebe den Layer «Velowege» unterhalb vo
 Ändere das Symbol für den Layer «Velowege» (bsp. ein dezentes dunkelgrau).
 
 9.	Selektiere den Layer «Velowege» in der Layer-Ansicht. 
+
 10.	Öffne das Menü «Styles» (vertikales Menü rechts).
 
     ![](figures/arcgis_online_27.PNG){width="50%" fig-align="center"}
 
 11.	Gehe auf «Style-Optionen»
+
 12.	Klicke auf das Stift-Symbol und ändere die Linienfarbe und -breite.
 
     ![](figures/arcgis_online_28.PNG){width="50%" fig-align="center"}
@@ -222,17 +239,21 @@ Lade nun den Layer «Zeckenstiche Zeit-animiert» ein zweites Mal zur Webmap. Hi
     ![](figures/arcgis_online_30.PNG)
 
 16.	Ändere anschliessend beim neu hinzugefügten Zeckenstich-Layer den Namen zu «Gemeldete Zeckenstiche».
+
 17.	Deaktiviere nun die Option Zeitanimation im Layer «Gemeldete Zeckenstiche». Gehe in diesem Layer auf «Eigenschaften anzeigen» und deaktiviere die Zeiteigenschaften im entsprechenden Abschnitt. 
 
     ![](figures/arcgis_online_31.PNG)
 
 18.	Verschiebe danach diesen Layer unterhalb des Layers «Zeckenstiche Zeit-animiert».
+
 19.	Verändere beim Layer «Zeckenstiche Zeit-animiert» den Style, so dass sich die animierten Zeckenstiche deutlich von den gemeldeten Zeckenstichen unterscheiden lassen. Wähle beispielsweise ein gelbes Punktsymbol inklusive Blooming-Effekt. Symboleffekte können via Reiter «Effekte» definiert werden.
+
 20.	Entferne beim Layer «Zeckenstiche Zeit-animiert» das Pop-up via «Pop-up konfigurieren». Somit wird verhindert, dass das Pop-up beim Anklicken eines Zeckenstich-Standortes zwei Mal aufgerufen wird.
 
     ![](figures/arcgis_online_32.PNG){width="50%" fig-align="center"}
 
 21.	Pop-ups können übrigens über das Menü «Pop-ups» benutzerdefiniert angepasst werden. Probiere diverse Optionen für andere Layer aus.
+
 22.	Die Zeit-Animation kann im linken Bereich über das Menü «Karteneigenschaften» und dann «Optionen des Zeitschiebereglers» angepasst werden (Intervall, Geschwindigkeit etc.). Probiere auch hier unterschiedliche Optionen aus.
 
 Erstelle nun noch zwei Bookmarks (Lesezeichen) für die Stadtkreise 7 und 10. Zoome hierfür in den Bereich des Stadtkreises 7. Gehe dann auf «Lesezeichen» > «Lesezeichen hinzufügen», gib «Stadtkreis 7» ein und bestätige die Eingabe mit der Enter-Taste. Gehe gleich vor für den Stadtkreis 10. Zoome nachfolgend wieder auf das gesamte Stadtgebiet.
@@ -242,9 +263,9 @@ Die Karte ist nun soweit vorbereitet, damit basierend auf dieser Web Map eine We
 Erst nachdem die Layers einer Karte fertig symbolisiert sind, die Pop-ups konfiguriert und die Layer-Funktionalitäten etc. definiert sind kann eine Web Mapping Applikation erstellt werden. Die Web Mapping Applikation übernimmt die grundlegenden Einstellungen, welche in der Web Map definiert sind. 
 
 :::{.callout-tip}
-    In der Regel müssen sowohl die Web Map als auch die Web Mapping Applikation 
-    auf dieselbe Art und Weise freigegeben werden. Dies gilt natürlich auch für 
-    alle Web-Layers welche in einer Karte enthalten sind.
+In der Regel müssen sowohl die Web Map als auch die Web Mapping Applikation 
+auf dieselbe Art und Weise freigegeben werden. Dies gilt natürlich auch für 
+alle Web-Layers welche in einer Karte enthalten sind.
 ::: 
 
 ## Übung 10: ArcGIS Online: Web App erstellen via “Instant Maps”
@@ -252,12 +273,15 @@ Erst nachdem die Layers einer Karte fertig symbolisiert sind, die Pop-ups konfig
 Erstelle nun eine Web Mapping Applikation basierend auf der vorher konfigurierten Web Map. In dieser Übung arbeiten wir mit «Instant Maps». Hierfür muss die Karte zuerst im «Map Viewer» geöffnet werden. Anschliessend generierst Du die Web Mapping Applikation über die Option «Instant Apps» (analog Übung 1 – Online Tutorial).
 
 1. Wähle die Option «Schieberegler» und gehe auf «Vorschau». Gehe Zurück und erstelle die App mit «Auswählen».
+
 2. Benenne die App als «Zecken App Zürich Vorname Name», lege sie im Ordner Modul AGI ab und wähle «App erstellen»
 
     ![](figures/arcgis_online_42.PNG){width="70%" fig-align="center"}
 
 3. Gehe durch die 5 Schritte, aktiviere die Pop-Ups, die Lesezeichen und die Layer Liste. Veröffentliche anschliessend die Web App.
+
 4. Ergänze die Web App nun noch mit einem zusätzlichen WMS-Layer. Gehe hierfür zuerst auf www.geolion.zh.ch und suche nach «Klimamodell». Gehe auf «Klimamodell ZH: Analysekarten (Raster)», öffne das Register «Datenbezug» und wähle den Link unter Datenbezug -> «WMS».
+
 5. Wechsle in ArcGIS Online auf «Inhalt» und füge den WMS-Klimamodell via « + Neues Element» hinzu. Wähle die Option «URL».
 
     ![](figures/arcgis_online_43.PNG)
@@ -275,7 +299,9 @@ Erstelle nun eine Web Mapping Applikation basierend auf der vorher konfigurierte
     ![](figures/arcgis_online_44.PNG)
 
 6. Öffne in ArcGIS Online die Web Map «Zecken Stadt Zürich Vorname Name». Gehe auf «Hinzufügen > Layer durchsuchen» und füge den Layer «Lufttemperatur Tag» zur Web Map hinzu. Verändere die Layerhierarchie und platziere die Temperaturkarte zuunterst.
+
 7. Speichere die Änderungen.
+
 8. Öffne nun die Web App. Der Layer «Lufttemperatur Tag» ist nun auch in der Web App enthalten und kann je nach Bedarf ein- und ausgeblendet werden (so wie alle anderen Layer auch). 
 
 ## Übung 11: ArcGIS Online: Web App erstellen via “Experience Builder”
@@ -283,8 +309,11 @@ Erstelle nun eine Web Mapping Applikation basierend auf der vorher konfigurierte
 Nun wirst Du eine zweite Web App erstellen, dieses Mal mit Unterstützung des Experience Builders. Der Experience Builder erlaubt eine viel flexiblere Gestaltung der Web App, insbesondere können verschiedenste Widgets in die Applikation integriert werden.
 
 1. Öffne wiederum die Web Map «Zecken Stadt Zürich Vorname Name» und wähle im Menü links die Option «App erstellen > Experience Builder»
+
 2. Wähle die Vorlage «Foldable». Du kannst eine Vorschau betrachten und dann via «Erstellen» in die Design-Oberfläche wechseln.
+
 3. Nun kannst Du die Web App nach Belieben konfigurieren, mit Widgets ergänzen und Funktionalitäten einbinden. 
+
 4. Klicke nach Abschluss der Konfiguration auf «Speichern unter» und weise einen sinnvollen Namen zu. Veröffentliche anschliessend die Anwendung.
 
   ![](figures/arcgis_online_45.PNG)

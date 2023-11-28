@@ -1,4 +1,4 @@
-# Übung
+# (Optional) Übung Leaflet
 
 ## Übung 1: Erste Schritte mit HTML
 
@@ -86,8 +86,8 @@ Als nächsten Schritt werden wir ein *```<div>```*-Element für die Definition u
         ![Kopieren der Attribution für die Nennung der Autoren](figures/web_map_leaflet_4.PNG){#fig-figure3 width="50%"}
 
 :::{.callout-tip}
-    Um die Daten zu erhalten, müsst Ihr ein kostenloses Konto erstellen. 
-    (Ihr könnt dazu eure ZHAW-E-Mail-Konto verwenden).
+Um die Daten zu erhalten, müsst Ihr ein kostenloses Konto erstellen. 
+(Ihr könnt dazu eure ZHAW-E-Mail-Konto verwenden).
 :::
 
 Nachdem Ihr die oben genannten Schritte durchgeführt habt, sollte Euer Code wie folgt aussehen:
@@ -120,7 +120,7 @@ Nachdem Ihr die oben genannten Schritte durchgeführt habt, sollte Euer Code wie
     
 **GeoJson** ist ein sehr verbreitetes Dateiformat zur Kodierung einer Vielzahl von geografischen Datenstrukturen. In der Webkartenentwicklung können GeoJson Variablen innerhalb einer JavaScript-Datei zugewiesen werden.
 
-- Ladet von [Drive Switch](https://drive.switch.ch/index.php/s/4ycg5kvYoEIp4we/download) die Übungsdateien herunter und speichert alles im gleichen Ordner, in dem Euer Dokument ***index.html*** liegt. 
+- Ladet von [Moodle](https://moodle.zhaw.ch/mod/resource/view.php?id=1078148) die Übungsdateien herunter und speichert alles im gleichen Ordner, in dem Euer Dokument ***index.html*** liegt. 
 Einer der Hauptvorteile von JavaScript ist, dass es sich gut in ein HTML-Dokument integrieren lässt. Mit den Tags *```<script></script>``* können wir beliebig viele JavaScript-Dateien mit dem Haupt-HTML-Dokument verknüpfen. Dies werden wir mit der Datei ***kantons.js*** tun.
 
 - Verknüpft die Datei ***kantons.js*** im Head Eueres Dokuments (nach dem Leaflet Script) wie folgt:
