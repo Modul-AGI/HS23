@@ -12,9 +12,28 @@ Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euer Jupyter Notebook
 
 ## Übung 1: Vorbereitung
 
-Bitte ladet zuerst die Musterlösung [hier]() runter.
+1. Bitte ladet zuerst die Übungsdaten [hier]() runter.
 
-Wir werden in dieser Übung mit der Library [Folium](https://python-visualization.github.io/folium/version-v0.14.0/index.html) arbeiten. Wenn ihr lokal auf eurem Rechner arbeitet, müsst ihr dieses Package zuerst noch über conda installieren (siehe: @sec-conda).
+2. Heute werden wir die Übung auf dem [Posit Workbench](https://statistik-ide.zhaw.ch/) der ZHAW bearbeiten. Klicked auf `+ New Session` und wählt ein `Jupyter Lab` und gebt einen Session Namen.
+
+![](figures/jupyter_notebook_1.PNG)
+
+3. Wenn die Session geladen ist, könnt ihr eure Übung files über dem `Upload` Button hochladen. Startet anschliessend das Jupyter Notebook `Musterloesung.ipynb`.
+
+4. Nun müssen wir noch die Packages installieren, die wir in dieser Session haben wollen. Erstellt dazu eine neue Cell und führt darin folgenden Code aus:
+
+:::{.callout-note}
+PIP ist ein Package Manager analog zu Anaconda, der uns hilft die benötigten Packages zu installieren.
+:::
+
+```{python}
+#| eval: false
+#| echo: true
+
+pip install geopandas matplotlib folium mapclassify
+```
+
+Startet nun das Kernel neu über Kernel -> Restart. Es sollte nun möglich sein das Jupyter Notebook auszuführen.
 
 ## Übung 2: Base Map
 Zuerst müssen wir eine Basiskarte erstellen, zu welcher wir dann die weiteren Layer hinzufügen können. Dazu nutzen wir nun Folium.
@@ -121,16 +140,18 @@ Nun ist unsere Map fertig. Inspiziert diese und spielt mit den `Radien` und `Run
 
 ### Input
 
-#### Tags
+#### Tags {#sec-celltags}
 
 Tags können dazu benutzt werden, um das Verhalten der Cell zu verändern. Es gibt dafür folgende Möglichkeiten:
 
-- `hide-input`: Verstecke die Cell (sie kann aber noch aufgeklappt werden)
-- `hide-output`: Verstecke den Output der Cell
-- `hide-cell`: Verstecke sowohl den Input als auch den Output der Zelle
-- `remove-input`: Entferne die Cell komplett
-- `remove-output`: Entferne den Output der Cell
-- `remove-cell`: Entferne den Cell Input und Output komplett
+- `remove_input`: Entferne den Input der Cell
+- `remove_output`: Entferne den Output der Cell
+- `remove_cell`: Entferne den Cell Input und Output
+
+Damit Tags eingeführt werden können, müssen wir zuerst die Property Inspector öffnen. Nun können die Tags in das Eingabenfeld in der Cell mit `Add tag` eigefügt werden. Wichtig ist das ihr die gewünschte Cell ausgewählt habt.
+Bereits erstellte Tags können in anderen Cells wiederverwendet werden.
+
+![](figures/jupyter_notebook_2.PNG)
 
 #### UI Elements
 
@@ -153,6 +174,8 @@ Hier kommt ein weiteres Text / Bild / Karte
 
 ::::
 ```
+
+Mit dem Attribute :columns: könnt ihr die Grösse des Grid Items definieren. Das Total aller columns muss immer 12 ergeben.
 
 Weitere Möglichkeiten findet ihr [hier](https://jupyterbook.org/en/stable/content/components.html)
 
@@ -188,15 +211,22 @@ Ein Bild kann ebenfalls via Markdown Syntax hinzugefügt werden:
 
 - Fügt nun eine Tabelle im Abschnitt Methodik hinzu, welche die verwendeten Daten (`zeckenstiche_full` und `wald`) beschreibt (Name, Datentyp, Herkunft, Koordinatensystem, Beschreibung).
 
-- Fügt einige Tags in Cells ein, wo ihr den Input, Output oder beides nicht sehen wollt.
+- Fügt einige Tags in Cells ein, wo ihr den Input, Output oder beides nicht sehen wollt. 
 
 ## Übung 7: Notebook in HTML konvertieren
 
 Damit wir nun unser Jupyter Notebook publizieren können, müssen wir davon ein HTML Output generieren.
 
-TODO: HOW TO 
+Da wir von den Tags aus dem Kapitel @sec-celltags benutzen wollen, müssen wir für die konversation das Terminal Tool nbconvert benutzen. Dieses wird in Jupyter Lab automatisch mitgeliefert. 
+Öffne eine neue Konsole indem du auf das grosse `+` in Jupyter Lab klickst. Wähle unter Other das Terminal aus.
 
-Nenne das File `index.html`, damit GitHub Pages das File automatisch als Startseite erkennt.
+Führe nun folgender Command aus um aus dem Jupyter Notebook ein HTML file zu erstellen. Die Zusätzlichen Optionen e.g. `--TagRemovePreprocessor.remove_cell_tags remove_cell` definiert den Namen des Tags, welcher benutzt wird um eine Cell zu entfernen. Das Gleiche gibt es dann auch für das Entfernen des Outputs oder des Inputs.
+
+```{.default}
+jupyter nbconvert --to html Musterloesung_final.ipynb --TagRemovePreprocessor.remove_cell_tags remove_cell --TagRemovePreprocessor.remove_all_outputs_tags remove_output --TagRemovePreprocessor.remove_input_tags remove_input
+```
+
+Ändere zum Schluss den Namen des Files auf `index.html`, damit später GitHub Pages das File automatisch als Startseite erkennt. Mit Rechtsklick auf das File kann über `Download` das HTML File heruntergeladen werden.
 
 ## Übung 8: GitHub und Publizieren
 
