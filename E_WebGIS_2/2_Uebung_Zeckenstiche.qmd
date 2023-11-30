@@ -14,17 +14,13 @@ Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euer Jupyter Notebook
 
 1. Bitte ladet zuerst die Übungsdaten [hier]() runter.
 
-2. Heute werden wir die Übung auf dem [Posit Workbench](https://statistik-ide.zhaw.ch/) der ZHAW bearbeiten. Klicked auf `+ New Session` und wählt ein `Jupyter Lab` und gebt einen Session Namen.
+2. Um technische Probleme zu vermeinden, haben wir heute eine ZHAW-eigene Cloud Lösung vorbereitet. Es handelt sich dabei um eine *gehostete* Version von Jupyter Lab, auf welche ihr auf folgender Webseite mit eurem ZHAW Benutzername und passwort einloggen könnt: [statistik-ide.zhaw.ch](https://statistik-ide.zhaw.ch). **Wer allerdings lieber lokal arbeiten möchte kann dies gerne tun, mit den Kentnissen aus Programmieren I - III sollte das gut möglich sein**.
 
 ![](figures/jupyter_notebook_1.PNG)
 
-3. Wenn die Session geladen ist, könnt ihr eure Übung files über dem `Upload` Button hochladen. Startet anschliessend das Jupyter Notebook `Musterloesung.ipynb`.
+3. Wenn die Session geladen ist, könnt ihr eure Übung files über dem `Upload` Button hochladen. Öffnet anschliessend das Jupyter Notebook `Musterloesung.ipynb`.
 
-4. Nun müssen wir noch die Packages installieren, die wir in dieser Session haben wollen. Erstellt dazu eine neue Cell und führt darin folgenden Code aus:
-
-:::{.callout-note}
-PIP ist ein Package Manager analog zu Anaconda, der uns hilft die benötigten Packages zu installieren.
-:::
+4. Nun müssen wir noch die Packages installieren, die wir in dieser Session haben wollen. Statt `conda` verwenden wir jetzt allerdings `pip`, da die Serverlösung mit diesem Packagemanager arbeitet.
 
 ```{python}
 #| eval: false
@@ -76,7 +72,7 @@ is_wald.to_crs(4326).explore(
 )
 ```
 
-Wenn wir nun map aufrufen, wird die Basemap zusammen mit dem Wald Layer dargestellt.
+Wenn wir nun `map` aufrufen, wird die Basemap zusammen mit dem Wald Layer dargestellt.
 
 ## Übung 4: Original und simulierter Zeckenstich Layer hinzufügen
 
