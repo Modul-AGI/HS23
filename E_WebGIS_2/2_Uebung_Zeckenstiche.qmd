@@ -11,7 +11,7 @@ Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euer Jupyter Notebook
 
 ## Übung 1: Vorbereitung
 
-1. Bitte ladet zuerst die Übungsdaten [hier]() runter und entpackt diese.
+1. Bitte ladet zuerst die Übungsdaten [hier](https://moodle.zhaw.ch/mod/resource/view.php?id=1087475) runter und entpackt diese.
 
 2. Um technische Probleme zu vermeinden, haben wir heute eine ZHAW-eigene Cloud Lösung vorbereitet. Es handelt sich dabei um eine *gehostete* Version von Jupyter Lab, auf welche ihr euch mit eurem ZHAW Benutzername und Passwort einloggen könnt: [statistik-ide.zhaw.ch](https://statistik-ide.zhaw.ch). Klickt auf `+ New Session` und wählt ein `Jupyter Lab` und gebt einen Session Namen ein. 
 
