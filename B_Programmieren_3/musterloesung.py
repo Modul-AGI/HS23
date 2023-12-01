@@ -25,8 +25,8 @@ for radius in radien:
     im_wald_list = []
     
     for _ in range(50):
-        x_sim = zeckenstiche_full["x"].apply(offset_coordinate, radius)
-        y_sim = zeckenstiche_full["y"].apply(offset_coordinate, radius)
+        x_sim = zeckenstiche_full["x"].apply(offset_coordinate, distance = radius)
+        y_sim = zeckenstiche_full["y"].apply(offset_coordinate, distance = radius)
             
         geom = gpd.points_from_xy(x_sim, y_sim)
         zeckenstiche_gpd = gpd.GeoDataFrame(zeckenstiche_full, geometry = geom, crs = 2056) 
