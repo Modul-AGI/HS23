@@ -6,20 +6,20 @@ code-summary: "Musterlösung"
 
 # Übung Visualisierung Zeckenstiche
 
-In dieser Übung wollen wir mit unseren orginalen und simulierten Zeckenstichen aus dem Block Programmieren eine interaktive Karte erstellen.
+In dieser Übung wollen wir mit unseren originalen und simulierten Zeckenstichen aus dem Block Programmieren eine interaktive Karte erstellen.
 Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euer Jupyter Notebook aufwerten und zum Schluss Online über GitHub publizieren könnt.
 
 ## Übung 1: Vorbereitung
 
 1. Bitte ladet zuerst die Übungsdaten [hier](https://moodle.zhaw.ch/mod/resource/view.php?id=1087475) runter und entpackt diese.
 
-2. Um technische Probleme zu vermeinden, haben wir heute eine ZHAW-eigene Cloud Lösung vorbereitet. Es handelt sich dabei um eine *gehostete* Version von Jupyter Lab, auf welche ihr euch mit eurem ZHAW Benutzername und Passwort einloggen könnt: [statistik-ide.zhaw.ch](https://statistik-ide.zhaw.ch). Klickt auf `+ New Session` und wählt ein `Jupyter Lab` und gebt einen Session Namen ein. 
+2. Um technische Probleme zu vermeiden, haben wir heute eine ZHAW-eigene Cloud Lösung vorbereitet. Es handelt sich dabei um eine *gehostete* Version von Jupyter Lab, auf welche ihr euch mit eurem ZHAW Benutzername und Passwort einloggen könnt: [statistik-ide.zhaw.ch](https://statistik-ide.zhaw.ch). Klickt auf `+ New Session` und wählt `JupyterLab` und gebt einen Session Namen ein. 
 
-**Wer allerdings lieber lokal arbeiten möchte kann dies gerne tun, mit den Kentnissen aus Programmieren I - III sollte das gut möglich sein**. 
+**Wer allerdings lieber lokal arbeiten möchte kann dies gerne tun, mit den Kentnissen aus Programmieren I - III sollte das gut möglich sein. Jedoch müssen diese noch das Programm Quarto installieren, sowie das fehlende Package Folium via conda installieren**. 
 
 ![](figures/jupyter_notebook_1.PNG)
 
-3. Wenn die Session geladen ist, könnt ihr eure Übungdaten über den `Upload` Button hochladen. Öffnet anschliessend ein neues Jupyter Notebook und speichert es unter dem Namen `visualisierung_zeckenstiche.ipynb`.
+3. Wenn die Session geladen ist, könnt ihr eure Übungsdaten über den `Upload` Button hochladen. Öffnet anschliessend ein neues Jupyter Notebook und speichert es unter dem Namen `visualisierung_zeckenstiche.ipynb`.
 
 4. Nun müssen wir noch die Packages installieren, die wir in dieser Session haben wollen. Statt `conda` verwenden wir jetzt allerdings `pip`, da die Serverlösung mit diesem Packagemanager arbeitet.
 
@@ -39,7 +39,7 @@ import geopandas as gpd
 import folium
 ```
 
-Ladet zudem die drei Datensätze `wald.gpkg`, `zeckenstiche_original.gpkg` und `zeckenstiche_simuliert.gpkg` mit der `read_file` von Geopandas in euer Jupyter Notebook.
+Ladet zudem die drei Datensätze `wald.gpkg`, `zeckenstiche_original.gpkg` und `zeckenstiche_simuliert.gpkg` mit der `read_file` Funktion von Geopandas in euer Jupyter Notebook.
 
 ```{python}
 zeckenstiche_original_gpd = gpd.read_file("data/zeckenstiche_original.gpkg")
@@ -96,8 +96,8 @@ Nun wollen wir neben dem Wald Layer (Polygon) den originalen Zeckenstiche Layer 
 
 # Original Zeckenstiche zur Karte hinzufügen
 zeckenstiche_original_gpd.to_crs(4326).explore(
-    m = map,                                     
-    color = "red",                              
+    m = map,                                     # Fügt diesen Layer der Map map hinzu
+    color = "red",                               # Der Layer wird rot dargestellt
     marker_kwds = dict(radius = 1, fill = True), # Optionen für das Aussehen der Punkte
     tooltip = "ID",                              # Beim Hovern über das Objekt wird die ID dargestellt
     name = "Original Zeckenstiche"               # Der Name des Layers
@@ -123,16 +123,16 @@ zeckenstiche_sim_gpd.to_crs(4326).explore(
     cmap = "viridis",                               # Einfärbung der Werte anhand des column Wert (Radius)
     legend = True,                                  # Legende soll angezeigt werden
     legend_kwds = dict(colorbar = False),           # Optionen der Legende, die Colorbar soll nicht angezeigt werden
-    marker_kwds = dict(radius = 1, fill = True),
+    marker_kwds = dict(radius = 1, fill = True),    # Optionen für das Aussehen der Punkte
     tooltip = ["ID", "Radius", "Run"],              # Beim Hovern über das Objekt wird die ID, Radius, Run dargestellt 
-    name = "Simulation Zeckenstiche",
+    name = "Simulation Zeckenstiche"                # Der Name des Layers
 )
 ```
 
 ## Übung 5: Layer Control hinzufügen
 
 Zum Abschluss wollen wir noch ein `Layer Control` hinzufügen, damit wir die verschiedenen Layer ein- und ausblenden können.
-Schaut dafür im [User Guide von Folium](https://python-visualization.github.io/folium/latest/user_guide.html) und sucht nach den Layer Control und versucht diesen eurer `map` hinzuzufügen. Zum Schluss kannst du die `map` aufrufen, damit diese Dargestellt wird. Das finale Produkt sollte wie folgt aussehen:
+Schaut dafür im [User Guide von Folium](https://python-visualization.github.io/folium/latest/user_guide.html) und sucht nach der Layer Control Funktion und versucht diese eurer `map` hinzuzufügen. Zum Schluss kannst du die `map` aufrufen, damit diese Dargestellt wird. Das finale Produkt sollte wie folgt aussehen:
 
 ```{python}
 folium.LayerControl().add_to(map)
@@ -152,8 +152,8 @@ Um unser Notebook zu verschönern werden wir das hilfreiche Tool [Quarto](https:
 
 Fügt ganz oben in eurem Notebook eine neue *raw* Cell ein und kopiert folgende Metadaten für Quarto. Dies bewirkt, dass euer Quarto Output ein Titel und Autor hat. Zudem sagen wir Quarto das wir mit Python3 arbeiten. Für unseren Ausgabeformat, welches HTML sein soll, definieren wir folgende global Optionen:
 
-- `embed-resources: true`:  Generiert ein einzige html File.
-- `code-fold: true`: Alle Code Cells werden eingekappt.
+- `embed-resources: true`:  Generiert ein einzelnes HTML File.
+- `code-fold: true`: Alle Code Cells werden eingeklappt.
 
 ```{.default}
 ---
@@ -167,11 +167,11 @@ format:
 ---
 ```
 
-Quarto gibt uns zudem die Möglichkeit unser File als Vorschau darzustellen. Öffne hierfür eine neue Konsole, indem du auf das grosse `+` in Jupyter Lab klickst. Wähle unter Other das Terminal aus. Mit dem Command `quarto preview visualisierung_zeckenstiche.ipynb`, erhaltet ihr ein Preview im Internet Explorer.
+Quarto gibt uns zudem die Möglichkeit unser File als Vorschau darzustellen. Öffne hierfür eine neue Konsole, indem du auf das grosse `+` in Jupyter Lab klickst. Wähle unter Other das Terminal aus. Mit dem Command `quarto preview visualisierung_zeckenstiche.ipynb` erhaltet ihr ein Preview im Internet Explorer.
 
 #### Cell Options
 
-Cell Options können dazu benutzt werden, um das Verhalten einer Cell zu verändern. Dabei werden diese Optionen mittels dem Vorschub `#|` am Anfang der Cell eingefügt. Wenn ihr eine Option für alle Cells haben wollt, könnt ihr diese als globale Optionen in den Metadaten von Quarto setzen (analog zu `code-fold: true`).
+Cell Options können dazu benutzt werden, um das Verhalten einer Cell zu verändern. Dabei werden diese Optionen mittels des Vorschubs `#|` am Anfang der Cell eingefügt. Wenn ihr eine Option für alle Cells haben wollt, könnt ihr diese als globale Optionen in den Metadaten von Quarto setzen (analog zu `code-fold: true`).
 
 ```{.default}
 #| echo: false
