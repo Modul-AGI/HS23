@@ -159,6 +159,7 @@ author: Vorname Nachname
 jupyter: python3
 format:
     html:
+        embed-resources: true
         code-fold: true
 ---
 ```
@@ -240,7 +241,9 @@ Weitere Information findet ihr auf [Quarto](https://quarto.org/docs/authoring/fi
 
 Seht euch das PDF `Textvorlage_WebGIS2.pdf` an. Versucht nun die Struktur dieses PDF's möglich gleich in eurem Jupyter Notebook nachzubauen. Nutzt dafür die oben beschriebenen Methoden. Das Bild findet ihr ebenfalls in den Übungsdaten.
 
-Benutze zudem die Cell Options um euren Code sauber darzustellen. Nutzt dazu `echo` und `output` um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells mittels `code-summary` sinnvoll. Am Schluss sollte nur noch eine Map am Ende des HTML dargestellt werden.
+Benutze zudem die Cell Options um euren Code sauber darzustellen. Nutzt dazu `echo` und `output` um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells mittels `code-summary` sinnvoll. Am Schluss sollte euer Output in etwa so aussehen:
+
+
 
 ## Übung 7: Notebook in HTML konvertieren
 
