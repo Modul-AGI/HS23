@@ -1,16 +1,21 @@
 # Leistungsnachweis
 
-Es muss eine voll funktionsfähige Story Map erstellt werden welche eine integrierte Web Map enthält. Die Story Map soll in einer eigenen Gruppe veröffentlicht werden und als Link per E-Mail an Hanno Rahn versendet werden.
-Gehe folgendermassen vor: Erstelle in ArcGIS Online eine neue eigene Gruppe. Benenne die Gruppe als «Leistungsnachweis Vorname Name». Definiere folgende Gruppeneigenschaften:
+Es muss eine voll funktionsfähige Story Map erstellt werden, welche eine integrierte Web Map aus der vorherigen Übung enthält. Die Story Map soll in einer eigenen Gruppe veröffentlicht werden.
 
-- Wer kann diese Gruppe sehen? -> Nur Gruppenmitglieder
-- Wer kann Mitglied dieser Gruppe sein? -> Nur Mitglieder der eigenen Organisation
-- Wie können Personen dieser Gruppe beitreten? -> Nach Einladung
-- Wer kann Inhalte beitragen? -> Alle Gruppenmitglieder
+Gehe folgendermassen vor: 
 
-Füge Hanno Rahn (rahn_zhaw) und Dominic Lüönd (luoe_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
-Veröffentliche die Story Map inklusive Web App aus Übung 10 für alle Mitglieder Deiner Gruppe «Leistungsnachweis Vorname Name».
+- Erstelle in ArcGIS Online eine neue eigene Gruppe.
 
-Gebe deine Lösung bis spätestens Freitag **22. Dezember 2023** auf Moodle (Link auf Moodle) ab. Lade hierzu den Link zu deiner Storymap hoch. Achte dabei auf die korrekten Berechtigungen (siehe oben).
+- Benenne die Gruppe als «Leistungsnachweis Vorname Name». 
 
-:::
+- Definiere folgende Gruppeneigenschaften:
+    - Wer kann diese Gruppe sehen? -> Nur Gruppenmitglieder
+    - Wer kann Mitglied dieser Gruppe sein? -> Nur Mitglieder der eigenen Organisation
+    - Wie können Personen dieser Gruppe beitreten? -> Nach Einladung
+    - Wer kann Inhalte beitragen? -> Alle Gruppenmitglieder
+
+- Füge Hanno Rahn (rahn_zhaw) und Dominic Lüönd (luoe_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
+
+- Veröffentliche deine Story Map für alle Mitglieder Deiner Gruppe «Leistungsnachweis Vorname Name».
+
+Gebe deine Lösung bis spätestens Freitag **17. Dezember 2023** auf Moodle ab. Lade hierzu den Link zu deiner Story Map hoch. Achte dabei auf die korrekten Berechtigungen von Story Map und Web Map. Beide müssen diesselben Berechtigungen haben.
