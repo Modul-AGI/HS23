@@ -11,7 +11,6 @@ Gehe folgendermassen vor: Erstelle in ArcGIS Online eine neue eigene Gruppe. Ben
 Füge Hanno Rahn (rahn_zhaw) und Dominic Lüönd (luoe_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
 Veröffentliche die Story Map inklusive Web App aus Übung 10 für alle Mitglieder Deiner Gruppe «Leistungsnachweis Vorname Name».
 
-Gebe deine Lösung bis spätestens Freitag **22. Dezember 2023** auf Moodle (Link auf Moodle) ab. Lade hierzu den Link deiner Storymap hoch.
-
+Gebe deine Lösung bis spätestens Freitag **22. Dezember 2023** auf Moodle (Link auf Moodle) ab. Lade hierzu den Link zu deiner Storymap hoch. Achte dabei auf die korrekten Berechtigungen (siehe oben).
 
 :::
