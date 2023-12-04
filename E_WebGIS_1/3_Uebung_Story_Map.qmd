@@ -36,7 +36,7 @@ Der einfachste Weg eine Story Map zu erstellen, geht am schnellsten via ZHAW Arc
 
     - FAQ: Hier findest Du Antworten zu häufig gestellten Fragen.
 
-5. Erstelle nun den ersten Entwurf einer Story Map. Über die Option «Entwerfen» kanns Du das Erscheinungsbild Deiner Story anpassen. 
+5. Erstelle nun den ersten Entwurf einer Story Map. Über die Option «Entwerfen» kannst Du das Erscheinungsbild Deiner Story anpassen. 
 
     ![](figures/story_map_5.PNG)
 
@@ -44,10 +44,10 @@ Der einfachste Weg eine Story Map zu erstellen, geht am schnellsten via ZHAW Arc
 
     ![](figures/story_map_6.PNG)
 
-6. Die Option «Veröffentlichen» ermöglicht Dir, die Story zu veröffentlichen und die FreigabeEinstellungen anzupassen.
+6. Die Option «Veröffentlichen» ermöglicht Dir, die Story zu veröffentlichen und die Freigabeeinstellungen anzupassen.
 
     ![](figures/story_map_7.PNG)
 
-7. Erstelle nun Deine Story Map, fülle die Story mit Inhalten (Text, Bilder, Grafiken, Web Maps, Videos, Links etc.). Nutze selbständig die zur Verfügung stehenden Hilfe-Optionen (vorangehende Seite). Beachte: Bevor Du eine Web Map in eine Story Map integrieren kannst, muss diese vorgängig erstellt werden (vgl. Übung von letzter Woche). Dabei müssen alle Inhalte auf die gleiche Art und Weise freigegeben werden.
+7. Erstelle nun Deine Story Map, fülle die Story mit Inhalten (Text, Bilder, Grafiken, Web Maps, Videos, Links etc.). Nutze selbständig die zur Verfügung stehenden Hilfe-Optionen (vorangehende Seite). Beachte: Bevor Du eine Web Map in eine Story Map integrieren kannst, muss diese vorgängig erstellt werden. Dabei müssen alle Inhalte auf die gleiche Art und Weise freigegeben werden.
 
 8. Arbeite selbständig und sei kreativ. Probiere verschiedene Dinge aus. Beachte jeweils die Freigabeeigenschaften.
