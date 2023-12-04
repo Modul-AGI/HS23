@@ -150,7 +150,10 @@ Um unser Notebook zu verschönern werden wir das hilfreiche Tool [Quarto](https:
 
 #### Vorbereiten von Quarto
 
-Fügt ganz oben in eurem Notebook eine neue *raw* Cell ein und kopiert folgende Metadaten für Quarto. Dies bewirkt, dass euer Quarto Output ein Titel und Autor hat. Zudem sagen wir Quarto das wir mit Python3 arbeiten. Für unseren Ausgabeformat, welches HTML sein soll, werden alle Code Cells automatisch eingekappt, was das HTML viel besser lesbar macht.
+Fügt ganz oben in eurem Notebook eine neue *raw* Cell ein und kopiert folgende Metadaten für Quarto. Dies bewirkt, dass euer Quarto Output ein Titel und Autor hat. Zudem sagen wir Quarto das wir mit Python3 arbeiten. Für unseren Ausgabeformat, welches HTML sein soll, definieren wir folgende global Optionen:
+
+- `embed-resources: true`:  Generiert ein einzige html File.
+- `code-fold: true`: Alle Code Cells werden eingekappt.
 
 ```{.default}
 ---
@@ -182,7 +185,7 @@ Die häufigsten Options sind:
 - `eval`: Soll die Code Cell ausgeführt werden.
 - `echo`: Soll der Code der Cell angezeigt werden.
 - `output`: Soll der Code Output dargestellt werden.
-- `code-fold`: Soll der Code eingeklappt werden.
+- `code-fold`: Soll die Code Cell eingeklappt werden.
 - `code-summary`: Wenn `code-fold` auf `true` gesetzt ist kann ein Titel für die Code Cell gesetzt werden.
 
 Es gibt aber noch viele weitere Möglichkeiten (siehe [hier](https://quarto.org/docs/reference/cells/cells-jupyter.html)). 
@@ -239,11 +242,9 @@ Weitere Information findet ihr auf [Quarto](https://quarto.org/docs/authoring/fi
 
 ### Aufgabe 
 
-Seht euch das PDF `Textvorlage_WebGIS2.pdf` an. Versucht nun die Struktur dieses PDF's möglich gleich in eurem Jupyter Notebook nachzubauen. Nutzt dafür die oben beschriebenen Methoden. Das Bild findet ihr ebenfalls in den Übungsdaten.
+Seht euch die [Webseite](https://modul-agi.github.io/WebGIS2_Zeckenstiche/) an. Versucht nun die Struktur dieser Webseite so gut wie möglich in eurem Jupyter Notebook nachzubauen. Nutzt dafür die oben beschriebenen Methoden. Das Bild findet ihr in den Übungsdaten.
 
-Benutze zudem die Cell Options um euren Code sauber darzustellen. Nutzt dazu `echo` und `output` um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells mittels `code-summary` sinnvoll. Am Schluss sollte euer Output in etwa so aussehen:
-
-
+Benutze zudem die Cell Options um euren Code sauber darzustellen. Nutzt dazu `echo` und `output` um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells mittels `code-summary` sinnvoll. 
 
 ## Übung 7: Notebook in HTML konvertieren
 
