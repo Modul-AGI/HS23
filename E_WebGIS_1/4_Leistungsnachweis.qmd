@@ -11,17 +11,7 @@ Gehe folgendermassen vor: Erstelle in ArcGIS Online eine neue eigene Gruppe. Ben
 Füge Hanno Rahn (rahn_zhaw) und Dominic Lüönd (luoe_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
 Veröffentliche die Story Map inklusive Web App aus Übung 10 für alle Mitglieder Deiner Gruppe «Leistungsnachweis Vorname Name».
 
-Sende bis spätestens Freitag **15. Dezember 2023** eine E-Mail mit folgendem Inhalt an ***hanno.rahn@zhaw.ch***: 
+Gebe deine Lösung bis spätestens Freitag **22. Dezember 2023** auf Moodle (Link auf Moodle) ab. Lade hierzu den Link deiner Storymap hoch.
 
-:::{.callout}
-Betreff:
-Modul AGI: Leistungsnachweis Web GIS 
 
-Text:
-Hallo Hanno
-
-Den Nachweis für meinen Leistungsnachweis – meine persönliche Story Map – kannst Du via folgendem Link aufrufen Link: ..... 
-
-Beste Grüsse,
-Vorname Name
 :::
