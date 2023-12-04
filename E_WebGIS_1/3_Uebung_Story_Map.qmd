@@ -32,7 +32,7 @@ Der einfachste Weg eine Story Map zu erstellen, geht am schnellsten via ZHAW Arc
 
         ![](figures/story_map_4.PNG)
 
-    - Ressourcen: Hier findest Du Tipps, was Du bei der Erstellung von Story Maps beachten musst damit diese aussagekräftig und fesselnd sind. Beachte hier die Story «Nine steps to great storytelling». Über folgendes Tutorial wird Dir vermittelt, wie Du deine Story erstellen kannst: [Tutorial](https://storymaps.arcgis.com/stories/cea22a609a1d4cccb8d54c650b595bc4)
+    - Ressourcen: Hier findest Du Tipps, was Du bei der Erstellung von Story Maps beachten musst damit diese aussagekräftig und fesselnd sind. Beachte hier die Story «Nine steps to great storytelling» (https://storymaps.arcgis.com/stories/429bc4eed5f145109e603c9711a33407). Über folgendes Tutorial wird Dir vermittelt, wie Du deine Story erstellen kannst: [Tutorial](https://storymaps.arcgis.com/stories/cea22a609a1d4cccb8d54c650b595bc4)
 
     - FAQ: Hier findest Du Antworten zu häufig gestellten Fragen.
 
