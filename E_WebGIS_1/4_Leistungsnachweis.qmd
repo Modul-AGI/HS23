@@ -1,6 +1,6 @@
 # Leistungsnachweis
 
-Es muss eine voll funktionsfähige Story Map erstellt werden welche eine integrierte Web Map (Resultat Übung 10), in einer eigenen Gruppe veröffentlicht werden und als Link per E-Mail an Pascal Ochsner versendet werden.
+Es muss eine voll funktionsfähige Story Map erstellt werden welche eine integrierte Web Map enthält. Die Story Map soll in einer eigenen Gruppe veröffentlicht werden und als Link per E-Mail an Hanno Rahn versendet werden.
 Gehe folgendermassen vor: Erstelle in ArcGIS Online eine neue eigene Gruppe. Benenne die Gruppe als «Leistungsnachweis Vorname Name». Definiere folgende Gruppeneigenschaften:
 
 - Wer kann diese Gruppe sehen? -> Nur Gruppenmitglieder
@@ -8,7 +8,7 @@ Gehe folgendermassen vor: Erstelle in ArcGIS Online eine neue eigene Gruppe. Ben
 - Wie können Personen dieser Gruppe beitreten? -> Nach Einladung
 - Wer kann Inhalte beitragen? -> Alle Gruppenmitglieder
 
-Füge Hanno Rahn (rahn_zhaw) Deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
+Füge Hanno Rahn (rahn_zhaw) und Dominic Lüönd (luoe_zhaw) deiner eigenen Gruppe «Leistungsnachweis Vorname Name» als Mitglied hinzu (via Benutzer einladen) ohne eine Bestätigung anzufordern.
 Veröffentliche die Story Map inklusive Web App aus Übung 10 für alle Mitglieder Deiner Gruppe «Leistungsnachweis Vorname Name».
 
 Sende bis spätestens Freitag **15. Dezember 2023** eine E-Mail mit folgendem Inhalt an ***hanno.rahn@zhaw.ch***: 
