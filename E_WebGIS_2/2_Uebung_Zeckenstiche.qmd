@@ -244,11 +244,11 @@ Weitere Information findet ihr auf [Quarto](https://quarto.org/docs/authoring/fi
 
 Seht euch die [Webseite](https://modul-agi.github.io/WebGIS2_Zeckenstiche/) an. Versucht nun die Struktur dieser Webseite so gut wie möglich in eurem Jupyter Notebook nachzubauen. Nutzt dafür die oben beschriebenen Methoden. Das Bild findet ihr in den Übungsdaten.
 
-Benutze zudem die Cell Options um euren Code sauber darzustellen. Nutzt dazu `echo` und `output` um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells mittels `code-summary` sinnvoll. 
+Benutze zudem die Cell Options um euren Code sauber darzustellen. Nutzt dazu `echo` und `output` um unnötige Cell Codes und Outputs nicht auszugeben. Benenne zudem alle eingeklappten Code Cells sinnvoll mittels `code-summary`. 
 
 ## Übung 7: Notebook in HTML konvertieren
 
-Damit wir nun unser Jupyter Notebook publizieren können, müssen wir davon ein HTML Output generieren.
+Damit wir nun unser Jupyter Notebook publizieren können, müssen wir davon einen HTML Output generieren.
 
 Dazu nützen wir wieder Quarto in der Konsole. Aber anstelle des `preview` Commands nutzen wir den `render` Command, sprich `quarto render visualisierung_zeckenstiche.ipynb`. Da wir in den Quarto Metadaten als format HTML angegeben haben, wird Quarto ein HTML File generieren.
 
@@ -262,7 +262,7 @@ GitHub ist eine webbasierte Plattform, die Hosting für Git-Repositories bereits
 
 1. Registriert euch mit eurer privaten Email Adresse auf [GitHub](https://github.com/).
 
-2. Nun da ihr auf eingeloggt seid, könnt ihr euer Repository erstellen. Drücke hierfür oben rechts auf den Avatar und wähle dann "Your repositories". Klicke anschliessend auf das grüne Symbol "New". Im neuen Fenster kannst du nun einen Namen für dein Repository definieren. Zudem kannst du die Sichtbarkeit des Repository anpassen, aber wir belassen es bei Public, damit wir dann auch das HTML File publizieren können. Schliesse die Ganze mit "Create repository" ab.
+2. Nun da ihr auf eingeloggt seid, könnt ihr euer Repository erstellen. Drücke hierfür oben rechts auf euren Avatar und wähle dann "Your repositories". Klicke anschliessend auf das grüne Symbol "New". Im neuen Fenster kannst du nun einen Namen für dein Repository definieren. Zudem kannst du die Sichtbarkeit des Repository anpassen, aber wir belassen es bei Public, damit wir dann auch das HTML File publizieren können. Schliesse das Ganze mit "Create repository" ab.
 
     ![Repository erstellen Schritt 1](figures/github_1.PNG)
 
@@ -277,16 +277,16 @@ GitHub ist eine webbasierte Plattform, die Hosting für Git-Repositories bereits
 :::{.callout-note}
 # Update existierende Files
 
-Wenn ihr nochmals Änderungen an den Files vornehmt, könnte ihr diese auf der Repository Seite über `Add File` hinzufügen. Achte darauf das die Files den gleichen Namen hat, damit wird sichergestellt, dass das auf GitHub existierende File überschrieben wird.
+Wenn ihr nochmals Änderungen an den Files vornehmt, könnte ihr diese auf der Repository Seite über `Add File` vornehmen. Achte darauf das die Files den gleichen Namen haben, damit wird sichergestellt, dass das auf GitHub existierende File überschrieben wird.
 
 ![](figures/github_11.PNG)
 :::
 
-4. Ihr seht nun eure Files im Repository. Geht nun auf Einstellungen um unsere Webseite zu Publizieren. 
+4. Ihr seht nun eure Files im Repository. Geht nun auf Einstellungen um eure Webseite zu Publizieren. 
 
     ![](figures/github_5.PNG)
 
-    Geht auf Pages und setzt auf Branch die Einstellungen auf `main` und `/root` und klickt auf Save. Dies bewirkt, dass GitHub nun nach einem index.html in deinem main Branch sucht und aus diesem eine Webseite macht. 
+    Geht auf Pages und setzt bei Branch die Einstellungen auf `main` und `/root` und klickt auf Save. Dies bewirkt, dass GitHub nun nach einem index.html in deinem main Branch sucht und aus diesem eine Webseite macht. 
 
     ![](figures/github_6.PNG)
 
