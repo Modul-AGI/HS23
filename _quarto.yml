@@ -130,8 +130,8 @@ book:
       - E_WebGIS_1/2_Uebung_Web_Map.qmd
       - E_WebGIS_1/3_Uebung_Story_Map.qmd
       - E_WebGIS_1/4_Leistungsnachweis.qmd
-    - "E_WebGIS_2/1_Einleitung.qmd"
-      #chapters: 
-      #- E_WebGIS_2/2_Uebung_Zeckenstiche.qmd
-      #- E_WebGIS_2/3_Uebung_Leaflet.qmd
+    - part: "E_WebGIS_2/1_Einleitung.qmd"
+      chapters: 
+      - E_WebGIS_2/2_Uebung_Zeckenstiche.qmd
+      - E_WebGIS_2/3_Uebung_Leaflet.qmd
     - Markdown.qmd

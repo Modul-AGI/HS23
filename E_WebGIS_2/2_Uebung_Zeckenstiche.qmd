@@ -69,6 +69,8 @@ Da unser Wald Datensatz aus zwei Zeilen mit Wald und nicht Wald besteht, müssen
 
 Folium kann nur das weltweite CRS WGS84 (EPSG:4326) verarbeiten und da der Geodataframe Wald das Schweizer CRS CH1903+ / LV95 (EPSG:2056) verwendet, müssen wir dieses mittels `to_crs()` transformieren, bevor wir ihn visualisieren können.
 
+Tipp: Wenn ihr am Schluss des Commands ein ; hinzufügt, wird kein Output generiert. Somit wird nicht für jeden Layer den wir hinzufügen, eine Karte erstellt.
+
 ```{python}
 #| echo: true
 #| output: false
@@ -82,7 +84,7 @@ is_wald.to_crs(4326).explore(
     tooltip = False,   # Es werden keine Daten angezeigt, wenn man über ein Objekt hovered.
     highlight = False, # Das Objekt wird nicht hervorgehoben, wenn man darüber hovered.
     name = "Wald"      # Der Name des Layers
-)
+);
 ```
 
 ## Übung 4: Original und simulierter Zeckenstich Layer hinzufügen
@@ -101,7 +103,7 @@ zeckenstiche_original_gpd.to_crs(4326).explore(
     marker_kwds = dict(radius = 1, fill = True), # Optionen für das Aussehen der Punkte
     tooltip = "ID",                              # Beim Hovern über das Objekt wird die ID dargestellt
     name = "Original Zeckenstiche"               # Der Name des Layers
-)
+);
 ```
 
 Nun wollen wir die simulierten Zeckenstiche darstellen. Als Vorlage könnt ihr den Code von oben kopieren. Erweitere die Funktion `explore` um folgende Logik:
@@ -126,7 +128,7 @@ zeckenstiche_sim_gpd.to_crs(4326).explore(
     marker_kwds = dict(radius = 1, fill = True),    # Optionen für das Aussehen der Punkte
     tooltip = ["ID", "Radius", "Run"],              # Beim Hovern über das Objekt wird die ID, Radius, Run dargestellt 
     name = "Simulation Zeckenstiche"                # Der Name des Layers
-)
+);
 ```
 
 ## Übung 5: Layer Control hinzufügen
@@ -135,8 +137,10 @@ Zum Abschluss wollen wir noch ein `Layer Control` hinzufügen, damit wir die ver
 Schaut dafür im [User Guide von Folium](https://python-visualization.github.io/folium/latest/user_guide.html) und sucht nach der Layer Control Funktion und versucht diese eurer `map` hinzuzufügen. Zum Schluss kannst du die `map` aufrufen, damit diese Dargestellt wird. Das finale Produkt sollte wie folgt aussehen:
 
 ```{python}
-folium.LayerControl().add_to(map)
+folium.LayerControl().add_to(map);
+```
 
+```{python}
 map
 ```
 
@@ -177,7 +181,7 @@ Cell Options können dazu benutzt werden, um das Verhalten einer Cell zu veränd
 #| echo: false
 #| code-summary: This is a Title for a collapsed Code Block
 
-test
+Python Code...
 ```
 
 Die häufigsten Options sind:
@@ -219,6 +223,8 @@ Eine Tabelle muss nach folgender Markdown Syntax erstellt werden (siehe [Quarto 
 |-----|:-----|:---:|:-----:|
 |Jack |Male  |23   |USA    |
 |Susan|Female|22   |Canada |
+
+: Name der Tabelle {#tbl-names}
 ```
 
 - Die erste Zeile ist die Tabellenüberschrift
@@ -227,15 +233,16 @@ Eine Tabelle muss nach folgender Markdown Syntax erstellt werden (siehe [Quarto 
     - `:---:` für die mittlere Ausrichtung
     - `---:` für die rechte Ausrichtung
 - Die weiteren Zeilen beinhalten der Tabelleninhalt. 
+- Mit dem : unter der Tabelle kannst du den Namen der Tabelle definieren. Mit `{#tbl-???}` kannst du den Namen für einen Querverweise im Text erstellen. Dieser kann dann mittels `@tbl-???` im Text aufrufen.
 
 Eine praktische Hilfe für das Erstellen einer Tabelle ist der [Tablesgenerator](https://www.tablesgenerator.com/).
 
 #### Bilder
 
-Ein Bild kann ebenfalls via Markdown Syntax hinzugefügt werden:
+Ein Bild kann ebenfalls via Markdown Syntax hinzugefügt werden. Zuerst folgt die Caption des Bildes, gefolgt vom Bild selbst. Mit `{#fig-???}` kannst du einen Querverweis für das Bild erstellen. Gleich wie bei der Tabelle kannst du ihn im Text mittels `@fig-???` aufrufen.
 
 ```{.default}
-![Caption](../images/test.png)
+![Caption](../images/test.png){#fig-???}
 ```
 
 Weitere Information findet ihr auf [Quarto](https://quarto.org/docs/authoring/figures.html).
