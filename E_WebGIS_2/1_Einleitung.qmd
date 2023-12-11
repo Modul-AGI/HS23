@@ -8,6 +8,6 @@
 - Du kannst dein Jupyter Notebook mittels Chunk Options und weiteren Tools verschönern.
 - Du kennst Github und kannst ein Repository erstellen, Files hochladen und diese publizieren.
 - Optional: Du kennst die grundlegenden Webtechnologien wie HyperText Markup Language (HTML), JavaScript und Cascading Style Sheets (CSS).
-- Optional: Du kannst dich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.
+- Optional: Du hast dich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.
 - Optional: Du kannst das GeoJson-Dateiformat verwenden.
 :::

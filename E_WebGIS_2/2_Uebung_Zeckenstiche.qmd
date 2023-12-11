@@ -27,7 +27,7 @@ Zudem werdet ihr weitere Tools und Tipps erhalten, wie ihr euer Jupyter Notebook
 #| eval: false
 #| echo: true
 
-pip install geopandas folium
+pip install geopandas folium matplotlib mapclassify
 ```
 
 Startet nun das Kernel neu über Kernel -> Restart.
@@ -269,13 +269,13 @@ GitHub ist eine webbasierte Plattform, die Hosting für Git-Repositories bereits
 
 1. Registriert euch mit eurer privaten Email Adresse auf [GitHub](https://github.com/).
 
-2. Nun da ihr auf eingeloggt seid, könnt ihr euer Repository erstellen. Drücke hierfür oben rechts auf euren Avatar und wähle dann "Your repositories". Klicke anschliessend auf das grüne Symbol "New". Im neuen Fenster kannst du nun einen Namen für dein Repository definieren. Zudem kannst du die Sichtbarkeit des Repository anpassen, aber wir belassen es bei Public, damit wir dann auch das HTML File publizieren können. Schliesse das Ganze mit "Create repository" ab.
+2. Nun da ihr eingeloggt seid, könnt ihr euer Repository erstellen. Drücke hierfür oben rechts auf euren Avatar und wähle dann "Your repositories". Klicke anschliessend auf das grüne Symbol "New". Im neuen Fenster kannst du nun einen Namen für dein Repository definieren. Zudem kannst du die Sichtbarkeit des Repository anpassen, aber wir belassen es bei Public, damit wir dann auch das HTML File publizieren können. Schliesse das Ganze mit "Create repository" ab.
 
     ![Repository erstellen Schritt 1](figures/github_1.PNG)
 
     ![Repository erstellen Schritt 2](figures/github_2.PNG)
 
-3. Nun hast du ein leeres Repository. Es gibt verschiedene Möglichkeiten nun Daten in dieses Repository zu kriegen. Am einfachsten ist aber das direkte Hochladen von Files. Klicke hierfür auf "uploading an existing file" und ziehe anschliessend das Jupyter Notebook und dein daraus generiertes HTML File (`index.html`) in die. Gib eine kurze Commit Beschreibung und klicke auf "Commit changes". 
+3. Nun hast du ein leeres Repository. Es gibt verschiedene Möglichkeiten nun Daten in dieses Repository zu kriegen. Am einfachsten ist aber das direkte Hochladen von Files. Klicke hierfür auf "uploading an existing file" und ziehe anschliessend das Jupyter Notebook und dein daraus generiertes HTML File (`index.html`) in den Explorer. Gib eine kurze Commit Beschreibung und klicke auf "Commit changes". 
 
     ![](figures/github_3.PNG)
 
