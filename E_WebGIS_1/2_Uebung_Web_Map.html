@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -58,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -110,12 +117,12 @@ window.onload = function() {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../E_WebGIS_1/1_Einleitung.html">WebGIS I</a></li><li class="breadcrumb-item"><a href="../E_WebGIS_1/2_Uebung_Web_Map.html"><span class="chapter-number">65</span>&nbsp; <span class="chapter-title">Übung Web Map</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../E_WebGIS_1/1_Einleitung.html">WebGIS I</a></li><li class="breadcrumb-item"><a href="../E_WebGIS_1/2_Uebung_Web_Map.html"><span class="chapter-title">Übung Web Map</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -125,7 +132,7 @@ window.onload = function() {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -133,7 +140,8 @@ window.onload = function() {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Modul AGI HS23</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/modul-AGI/hs23" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/modul-AGI/hs23" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Modul-AGI-HS23.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
@@ -633,16 +641,10 @@ window.onload = function() {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Markdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Markdown</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -661,12 +663,12 @@ window.onload = function() {
   <li><a href="#übung-10-arcgis-online-web-app-erstellen-via-instant-maps" id="toc-übung-10-arcgis-online-web-app-erstellen-via-instant-maps" class="nav-link" data-scroll-target="#übung-10-arcgis-online-web-app-erstellen-via-instant-maps">Übung 10: ArcGIS Online: Web App erstellen via “Instant Maps”</a></li>
   <li><a href="#übung-11-arcgis-online-web-app-erstellen-via-experience-builder" id="toc-übung-11-arcgis-online-web-app-erstellen-via-experience-builder" class="nav-link" data-scroll-target="#übung-11-arcgis-online-web-app-erstellen-via-experience-builder">Übung 11: ArcGIS Online: Web App erstellen via “Experience Builder”</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/E_WebGIS_1/2_Uebung_Web_Map.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/E_WebGIS_1/2_Uebung_Web_Map.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../E_WebGIS_1/1_Einleitung.html">WebGIS I</a></li><li class="breadcrumb-item"><a href="../E_WebGIS_1/2_Uebung_Web_Map.html"><span class="chapter-title">Übung Web Map</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">Übung Web Map</span></h1>
 </div>
@@ -681,7 +683,9 @@ window.onload = function() {
   </div>
   
 
+
 </header>
+
 
 <section id="übung-1-erste-schritte-mit-arcgis-online-online-tutorial" class="level2">
 <h2 class="anchored" data-anchor-id="übung-1-erste-schritte-mit-arcgis-online-online-tutorial">Übung 1: Erste Schritte mit ArcGIS Online (Online Tutorial)</h2>
@@ -697,13 +701,13 @@ window.onload = function() {
 <li><p>Wechsle von der Startseite in das Register Inhalt. Im Ordner «Alle eigenen Inhalte» sollten die beiden Inhalte «At-Risk Population in Houston» (Instant App) und «Houston Evacuation Map» (Web Map) welche Du im Rahmen der ersten Übung (Online Tutorial) erstellt hast, aufgeführt sein.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_2.PNG" class="img-fluid figure-img"></p>
+<p><img src="figures/arcgis_online_2.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div></li>
 <li><p>Erstelle einen neuen Ordner mit dem Namen «Modul AGI» in dem Du alle Inhalte ablegen kannst, welche Du im Rahmen dieses Moduls auf ArcGIS Online hochlädst. Klicke hierfür auf «Neu», und gib den Namen für den neu zu erstellenden Ordner ein.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_3.PNG" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="figures/arcgis_online_3.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div></li>
 <li><p>Verschiebe nun die beiden Inhalte «At-Risk Population in Houston» (Web Mapping Application) und «Houston Evacuation Map» (Web Map) in den soeben neu erstellten Ordner. Gehe hierfür zurück auf den Ordner «Alle meine Inhalte». Selektiere die beiden Inhalte und klicke auf die Option «Verschieben».</p>
@@ -711,7 +715,7 @@ window.onload = function() {
 <p>Wähle im sich öffnenden Fenster «Element verschieben» den Ordner «Modul AGI» und verschiebe diese Inhalte in den neuen Ordner</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_5.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_5.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Lege alle Deine Inhalte, welche Du im Rahmen dieses Moduls auf ArcGIS Online hochlädst im Ordner «Modul AGI» ab.</p></li>
@@ -728,7 +732,7 @@ window.onload = function() {
 <li><p>Ändere im Freigabefenster nun die Freigabeeigenschaften für diesen Inhalt. Diese Anwendung soll nun nicht mehr für die Öffentlichkeit freigegeben sein, sondern nur noch für Dich (Du kannst die Anwendung öffnen, andere haben jedoch keinen Zugriff mehr darauf). Wähle hierfür die Option «Eigentümer».</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_7.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_7.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Führe dasselbe für die Web Map «Houston Evacuation Map» durch.</p></li>
@@ -758,13 +762,13 @@ Tipp
 <li><p>Gehe in das Catalog Window und überprüfe die Inhalte im Projektordner. Zusätzlich zur Projekt-GDB sollte die Geodatenbank «uebung_online_publikation.gdb» aufgeführt sein. Falls nicht, erstelle im Catalog Pane eine Verbindung zum Ordner her, in dem Du die heutigen Übungsdaten entpackt hast (Catalog Pane &gt; Project &gt; Folders &gt; Kontextmenü Add Folder Connection).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_10.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_10.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Die Geodatenbank «uebung_online_publikation.gdb» enthält folgende Feature Classes:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_11.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_11.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 </ol>
@@ -791,7 +795,7 @@ Tipp
 <li><p>Suche nach «Project» und öffne das Tool «Project (Data Management Tools). Transformiere die fünf Layers vom Schweizerischen Koordinatensystem in das projizierte weltweite Koordinatensystem. Definiere hierfür die nötigen Werkzeug-Parameter. Speichere die Output Layers in der gleichen Geodatenbank (uebung_online_publikation.gdb), jeweils ohne «_lv95» (bsp. picknickplatz). Das Koordinatensystem WGS 1984 Web Mercator Auxiliary Sphere findest Du unter folgendem Pfad: Projected coordinate system &gt; World &gt; WGS 1984 Web Mercator (auxiliary sphere). Füge es doch zu Deinen Favoriten hinzu.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_13.PNG" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="figures/arcgis_online_13.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div>
 <p>Nach Ausführung des Werkzeugs «Project» werden die Layers automatisch der Karte «Einfuehrung» hinzugefügt.</p></li>
@@ -829,7 +833,7 @@ Tipp
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_17.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_17.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Klicke auf «Analyze» und löse bei Bedarf die angezeigten Probleme. Nutze zur Lösung der etwaigen Probleme die ArcGIS Webhelp. Sofern die Warnung «Layer does not have a feature template set» erscheint, kann diese vernachlässigt werden.</p></li>
@@ -851,7 +855,7 @@ Tipp
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_19.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_19.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Klicke auf «Analyze» und löse angezeigte Probleme.</p></li>
@@ -875,7 +879,7 @@ Tipp
 <li><p>Wähle «Umbenennen» und ändere den Layernamen auf «Zeckenstiche Zeit-animiert»</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_23.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_23.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Passe die Namen der anderen Layers an (bsp. Grossschreibung)</p></li>
@@ -885,13 +889,13 @@ Tipp
 <li><p>Wähle «Hinzufügen» und dann «Durchsuchen von Layern» (beende bei Bedarf die Zeitanimation).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_24.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_24.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Suche unter «Eigene Inhalte». Gib im Suchfeld «Veloweg» ein. Der Layer sollte dann angezeigt werden. Füge den Layer durch Klicken auf «+» der Karte hinzu. Der Layer wird der Karte hinzugefügt.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_25.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_25.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 </ol>
@@ -902,7 +906,7 @@ Tipp
 <p>Alternative: Klicke unter Inhalt beim Layer «Velowege» auf die drei vertikalen Punkte und verschiebe den Layer an den gewünschten Ort.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_26.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_26.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 </ol>
@@ -912,14 +916,14 @@ Tipp
 <li><p>Öffne das Menü «Styles» (vertikales Menü rechts).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_27.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_27.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Gehe auf «Style-Optionen»</p></li>
 <li><p>Klicke auf das Stift-Symbol und ändere die Linienfarbe und -breite.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_28.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_28.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Bestätige die Eingaben mit “Fertig” &gt; “Fertig”</p></li>
@@ -938,7 +942,7 @@ Tipp
 <li><p>Entferne beim Layer «Zeckenstiche Zeit-animiert» das Pop-up via «Pop-up konfigurieren». Somit wird verhindert, dass das Pop-up beim Anklicken eines Zeckenstich-Standortes zwei Mal aufgerufen wird.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_32.PNG" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="figures/arcgis_online_32.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
 </figure>
 </div></li>
 <li><p>Pop-ups können übrigens über das Menü «Pop-ups» benutzerdefiniert angepasst werden. Probiere diverse Optionen für andere Layer aus.</p></li>
@@ -969,7 +973,7 @@ Tipp
 <li><p>Benenne die App als «Zecken App Zürich Vorname Name», lege sie im Ordner Modul AGI ab und wähle «App erstellen»</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/arcgis_online_42.PNG" class="img-fluid figure-img" style="width:70.0%"></p>
+<p><img src="figures/arcgis_online_42.PNG" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%"></p>
 </figure>
 </div></li>
 <li><p>Gehe durch die 5 Schritte, aktiviere die Pop-Ups, die Lesezeichen und die Layer Liste. Veröffentliche anschliessend die Web App.</p></li>
@@ -1048,6 +1052,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1114,13 +1145,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1199,10 +1232,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1212,8 +1244,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1226,6 +1267,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1269,6 +1429,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1294,6 +1455,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1355,12 +1542,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../E_WebGIS_1/1_Einleitung.html" class="pagination-link">
+      <a href="../E_WebGIS_1/1_Einleitung.html" class="pagination-link" aria-label="WebGIS I">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">WebGIS I</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../E_WebGIS_1/3_Uebung_Story_Map.html" class="pagination-link">
+      <a href="../E_WebGIS_1/3_Uebung_Story_Map.html" class="pagination-link" aria-label="Übung Story Map">
         <span class="nav-page-text"><span class="chapter-title">Übung Story Map</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1369,4 +1556,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/E_WebGIS_1/2_Uebung_Web_Map.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></div></div></footer></body></html>

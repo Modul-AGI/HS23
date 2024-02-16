@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -83,7 +83,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -92,6 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -144,12 +151,12 @@ window.onload = function() {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/6_Raeumliche_Operationen.html"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Räumliche Operationen</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/6_Raeumliche_Operationen.html"><span class="chapter-title">Räumliche Operationen</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -159,7 +166,7 @@ window.onload = function() {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -167,7 +174,8 @@ window.onload = function() {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Modul AGI HS23</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/modul-AGI/hs23" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/modul-AGI/hs23" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Modul-AGI-HS23.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
@@ -667,16 +675,10 @@ window.onload = function() {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Markdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Markdown</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -688,14 +690,14 @@ window.onload = function() {
   <li><a href="#sec-raeumliche-operationen-mbg" id="toc-sec-raeumliche-operationen-mbg" class="nav-link" data-scroll-target="#sec-raeumliche-operationen-mbg">Minimum Bounding Geometry</a></li>
   <li><a href="#overlay" id="toc-overlay" class="nav-link" data-scroll-target="#overlay">Overlay</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/B_Programmieren_3/6_Raeumliche_Operationen.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/B_Programmieren_3/6_Raeumliche_Operationen.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../B_Programmieren_3/1_Einleitung.html">Programmieren III</a></li><li class="breadcrumb-item"><a href="../B_Programmieren_3/6_Raeumliche_Operationen.html"><span class="chapter-title">Räumliche Operationen</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">Räumliche Operationen</span></h1>
+<h1 class="title"><span id="sec-raeumliche-operationen" class="quarto-section-identifier"><span class="chapter-title">Räumliche Operationen</span></span></h1>
 </div>
 
 
@@ -708,13 +710,18 @@ window.onload = function() {
   </div>
   
 
+
 </header>
 
-<p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in <a href="5_GIS_in_Python.html"><span>Kapitel&nbsp;39</span></a> beschrieben.</p>
-<div class="cell" data-execution_count="1">
+
+<p>Was bringt uns diese <em>Geo</em> Erweiterung? Mit <em>GeoDataFrames</em> sind nun alle räumliche Operationen möglich, die wir bereits aus ArcGIS kennen aber mit einfachen <em>DataFrames</em> noch nicht möglich waren. Ich möchte dies an ein paar Beispielen Demonstrieren. Dazu müssen wir die Zeckenstiche in GeoDataFrame konvertiert und in ein Geopackage exportiert haben, wie in <a href="5_GIS_in_Python.html" class="quarto-xref"><span>Input: GIS in Python</span></a> beschrieben.</p>
+<div id="4db4f011" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche <span class="op">=</span> gpd.read_file(<span class="st">"data/zeckenstiche.gpkg"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>ModuleNotFoundError: No module named 'geopandas'</code></pre>
+</div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -727,122 +734,134 @@ Hinweis
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen <em>Geometrien</em>, <em>Geoseries</em> und <em>GeoDataFrames</em> hin- und her konvertieren (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;39.2</span></a>).</li>
+<li>Die verschiedenen räumlichen Operationen in Geopandas erwarten unterschiedlichen Input, deshalb müssen wir manchmal zwischen <em>Geometrien</em>, <em>Geoseries</em> und <em>GeoDataFrames</em> hin- und her konvertieren (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur" class="quarto-xref"><span>Aufbau von GeoDataFrames</span></a>).</li>
 <li>Welcher Datentyp eure Operation <em>braucht</em> seht ihr in <a href="https://geopandas.org/">der Dokumentation</a>. Welcher Datentyp ihr <em>habt</em> seht ihr mit <code>type()</code>.</li>
 <li>Um ein Objekt von einem Format in das andere zu konvertieren (angenommen das Objekt heisst <code>x</code>)</li>
 </ul>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoDataFrame zu Geoseries:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>zecken_geoseries <span class="op">=</span> gpd.GeoSeries(zeckenstiche[<span class="st">"geometry"</span>])          </span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoSeries zurück zu GeoDataFrame:</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>zecken_geodataframe <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> zecken_geoseries) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f9f8895e" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoDataFrame zu Geoseries:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>zecken_geoseries <span class="op">=</span> gpd.GeoSeries(zeckenstiche[<span class="st">"geometry"</span>])          </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># von GeoSeries zurück zu GeoDataFrame:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>zecken_geodataframe <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> zecken_geoseries) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 </div>
 </div>
 <section id="buffer" class="level2">
 <h2 class="anchored" data-anchor-id="buffer">Buffer</h2>
 <p>Eine typische GIS Operation ist das “Buffern” von Objekten. Der ArcGIS Befehl <a href="https://pro.arcgis.com/en/pro-app/tool-reference/analysis/buffer.htm">“Buffer”</a> erreichen wir in Geopandas mit <code>.buffer()</code>. Folgender Code macht einen Buffer mit einer Distanz von 10m.</p>
-<div class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>buffered <span class="op">=</span> zeckenstiche.<span class="bu">buffer</span>(<span class="dv">10</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1a895dbe" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>buffered <span class="op">=</span> zeckenstiche.<span class="bu">buffer</span>(<span class="dv">10</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche' is not defined</code></pre>
+</div>
 </div>
 <p>Um Geopandas-Objekte zu plotten kann man einfach <code>.plot()</code> verwenden. Zudem kann man mit <code>boundary</code> die Umrisse eines Polygons extrahieren:</p>
-<div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> buffered.boundary.plot() <span class="co"># plottet die boundries    </span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"black"</span>) <span class="co"># plottet die Punkte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>&lt;Axes: &gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-5-output-2.png" width="431" height="442"></p>
+<div id="c8da91b0" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>base <span class="op">=</span> buffered.boundary.plot() <span class="co"># plottet die boundries    </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> base, color <span class="op">=</span> <span class="st">"black"</span>) <span class="co"># plottet die Punkte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'buffered' is not defined</code></pre>
 </div>
 </div>
 </section>
 <section id="union" class="level2">
 <h2 class="anchored" data-anchor-id="union">Union</h2>
-<p>Mit <code>unary_union</code> können wir aus unserer <em>Point</em>-Geometrie ein <em>MultiPoint</em> erstellen (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur"><span>Kapitel&nbsp;39.2</span></a>). Dieser Befehl lautet in ArcGIS <a href="https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm">Union</a>.</p>
-<div class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_union <span class="op">=</span> zeckenstiche[<span class="st">"geometry"</span>].unary_union</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(zeckenstiche_union) <span class="co"># Es handelt sich nun um den Typ "MultiPoint"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>shapely.geometry.multipoint.MultiPoint</code></pre>
+<p>Mit <code>unary_union</code> können wir aus unserer <em>Point</em>-Geometrie ein <em>MultiPoint</em> erstellen (siehe <a href="5_GIS_in_Python.html#sec-pythongis-datenstruktur" class="quarto-xref"><span>Aufbau von GeoDataFrames</span></a>). Dieser Befehl lautet in ArcGIS <a href="https://desktop.arcgis.com/de/arcmap/10.3/tools/analysis-toolbox/union.htm">Union</a>.</p>
+<div id="6e4ceb0b" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>zeckenstiche_union <span class="op">=</span> zeckenstiche[<span class="st">"geometry"</span>].unary_union</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(zeckenstiche_union) <span class="co"># Es handelt sich nun um den Typ "MultiPoint"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche' is not defined</code></pre>
 </div>
 </div>
 <p>Wenn wir uns <code>zeckenstiche_union</code> nun mit <code>print</code> anschauen sehen wir, dass sämtliche Koordinaten in einem Objekt zusammengepackt sind:</p>
-<div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeckenstiche_union)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>MULTIPOINT (2681092 1250672, 2681107 1250712, 2681111 1250683, 2681116 1250648, 2681117 1250725, 2681124 1250720, 2681128 1250683, 2681131 1250692, 2681138 1250725, 2681171 1250711)</code></pre>
+<div id="f73a55c7" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeckenstiche_union)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche_union' is not defined</code></pre>
 </div>
 </div>
 </section>
 <section id="sec-raeumliche-operationen-mbg" class="level2">
 <h2 class="anchored" data-anchor-id="sec-raeumliche-operationen-mbg">Minimum Bounding Geometry</h2>
 <p>Über ein <em>MultiPoint</em> lassen sich jetzt wunderbar sogenannte (in ESRI Terminologie) <a href="https://pro.arcgis.com/de/pro-app/tool-reference/data-management/minimum-bounding-geometry.htm">Minimum Bounding Geometries</a> rechnen. Mit den gleichnamigen Funktionen können wir nun eine <code>convex_hull</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> sowie eine <code>envelope</code> <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> über alle Punkte rechnen.</p>
-<div class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> zeckenstiche_union.convex_hull</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> zeckenstiche_union.envelope</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="d8c3dc66" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> zeckenstiche_union.convex_hull</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> zeckenstiche_union.envelope</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'zeckenstiche_union' is not defined</code></pre>
+</div>
 </div>
 <p>Nun konvertiere ich beide Polygon-Geometrien in <em>GeoSeries</em>, damit sie einfacher zu visualisieren sind:</p>
-<div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> gpd.GeoSeries(my_convex_hull)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> gpd.GeoSeries(my_envelope)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c170af56" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_convex_hull <span class="op">=</span> gpd.GeoSeries(my_convex_hull)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>my_envelope <span class="op">=</span> gpd.GeoSeries(my_envelope)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 <p>Um die beiden Objekte nebeneinander zu visualisieren importiere ich zuerst <code>pyplot</code> aus <code>matplotlib</code> (mit dem alias <code>plt</code>) und erstelle <code>subplots</code></p>
-<div class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>,figsize <span class="op">=</span> (<span class="dv">9</span>, <span class="dv">9</span>))</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den linken Plot</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>my_convex_hull.plot(ax <span class="op">=</span> ax1)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"Convex Hull"</span>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax1, color <span class="op">=</span> <span class="st">"black"</span>)</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den rechten Plot</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>my_envelope.plot(ax <span class="op">=</span> ax2)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"Envelope"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax2, color <span class="op">=</span> <span class="st">"black"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>&lt;Axes: title={'center': 'Envelope'}&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-10-output-2.png" width="724" height="375"></p>
+<div id="e7af5cca" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>,figsize <span class="op">=</span> (<span class="dv">9</span>, <span class="dv">9</span>))</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den linken Plot</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>my_convex_hull.plot(ax <span class="op">=</span> ax1)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"Convex Hull"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax1, color <span class="op">=</span> <span class="st">"black"</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellt den rechten Plot</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>my_envelope.plot(ax <span class="op">=</span> ax2)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"Envelope"</span>)</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>zeckenstiche.plot(ax <span class="op">=</span> ax2, color <span class="op">=</span> <span class="st">"black"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>ModuleNotFoundError: No module named 'matplotlib'</code></pre>
 </div>
 </div>
 </section>
 <section id="overlay" class="level2">
 <h2 class="anchored" data-anchor-id="overlay">Overlay</h2>
 <p>Viele der Funktionen aus dem ESRI Toolset <a href="https://pro.arcgis.com/de/pro-app/tool-reference/analysis/an-overview-of-the-overlay-toolset.htm">“Overlay”</a> sind in der <em>Geopandas</em> Funktion <code>overlay</code> verpackt. Um sie zu demonstrieren nutze ich die Geometrien, die wir in weiter oben erstellt haben (<code>buffered</code> und <code>my_convex_hull</code>). Zuerst muss ich sie aber noch von <em>GeoSeries</em> in <em>GeoDataFrames</em> konverieren.</p>
-<div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>buffered_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> buffered, crs <span class="op">=</span> <span class="dv">2056</span>)               </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> my_convex_hull, crs <span class="op">=</span> <span class="dv">2056</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="6fdd5be8" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>buffered_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> buffered, crs <span class="op">=</span> <span class="dv">2056</span>)               </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf <span class="op">=</span> gpd.GeoDataFrame(geometry <span class="op">=</span> my_convex_hull, crs <span class="op">=</span> <span class="dv">2056</span>) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
+</div>
 </div>
 <p>Nun kann ich zum beispielsweise die Overlay-Funktion <code>difference</code> ausführen:</p>
-<div class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_difference <span class="op">=</span> gpd.overlay(my_convex_hull_gdf,buffered_gdf, how<span class="op">=</span><span class="st">'difference'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="e5a873fe" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>my_difference <span class="op">=</span> gpd.overlay(my_convex_hull_gdf,buffered_gdf, how<span class="op">=</span><span class="st">'difference'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'gpd' is not defined</code></pre>
 </div>
-<div class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereitet die drei Subplots vor ################</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot links ####################################</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf.plot(ax <span class="op">=</span> ax1)               <span class="co">#</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"1. Das Minimum Convex Polygon"</span>)  <span class="co"># </span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>ax1.set_axis_off()                              <span class="co">#</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot mitte ####################################</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>buffered_gdf.plot(ax <span class="op">=</span> ax2)                     <span class="co">#</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"2. Die gebufferten Punkte"</span>)      <span class="co"># </span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>ax2.set_axis_off()                              <span class="co">#</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot rechts ###################################</span></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>my_difference.plot(ax <span class="op">=</span> ax3)                    <span class="co">#</span></span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">"Differenz aus 1. &amp; 2."</span>)          <span class="co"># </span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>ax3.set_axis_off()                              <span class="co">#</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="6_Raeumliche_Operationen_files/figure-html/cell-13-output-1.png" width="722" height="246"></p>
+</div>
+<div id="1192a8b1" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bereitet die drei Subplots vor ################</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2, ax3) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">3</span>, sharex<span class="op">=</span><span class="va">True</span>, sharey <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">9</span>,<span class="dv">9</span>))</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot links ####################################</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>my_convex_hull_gdf.plot(ax <span class="op">=</span> ax1)               <span class="co">#</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"1. Das Minimum Convex Polygon"</span>)  <span class="co"># </span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>ax1.set_axis_off()                              <span class="co">#</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot mitte ####################################</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>buffered_gdf.plot(ax <span class="op">=</span> ax2)                     <span class="co">#</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"2. Die gebufferten Punkte"</span>)      <span class="co"># </span></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>ax2.set_axis_off()                              <span class="co">#</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot rechts ###################################</span></span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>my_difference.plot(ax <span class="op">=</span> ax3)                    <span class="co">#</span></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>ax3.set_title(<span class="st">"Differenz aus 1. &amp; 2."</span>)          <span class="co"># </span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>ax3.set_axis_off()                              <span class="co">#</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="co">#################################################</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'plt' is not defined</code></pre>
 </div>
 </div>
 
@@ -898,6 +917,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -966,13 +1012,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1051,10 +1099,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1064,8 +1111,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1078,6 +1134,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1121,6 +1296,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1146,6 +1322,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1207,12 +1409,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../B_Programmieren_3/5_GIS_in_Python.html" class="pagination-link">
+      <a href="../B_Programmieren_3/5_GIS_in_Python.html" class="pagination-link" aria-label="Input: GIS in Python">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Input: GIS in Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../B_Programmieren_3/6_Uebung_14.html" class="pagination-link">
+      <a href="../B_Programmieren_3/6_Uebung_14.html" class="pagination-link" aria-label="Übung 14">
         <span class="nav-page-text"><span class="chapter-title">Übung 14</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1221,4 +1423,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/B_Programmieren_3/6_Raeumliche_Operationen.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></div></div></footer></body></html>

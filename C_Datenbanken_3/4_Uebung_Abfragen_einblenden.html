@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Keine Treffer",
     "search-matching-documents-text": "Treffer",
@@ -58,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -110,12 +117,12 @@ window.onload = function() {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html"><span class="chapter-number">53</span>&nbsp; <span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -125,7 +132,7 @@ window.onload = function() {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../zhaw_sw_neg.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -133,7 +140,8 @@ window.onload = function() {
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Modul AGI HS23</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/modul-AGI/hs23" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/modul-AGI/hs23" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="../Modul-AGI-HS23.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Lesemodus umschalten">
   <div class="quarto-reader-toggle-btn">
@@ -633,16 +641,10 @@ window.onload = function() {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Markdown.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Markdown</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -654,12 +656,12 @@ window.onload = function() {
   <li><a href="#übung-5-werkzeug-create-database-view-anwenden" id="toc-übung-5-werkzeug-create-database-view-anwenden" class="nav-link" data-scroll-target="#übung-5-werkzeug-create-database-view-anwenden">Übung 5: Werkzeug “Create Database View” anwenden</a></li>
   <li><a href="#übung-6-optional-werkzeug-make-table-view" id="toc-übung-6-optional-werkzeug-make-table-view" class="nav-link" data-scroll-target="#übung-6-optional-werkzeug-make-table-view">Übung 6: (optional) Werkzeug “Make Table View”</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/modul-AGI/hs23/edit/main/C_Datenbanken_3/4_Uebung_Abfragen_einblenden.qmd" class="toc-action">Seite editieren</a></p></div></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/C_Datenbanken_3/4_Uebung_Abfragen_einblenden.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/4_Uebung_Abfragen_einblenden.html"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-title">Abfragen aus der Datenbank in ArcGIS Pro einbinden</span></h1>
 </div>
@@ -674,18 +676,24 @@ window.onload = function() {
   </div>
   
 
+
 </header>
 
-<p>In den nächsten Übungen wollen wir mit den Daten in unserer Beispiel-Datenbank umgehen (siehe <a href="#fig-db3-uebung3-1">Abbildung&nbsp;<span>53.1</span></a>). Dazu versuchen wir die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen “modulagi_pdb”. Verwenden Sie, wenn nicht anders angegeben diese Datenbank. Erstellen Sie zunächst noch einen beliebigen Ordner auf Ihrem Rechner in welchem wir die jeweiligen Ergebnisse speichern können. Sie finden ein Datenbankschema der Pflanzendatenbank auf dem Moodle. Dies hilft Ihnen beim Verständnis der Datenbank und seinen Beziehungen. Nutzen Sie auch die PostGIS Referenz, um die PostGIS Funktionen zu verstehen.</p>
+
+<p>In den nächsten Übungen wollen wir mit den Daten in unserer Beispiel-Datenbank umgehen (siehe <a href="#fig-db3-uebung3-1" class="quarto-xref">Abbildung&nbsp;<span>53.1</span></a>). Dazu versuchen wir die Daten aus den einzelnen Tabellen zu verknüpfen und sinnvoll aufzubereiten, um Sie anschliessend im ArcGIS Pro einzubinden und zu visualisieren. Unsere Pflanzendatenbank hat hierbei immer den Namen “modulagi_pdb”. Verwenden Sie, wenn nicht anders angegeben diese Datenbank. Erstellen Sie zunächst noch einen beliebigen Ordner auf Ihrem Rechner in welchem wir die jeweiligen Ergebnisse speichern können. Sie finden ein Datenbankschema der Pflanzendatenbank auf dem Moodle. Dies hilft Ihnen beim Verständnis der Datenbank und seinen Beziehungen. Nutzen Sie auch die PostGIS Referenz, um die PostGIS Funktionen zu verstehen.</p>
 <ul>
 <li><a href="https://moodle.zhaw.ch/mod/resource/view.php?id=974470">Datenbankschema</a></li>
 <li><a href="https://postgis.net/docs/manual-3.3/reference.html">PostGIS Referenz</a></li>
 </ul>
 <p>Wenn Sie sich bei den SQL-Befehlen nicht ganz sicher sind, so versuchen Sie schrittweise zum Ziel zu kommen. Formulieren Sie zunächst einen einfacheren Teil der Abfrage, z.B. nur Attribute aus einer Tabelle und fügen Sie dann die weiteren Attribute und/oder Tabellen schrittweise hinzu. Probieren Sie bei Bedarf nach jedem Zwischenschritt die Abfrage aus und schauen sich die Ergebnisse an.</p>
-<div id="fig-db3-uebung3-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/screenshot-uebung3-1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;53.1: Datenbankschema: Pflanzendatenbank (die gelben Schlüssel sind Primärschlüssel, die blauen Pfeile sind Fremdschlüssel).</figcaption>
+<div id="fig-db3-uebung3-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-db3-uebung3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/screenshot-uebung3-1.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-db3-uebung3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;53.1: Datenbankschema: Pflanzendatenbank (die gelben Schlüssel sind Primärschlüssel, die blauen Pfeile sind Fremdschlüssel).
+</figcaption>
 </figure>
 </div>
 <section id="übung-3-werkzeug-make-query-table-anwenden" class="level2">
@@ -707,7 +715,7 @@ Tipp
 <ol type="1">
 <li>Starten Sie pgAdmin und verbinden Sie mit der Pflanzendatenbank “modulagi_pdb” mit Ihrem Benutzer studentNr.</li>
 <li>Probieren Sie folgende SQL-Abfrage zu formulieren.</li>
-<li>Suchen Sie alle Gattungen der Familie “Asteraceae”. Zeigen Sie den Namen der Familie und den Namen der Gattung an (siehe <a href="#fig-db3-uebung3-2">Abbildung&nbsp;<span>53.2</span></a>).</li>
+<li>Suchen Sie alle Gattungen der Familie “Asteraceae”. Zeigen Sie den Namen der Familie und den Namen der Gattung an (siehe <a href="#fig-db3-uebung3-2" class="quarto-xref">Abbildung&nbsp;<span>53.2</span></a>).</li>
 <li>Starten Sie ArcGIS Pro und öffnen das Projekt “Pflanzendatenbank_III”.</li>
 <li>Erstellen Sie eine neue Karte.</li>
 <li>Öffnen Sie das Werkzeug “Make Query Table”</li>
@@ -745,10 +753,14 @@ Tipp
 <p>“Make Query Table” erlaubt nur NICHT-räumliche Abfragen. Es können zwar Felder aus räumlichen Tabellen abgefragt werden, das Ergebnis ist aber immer eine einfache Tabelle und keine Feature Class.</p>
 </div>
 </div>
-<div id="fig-db3-uebung3-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/screenshot-uebung3-2.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;53.2: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
+<div id="fig-db3-uebung3-2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-db3-uebung3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/screenshot-uebung3-2.jpg" class="img-fluid figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-db3-uebung3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;53.2: Ausschnitt Datenbankschema modulagi_pdb
+</figcaption>
 </figure>
 </div>
 </section>
@@ -770,7 +782,7 @@ Tipp
 </div>
 <ol type="1">
 <li>Probieren Sie folgende SQL-Abfrage in pgAdmin zu formulieren.</li>
-<li>Suchen Sie den Standort aller Eichen (Gattung = Quercus). Zeigen Sie Gattung, Art und den Standort mit der objectid (Attribut shape + objectid) (siehe <a href="#fig-db3-uebung4-1">Abbildung&nbsp;<span>53.3</span></a>).</li>
+<li>Suchen Sie den Standort aller Eichen (Gattung = Quercus). Zeigen Sie Gattung, Art und den Standort mit der objectid (Attribut shape + objectid) (siehe <a href="#fig-db3-uebung4-1" class="quarto-xref">Abbildung&nbsp;<span>53.3</span></a>).</li>
 <li>Wechseln Sie zu ArcGIS Pro.</li>
 <li>Öffnen Sie das Werkzeug “Make Query Layer”.</li>
 <li>Schreiben Sie das SQL-Query.</li>
@@ -822,10 +834,14 @@ Tipp
 <p>Über das Kontextmenü des neuen Layers im Contents Fenster (Data→Export Features) können Sie den Layer auch dauerhaft z.B. als neue Feature Class in eine eigene Datenbank oder als neues Shapefile speichern.</p>
 </div>
 </div>
-<div id="fig-db3-uebung4-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/screenshot-uebung4-1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;53.3: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
+<div id="fig-db3-uebung4-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-db3-uebung4-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/screenshot-uebung4-1.jpg" class="img-fluid figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-db3-uebung4-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;53.3: Ausschnitt Datenbankschema modulagi_pdb
+</figcaption>
 </figure>
 </div>
 </section>
@@ -847,7 +863,7 @@ Tipp
 </div>
 <ol type="1">
 <li>Probieren Sie folgende SQL-Abfrage in pgAdmin zu formulieren.</li>
-<li>Machen Sie eine Liste mit allen Pflanzen des Kurses “UÖ Stauden Gärtnerisch”. Die Liste soll dabei die ID der Spezies, die Gattung, Art und Sorte der Pflanze sowie den Namen des Kurses und den Standort (Attribut shape) enthalten. Speichern Sie diese Abfrage als View mit dem Namen “pdb.view_kursliste_stauden_gaertnerisch_studentNr” in der Datenbank. (CREATE VIEW … AS SELECT…) (siehe <a href="#fig-db3-uebung5-1">Abbildung&nbsp;<span>53.4</span></a>).</li>
+<li>Machen Sie eine Liste mit allen Pflanzen des Kurses “UÖ Stauden Gärtnerisch”. Die Liste soll dabei die ID der Spezies, die Gattung, Art und Sorte der Pflanze sowie den Namen des Kurses und den Standort (Attribut shape) enthalten. Speichern Sie diese Abfrage als View mit dem Namen “pdb.view_kursliste_stauden_gaertnerisch_studentNr” in der Datenbank. (CREATE VIEW … AS SELECT…) (siehe <a href="#fig-db3-uebung5-1" class="quarto-xref">Abbildung&nbsp;<span>53.4</span></a>).</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -865,23 +881,31 @@ Tipp
 <ol start="4" type="1">
 <li>Wechseln Sie zu ArcGIS Pro.</li>
 <li>Erneuern Sie die Datenbankverbindung (Refresh / F5), damit die neue View sichtbar ist.</li>
-<li>Eine View verhält sich wie eine neue Tabelle in ArcGIS Pro. Aus diesem Grund müsste die Tabelle eigentlich mit der Datenbank registriert werden. Sie erkennen dies auch in der Catalog Ansicht an dem nicht ausgefüllten Rechteck (siehe <a href="#fig-db3-uebung5-2">Abbildung&nbsp;<span>53.5</span></a>).</li>
+<li>Eine View verhält sich wie eine neue Tabelle in ArcGIS Pro. Aus diesem Grund müsste die Tabelle eigentlich mit der Datenbank registriert werden. Sie erkennen dies auch in der Catalog Ansicht an dem nicht ausgefüllten Rechteck (siehe <a href="#fig-db3-uebung5-2" class="quarto-xref">Abbildung&nbsp;<span>53.5</span></a>).</li>
 <li>Eine Registrierung bewirkt das Freischalten der Geodatenbank-Funktionen für diese Tabelle, damit auch neue Daten erfasst und bearbeitet werden können. Da Ihr Benutzer studentNr keine Berechtigungen zum Schreiben im Datenbankschema auf der Datenbank hat, kann die Tabelle jetzt nicht registriert werden. Da wir aber die Tabelle nur abfragen wollen ist dies nicht weiter schlimm.</li>
 <li>Öffnen Sie das Werkzeug “Create Database View”.</li>
 <li>Speichern Sie mit dem Werkzeug eine identische Liste für den Kurs “UÖ Gehölze”. Geben Sie der View den Namen “pdb.view_kursliste_gehoelze_studentNr”. Achten Sie auf das “pdb.” vor dem eigentlichen Namen. Dies gibt das Schema an indem die View gespeichert werden soll. Sie können hierzu wieder das SQL-Select-Statement von oben kopieren (ohne den CREATE VIEW Teil) und den Kursnamen entsprechend anpassen.</li>
 <li>Schauen Sie sich das Ergebnis in der Attributtabelle und in der Karte an.</li>
 <li>Sie sehen an dieser Übung, dass nur der Datenbankbesitzer neue Tabellen erstellen und hinzufügen kann. Andere Benutzer wie der student1 können nur vorhandene Tabellen und Daten bearbeiten und ändern. Neue Tabellen können nur ohne Schreibberechtigung erstellt werden.</li>
 </ol>
-<div id="fig-db3-uebung5-1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/screenshot-uebung5-1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;53.4: Ausschnitt Datenbankschema modulagi_pdb</figcaption>
+<div id="fig-db3-uebung5-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-db3-uebung5-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/screenshot-uebung5-1.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-db3-uebung5-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;53.4: Ausschnitt Datenbankschema modulagi_pdb
+</figcaption>
 </figure>
 </div>
-<div id="fig-db3-uebung5-2" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="figures/screenshot-uebung5-2.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;53.5: Catalog Ansicht in ArcGIS Pro</figcaption>
+<div id="fig-db3-uebung5-2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-db3-uebung5-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/screenshot-uebung5-2.jpg" class="img-fluid figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-db3-uebung5-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;53.5: Catalog Ansicht in ArcGIS Pro
+</figcaption>
 </figure>
 </div>
 </section>
@@ -956,6 +980,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
   }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
   const toggleColorMode = (alternate) => {
     // Switch the stylesheets
     const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
@@ -1022,13 +1073,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'alternate';
+  const darkModeDefault = true;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1107,10 +1160,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1120,8 +1172,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1134,6 +1195,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1177,6 +1357,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1202,6 +1383,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1263,12 +1470,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html" class="pagination-link">
+      <a href="../C_Datenbanken_3/3_Uebung_Datenbankverbindung.html" class="pagination-link" aria-label="Datenbankverbindung zum Server aufbauen">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Datenbankverbindung zum Server aufbauen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html" class="pagination-link">
+      <a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html" class="pagination-link" aria-label="Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL">
         <span class="nav-page-text"><span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1277,4 +1484,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/modul-AGI/hs23/edit/main/C_Datenbanken_3/4_Uebung_Abfragen_einblenden.qmd" class="toc-action"><i class="bi bi-github"></i>Seite editieren</a></li></ul></div></div></div></footer></body></html>
