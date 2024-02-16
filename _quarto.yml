@@ -6,7 +6,8 @@ project:
 
 lang: de
 
-format: 
+format:
+  pdf: default
   html:
     toc: true
     theme:
@@ -31,6 +32,7 @@ book:
   title: "Modul AGI HS23"
   author: "Forschungsgruppe Geoinformatik"
   reader-mode: true
+  downloads: [pdf]
   sidebar: 
     position: left
     logo: zhaw_sw_neg.png
@@ -134,4 +136,4 @@ book:
       chapters: 
       - E_WebGIS_2/2_Uebung_Zeckenstiche.qmd
       - E_WebGIS_2/3_Uebung_Leaflet.qmd
-    - Markdown.qmd
+    # - Markdown.qmd

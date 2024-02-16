@@ -48,7 +48,7 @@ Das Problem ist etwas schwierig zu Packen weil wir die "von - bis" Uhrzeiten in 
 
 :::{.callout-note collapse="true"}
 
-![](figures/if-else2.svg)
+![](figures/if-else2.png)
 
 :::
 

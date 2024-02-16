@@ -71,4 +71,4 @@ suggest_song(24)
 
 Dabei ist wichtig, dass man sich jeweils die Ausführungslogik vor Augen führt.
 
-![](figures/if-else.svg)
+![](figures/if-else.png)
