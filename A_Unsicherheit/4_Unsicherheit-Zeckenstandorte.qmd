@@ -16,7 +16,7 @@ Kopiere zuerst die Feature Class *Tick_Original* in das Feature Dataset *Resulta
 
 ## Übung 3: Summe der Stiche innerhalb der Waldfläche
 
-Um zu überprüfen wie viele Stiche sich innerhalb des Waldes befinden, muss zunächst der Punktlayer mit den Stichdaten aller Runs und den Originaldaten (Resultat aus Übung 2) mit dem Wald-Layer überlagert werden. Hierbei bietet sich das Geoverarbeitungswerkzeug "Summarize Within" (GeoAnalytics Desktop Tools) an. Dieses Werkzeug zählt alle Punkte welche sich in den jeweiligen Flächen des Input-Polygons befinden. Ausserdem kann damit eine separate Output Tabelle (Output Grouped Table) generiert werden, welche für jeden Run angibt (Group Field = Run_Nr), wie viele Punkt pro Run inner- oder ausserhalb des Waldes liegen.
+Um zu überprüfen wie viele Stiche sich innerhalb des Waldes befinden, muss zunächst der Punktlayer mit den Stichdaten aller Runs und den Originaldaten (Resultat aus Übung 2) mit dem Wald-Layer überlagert werden. Hierbei bietet sich das Geoverarbeitungswerkzeug "Summarize Within" (GeoAnalytics Desktop Tools) an. Dieses Werkzeug zählt alle Punkte welche sich in den jeweiligen Flächen des Input-Polygons befinden. Ausserdem kann damit eine separate Output Tabelle (Output Grouped Table) generiert werden, welche für jeden Run angibt (Group Field = Run_Nr), wie viele Punkte pro Run inner- oder ausserhalb des Waldes liegen.
 Hinweis: Speichere die Output Grouped Table direkt auf Datenbank-Ebene und nicht im Feature Dataset Resultate. Ansonsten kann die Ausführung des Werkzeugs zu einem Fehler führen.
 
 :::{.callout-note}
