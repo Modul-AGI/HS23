@@ -10,16 +10,6 @@
     ]
   },
   {
-    "objectID": "A_Unsicherheit/1_Einleitung.html",
-    "href": "A_Unsicherheit/1_Einleitung.html",
-    "title": "Unsicherheit",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage bei zukünftigen GIS Arbeiten mit der Unsicherheit von Punktdaten umzugehen.\nDu kannst reale räumliche Objekte dahin beurteilen, ob diese grenzscharf oder nur mit einer Unschärfe abgebildet werden können.\nDu kannst mit Fuzzy-Tallness umgehen und diese definieren.\nDu kannst unscharfe Phänomene in deinen zukünftigen Projekten berücksichtigen und deren Unschärfe in den Geoverarbeitungsprozess integrieren und auswerten.\nDu kannst ein Modell mit ModelBuilder erstellen und ausführen.",
-    "crumbs": [
-      "Unsicherheit"
-    ]
-  },
-  {
     "objectID": "A_Unsicherheit/2_Datengrundlage.html",
     "href": "A_Unsicherheit/2_Datengrundlage.html",
     "title": "Datengrundlage",
@@ -57,7 +47,7 @@
     "href": "A_Unsicherheit/4_Unsicherheit-Zeckenstandorte.html",
     "title": "Unsicherheit der gemeldeten Zeckenstichstandorte",
     "section": "",
-    "text": "Übung 2: Zusammenfügen (Append) aller Runs zu einem Datensatz\nKopiere zuerst die Feature Class Tick_Original in das Feature Dataset Resultate. Benenne die kopierte Feature Class in Tick_Append um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug “Append”, um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matchig Type die Option “Use the field map to reconcile field differences”.\nÜberprüfe das Resultat. Die Tick_Append Feature Class sollte anschliessend 44’116 Features beinhalten.",
+    "text": "Übung 2: Zusammenfügen (Append) aller Runs zu einem Datensatz\nKopiere zuerst die Feature Class Tick_Original in das Feature Dataset Resultate. Benenne die kopierte Feature Class in Tick_Append um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug “Append”, um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matching Type die Option “Use the field map to reconcile field differences”.\nÜberprüfe das Resultat. Die Tick_Append Feature Class sollte anschliessend 44’116 Features beinhalten.",
     "crumbs": [
       "Unsicherheit",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Unsicherheit der gemeldeten Zeckenstichstandorte</span>"
@@ -215,36 +205,6 @@
     "crumbs": [
       "Unsicherheit",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Leistungsnachweis</span>"
-    ]
-  },
-  {
-    "objectID": "B_Programmieren_1/1_Einleitung.html",
-    "href": "B_Programmieren_1/1_Einleitung.html",
-    "title": "Programmieren I",
-    "section": "",
-    "text": "Vorbereitung\nIm Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Mit ArcGIS Installation durch.\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt Ohne ArcGIS Installation durch.",
-    "crumbs": [
-      "Programmieren I"
-    ]
-  },
-  {
-    "objectID": "B_Programmieren_1/1_Einleitung.html#vorbereitung",
-    "href": "B_Programmieren_1/1_Einleitung.html#vorbereitung",
-    "title": "Programmieren I",
-    "section": "",
-    "text": "Mit ArcGIS Installation (v.a. Windows Nutzer)\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte im Video (s.u.) ausführen:\n\nPython Command Prompt suchen und starten\nMittels dem Befehl cd in dein Persönliches Laufwerk wechseln (cd C:\\Users\\DeinUserName\\Desktop, siehe dazu diesen Video)\nMittels des Befehls jupyter lab das Programm Juypter Lab starten\nMit Klick auf den Button ein neues Notebook erstellen\n\n\n\nOhne ArcGIS Installation (v.a. Mac / Linux Nutzer)\nWer keine ArcGIS installation hat, sollte folgende Software installieren:\n\nÜberprüfe, ob Python &gt; 3.9 installiert ist. Tippe dafür folgenden Befehl in den Terminal: bash     python3 --version\nWenn die Python nicht vorhanden oder die Version älter / kleiner als 3.9 ist, installiert eine aktuelle Version von Python: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/\nTippt folgende Befehle in der Commandozeile ein:\nconda create --name geopython1\nconda activate geopython1   # Windows nutzer: conda activate geopython1\nconda install -c conda-forge jupyterlab pandas",
-    "crumbs": [
-      "Programmieren I"
-    ]
-  },
-  {
-    "objectID": "B_Programmieren_1/1_Einleitung.html#daten",
-    "href": "B_Programmieren_1/1_Einleitung.html#daten",
-    "title": "Programmieren I",
-    "section": "Daten",
-    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\n\n\n\nDatensatz (inkl. Link)\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet\n\n\n\n\n\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nPython kennen lernen, erste Interaktionen mit Python durch die Commandline\nErste Erfahrungen mit JupyterLab sammeln\nDie wichtigsten Datentypen in Python kennen lernen (bool, str, int, float, list, dict)\nPandas DataFrames kennen lernen und einfache Manipulationen durchführen",
-    "crumbs": [
-      "Programmieren I"
     ]
   },
   {
@@ -718,16 +678,6 @@
     "crumbs": [
       "Programmieren I",
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>Anhang</span>"
-    ]
-  },
-  {
-    "objectID": "B_Programmieren_2/1_Einleitung.html",
-    "href": "B_Programmieren_2/1_Einleitung.html",
-    "title": "Programmieren II",
-    "section": "",
-    "text": "Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Juypter Notebook verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei conda kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (Functions), Fallunterscheidungen (if und else) sowie dem Erstellen von Zufallszahlen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nConda verstehen und beherrschen\nPython Module verstehen\nFunctions kennenlernen und beherrschen\nFunction auf eine ganze Spalte einer DataFrame anwenden können.",
-    "crumbs": [
-      "Programmieren II"
     ]
   },
   {
@@ -1278,16 +1228,6 @@
     "crumbs": [
       "Programmieren II",
       "<span class='chapter-number'>32</span>  <span class='chapter-title'>Anhang</span>"
-    ]
-  },
-  {
-    "objectID": "B_Programmieren_3/1_Einleitung.html",
-    "href": "B_Programmieren_3/1_Einleitung.html",
-    "title": "Programmieren III",
-    "section": "",
-    "text": "Heute widmen wir uns zwei grossen Themen bevor wir uns an die Umsetzung der Monte Carlo Simulation wenden.\nIm ersten Thema geht es um for Loops, mit denen wir eine Aufgabe mehrfach (“Iterativ”) durchzuführen können. Ein for Loop ist ein sehr wichtiges und hilfreiches Werkzeug das man unbedingt kennen sollte. Wir werden for loops brauchen um Zeckenstiche zu simulieren, indem wir die bestehenden Meldungen x-fach zufällig verschieben. Das Thema for loops behandeln wir in Einführung in for loop, Basic for loop und Advanced for loops.\nBeim zweiten Thema geht es um GIS. Wir haben bisher mit Daten gearbeitet die eine Rauminformation beinhalten, die Zeckenstiche haben x/y-Koordinaten. Diese Rauminformation haben wir aber nicht als solche behandelt, wir haben die Koordinaten als Zahlen eingelesen und uns nicht gross darum geschert, dass es sich dabei um spezifische Punkte in der Schweiz handelt. Heute werden wir dies ändern müssen da uns eine räumliche Abfrage bevorsteht: Wir wollen nämlich wissen, welche Zeckenstiche sich im Wald befinden. Dadurch lernen wir eine neue Erweiterung kennen und sehen, was für räumliche Operationen in Python möglich sind. Das Thema behandeln wir in Input: GIS in Python, Räumliche Operationen und Spatial Joins.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nIhr kennt for-Loops und könnt sie anwenden\nIhr seht, was mit räumlichen Operationen in Python möglich ist und kennt ein Tool, welches dazu notwendig ist\nIhr könnt räumliche Operationen (spatial join, overlay) in Python umsetzen\nIhr könnt summary Statistiken (mit groupby/count) aus DataFrames extrahieren",
-    "crumbs": [
-      "Programmieren III"
     ]
   },
   {
@@ -1863,26 +1803,6 @@
     ]
   },
   {
-    "objectID": "C_Datenbanken_1/1_Einleitung.html",
-    "href": "C_Datenbanken_1/1_Einleitung.html",
-    "title": "Datenbanken I",
-    "section": "",
-    "text": "Ausgangslage\nDie Gärten und Grünanlagen prägen das Bild des Campus Grüental. Eine grosse Vielfalt an verschiedenen einheimischen und exotischen Pflanzenarten lädt zum Verweilen ein. Mitarbeiter und Studierende nutzen den grünen Raum zur Erholung, zum Miteinander und zum Lernen. Nicht nur in den Sommermonaten ist das offene Areal des Campus ein Erlebnis für alle. Für die individuelle Pflege und Wartung der Gärten bedarf es sehr guter Planung. Als Datenbank Spezialist werden Sie beauftragt eine Datenbanklösung zur Verwaltung der Campus Pflanzenwelt zu entwickeln.",
-    "crumbs": [
-      "Datenbanken I"
-    ]
-  },
-  {
-    "objectID": "C_Datenbanken_1/1_Einleitung.html#ausgangslage",
-    "href": "C_Datenbanken_1/1_Einleitung.html#ausgangslage",
-    "title": "Datenbanken I",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nSie lernen ein vorgegebenes Textmodell zu lesen, zu interpretieren und dazu die richtigen Fragen zu stellen, um fehlende Antworten zu bekommen.\nSie können aus dem Textmodell relevante Objekte, Attribute und Beziehungen extrahieren.\nSie können auf der Grundlage eines bestehenden Textmodells ein konzeptuelles Datenmodell mit Hilfe eines ER-Diagramms entwickeln.\nSie können das konzeptuelle Datenmodell zu einem logischen Datenmodell weiter entwickeln, indem Sie Tabellen ableiten und Attribute, Schlüssel und Kardinalitäten identifizieren.",
-    "crumbs": [
-      "Datenbanken I"
-    ]
-  },
-  {
     "objectID": "C_Datenbanken_1/2_Uebung.html",
     "href": "C_Datenbanken_1/2_Uebung.html",
     "title": "Übung",
@@ -1902,16 +1822,6 @@
     "crumbs": [
       "Datenbanken I",
       "<span class='chapter-number'>46</span>  <span class='chapter-title'>Übung</span>"
-    ]
-  },
-  {
-    "objectID": "C_Datenbanken_2/1_Einleitung.html",
-    "href": "C_Datenbanken_2/1_Einleitung.html",
-    "title": "Datenbanken II",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nSie können ein bestehendes logisches Modell auf Datenintegrität prüfen und Konsistenzfehler korrigieren.\nSie können auf der Grundlage eines bestehenden Datenmodells mit Hilfe von pgAdmin und ArcGIS Pro auf eine Server Datenbank zugreifen.\nSie können eine bestehende Server Datenbank mit Hilfe von pgAdmin und ArcGIS Pro mit Daten befüllen.\nSie kennen die grundlegenden Mechanismen von Datenbank-Versionierung und können diese in ArcGIS Pro anwenden.",
-    "crumbs": [
-      "Datenbanken II"
     ]
   },
   {
@@ -2077,16 +1987,6 @@
     "crumbs": [
       "Datenbanken II",
       "<span class='chapter-number'>50</span>  <span class='chapter-title'>Abfragen in SQL mit pgAdmin und ArcGIS Pro</span>"
-    ]
-  },
-  {
-    "objectID": "C_Datenbanken_3/1_Einleitung.html",
-    "href": "C_Datenbanken_3/1_Einleitung.html",
-    "title": "Datenbanken III",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nSie lernen die Abfragesprache SQL kennen.\nSie können Abfragen in SQL formulieren und dabei auch räumliche PostGIS Funktionen nutzen.\nSie lernen SQL‐Abfragen mit ArcGIS Pro Werkzeugen zu visualisieren.",
-    "crumbs": [
-      "Datenbanken III"
     ]
   },
   {
@@ -2263,16 +2163,6 @@
     "crumbs": [
       "Datenbanken III",
       "<span class='chapter-number'>54</span>  <span class='chapter-title'>Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span>"
-    ]
-  },
-  {
-    "objectID": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
-    "href": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
-    "title": "Netzwerkanalyse I",
-    "section": "",
-    "text": "Die Lerneinheit vermittelt die Grundlagen bei der Verwendung von Netzwerk-Geodaten. Die Anwendungsfelder reichen von Streckenfindung und Reisezeitberechnungen zu Energienetzwerk-Systeme bis hin zu Gewässernetzen in der Hydrologie. Diese Lerneinheit vermittelt die dafür relevanten Grundlagen aus der Graphentheorie und knüpft dabei an die bekannten Grundlagen der Vektordatenmodellierung (Definitionen, Elemente von Graphen, Eigenschaften von Graphen, Bäume) an. Zudem werden im theoretischen Teil Netzwerkmasse, insbesondere Zentralitätsmasse nähergebracht. Der praktische Teil basiert auf der Einführung und Verwendung von QGIS als Alternative zu den ESRI-Produkten.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nEinfache GIS-Operationen mit QGIS durchführen können (Clip, Reproject, Abfrage der Attributtabelle, Symbolisierung, Export als jpg)\nSchnittstelle zwischen QGIS und anderen GIS-Software am Beispiel GRASS kennenlernen\nErste Netzwerkoperationen mit QGIS/GRASS GIS durchführen\nNetzwerk-Zentralitätsmasse verstehen und für einfache Netzwerkdaten berechnen können",
-    "crumbs": [
-      "Netzwerkanalyse I"
     ]
   },
   {
@@ -2485,16 +2375,6 @@
     ]
   },
   {
-    "objectID": "D_Netzwerkanalyse_2/1_Einleitung.html",
-    "href": "D_Netzwerkanalyse_2/1_Einleitung.html",
-    "title": "Netzwerkanalyse II",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nIn einem gegebenen Netzwerk kürzeste Pfade mit QGIS berechnen können\nWeitere GRASS GIS Werkezeuge innerhalb von QGIS ansteuern können\nVerschiedene QGIS / GRASS GIS Tools kennenlernen und deren Outputs interpretieren können\nEigene einfache Vektor-Datensätze erstellen können, resp. Punkte von Hand digitalisieren können\nAlternative, professionelle Routing Services kennenlernen und ausserhalb herkömmlicher Services (z.B. Google) nutzen",
-    "crumbs": [
-      "Netzwerkanalyse II"
-    ]
-  },
-  {
     "objectID": "D_Netzwerkanalyse_2/1_Shortest_Path.html",
     "href": "D_Netzwerkanalyse_2/1_Shortest_Path.html",
     "title": "Aufgabe 3: Kürzeste Pfade (shortest path)",
@@ -2569,16 +2449,6 @@
     "crumbs": [
       "Netzwerkanalyse II",
       "<span class='chapter-number'>59</span>  <span class='chapter-title'>Aufgabe 4: Traveling Salesperson</span>"
-    ]
-  },
-  {
-    "objectID": "D_Netzwerkanalyse_3/1_Einleitung.html",
-    "href": "D_Netzwerkanalyse_3/1_Einleitung.html",
-    "title": "Netzwerkanalyse III",
-    "section": "",
-    "text": "Angenommen Sie sind auf Wohnungssuche in Wädenswil. Dabei gilt es nebst dem Budget viele wichtige raumgebundene Variablen zu berücksichtigen, dazu verwenden Sie natürlich QGIS. Sie wollen drei Kriterien untersuchen:\n\nLaufdistanz zur nächsten Entsorgungsstelle\nErschliessung an die öffentlichen Verkehrsmittel (unter Berücksichtigung des Fahrplans)\nDistanz zur Durchfahrtsstrasse\n\nWir werden für jeden dieser drei Kriterien einen Rasterdatensatz kreieren, den wir zum Schluss miteinander verrechnen können. So finden wir den optimalen Standort unter der Berücksichtigung aller drei Kriterien. Starten Sie dazu QGIS und laden Sie folgende Daten in das Projekt:\n\nStrassennetz Wädenswil (“osm_highway_prepared.gpkg”, siehe Tabelle 55.1)\nEntsorgungsstellen Wädenswil (“abfallentsorgung_waedenswil.gpkg”, siehe Tabelle 55.1)\nGemeindegrenze Wädenswil (“Gemeinde_Waedenswil.gpkg”, siehe Tabelle 55.1)\nOptional: OSM Hintergrundkarte grau eingefärbt (siehe Übung 3.1: Projekt vorbereiten)\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nSie sind in der Lage, einfache Reisezeitberechnungen in QGIS selber durchzuführen.\nSie erweitern Ihr Skillset zur Umwandlung von verschiedenen Geodatentypen (Vektor zu Raster, Raster zu Vektor, Linien zu Punkte, usw.)\nSie können eine einfache Multi-Kriterien-Analyse (MCA) mit Raster-Daten in QGIS selbständig durchführen.\nSie können einfache Map Overlay-Operationen in QGIS selber ausführen.",
-    "crumbs": [
-      "Netzwerkanalyse III"
     ]
   },
   {
@@ -2736,16 +2606,6 @@
     ]
   },
   {
-    "objectID": "E_WebGIS_1/1_Einleitung.html",
-    "href": "E_WebGIS_1/1_Einleitung.html",
-    "title": "WebGIS I",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage auf dem ArcGIS Online Organisationskonto Deine Inhalte zu organisieren und die Freigabeeigenschaften von Inhalten zu ändern.\nDu kannst in ArcGIS Pro eine Karte vorbereiten, eine Zeitanimation aktivieren und ArcGIS Pro Karten auf einem ArcGIS Online Organisationskonto als Web Maps veröffentlichen.\nDu kannst eine Web Map zielgerichtet gestalten und basierend auf bestehenden Web Maps neue Web Map Applikationen erstellen.\nDu weisst, wie Du eine Story Map erstellen und diese mit Inhalten füllen kannst.",
-    "crumbs": [
-      "WebGIS I"
-    ]
-  },
-  {
     "objectID": "E_WebGIS_1/2_Uebung_Web_Map.html",
     "href": "E_WebGIS_1/2_Uebung_Web_Map.html",
     "title": "Übung Web Map",
@@ -2897,16 +2757,6 @@
     "crumbs": [
       "WebGIS I",
       "<span class='chapter-number'>67</span>  <span class='chapter-title'>Leistungsnachweis</span>"
-    ]
-  },
-  {
-    "objectID": "E_WebGIS_2/1_Einleitung.html",
-    "href": "E_WebGIS_2/1_Einleitung.html",
-    "title": "WebGIS II",
-    "section": "",
-    "text": "Übungsziele\n\n\n\n\nDu kannst eine Map mit mehreren Layern und einer Legende in Python erstellen.\nDu kannst dein Jupyter Notebook mittels Chunk Options und weiteren Tools verschönern.\nDu kennst Github und kannst ein Repository erstellen, Files hochladen und diese publizieren.\nOptional: Du kennst die grundlegenden Webtechnologien wie HyperText Markup Language (HTML), JavaScript und Cascading Style Sheets (CSS).\nOptional: Du hast dich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.\nOptional: Du kannst das GeoJson-Dateiformat verwenden.",
-    "crumbs": [
-      "WebGIS II"
     ]
   },
   {
@@ -3094,6 +2944,156 @@
     "crumbs": [
       "WebGIS II",
       "<span class='chapter-number'>69</span>  <span class='chapter-title'>(Optional) Übung Leaflet</span>"
+    ]
+  },
+  {
+    "objectID": "A_Unsicherheit/1_Einleitung.html",
+    "href": "A_Unsicherheit/1_Einleitung.html",
+    "title": "Unsicherheit",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage bei zukünftigen GIS Arbeiten mit der Unsicherheit von Punktdaten umzugehen.\nDu kannst reale räumliche Objekte dahin beurteilen, ob diese grenzscharf oder nur mit einer Unschärfe abgebildet werden können.\nDu kannst mit Fuzzy-Tallness umgehen und diese definieren.\nDu kannst unscharfe Phänomene in deinen zukünftigen Projekten berücksichtigen und deren Unschärfe in den Geoverarbeitungsprozess integrieren und auswerten.\nDu kannst ein Modell mit ModelBuilder erstellen und ausführen.",
+    "crumbs": [
+      "Unsicherheit"
+    ]
+  },
+  {
+    "objectID": "B_Programmieren_1/1_Einleitung.html",
+    "href": "B_Programmieren_1/1_Einleitung.html",
+    "title": "Programmieren I",
+    "section": "",
+    "text": "Vorbereitung\nIm Modul Angewandte Geoinformatik benutzen wir Python mit Jupyter Lab. Mit der Installation von ArcGIS sollte die nötige Software bereits installiert sein. Es muss also lediglich getestet werden, ob dies auch wie erwartet funktioniert. Bitte führt die Instruktionen unter dem Punkt Mit ArcGIS Installation durch.\nWer lieber auf einem anderen Betriebssystem als Windows arbeiten möchte, sollte es für den Teil Programmieren I - III auch können. In diesem Fall braucht es aber ein bisschen Vorbereitung. Befolgt in diesem Fall die Schritte unter dem Punkt Ohne ArcGIS Installation durch.",
+    "crumbs": [
+      "Programmieren I"
+    ]
+  },
+  {
+    "objectID": "B_Programmieren_1/1_Einleitung.html#vorbereitung",
+    "href": "B_Programmieren_1/1_Einleitung.html#vorbereitung",
+    "title": "Programmieren I",
+    "section": "",
+    "text": "Mit ArcGIS Installation (v.a. Windows Nutzer)\nUm zu testen, ob die Installation bei Dir auch funktioniert, musst Du die paar Schritte im Video (s.u.) ausführen:\n\nPython Command Prompt suchen und starten\nMittels dem Befehl cd in dein Persönliches Laufwerk wechseln (cd C:\\Users\\DeinUserName\\Desktop, siehe dazu diesen Video)\nMittels des Befehls jupyter lab das Programm Juypter Lab starten\nMit Klick auf den Button ein neues Notebook erstellen\n\n\n\nOhne ArcGIS Installation (v.a. Mac / Linux Nutzer)\nWer keine ArcGIS installation hat, sollte folgende Software installieren:\n\nÜberprüfe, ob Python &gt; 3.9 installiert ist. Tippe dafür folgenden Befehl in den Terminal: bash     python3 --version\nWenn die Python nicht vorhanden oder die Version älter / kleiner als 3.9 ist, installiert eine aktuelle Version von Python: https://www.python.org/downloads/\nInstalliert Miniconda von dieser Website: https://docs.conda.io/projects/miniconda/en/latest/\nTippt folgende Befehle in der Commandozeile ein:\nconda create --name geopython1\nconda activate geopython1   # Windows nutzer: conda activate geopython1\nconda install -c conda-forge jupyterlab pandas",
+    "crumbs": [
+      "Programmieren I"
+    ]
+  },
+  {
+    "objectID": "B_Programmieren_1/1_Einleitung.html#daten",
+    "href": "B_Programmieren_1/1_Einleitung.html#daten",
+    "title": "Programmieren I",
+    "section": "Daten",
+    "text": "Daten\nIm Kurs werdet ihr nachstehende Datensätze benötigen, die ihr im Moodlekurs unter Programmieren I → Datensätze herunterladen könnt.\n\n\n\nTabelle 1: Datensätze für den Teil “Programmieren I - III”\n\n\n\n\n\n\n\n\n\nDatensatz (inkl. Link)\nBeschreibung\n\n\n\n\nzeckenstiche.csv\nEine CSV mit 10 Zeckenstich-Meldungen im Kanton Zürich\n\n\nzeckenstiche_full.csv\nEine CSV mit 1’076 Zeckenstich-Meldungen im Kanton Zürich\n\n\nwald.gpkg\nEin Geodatensatz mit einem flächendeckenden (lückenlosen) Polygon, welche den Kanton Zürich in “Wald” und “nicht Wald” unterscheidet\n\n\n\n\n\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nPython kennen lernen, erste Interaktionen mit Python durch die Commandline\nErste Erfahrungen mit JupyterLab sammeln\nDie wichtigsten Datentypen in Python kennen lernen (bool, str, int, float, list, dict)\nPandas DataFrames kennen lernen und einfache Manipulationen durchführen",
+    "crumbs": [
+      "Programmieren I"
+    ]
+  },
+  {
+    "objectID": "B_Programmieren_2/1_Einleitung.html",
+    "href": "B_Programmieren_2/1_Einleitung.html",
+    "title": "Programmieren II",
+    "section": "",
+    "text": "Letzte Woche habt ihr die wichtigsten Datentypen in Python kennen gelernt und sowohl den Command Prompt wie auch Juypter Notebook verwendet. Diese Woche werden wir Python Module genauer beleuchten und dabei conda kennenlernen. Zudem widmen wir uns dem Erstellen von Funktionen (Functions), Fallunterscheidungen (if und else) sowie dem Erstellen von Zufallszahlen.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nConda verstehen und beherrschen\nPython Module verstehen\nFunctions kennenlernen und beherrschen\nFunction auf eine ganze Spalte einer DataFrame anwenden können.",
+    "crumbs": [
+      "Programmieren II"
+    ]
+  },
+  {
+    "objectID": "B_Programmieren_3/1_Einleitung.html",
+    "href": "B_Programmieren_3/1_Einleitung.html",
+    "title": "Programmieren III",
+    "section": "",
+    "text": "Heute widmen wir uns zwei grossen Themen bevor wir uns an die Umsetzung der Monte Carlo Simulation wenden.\nIm ersten Thema geht es um for Loops, mit denen wir eine Aufgabe mehrfach (“Iterativ”) durchzuführen können. Ein for Loop ist ein sehr wichtiges und hilfreiches Werkzeug das man unbedingt kennen sollte. Wir werden for loops brauchen um Zeckenstiche zu simulieren, indem wir die bestehenden Meldungen x-fach zufällig verschieben. Das Thema for loops behandeln wir in Einführung in for loop, Basic for loop und Advanced for loops.\nBeim zweiten Thema geht es um GIS. Wir haben bisher mit Daten gearbeitet die eine Rauminformation beinhalten, die Zeckenstiche haben x/y-Koordinaten. Diese Rauminformation haben wir aber nicht als solche behandelt, wir haben die Koordinaten als Zahlen eingelesen und uns nicht gross darum geschert, dass es sich dabei um spezifische Punkte in der Schweiz handelt. Heute werden wir dies ändern müssen da uns eine räumliche Abfrage bevorsteht: Wir wollen nämlich wissen, welche Zeckenstiche sich im Wald befinden. Dadurch lernen wir eine neue Erweiterung kennen und sehen, was für räumliche Operationen in Python möglich sind. Das Thema behandeln wir in Input: GIS in Python, Räumliche Operationen und Spatial Joins.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nIhr kennt for-Loops und könnt sie anwenden\nIhr seht, was mit räumlichen Operationen in Python möglich ist und kennt ein Tool, welches dazu notwendig ist\nIhr könnt räumliche Operationen (spatial join, overlay) in Python umsetzen\nIhr könnt summary Statistiken (mit groupby/count) aus DataFrames extrahieren",
+    "crumbs": [
+      "Programmieren III"
+    ]
+  },
+  {
+    "objectID": "C_Datenbanken_1/1_Einleitung.html",
+    "href": "C_Datenbanken_1/1_Einleitung.html",
+    "title": "Datenbanken I",
+    "section": "",
+    "text": "Ausgangslage\nDie Gärten und Grünanlagen prägen das Bild des Campus Grüental. Eine grosse Vielfalt an verschiedenen einheimischen und exotischen Pflanzenarten lädt zum Verweilen ein. Mitarbeiter und Studierende nutzen den grünen Raum zur Erholung, zum Miteinander und zum Lernen. Nicht nur in den Sommermonaten ist das offene Areal des Campus ein Erlebnis für alle. Für die individuelle Pflege und Wartung der Gärten bedarf es sehr guter Planung. Als Datenbank Spezialist werden Sie beauftragt eine Datenbanklösung zur Verwaltung der Campus Pflanzenwelt zu entwickeln.",
+    "crumbs": [
+      "Datenbanken I"
+    ]
+  },
+  {
+    "objectID": "C_Datenbanken_1/1_Einleitung.html#ausgangslage",
+    "href": "C_Datenbanken_1/1_Einleitung.html#ausgangslage",
+    "title": "Datenbanken I",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nSie lernen ein vorgegebenes Textmodell zu lesen, zu interpretieren und dazu die richtigen Fragen zu stellen, um fehlende Antworten zu bekommen.\nSie können aus dem Textmodell relevante Objekte, Attribute und Beziehungen extrahieren.\nSie können auf der Grundlage eines bestehenden Textmodells ein konzeptuelles Datenmodell mit Hilfe eines ER-Diagramms entwickeln.\nSie können das konzeptuelle Datenmodell zu einem logischen Datenmodell weiter entwickeln, indem Sie Tabellen ableiten und Attribute, Schlüssel und Kardinalitäten identifizieren.",
+    "crumbs": [
+      "Datenbanken I"
+    ]
+  },
+  {
+    "objectID": "C_Datenbanken_2/1_Einleitung.html",
+    "href": "C_Datenbanken_2/1_Einleitung.html",
+    "title": "Datenbanken II",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nSie können ein bestehendes logisches Modell auf Datenintegrität prüfen und Konsistenzfehler korrigieren.\nSie können auf der Grundlage eines bestehenden Datenmodells mit Hilfe von pgAdmin und ArcGIS Pro auf eine Server Datenbank zugreifen.\nSie können eine bestehende Server Datenbank mit Hilfe von pgAdmin und ArcGIS Pro mit Daten befüllen.\nSie kennen die grundlegenden Mechanismen von Datenbank-Versionierung und können diese in ArcGIS Pro anwenden.",
+    "crumbs": [
+      "Datenbanken II"
+    ]
+  },
+  {
+    "objectID": "C_Datenbanken_3/1_Einleitung.html",
+    "href": "C_Datenbanken_3/1_Einleitung.html",
+    "title": "Datenbanken III",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nSie lernen die Abfragesprache SQL kennen.\nSie können Abfragen in SQL formulieren und dabei auch räumliche PostGIS Funktionen nutzen.\nSie lernen SQL‐Abfragen mit ArcGIS Pro Werkzeugen zu visualisieren.",
+    "crumbs": [
+      "Datenbanken III"
+    ]
+  },
+  {
+    "objectID": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
+    "href": "D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html",
+    "title": "Netzwerkanalyse I",
+    "section": "",
+    "text": "Die Lerneinheit vermittelt die Grundlagen bei der Verwendung von Netzwerk-Geodaten. Die Anwendungsfelder reichen von Streckenfindung und Reisezeitberechnungen zu Energienetzwerk-Systeme bis hin zu Gewässernetzen in der Hydrologie. Diese Lerneinheit vermittelt die dafür relevanten Grundlagen aus der Graphentheorie und knüpft dabei an die bekannten Grundlagen der Vektordatenmodellierung (Definitionen, Elemente von Graphen, Eigenschaften von Graphen, Bäume) an. Zudem werden im theoretischen Teil Netzwerkmasse, insbesondere Zentralitätsmasse nähergebracht. Der praktische Teil basiert auf der Einführung und Verwendung von QGIS als Alternative zu den ESRI-Produkten.\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nEinfache GIS-Operationen mit QGIS durchführen können (Clip, Reproject, Abfrage der Attributtabelle, Symbolisierung, Export als jpg)\nSchnittstelle zwischen QGIS und anderen GIS-Software am Beispiel GRASS kennenlernen\nErste Netzwerkoperationen mit QGIS/GRASS GIS durchführen\nNetzwerk-Zentralitätsmasse verstehen und für einfache Netzwerkdaten berechnen können",
+    "crumbs": [
+      "Netzwerkanalyse I"
+    ]
+  },
+  {
+    "objectID": "D_Netzwerkanalyse_2/1_Einleitung.html",
+    "href": "D_Netzwerkanalyse_2/1_Einleitung.html",
+    "title": "Netzwerkanalyse II",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nIn einem gegebenen Netzwerk kürzeste Pfade mit QGIS berechnen können\nWeitere GRASS GIS Werkezeuge innerhalb von QGIS ansteuern können\nVerschiedene QGIS / GRASS GIS Tools kennenlernen und deren Outputs interpretieren können\nEigene einfache Vektor-Datensätze erstellen können, resp. Punkte von Hand digitalisieren können\nAlternative, professionelle Routing Services kennenlernen und ausserhalb herkömmlicher Services (z.B. Google) nutzen",
+    "crumbs": [
+      "Netzwerkanalyse II"
+    ]
+  },
+  {
+    "objectID": "D_Netzwerkanalyse_3/1_Einleitung.html",
+    "href": "D_Netzwerkanalyse_3/1_Einleitung.html",
+    "title": "Netzwerkanalyse III",
+    "section": "",
+    "text": "Angenommen Sie sind auf Wohnungssuche in Wädenswil. Dabei gilt es nebst dem Budget viele wichtige raumgebundene Variablen zu berücksichtigen, dazu verwenden Sie natürlich QGIS. Sie wollen drei Kriterien untersuchen:\n\nLaufdistanz zur nächsten Entsorgungsstelle\nErschliessung an die öffentlichen Verkehrsmittel (unter Berücksichtigung des Fahrplans)\nDistanz zur Durchfahrtsstrasse\n\nWir werden für jeden dieser drei Kriterien einen Rasterdatensatz kreieren, den wir zum Schluss miteinander verrechnen können. So finden wir den optimalen Standort unter der Berücksichtigung aller drei Kriterien. Starten Sie dazu QGIS und laden Sie folgende Daten in das Projekt:\n\nStrassennetz Wädenswil (“osm_highway_prepared.gpkg”, siehe Tabelle 55.1)\nEntsorgungsstellen Wädenswil (“abfallentsorgung_waedenswil.gpkg”, siehe Tabelle 55.1)\nGemeindegrenze Wädenswil (“Gemeinde_Waedenswil.gpkg”, siehe Tabelle 55.1)\nOptional: OSM Hintergrundkarte grau eingefärbt (siehe Übung 3.1: Projekt vorbereiten)\n\n\n\n\n\n\n\nÜbungsziele\n\n\n\n\nSie sind in der Lage, einfache Reisezeitberechnungen in QGIS selber durchzuführen.\nSie erweitern Ihr Skillset zur Umwandlung von verschiedenen Geodatentypen (Vektor zu Raster, Raster zu Vektor, Linien zu Punkte, usw.)\nSie können eine einfache Multi-Kriterien-Analyse (MCA) mit Raster-Daten in QGIS selbständig durchführen.\nSie können einfache Map Overlay-Operationen in QGIS selber ausführen.",
+    "crumbs": [
+      "Netzwerkanalyse III"
+    ]
+  },
+  {
+    "objectID": "E_WebGIS_1/1_Einleitung.html",
+    "href": "E_WebGIS_1/1_Einleitung.html",
+    "title": "WebGIS I",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nDu bist in der Lage auf dem ArcGIS Online Organisationskonto Deine Inhalte zu organisieren und die Freigabeeigenschaften von Inhalten zu ändern.\nDu kannst in ArcGIS Pro eine Karte vorbereiten, eine Zeitanimation aktivieren und ArcGIS Pro Karten auf einem ArcGIS Online Organisationskonto als Web Maps veröffentlichen.\nDu kannst eine Web Map zielgerichtet gestalten und basierend auf bestehenden Web Maps neue Web Map Applikationen erstellen.\nDu weisst, wie Du eine Story Map erstellen und diese mit Inhalten füllen kannst.",
+    "crumbs": [
+      "WebGIS I"
+    ]
+  },
+  {
+    "objectID": "E_WebGIS_2/1_Einleitung.html",
+    "href": "E_WebGIS_2/1_Einleitung.html",
+    "title": "WebGIS II",
+    "section": "",
+    "text": "Übungsziele\n\n\n\n\nDu kannst eine Map mit mehreren Layern und einer Legende in Python erstellen.\nDu kannst dein Jupyter Notebook mittels Chunk Options und weiteren Tools verschönern.\nDu kennst Github und kannst ein Repository erstellen, Files hochladen und diese publizieren.\nOptional: Du kennst die grundlegenden Webtechnologien wie HyperText Markup Language (HTML), JavaScript und Cascading Style Sheets (CSS).\nOptional: Du hast dich mit Leaflet, der beliebtesten Open-Source-JavaScript-Bibliothek, vertraut gemacht.\nOptional: Du kannst das GeoJson-Dateiformat verwenden.",
+    "crumbs": [
+      "WebGIS II"
     ]
   }
 ]

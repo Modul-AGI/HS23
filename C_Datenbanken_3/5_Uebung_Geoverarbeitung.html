@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Modul AGI HS23 - Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</title>
+<title>Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL – Modul AGI HS23</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,13 +117,13 @@ window.onload = function() {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../C_Datenbanken_3/1_Einleitung.html">Datenbanken III</a></li><li class="breadcrumb-item"><a href="../C_Datenbanken_3/5_Uebung_Geoverarbeitung.html"><span class="chapter-title">Geoverarbeitung in der Datenbank mit ArcGIS Pro und SQL</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -168,7 +168,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../A_Unsicherheit/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Unsicherheit</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -209,7 +209,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../B_Programmieren_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren I</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -280,7 +280,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../B_Programmieren_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren II</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -361,7 +361,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../B_Programmieren_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Programmieren III</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -437,7 +437,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../C_Datenbanken_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken I</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -453,7 +453,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../C_Datenbanken_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken II</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -484,7 +484,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../C_Datenbanken_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datenbanken III</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -515,7 +515,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../D_Netzwerkanalyse_1/1_Netzwerkanalyse_I.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Netzwerkanalyse I</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -541,7 +541,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../D_Netzwerkanalyse_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Netzwerkanalyse II</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -562,7 +562,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../D_Netzwerkanalyse_3/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Netzwerkanalyse III</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -598,7 +598,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../E_WebGIS_1/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebGIS I</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -624,7 +624,7 @@ window.onload = function() {
       <div class="sidebar-item-container"> 
             <a href="../E_WebGIS_2/1_Einleitung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">WebGIS II</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" aria-expanded="false" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -709,7 +709,7 @@ Tipp
 <p>Da Ihr Datenbankbenutzer studentNr keine Berechtigungen zum Speichern in der Server Datenbank hat, können Sie das Ergebnis lokal auf Ihrem Rechner in Ihrem Ordner oder einer eigenen Geodatenbank ablegen.</p>
 </div>
 </div>
-<div id="fig-db3-uebung7-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-db3-uebung7-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-db3-uebung7-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/screenshot-uebung7-1.jpg" class="img-fluid figure-img" style="width:50.0%">
@@ -748,7 +748,7 @@ Tipp
 <li>Um das Ergebnis der PostGIS Funktion zu visualisieren, nutzen Sie das Werkzeug “Make Query Layer” mit Ihrer SQL Abfrage.</li>
 <li>Vergleichen Sie die Ergebnisse. Schauen Sie sich auch die Attribute an. Was fällt auf?</li>
 </ol>
-<div id="fig-db3-uebung8-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-db3-uebung8-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-db3-uebung8-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/screenshot-uebung8-1.jpg" class="img-fluid figure-img" style="width:50.0%">
@@ -784,7 +784,7 @@ Tipp
 <p>Die SQL Funktion ST_INTERSECTION erzeugt immer eine so genannte Geometry Collection, auch wenn zwei Geometrien keine Schnittmenge aufweisen, gibt es einen dann leeren Eintrag. Aus diesem Grund zeigt das Ergebnis immer alle Geometrien an. Haben die Geometrien keine Schnittmenge, so ist die Geometrie leer. Um leere Geometrien auszuschliessen, sollte im WHERE-Abschnitt z.B. mit der Funktion ST_OVERLAPS oder der Funktion ST_INTERSECTS geprüft werden, ob die zwei Eingabe-Geometrien (Gepufferte Wege und sonstige Flächen) überhaupt irgendwo überlappen. Im ArcGIS Pro werden leere Geometrien automatisch vom Ergebnis abgeschnitten.</p>
 </div>
 </div>
-<div id="fig-db3-uebung9-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-db3-uebung9-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-db3-uebung9-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/screenshot-uebung9-1.jpg" class="img-fluid figure-img" style="width:50.0%">
@@ -806,7 +806,7 @@ Abbildung&nbsp;54.3: Auszug aus Datenbankschema
 <li>Visualisieren Sie das Ergebnis erneut mit “Make Query Layer”.</li>
 </ul></li>
 </ol>
-<div id="fig-db3-uebung10-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-db3-uebung10-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-db3-uebung10-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/screenshot-uebung10-1.jpg" class="img-fluid figure-img" style="width:50.0%">
@@ -842,7 +842,7 @@ Tipp
 <p>Die Funktion ST_Difference berechnet für jedes eingeschlossene Polygon einmal die Differenzmenge aus der Wegefläche und allen eingeschlossenen Polygonen. Dadurch hat das Ergebnis eigentlich zu viele Einträge, für jedes eingeschlossene Polygon ein Eintrag, welche aber alle dieselbe Geometrie aufweisen. Der Parameter LIMIT 1 limitiert die Ausgabe auf ein Feature.</p>
 </div>
 </div>
-<div id="fig-db3-uebung11-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-db3-uebung11-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-db3-uebung11-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/uebung11.jpg" class="img-fluid figure-img" style="width:50.0%">
@@ -863,7 +863,7 @@ Abbildung&nbsp;54.5: Auszug aus Datenbankschema
 <li>Formulieren Sie auch hierzu die SQL-Anfrage in pgAdmin, welche alle Punkte auf den Flächen zurückgibt. Sie können dazu wieder die Funktion ST_INTERSECTION nutzen. Achten Sie darauf, dass wir dabei wieder nur diejenigen Punkte haben wollen, welche auch wirklich in Beziehung zu den Flächen stehen. Diesen Filter müssen Sie im WHERE-Abschnitt bereitstellen. Verwenden Sie dafür diesmal die Funktion ST_INTERSECTS. Binden Sie ausserdem noch die Attribute id_pflanze (objectid) und id_spezies in die Ausgabe ein und sortieren die Liste danach anhand der id_pflanze.</li>
 </ul></li>
 </ol>
-<div id="fig-db3-uebung12-1" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-db3-uebung12-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-db3-uebung12-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="figures/screenshot-uebung12-1.jpg" class="img-fluid figure-img" style="width:50.0%">
@@ -1057,18 +1057,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1100,7 +1089,47 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1135,7 +1164,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
