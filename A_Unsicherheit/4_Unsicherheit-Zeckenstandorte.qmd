@@ -4,7 +4,7 @@ Die erste Aufgabe besteht darin, zu untersuchen, wie gross der Einfluss der Erfa
 
 ## Übung 2: Zusammenfügen (Append) aller Runs zu einem Datensatz
 
-Kopiere zuerst die Feature Class *Tick_Original* in das Feature Dataset *Resultate*. Benenne die kopierte Feature Class in *Tick_Append* um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug "Append", um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matchig Type die Option "Use the field map to reconcile field differences".
+Kopiere zuerst die Feature Class *Tick_Original* in das Feature Dataset *Resultate*. Benenne die kopierte Feature Class in *Tick_Append* um, ändere auch den Alias. Nutze anschliessend das Geoverarbeitungswerkzeug "Append", um die soeben kopierten Original-Standorte mit den Zeckenstichstandorten aller Runs zusammenzufügen. Wähle unter Field Matching Type die Option "Use the field map to reconcile field differences".
 
 :::{.callout-note}
 ## ArcGIS Pro Help: Geoprocessing Tool Append
